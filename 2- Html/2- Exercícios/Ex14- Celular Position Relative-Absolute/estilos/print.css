@@ -1,0 +1,14 @@
+@charset "UFT-8";
+
+*{
+margin: 0px;
+padding: 0px;
+}
+
+nav{
+    display: none;
+}
+
+iframe{
+    display: none;
+}

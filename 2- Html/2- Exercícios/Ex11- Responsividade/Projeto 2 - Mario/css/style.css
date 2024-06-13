@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&family=Monoton&family=Oswald:wght@200..700&family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400..700&family=Monoton&family=Oswald:wght@200..700&family=Poetsen+One&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+@font-face {
+    font-family: 'mario';
+    src: url(\fontes\SuperMario256.ttf) format('truetype');
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+
+    --cor0: white;
+    --cor1: gray;
+    --cor2: #0060AD;
+    --cor3: #D3080C;
+    --fonte-padrao: arial, helvetica, sans-serif;
+    --fonte-android: 'Android', cursive;
+    --font-tamanho: 14px;
+}
+
+body {
+    background-image: url(../imagens/wallpaper2.jpg);
+    background-color: var(--cor1);
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    max-width: 800px;
+    min-width: 320px;
+    background-color: var(--cor0);
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+nav {
+    min-width: 320px;
+    max-width: 800px;
+    text-align: right;
+    background-color: var(--cor3);
+}
+
+a {
+    display: inline-block;
+    width: 16%;
+    height: 100%;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    text-align: center;
+    top: auto;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: var(--cor2);
+}
+
+.logo {
+    display: inline-block;
+    width: 100px;
+}
+
+h1 {
+    font-variant: small-caps;
+    /* text-transform: uppercase; */
+    font-family: 'mario', sans-serif;
+    color: #D3080C;
+    margin: 0px;
+    margin-bottom: 3px;
+    padding: 0px 5px;
+    display: inline-block;
+    vertical-align: 50%;
+}
+
+.paragrafo {
+    margin: 0px 0px 10px 0px;
+    text-align: justify;
+    font-family: 'Source Code Pro';
+    color: var(--cor1);
+    font-size: var(--font-tamanho);
+}
+
+img {
+    width: 100%;
+    margin: 0px;
+    margin-bottom: -4px;
+}
+
+.divimagem {
+    margin: 0px;
+    padding: 0px;
+}
+
+.rodape {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    text-align: right;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-top: -4px;
+    margin-bottom: 0px;
+}
+
+.divvideo {
+    background-color: rgb(228, 228, 228);
+    margin: 0px 0px 4px 0px;
+    padding: 20px;
+    position: relative;
+}
+
+div.video>iframe {
+    position: absolute;
+    width: 100%;
+    top: 5%;
+    left: 5%;
+    width: 50%;
+    height: 50%;
+
+}
+
+form {
+    margin: auto;
+    margin-top: 10px;
+    width: 95%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.divform {
+    width: 48%;
+    padding: 2px;
+    padding-bottom: 0px;
+    display: inline-block;
+
+}
+
+.textosforms {
+    margin: 0px;
+    margin-top: 10px;
+    font-family: 'Source Code Pro';
+    font-size: 15px;
+    color: white;
+    background-color: #0060AD;
+    display: inline-block;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 0px 5px;
+}
+
+input {
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-width: 2.5px;
+    border-style: solid;
+    border-color: var(--cor2);
+    margin: 0px;
+    padding: 0px;
+    height: 40px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 4px 2px rgba(2, 2, 2, 0.318);
+    color: var(--cor2);
+    text-align: center;
+}
+
+.h1contatos {   
+    margin: auto;
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.titulocontatos{
+    margin-top: 20px;
+    margin-bottom: -20px;
+    text-align: center;
+}
+
+.titulocontatos > h1{
+    color: white;
+}
+
+.maincontatos {
+    background-color: var(--cor2);
+    border: 20px white;
+    padding: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.322);
+    max-width: 800px;
+    min-width: 320px;
+}
+
+.inputbutton {
+    display: inline-block;
+    border: 0px;
+    border-color: #005fad6b;
+    border-radius: 20px;
+    border-style: solid;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.459);
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #0060AD;
+    height: 40px;
+    width: 80px;
+}
+
+label {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 2px;
+    vertical-align: 75%;
+    font-family: 'Source Code Pro';
+}
+
+.divradio {
+    display: inline-block;
+    width: 120px;
+    margin-top: 10px;
+}
+
+.radio {
+    display: inline-block;
+    width: 15px;
+}
+
+.inputbutton:hover {
+    background-color: var(--cor3);
+}
+
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+caption {
+    background-image: url(../imagens/wallpaper3.jpg);
+    background-position: left center;
+    background-size: cover;
+    color: white;
+    font-size: 1.2em;
+    font-variant: small-caps;
+    height: 350px;
+    padding: 10px;
+    text-align: left;
+    vertical-align: bottom;
+    }
+
+thead,tfoot {
+    font-size: 1.2em;
+    font-variant: small-caps;
+    background-color: #0060AD;
+    color: white;
+}
+
+thead > th {
+    position: sticky;
+    top: 0;
+    background-color: #0060AD;
+}
+
+th,td {
+    height: 50px;
+    border: 1px solid black;
+    text-align: center;
+    font-family: 'Source Code Pro';
+}
+
+tbody>tr:nth-child(even) {
+    background-color: lightgray;
+}
+
+
+.galeriabody{
+    background-image: url(../imagens/Wallpaper1.jpeg);
+}
+
+.sectioncomum{
+    display: inline-block;
+    width: 100%;
+}
+
+.paragrafoparallax{
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    width: 300px;
+    height: 300px;
+    text-align: justify;
+    font-size: 1.2em;
+    font-family: 'Source Code Pro';
+    background-color: rgba(0, 0, 0, 0.842);
+    color: white;
+}
+
+.paragrafosemparallax{
+    display: inline-block;
+    padding: 10px;
+    width: 300px;
+    text-align: justify;
+    font-size: 1.2em;
+    font-family: 'Source Code Pro';
+    }
+
+#sectionparallax1{
+    background-image: url(../imagens/Wallpaper1.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: right 80%;
+}
+
+#sectionparallax2{
+    background-image: url(../imagens/Wallpaper2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: right 80%;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilos/style.css">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <main>
+        
+        <form action="formulario.php" method="POST" autocomplete="on">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <div>
+                    <label for="inome">Nome: </label>
+                    <input class="inputpessoais" type="text" name="nome" id="inome" required maxlength="50" placeholder="Nome completo"
+                        autocomplete="name">
+                </div>
+
+                <div>
+                    <label for="iidade">Idade:</label>
+                    <input class="inputpessoais" type="number" name="idade" id="iidade" min="18" max="99" placeholder="18 a 99" step="1"><!-- value="5" -->
+                </div>
+
+                <div>
+                    <label for="iemail">E-mail</label>
+                    <input class="inputpessoais" type="email" name="email" id="iemail" placeholder="e-mail" autocomplete="email" required>
+                </div>
+                
+                <div>
+                    <label for="itelefone">Telefone:</label>
+                    <input class="inputpessoais" type="tel" name="telefone" id="itelefone" autocomplete="tel" 
+                    pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required placeholder="(xx)xxxxx-xxxx"> <!-- Expressões Regulares-->
+                </div>
+
+                <div>
+                    <label for="smasc">Masculino</label>
+                    <input type="radio" name="sexo" id="smasc" checked>
+                    
+                    <label for="sfem">Feminino</label>
+                    <input type="radio" name="sexo" id="sfem">
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Datas: </legend>
+                <label class="datas" for="imes">Período Letivo:</label>
+                <input type="month" name="mes" id="imes" value="2024-06"><br>
+
+                <label class="datas" for="idia">Dia da prova:</label>
+                <input type="date" name="dia" id="idia" value="2024-06-10"><br>
+
+                <label class="datas" for="ihora">Horário da prova:</label>
+                <input type="time" name="hora" id="ihora" value="08:00"><br>
+                
+                <label class="datas" for="icor">Cores:</label>
+                <input type="color" name="cor" id="icor" value="000000">
+       
+                <label class="datas" for="inivel">Satisfação:</label>
+                <input type="range" name="nivel" id="inivel" min="0" max="10" value="5" oninput="valor.innerHTML = Number(inivel.value)">
+                <output id="valor">5</output> <br>
+
+                <input type="file" name="arquivos" id="iarquivos">
+
+                
+                <label for="iestado">Estados:</label>
+                <select name="estado" id="iestado">
+                    <option value="" selected>--- Escolha ---</option>
+
+                    <optgroup label="Região Sudeste">
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="MG">Minas Gerais</option>
+                    </optgroup>
+                    
+                    <optgroup label="Região Sul">
+                        <option value="PR">Paraná</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                    </optgroup>
+                </select><br>
+
+                <label for="iprof">Profissão:</label>
+                <input type="text" name="prof" id="iprof" list="1stprof">
+                <datalist id="1stprof">
+                    <option value="ADM">Administrador</option>
+                    <option value="DEV">Desenvolvedor</option>
+                    <option value="PROF">Professor</option>
+                </datalist>
+                <br>
+
+                <label for="imsg">Mensagem:</label><br>
+                <textarea name="msg" id="imsg" cols="30" rows="2"></textarea>
+            </fieldset>
+
+     
+            <fieldset>
+                <legend>Somando números:</legend>
+                <label for="n1">Número 1:</label>
+                <input type="number" id="n1" min="0" max="50" required
+                oninput="soma.innerHTML = Number(n1.value) + Number(n2.value)">
+            
+                <label for="n2">Número 2:</label>
+                <input type="number" id="n2" min="0" max="50" required
+                oninput="soma.innerHTML = Number(n1.value) + Number(n2.value)">
+            
+                <label for="soma">Soma: </label>
+                <output id="soma">0</output>
+            </fieldset> -->
+
+            <br>
+            <input type="submit">
+            <input type="reset" value="Limpar">
+        </form>
+    </main>
+
+</body>
+
+</html>
