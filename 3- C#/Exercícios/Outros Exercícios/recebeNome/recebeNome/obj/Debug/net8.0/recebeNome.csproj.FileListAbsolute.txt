@@ -1,0 +1,14 @@
+C:\Users\Ei! Brownie\source\repos\recebeNome\recebeNome\obj\Debug\net8.0\recebeNome.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ei! Brownie\source\repos\recebeNome\recebeNome\obj\Debug\net8.0\recebeNome.AssemblyInfoInputs.cache
+C:\Users\Ei! Brownie\source\repos\recebeNome\recebeNome\obj\Debug\net8.0\recebeNome.AssemblyInfo.cs
+C:\Users\Ei! Brownie\source\repos\recebeNome\recebeNome\obj\Debug\net8.0\recebeNome.csproj.CoreCompileInputs.cache
+C:\Users\Ei! Brownie\source\repos\recebeNome\recebeNome\bin\Debug\net8.0\recebeNome.exe
+C:\Users\Ei! Brownie\source\repos\recebeNome\recebeNome\bin\Debug\net8.0\recebeNome.deps.json
+C:\Users\Ei! Brownie\source\repos\recebeNome\recebeNome\bin\Debug\net8.0\recebeNome.runtimeconfig.json
+C:\Users\Ei! Brownie\source\repos\recebeNome\recebeNome\bin\Debug\net8.0\recebeNome.dll
+C:\Users\Ei! Brownie\source\repos\recebeNome\recebeNome\bin\Debug\net8.0\recebeNome.pdb
+C:\Users\Ei! Brownie\source\repos\recebeNome\recebeNome\obj\Debug\net8.0\recebeNome.dll
+C:\Users\Ei! Brownie\source\repos\recebeNome\recebeNome\obj\Debug\net8.0\refint\recebeNome.dll
+C:\Users\Ei! Brownie\source\repos\recebeNome\recebeNome\obj\Debug\net8.0\recebeNome.pdb
+C:\Users\Ei! Brownie\source\repos\recebeNome\recebeNome\obj\Debug\net8.0\recebeNome.genruntimeconfig.cache
+C:\Users\Ei! Brownie\source\repos\recebeNome\recebeNome\obj\Debug\net8.0\ref\recebeNome.dll

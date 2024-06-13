@@ -1,0 +1,14 @@
+C:\Users\Ei! Brownie\source\repos\validaNomeUsuario\validaNomeUsuario\bin\Debug\net8.0\validaNomeUsuario.exe
+C:\Users\Ei! Brownie\source\repos\validaNomeUsuario\validaNomeUsuario\bin\Debug\net8.0\validaNomeUsuario.deps.json
+C:\Users\Ei! Brownie\source\repos\validaNomeUsuario\validaNomeUsuario\bin\Debug\net8.0\validaNomeUsuario.runtimeconfig.json
+C:\Users\Ei! Brownie\source\repos\validaNomeUsuario\validaNomeUsuario\bin\Debug\net8.0\validaNomeUsuario.dll
+C:\Users\Ei! Brownie\source\repos\validaNomeUsuario\validaNomeUsuario\bin\Debug\net8.0\validaNomeUsuario.pdb
+C:\Users\Ei! Brownie\source\repos\validaNomeUsuario\validaNomeUsuario\obj\Debug\net8.0\validaNomeUsuario.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ei! Brownie\source\repos\validaNomeUsuario\validaNomeUsuario\obj\Debug\net8.0\validaNomeUsuario.AssemblyInfoInputs.cache
+C:\Users\Ei! Brownie\source\repos\validaNomeUsuario\validaNomeUsuario\obj\Debug\net8.0\validaNomeUsuario.AssemblyInfo.cs
+C:\Users\Ei! Brownie\source\repos\validaNomeUsuario\validaNomeUsuario\obj\Debug\net8.0\validaNomeUsuario.csproj.CoreCompileInputs.cache
+C:\Users\Ei! Brownie\source\repos\validaNomeUsuario\validaNomeUsuario\obj\Debug\net8.0\validaNomeUsuario.dll
+C:\Users\Ei! Brownie\source\repos\validaNomeUsuario\validaNomeUsuario\obj\Debug\net8.0\refint\validaNomeUsuario.dll
+C:\Users\Ei! Brownie\source\repos\validaNomeUsuario\validaNomeUsuario\obj\Debug\net8.0\validaNomeUsuario.pdb
+C:\Users\Ei! Brownie\source\repos\validaNomeUsuario\validaNomeUsuario\obj\Debug\net8.0\validaNomeUsuario.genruntimeconfig.cache
+C:\Users\Ei! Brownie\source\repos\validaNomeUsuario\validaNomeUsuario\obj\Debug\net8.0\ref\validaNomeUsuario.dll

@@ -1,0 +1,14 @@
+C:\Users\Ei! Brownie\source\repos\somaEnquantoPositivo\somaEnquantoPositivo\bin\Debug\net8.0\somaEnquantoPositivo.exe
+C:\Users\Ei! Brownie\source\repos\somaEnquantoPositivo\somaEnquantoPositivo\bin\Debug\net8.0\somaEnquantoPositivo.deps.json
+C:\Users\Ei! Brownie\source\repos\somaEnquantoPositivo\somaEnquantoPositivo\bin\Debug\net8.0\somaEnquantoPositivo.runtimeconfig.json
+C:\Users\Ei! Brownie\source\repos\somaEnquantoPositivo\somaEnquantoPositivo\bin\Debug\net8.0\somaEnquantoPositivo.dll
+C:\Users\Ei! Brownie\source\repos\somaEnquantoPositivo\somaEnquantoPositivo\bin\Debug\net8.0\somaEnquantoPositivo.pdb
+C:\Users\Ei! Brownie\source\repos\somaEnquantoPositivo\somaEnquantoPositivo\obj\Debug\net8.0\somaEnquantoPositivo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ei! Brownie\source\repos\somaEnquantoPositivo\somaEnquantoPositivo\obj\Debug\net8.0\somaEnquantoPositivo.AssemblyInfoInputs.cache
+C:\Users\Ei! Brownie\source\repos\somaEnquantoPositivo\somaEnquantoPositivo\obj\Debug\net8.0\somaEnquantoPositivo.AssemblyInfo.cs
+C:\Users\Ei! Brownie\source\repos\somaEnquantoPositivo\somaEnquantoPositivo\obj\Debug\net8.0\somaEnquantoPositivo.csproj.CoreCompileInputs.cache
+C:\Users\Ei! Brownie\source\repos\somaEnquantoPositivo\somaEnquantoPositivo\obj\Debug\net8.0\somaEnquantoPositivo.dll
+C:\Users\Ei! Brownie\source\repos\somaEnquantoPositivo\somaEnquantoPositivo\obj\Debug\net8.0\refint\somaEnquantoPositivo.dll
+C:\Users\Ei! Brownie\source\repos\somaEnquantoPositivo\somaEnquantoPositivo\obj\Debug\net8.0\somaEnquantoPositivo.pdb
+C:\Users\Ei! Brownie\source\repos\somaEnquantoPositivo\somaEnquantoPositivo\obj\Debug\net8.0\somaEnquantoPositivo.genruntimeconfig.cache
+C:\Users\Ei! Brownie\source\repos\somaEnquantoPositivo\somaEnquantoPositivo\obj\Debug\net8.0\ref\somaEnquantoPositivo.dll

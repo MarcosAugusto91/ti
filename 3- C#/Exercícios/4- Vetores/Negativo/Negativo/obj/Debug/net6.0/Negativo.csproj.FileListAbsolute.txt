@@ -1,0 +1,15 @@
+C:\Users\marcos.aazevedo3\source\repos\Negativo\Negativo\bin\Debug\net6.0\Negativo.exe
+C:\Users\marcos.aazevedo3\source\repos\Negativo\Negativo\bin\Debug\net6.0\Negativo.deps.json
+C:\Users\marcos.aazevedo3\source\repos\Negativo\Negativo\bin\Debug\net6.0\Negativo.runtimeconfig.json
+C:\Users\marcos.aazevedo3\source\repos\Negativo\Negativo\bin\Debug\net6.0\Negativo.dll
+C:\Users\marcos.aazevedo3\source\repos\Negativo\Negativo\bin\Debug\net6.0\Negativo.pdb
+C:\Users\marcos.aazevedo3\source\repos\Negativo\Negativo\obj\Debug\net6.0\Negativo.csproj.AssemblyReference.cache
+C:\Users\marcos.aazevedo3\source\repos\Negativo\Negativo\obj\Debug\net6.0\Negativo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marcos.aazevedo3\source\repos\Negativo\Negativo\obj\Debug\net6.0\Negativo.AssemblyInfoInputs.cache
+C:\Users\marcos.aazevedo3\source\repos\Negativo\Negativo\obj\Debug\net6.0\Negativo.AssemblyInfo.cs
+C:\Users\marcos.aazevedo3\source\repos\Negativo\Negativo\obj\Debug\net6.0\Negativo.csproj.CoreCompileInputs.cache
+C:\Users\marcos.aazevedo3\source\repos\Negativo\Negativo\obj\Debug\net6.0\Negativo.dll
+C:\Users\marcos.aazevedo3\source\repos\Negativo\Negativo\obj\Debug\net6.0\refint\Negativo.dll
+C:\Users\marcos.aazevedo3\source\repos\Negativo\Negativo\obj\Debug\net6.0\Negativo.pdb
+C:\Users\marcos.aazevedo3\source\repos\Negativo\Negativo\obj\Debug\net6.0\Negativo.genruntimeconfig.cache
+C:\Users\marcos.aazevedo3\source\repos\Negativo\Negativo\obj\Debug\net6.0\ref\Negativo.dll

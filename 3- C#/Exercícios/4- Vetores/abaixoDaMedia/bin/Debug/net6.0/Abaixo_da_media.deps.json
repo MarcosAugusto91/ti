@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Abaixo_da_media/1.0.0": {
+        "runtime": {
+          "Abaixo_da_media.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Abaixo_da_media/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
