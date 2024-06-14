@@ -9,7 +9,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Menu Hamburguer</title>
-</head>.
+</head>
 
 <body onresize="mudouTamanho()">
     <header>
@@ -58,6 +58,8 @@
         function mudouTamanho(){
             if (window.innerWidth >= 768){
                 itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
             }
         }
     </script>
