@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header{
+    display: flex;
+    background-color: gray;
+    height: 100px;
+}
+
+.headinhos{
+    flex: auto;
+    background-color: white;
+    margin: 10px;
+}
+
+.logo{}
+.títuloheader{}
+.carrinho{}
