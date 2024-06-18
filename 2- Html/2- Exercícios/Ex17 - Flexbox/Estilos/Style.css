@@ -7,7 +7,7 @@
     background-color: gray;
     display: flex;
     flex-direction: row; /*row-reverse column column-reverse EX1 */
-    flex-wrap: nowrap; /*wrap wrap-reverse */
+    flex-wrap: wrap; /*wrap wrap-reverse */
     /* flex-flow: row nowrap; */
     /* justify-content: space-around; flex-end center space-between space-around Hori */ 
     /* align-items: baseline; /*stretch center flex-start flex-end baseline  Vertical*/
@@ -19,7 +19,7 @@
     text-align: center;
     padding: 10px;
     margin: 10px;
-    width: 100px;
+    width: 200px;
     height: 100px;
     /*flex:auto;*/
     /*flex-grow:5;*/
