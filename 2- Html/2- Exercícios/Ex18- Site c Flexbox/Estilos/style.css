@@ -71,7 +71,7 @@ main{
 
 .menulat{
     background-color: gray;
-    width: 17%;
+    width: 12%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -80,7 +80,7 @@ main{
 
 .corpo{
     background-color: white;
-    width: 83%;
+    width: 88%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -98,12 +98,12 @@ main{
 .produto{
     background-color:gray;
     margin: 1px;
-    height: 204.1px;
+    height: 216.5px;
 }
 
 .produto > img{
-    width: 204.1px;
-    height: 204.1px;
+    width: 216.5px;
+    height: 216.5px;
 }
 
 footer{
@@ -113,8 +113,27 @@ footer{
 
 /*itens$*div5*/
 
-@media screen and (max-width:768px){} /*TABLET*/
-@media screen and (min-width:768px) and (max-width:992px){} /*TABLET*/
-@media screen and (min-width:992px) and (max-width:1200px){} /*DESKTOP*/
-@media screen and (min-width:1200px){} /*GRANDES TELAS*/
-@media print{} /*IMPRESSORA*/
+@media screen and (max-width:454px){ /*CELULAR*/
+    .menulat{
+        display: none;
+    }
+    .corpo{width: 100%;}
+    .produto{height: 150px;}
+    .produto > img{
+        width: 150px;
+        height: 150px;
+    }
+} 
+
+@media screen and (min-width:455px) and (max-width:754px){ /*CELULAR*/
+    .menulat{width: 30%;}
+    .corpo{width: 70%;}
+    .produto > img{
+        width: 252px;
+        height: 252px;
+    }
+} 
+@media screen and (min-width:754px) and (max-width:992px){
+    .menulat{width: 20%;}
+    .corpo{width: 80%;}
+}
