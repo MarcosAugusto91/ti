@@ -1,0 +1,15 @@
+C:\Users\marcos.aazevedo3\source\repos\Matriz - teste\Matriz - teste\bin\Debug\net6.0\Matriz - teste.exe
+C:\Users\marcos.aazevedo3\source\repos\Matriz - teste\Matriz - teste\bin\Debug\net6.0\Matriz - teste.deps.json
+C:\Users\marcos.aazevedo3\source\repos\Matriz - teste\Matriz - teste\bin\Debug\net6.0\Matriz - teste.runtimeconfig.json
+C:\Users\marcos.aazevedo3\source\repos\Matriz - teste\Matriz - teste\bin\Debug\net6.0\Matriz - teste.dll
+C:\Users\marcos.aazevedo3\source\repos\Matriz - teste\Matriz - teste\bin\Debug\net6.0\Matriz - teste.pdb
+C:\Users\marcos.aazevedo3\source\repos\Matriz - teste\Matriz - teste\obj\Debug\net6.0\Matriz - teste.csproj.AssemblyReference.cache
+C:\Users\marcos.aazevedo3\source\repos\Matriz - teste\Matriz - teste\obj\Debug\net6.0\Matriz - teste.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marcos.aazevedo3\source\repos\Matriz - teste\Matriz - teste\obj\Debug\net6.0\Matriz - teste.AssemblyInfoInputs.cache
+C:\Users\marcos.aazevedo3\source\repos\Matriz - teste\Matriz - teste\obj\Debug\net6.0\Matriz - teste.AssemblyInfo.cs
+C:\Users\marcos.aazevedo3\source\repos\Matriz - teste\Matriz - teste\obj\Debug\net6.0\Matriz - teste.csproj.CoreCompileInputs.cache
+C:\Users\marcos.aazevedo3\source\repos\Matriz - teste\Matriz - teste\obj\Debug\net6.0\Matriz - teste.dll
+C:\Users\marcos.aazevedo3\source\repos\Matriz - teste\Matriz - teste\obj\Debug\net6.0\refint\Matriz - teste.dll
+C:\Users\marcos.aazevedo3\source\repos\Matriz - teste\Matriz - teste\obj\Debug\net6.0\Matriz - teste.pdb
+C:\Users\marcos.aazevedo3\source\repos\Matriz - teste\Matriz - teste\obj\Debug\net6.0\Matriz - teste.genruntimeconfig.cache
+C:\Users\marcos.aazevedo3\source\repos\Matriz - teste\Matriz - teste\obj\Debug\net6.0\ref\Matriz - teste.dll
