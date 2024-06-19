@@ -14,39 +14,44 @@
 */
 
 .container{ /* DIV PAI */
+    background-image: url(../imagens/fundo2.jpg);
     display: grid;
-    grid-template-columns: repeat(5, 150px);
-    grid-template-rows: 200px 200px 200px 100px 100px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 200px 200px 200px 80px ;
     /*grid-auto-rows: 200px*/
     /*grid-gap: 10px;*/
     /*grid-column-gap:10px;*/
     /*grid-row-gap:10px;*/
-    grid-template-areas: "null header header header header" 
-                         "main  main   main   main   aside"
-                         "footer footer footer footer footer" ;
-
+    grid-template-areas: "header header header header header header header header header header header header" 
+                         "aside  aside   null   null   main   main   main   main  main   main   main   main"
+                         "aside  aside   null   null   main   main   main   main   main  main   main   main"
+                         "footer footer footer footer footer footer footer footer footer footer footer footer";
     /* align-items: start; center, end; stretch */
     /* justify-items: start;  center, end; */
-    
 }
 
 /* FILHOS */
 .header{
     /*grid-column: 1 / 6;*/
+    border: 1px solid green;
     grid-area: header;
-    background-color: gray;
+    justify-self: center;
+    align-self: center;
 }
 
 .main{
     /*grid-column: 4 / 6;*/
+    /*grid-row: 2 / 4 */
     grid-area: main;
-    background-color: red;
+    border: 1px solid red;
 }
 
 .aside{
+    justify-self: center;
+    align-self: center;
     /*grid-column: 1 / 2; */
-    grid-area: aside;
-    background-color: yellow;
+    grid-area: aside;  
+    border: 1px solid blue;
 }
 
 .footer{
@@ -55,9 +60,14 @@
     grid-row-start: 3;
     grid-row-end: 6 ;*/
     grid-area: footer;
-    background-color: blue;
+    display: grid;
+    border: 1px solid black;
 }
-
 
 /* justify-self:
 align-self: */
+
+h1, p{
+    padding: 10px;
+    color: white;
+}
