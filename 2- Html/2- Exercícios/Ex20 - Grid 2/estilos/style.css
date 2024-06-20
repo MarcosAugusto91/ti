@@ -1,0 +1,36 @@
+@charset "UFT-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1FR) 2fr minmax(100px, 1fr);
+    grid-auto-rows: 200px;
+}
+
+.header{
+    grid-column: 1 / -1;
+    background-color: gray;
+}
+
+.aside{
+    background-color: dimgray;
+    grid-column: 1/3;
+    grid-row: 2/4;
+    z-index: 1;
+}
+
+.main{
+    background-color: darkslategrey;
+    grid-column: 2/-1;
+    grid-row: 3/5;
+    z-index: 2;
+}
+
+.footer{
+    background-color: dodgerblue;
+    grid-column: 1/-1;
+}
