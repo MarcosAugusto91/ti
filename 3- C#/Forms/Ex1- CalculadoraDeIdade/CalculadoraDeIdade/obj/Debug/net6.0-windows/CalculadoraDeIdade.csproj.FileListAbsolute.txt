@@ -1,0 +1,17 @@
+C:\Users\marcos.aazevedo3\source\repos\CalculadoraDeIdade\CalculadoraDeIdade\bin\Debug\net6.0-windows\CalculadoraDeIdade.exe
+C:\Users\marcos.aazevedo3\source\repos\CalculadoraDeIdade\CalculadoraDeIdade\bin\Debug\net6.0-windows\CalculadoraDeIdade.deps.json
+C:\Users\marcos.aazevedo3\source\repos\CalculadoraDeIdade\CalculadoraDeIdade\bin\Debug\net6.0-windows\CalculadoraDeIdade.runtimeconfig.json
+C:\Users\marcos.aazevedo3\source\repos\CalculadoraDeIdade\CalculadoraDeIdade\bin\Debug\net6.0-windows\CalculadoraDeIdade.dll
+C:\Users\marcos.aazevedo3\source\repos\CalculadoraDeIdade\CalculadoraDeIdade\bin\Debug\net6.0-windows\CalculadoraDeIdade.pdb
+C:\Users\marcos.aazevedo3\source\repos\CalculadoraDeIdade\CalculadoraDeIdade\obj\Debug\net6.0-windows\CalculadoraDeIdade.csproj.AssemblyReference.cache
+C:\Users\marcos.aazevedo3\source\repos\CalculadoraDeIdade\CalculadoraDeIdade\obj\Debug\net6.0-windows\CalculadoraDeIdade.Form1.resources
+C:\Users\marcos.aazevedo3\source\repos\CalculadoraDeIdade\CalculadoraDeIdade\obj\Debug\net6.0-windows\CalculadoraDeIdade.csproj.GenerateResource.cache
+C:\Users\marcos.aazevedo3\source\repos\CalculadoraDeIdade\CalculadoraDeIdade\obj\Debug\net6.0-windows\CalculadoraDeIdade.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marcos.aazevedo3\source\repos\CalculadoraDeIdade\CalculadoraDeIdade\obj\Debug\net6.0-windows\CalculadoraDeIdade.AssemblyInfoInputs.cache
+C:\Users\marcos.aazevedo3\source\repos\CalculadoraDeIdade\CalculadoraDeIdade\obj\Debug\net6.0-windows\CalculadoraDeIdade.AssemblyInfo.cs
+C:\Users\marcos.aazevedo3\source\repos\CalculadoraDeIdade\CalculadoraDeIdade\obj\Debug\net6.0-windows\CalculadoraDeIdade.csproj.CoreCompileInputs.cache
+C:\Users\marcos.aazevedo3\source\repos\CalculadoraDeIdade\CalculadoraDeIdade\obj\Debug\net6.0-windows\CalculadoraDeIdade.dll
+C:\Users\marcos.aazevedo3\source\repos\CalculadoraDeIdade\CalculadoraDeIdade\obj\Debug\net6.0-windows\refint\CalculadoraDeIdade.dll
+C:\Users\marcos.aazevedo3\source\repos\CalculadoraDeIdade\CalculadoraDeIdade\obj\Debug\net6.0-windows\CalculadoraDeIdade.pdb
+C:\Users\marcos.aazevedo3\source\repos\CalculadoraDeIdade\CalculadoraDeIdade\obj\Debug\net6.0-windows\CalculadoraDeIdade.genruntimeconfig.cache
+C:\Users\marcos.aazevedo3\source\repos\CalculadoraDeIdade\CalculadoraDeIdade\obj\Debug\net6.0-windows\ref\CalculadoraDeIdade.dll
