@@ -1,0 +1,17 @@
+C:\Users\marcos.aazevedo3\source\repos\calculadoraTradicional\calculadoraTradicional\bin\Debug\net6.0-windows\calculadoraTradicional.exe
+C:\Users\marcos.aazevedo3\source\repos\calculadoraTradicional\calculadoraTradicional\bin\Debug\net6.0-windows\calculadoraTradicional.deps.json
+C:\Users\marcos.aazevedo3\source\repos\calculadoraTradicional\calculadoraTradicional\bin\Debug\net6.0-windows\calculadoraTradicional.runtimeconfig.json
+C:\Users\marcos.aazevedo3\source\repos\calculadoraTradicional\calculadoraTradicional\bin\Debug\net6.0-windows\calculadoraTradicional.dll
+C:\Users\marcos.aazevedo3\source\repos\calculadoraTradicional\calculadoraTradicional\bin\Debug\net6.0-windows\calculadoraTradicional.pdb
+C:\Users\marcos.aazevedo3\source\repos\calculadoraTradicional\calculadoraTradicional\obj\Debug\net6.0-windows\calculadoraTradicional.csproj.AssemblyReference.cache
+C:\Users\marcos.aazevedo3\source\repos\calculadoraTradicional\calculadoraTradicional\obj\Debug\net6.0-windows\calculadoraTradicional.Form1.resources
+C:\Users\marcos.aazevedo3\source\repos\calculadoraTradicional\calculadoraTradicional\obj\Debug\net6.0-windows\calculadoraTradicional.csproj.GenerateResource.cache
+C:\Users\marcos.aazevedo3\source\repos\calculadoraTradicional\calculadoraTradicional\obj\Debug\net6.0-windows\calculadoraTradicional.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marcos.aazevedo3\source\repos\calculadoraTradicional\calculadoraTradicional\obj\Debug\net6.0-windows\calculadoraTradicional.AssemblyInfoInputs.cache
+C:\Users\marcos.aazevedo3\source\repos\calculadoraTradicional\calculadoraTradicional\obj\Debug\net6.0-windows\calculadoraTradicional.AssemblyInfo.cs
+C:\Users\marcos.aazevedo3\source\repos\calculadoraTradicional\calculadoraTradicional\obj\Debug\net6.0-windows\calculadoraTradicional.csproj.CoreCompileInputs.cache
+C:\Users\marcos.aazevedo3\source\repos\calculadoraTradicional\calculadoraTradicional\obj\Debug\net6.0-windows\calculadoraTradicional.dll
+C:\Users\marcos.aazevedo3\source\repos\calculadoraTradicional\calculadoraTradicional\obj\Debug\net6.0-windows\refint\calculadoraTradicional.dll
+C:\Users\marcos.aazevedo3\source\repos\calculadoraTradicional\calculadoraTradicional\obj\Debug\net6.0-windows\calculadoraTradicional.pdb
+C:\Users\marcos.aazevedo3\source\repos\calculadoraTradicional\calculadoraTradicional\obj\Debug\net6.0-windows\calculadoraTradicional.genruntimeconfig.cache
+C:\Users\marcos.aazevedo3\source\repos\calculadoraTradicional\calculadoraTradicional\obj\Debug\net6.0-windows\ref\calculadoraTradicional.dll

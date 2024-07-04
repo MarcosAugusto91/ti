@@ -1,0 +1,17 @@
+C:\Users\marcos.aazevedo3\source\repos\calculadoraRadioButton\calculadoraRadioButton\bin\Debug\net6.0-windows\calculadoraRadioButton.exe
+C:\Users\marcos.aazevedo3\source\repos\calculadoraRadioButton\calculadoraRadioButton\bin\Debug\net6.0-windows\calculadoraRadioButton.deps.json
+C:\Users\marcos.aazevedo3\source\repos\calculadoraRadioButton\calculadoraRadioButton\bin\Debug\net6.0-windows\calculadoraRadioButton.runtimeconfig.json
+C:\Users\marcos.aazevedo3\source\repos\calculadoraRadioButton\calculadoraRadioButton\bin\Debug\net6.0-windows\calculadoraRadioButton.dll
+C:\Users\marcos.aazevedo3\source\repos\calculadoraRadioButton\calculadoraRadioButton\bin\Debug\net6.0-windows\calculadoraRadioButton.pdb
+C:\Users\marcos.aazevedo3\source\repos\calculadoraRadioButton\calculadoraRadioButton\obj\Debug\net6.0-windows\calculadoraRadioButton.csproj.AssemblyReference.cache
+C:\Users\marcos.aazevedo3\source\repos\calculadoraRadioButton\calculadoraRadioButton\obj\Debug\net6.0-windows\calculadoraRadioButton.Form1.resources
+C:\Users\marcos.aazevedo3\source\repos\calculadoraRadioButton\calculadoraRadioButton\obj\Debug\net6.0-windows\calculadoraRadioButton.csproj.GenerateResource.cache
+C:\Users\marcos.aazevedo3\source\repos\calculadoraRadioButton\calculadoraRadioButton\obj\Debug\net6.0-windows\calculadoraRadioButton.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marcos.aazevedo3\source\repos\calculadoraRadioButton\calculadoraRadioButton\obj\Debug\net6.0-windows\calculadoraRadioButton.AssemblyInfoInputs.cache
+C:\Users\marcos.aazevedo3\source\repos\calculadoraRadioButton\calculadoraRadioButton\obj\Debug\net6.0-windows\calculadoraRadioButton.AssemblyInfo.cs
+C:\Users\marcos.aazevedo3\source\repos\calculadoraRadioButton\calculadoraRadioButton\obj\Debug\net6.0-windows\calculadoraRadioButton.csproj.CoreCompileInputs.cache
+C:\Users\marcos.aazevedo3\source\repos\calculadoraRadioButton\calculadoraRadioButton\obj\Debug\net6.0-windows\calculadoraRadioButton.dll
+C:\Users\marcos.aazevedo3\source\repos\calculadoraRadioButton\calculadoraRadioButton\obj\Debug\net6.0-windows\refint\calculadoraRadioButton.dll
+C:\Users\marcos.aazevedo3\source\repos\calculadoraRadioButton\calculadoraRadioButton\obj\Debug\net6.0-windows\calculadoraRadioButton.pdb
+C:\Users\marcos.aazevedo3\source\repos\calculadoraRadioButton\calculadoraRadioButton\obj\Debug\net6.0-windows\calculadoraRadioButton.genruntimeconfig.cache
+C:\Users\marcos.aazevedo3\source\repos\calculadoraRadioButton\calculadoraRadioButton\obj\Debug\net6.0-windows\ref\calculadoraRadioButton.dll
