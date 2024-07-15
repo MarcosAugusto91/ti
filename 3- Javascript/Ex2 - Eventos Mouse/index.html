@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 2 - Eventos mouse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+        <div id="div01" onclick="clicar()" onmouseenter="ent1()" onmouseout="sair1()">1</div>        
+        <div id="div02" onclick="clicar()" onmouseenter="ent2()" onmouseout="sair2()">2</div>        
+        <div id="div03" onclick="clicar()" onmouseenter="ent3()" onmouseout="sair3()">3</div>        
+        <div id="div04" onclick="clicar()" onmouseenter="ent4()" onmouseout="sair4()">4</div>        
+        <div id="div05" onclick="clicar()" onmouseenter="ent5()" onmouseout="sair5()">5</div>    
+        <div id="div06" onclick="clicar()" onmouseenter="ent6()" onmouseout="sair6()">6</div>        
+        <div id="div07" onclick="clicar()" onmouseenter="ent7()" onmouseout="sair7()">7</div>        
+        <div id="div08" onclick="clicar()" onmouseenter="ent8()" onmouseout="sair8()">8</div>        
+        <div id="div09" onclick="clicar()" onmouseenter="ent9()" onmouseout="sair9()">9</div>        
+        <div id="div10" onclick="clicar()" onmouseenter="ent10()" onmouseout="sair10()">10</div>                   
+    </main>
+
+    <script>
+        var a = window.document.getElementById('div01')
+        var b = window.document.getElementById('div02')
+        var c = window.document.getElementById('div03')
+        var d = window.document.getElementById('div04')
+        var e = window.document.getElementById('div05')
+        var f = window.document.getElementById('div06')
+        var g = window.document.getElementById('div07')
+        var h = window.document.getElementById('div08')
+        var i = window.document.getElementById('div09')
+        var j = window.document.getElementById('div10')
+        //var a = window.document.querySelector('div.teste')
+        
+
+        function clicar(){
+        a.innerText = 'Clicou!'
+        b.innerText = 'Clicou!'
+        c.innerText = 'Clicou!'
+        d.innerText = 'Clicou!'
+        e.innerText = 'Clicou!'
+        f.innerText = 'Clicou!'
+        g.innerText = 'Clicou!'
+        h.innerText = 'Clicou!'
+        i.innerText = 'Clicou!'
+        j.innerText = 'Clicou!'
+
+        }
+
+        function ent1(){  
+        a.style.backgroundColor = 'gray'
+        a.style.color = 'white'
+        }
+        function ent2(){  
+        b.style.backgroundColor = 'gray'
+        b.style.color = 'white'
+        }
+        function ent3(){  
+        c.style.backgroundColor = 'gray'
+        c.style.color = 'white'
+        }
+        function ent4(){  
+        d.style.backgroundColor = 'gray'
+        d.style.color = 'white'
+        }
+        function ent5(){  
+        e.style.backgroundColor = 'gray'
+        e.style.color = 'white'
+        }
+        function ent6(){  
+        f.style.backgroundColor = 'gray'
+        f.style.color = 'white'
+        }
+        function ent7(){  
+        g.style.backgroundColor = 'gray'
+        g.style.color = 'white'
+        }
+        function ent8(){  
+        h.style.backgroundColor = 'gray'
+        h.style.color = 'white'
+        }
+        function ent9(){  
+        i.style.backgroundColor = 'gray'
+        i.style.color = 'white'
+        }
+        function ent10(){  
+        j.style.backgroundColor = 'gray'
+        j.style.color = 'white'
+        }
+              
+        function sair1(){
+        a.style.backgroundColor = 'white'
+        }
+        function sair2(){
+        b.style.backgroundColor = 'white'
+        }
+        function sair3(){
+        c.style.backgroundColor = 'white'
+        }
+        function sair4(){
+        d.style.backgroundColor = 'white'
+        }
+        function sair5(){
+        e.style.backgroundColor = 'white'
+        }
+        function sair6(){
+        f.style.backgroundColor = 'white'
+        }
+        function sair7(){
+        g.style.backgroundColor = 'white'
+        }
+        function sair8(){
+        h.style.backgroundColor = 'white'
+        }
+        function sair9(){
+        i.style.backgroundColor = 'white'
+        }
+        function sair10(){
+        j.style.backgroundColor = 'white'
+        }
+
+
+    </script>
+
+    
+</body>
+</html>
