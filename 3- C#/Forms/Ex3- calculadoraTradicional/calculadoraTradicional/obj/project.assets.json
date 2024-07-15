@@ -8,19 +8,24 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\marcos.aazevedo3\\.nuget\\packages\\": {}
+    "C:\\Users\\Ei! Brownie\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marcos.aazevedo3\\source\\repos\\calculadoraTradicional\\calculadoraTradicional\\calculadoraTradicional.csproj",
+      "projectUniqueName": "C:\\Users\\Ei! Brownie\\Documents\\GitHub\\ti\\3- C#\\Forms\\Ex3- calculadoraTradicional\\calculadoraTradicional\\calculadoraTradicional.csproj",
       "projectName": "calculadoraTradicional",
-      "projectPath": "C:\\Users\\marcos.aazevedo3\\source\\repos\\calculadoraTradicional\\calculadoraTradicional\\calculadoraTradicional.csproj",
-      "packagesPath": "C:\\Users\\marcos.aazevedo3\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marcos.aazevedo3\\source\\repos\\calculadoraTradicional\\calculadoraTradicional\\obj\\",
+      "projectPath": "C:\\Users\\Ei! Brownie\\Documents\\GitHub\\ti\\3- C#\\Forms\\Ex3- calculadoraTradicional\\calculadoraTradicional\\calculadoraTradicional.csproj",
+      "packagesPath": "C:\\Users\\Ei! Brownie\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ei! Brownie\\Documents\\GitHub\\ti\\3- C#\\Forms\\Ex3- calculadoraTradicional\\calculadoraTradicional\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\marcos.aazevedo3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ei! Brownie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -40,6 +45,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -56,6 +66,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.28, 6.0.28]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.28, 6.0.28]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.28, 6.0.28]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.28, 6.0.28]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -64,7 +92,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
