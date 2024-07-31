@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Calculadora de Áreas/1.0.0": {
+        "runtime": {
+          "Calculadora de Áreas.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Calculadora de Áreas/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
