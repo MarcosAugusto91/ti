@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sWyMqu5rddOsQsbUdKQbMspOF/E7+UbF6N8629+1flpeNYr9Z7PRZZrPLvNcD/R51RawlV2FGSCR5tryyXekzA==",
+  "dgSpecHash": "d9l3Yno3kZfranfIL2RUGV2RYtP36boqkmgaV2yMKwYO1V0oWE4uX2gU1eaEgTvhSYKc99OI70OhAci9JS9NxA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ei! Brownie\\Documents\\GitHub\\ti\\3- C#\\Forms\\Ex3- calculadoraTradicional\\calculadoraTradicional\\calculadoraTradicional.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Ei! Brownie\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
-    "C:\\Users\\Ei! Brownie\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
-    "C:\\Users\\Ei! Brownie\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512",
-    "C:\\Users\\Ei! Brownie\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.28\\microsoft.netcore.app.host.win-x64.6.0.28.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\Ei! Brownie\\Documents\\GitHub\\ti\\4- C#\\Forms\\Ex3- calculadoraTradicional\\calculadoraTradicional\\calculadoraTradicional.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

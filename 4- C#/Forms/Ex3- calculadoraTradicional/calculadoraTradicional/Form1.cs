@@ -90,27 +90,32 @@ namespace calculadoraTradicional
 
         public void btnIgual_Click(object sender, EventArgs e)
         {
+            if (txtResultado.Text == "")
+            {
+                txtResultado.Text = "0";
+            }
+
             b = int.Parse(txtResultado.Text);
-            if (operacao == "soma")
-            {
-                resultado = a + b;
-                txtResultado.Text = resultado.ToString();
-            }
-            else if (operacao == "sub")
-            {
-                resultado = a - b;
-                txtResultado.Text = resultado.ToString();
-            }
-            else if (operacao == "multi")
-            {
-                resultado = a * b;
-                txtResultado.Text = resultado.ToString();
-            }
-            else if (operacao == "div")
-            {
-                resultado = a / b;
-                txtResultado.Text = resultado.ToString();
-            }
+                if (operacao == "soma")
+                {
+                    resultado = a + b;
+                    txtResultado.Text = resultado.ToString();
+                }
+                else if (operacao == "sub")
+                {
+                    resultado = a - b;
+                    txtResultado.Text = resultado.ToString();
+                }
+                else if (operacao == "multi")
+                {
+                    resultado = a * b;
+                    txtResultado.Text = resultado.ToString();
+                }
+                else if (operacao == "div")
+                {
+                    resultado = a / b;
+                    txtResultado.Text = resultado.ToString();
+                }
         }
 
         private void btnMulti_Click(object sender, EventArgs e)
