@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Ei! Brownie\\Documents\\GitHub\\ti\\4- C#\\Forms\\Ex3- calculadoraTradicional\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{95436328-742C-4829-A72B-E47B55CBC10A}|calculadoraTradicional\\calculadoraTradicional.csproj|c:\\users\\ei! brownie\\documents\\github\\ti\\4- c#\\forms\\ex3- calculadoratradicional\\calculadoratradicional\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{95436328-742C-4829-A72B-E47B55CBC10A}|calculadoraTradicional\\calculadoraTradicional.csproj|solutionrelative:calculadoratradicional\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95436328-742C-4829-A72B-E47B55CBC10A}|calculadoraTradicional\\calculadoraTradicional.csproj|C:\\Users\\Ei! Brownie\\Documents\\GitHub\\ti\\4- C#\\Forms\\Ex3- calculadoraTradicional\\calculadoratradicional\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95436328-742C-4829-A72B-E47B55CBC10A}|calculadoraTradicional\\calculadoraTradicional.csproj|solutionrelative:calculadoratradicional\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Ei! Brownie\\Documents\\GitHub\\ti\\4- C#\\Forms\\Ex3- calculadoraTradicional\\calculadoraTradicional\\Form1.cs",
+              "RelativeDocumentMoniker": "calculadoraTradicional\\Form1.cs",
+              "ToolTip": "C:\\Users\\Ei! Brownie\\Documents\\GitHub\\ti\\4- C#\\Forms\\Ex3- calculadoraTradicional\\calculadoraTradicional\\Form1.cs [Projeto]",
+              "RelativeToolTip": "calculadoraTradicional\\Form1.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T00:54:29.28Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Ei! Brownie\\Documents\\GitHub\\ti\\4- C#\\Forms\\Ex3- calculadoraTradicional\\calculadoraTradicional\\Form1.cs",
+              "RelativeDocumentMoniker": "calculadoraTradicional\\Form1.cs",
+              "ToolTip": "C:\\Users\\Ei! Brownie\\Documents\\GitHub\\ti\\4- C#\\Forms\\Ex3- calculadoraTradicional\\calculadoraTradicional\\Form1.cs",
+              "RelativeToolTip": "calculadoraTradicional\\Form1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAF4AAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-04T00:54:29.201Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

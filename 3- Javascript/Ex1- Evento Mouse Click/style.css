@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body{
+    width: 100%;
+    background-color: gray;
+}
+
+div{
+    margin: auto;
+    width: 900px;
+    height: 500px;
+    text-align: center;
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+h1{
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+h4{
+    margin-top: 10px;
+}

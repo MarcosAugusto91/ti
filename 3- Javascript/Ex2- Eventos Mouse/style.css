@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body{ 
+    width: 100%;
+    background-color: gray;
+}
+
+main{
+    width: 500px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: aquamarine;
+}
+
+div{
+    color: white;
+    padding-top: 10px;
+    margin: 0px;
+    width: 20%;
+    height: 100px;
+    margin-right: -4px;
+    display: inline-block;
+    background-color: white;
+    text-align: center;
+}
+
