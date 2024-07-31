@@ -21,24 +21,15 @@ Inicio
       
       para contador de x ate y faca
            se contador % 2 <> 0 entao
-              escreval("Número Impar: ",contador)
-              z <- z + contador
+              se (contador <> x) e (contador <> y) entao
+                 escreval("Número Impar: ",contador)
+                 z <- z + contador
+              fimse
            fimse
       fimpara
       escreval()
       escreva("Soma dos números impares entre a seleção: ",z)
       escreval()
-      
-      z <- 0
-      
-      para contador de x ate y faca
-           se contador % 2 = 0 entao
-              escreval("Número par: ",contador)
-              z <- z + contador
-           fimse
-      fimpara
-      escreval()
-      escreva("Soma dos números pares entre a seleção: ",z)
 
 
 Fimalgoritmo
