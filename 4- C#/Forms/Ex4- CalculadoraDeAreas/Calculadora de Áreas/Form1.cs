@@ -39,67 +39,102 @@ namespace Calculadora_de_Áreas
             switch (selecao)
             {
                 case 0: //quadrado
-                    expressao = expressao + txt2.Text + " * " + txt2.Text;
-                    op1 = double.Parse(txt2.Text);
-                    resultado = op1 * op1;
-                    lblresultado.Text = resultado.ToString();
-                    resultado = Math.Round(resultado, 2);
-                    lblresultado.Visible = true;
-                    lblexpressao.Text = expressao;
-                    lblexpressao.Visible = true;
-                    txt2.Focus();
+                    if (txt2.Text == "")
+                    {
+                        MessageBox.Show("Preencha os campos obrigatórios!");
+                    }
+                    else
+                    {
+                        expressao = expressao + txt2.Text + " * " + txt2.Text;
+                        op1 = double.Parse(txt2.Text);
+                        resultado = op1 * op1;
+                        resultado = Math.Round(resultado, 2);
+                        lblresultado.Text = resultado.ToString();
+                        lblresultado.Visible = true;
+                        lblexpressao.Text = expressao;
+                        lblexpressao.Visible = true;
+                        txt2.Focus();
+                    }
                     break;
 
                 case 1: //retangulo
-                    expressao = expressao + txt1.Text + " * " + txt2.Text;
-                    op1 = double.Parse(txt1.Text);
-                    op2 = double.Parse(txt2.Text);
-                    resultado = op1 * op2;
-                    resultado = Math.Round(resultado, 2);
-                    lblresultado.Text = resultado.ToString();
-                    lblresultado.Visible = true;
-                    lblexpressao.Text = expressao;
-                    lblexpressao.Visible = true;
-                    txt1.Focus();
+                    if (txt1.Text == "" || txt2.Text == "")
+                    {
+                        MessageBox.Show("Preencha os campos obrigatórios!");
+                    }
+                    else
+                    {
+                        expressao = expressao + txt1.Text + " * " + txt2.Text;
+                        op1 = double.Parse(txt1.Text);
+                        op2 = double.Parse(txt2.Text);
+                        resultado = op1 * op2;
+                        resultado = Math.Round(resultado, 2);
+                        lblresultado.Text = resultado.ToString();
+                        lblresultado.Visible = true;
+                        lblexpressao.Text = expressao;
+                        lblexpressao.Visible = true;
+                        txt1.Focus();
+                    }
                     break;
 
                 case 2: //triangulo
-                    expressao = "(" + txt1.Text + " * " + txt2.Text + ") / 2";
-                    op1 = double.Parse(txt1.Text);
-                    op2 = double.Parse(txt2.Text);
-                    resultado = (op1 * op2) / 2;
-                    resultado = Math.Round(resultado, 2);
-                    lblresultado.Text = resultado.ToString();
-                    lblresultado.Visible = true;
-                    lblexpressao.Text = expressao;
-                    lblexpressao.Visible = true;
-                    txt1.Focus();
+                    if (txt1.Text == "" || txt2.Text == "")
+                    {
+                        MessageBox.Show("Preencha os campos obrigatórios!");
+                    }
+                    else
+                    {
+                        expressao = "(" + txt1.Text + " * " + txt2.Text + ") / 2";
+                        op1 = double.Parse(txt1.Text);
+                        op2 = double.Parse(txt2.Text);
+                        resultado = (op1 * op2) / 2;
+                        resultado = Math.Round(resultado, 2);
+                        lblresultado.Text = resultado.ToString();
+                        lblresultado.Visible = true;
+                        lblexpressao.Text = expressao;
+                        lblexpressao.Visible = true;
+                        txt1.Focus();
+                    }
                     break;
 
                 case 3: //circulo
-                    expressao = "PI * (" + txt2.Text + " * " + txt2.Text + ")";
-                    op1 = double.Parse(txt2.Text);
-                    resultado = 3.1416 * (op1 * op1);
-                    resultado = Math.Round(resultado, 2);
-                    lblresultado.Text = resultado.ToString();
-                    lblresultado.Visible = true;
-                    lblexpressao.Text = expressao;
-                    lblexpressao.Visible = true;
-                    txt2.Focus();
+                    if (txt2.Text == "")
+                    {
+                        MessageBox.Show("Preencha os campos obrigatórios!");
+                    }
+                    else
+                    {
+                        expressao = "PI * (" + txt2.Text + " * " + txt2.Text + ")";
+                        op1 = double.Parse(txt2.Text);
+                        resultado = 3.1416 * (op1 * op1);
+                        resultado = Math.Round(resultado, 2);
+                        lblresultado.Text = resultado.ToString();
+                        lblresultado.Visible = true;
+                        lblexpressao.Text = expressao;
+                        lblexpressao.Visible = true;
+                        txt2.Focus();
+                    }
                     break;
 
                 case 4: //trapezio
-                    expressao = "((" + txt1.Text + " + " + txt2.Text + ") * " + txt3.Text + ") / 2";
-                    op1 = double.Parse(txt1.Text);
-                    op2 = double.Parse(txt2.Text);
-                    op3 = double.Parse(txt3.Text);
-                    resultado = ((op1 + op2) * op3) / 2;
-                    resultado = Math.Round(resultado, 2);
-                    lblresultado.Text = resultado.ToString();
-                    lblresultado.Visible = true;
-                    lblexpressao.Text = expressao;
-                    lblexpressao.Visible = true;
-                    txt1.Focus();
+                    if (txt1.Text == "" || txt2.Text == "" || txt3.Text == "")
+                    {
+                        MessageBox.Show("Preencha os campos obrigatórios!");
+                    }
+                    else
+                    {
+                        expressao = "((" + txt1.Text + " + " + txt2.Text + ") * " + txt3.Text + ") / 2";
+                        op1 = double.Parse(txt1.Text);
+                        op2 = double.Parse(txt2.Text);
+                        op3 = double.Parse(txt3.Text);
+                        resultado = ((op1 + op2) * op3) / 2;
+                        resultado = Math.Round(resultado, 2);
+                        lblresultado.Text = resultado.ToString();
+                        lblresultado.Visible = true;
+                        lblexpressao.Text = expressao;
+                        lblexpressao.Visible = true;
+                        txt1.Focus();
+                    }
                     break;
             }
 
