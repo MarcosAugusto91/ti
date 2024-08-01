@@ -129,6 +129,7 @@
             // 
             imgarea.BackgroundImage = (Image)resources.GetObject("imgarea.BackgroundImage");
             imgarea.BackgroundImageLayout = ImageLayout.Stretch;
+            imgarea.Image = Properties.Resources.quadrado;
             imgarea.Location = new Point(146, 45);
             imgarea.Name = "imgarea";
             imgarea.Size = new Size(227, 119);
@@ -138,7 +139,7 @@
             // 
             // txt1
             // 
-            txt1.Location = new Point(16, 274);
+            txt1.Location = new Point(21, 274);
             txt1.Name = "txt1";
             txt1.Size = new Size(100, 23);
             txt1.TabIndex = 7;
@@ -154,7 +155,7 @@
             // 
             // txt3
             // 
-            txt3.Location = new Point(272, 274);
+            txt3.Location = new Point(266, 274);
             txt3.Name = "txt3";
             txt3.Size = new Size(100, 23);
             txt3.TabIndex = 9;
@@ -163,7 +164,7 @@
             // lbl1
             // 
             lbl1.AutoSize = true;
-            lbl1.Location = new Point(43, 256);
+            lbl1.Location = new Point(48, 256);
             lbl1.Name = "lbl1";
             lbl1.Size = new Size(47, 15);
             lbl1.TabIndex = 10;
@@ -183,7 +184,7 @@
             // lbl3
             // 
             lbl3.AutoSize = true;
-            lbl3.Location = new Point(298, 256);
+            lbl3.Location = new Point(292, 256);
             lbl3.Name = "lbl3";
             lbl3.Size = new Size(47, 15);
             lbl3.TabIndex = 12;

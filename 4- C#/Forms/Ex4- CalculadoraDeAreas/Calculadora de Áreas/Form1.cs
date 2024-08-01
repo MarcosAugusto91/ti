@@ -111,7 +111,7 @@ namespace Calculadora_de_Áreas
 
         private void rdbquadrado_CheckedChanged(object sender, EventArgs e)
         {
-            imgarea.Image = Image.FromFile(@"C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex4- CalculadoraDeAreas\quadrado.png");
+            imgarea.Image = Image.FromFile(@"C:\Users\marcos.aazevedo3\source\repos\Ex4- CalculadoraDeAreas\Calculadora de Áreas\Resources\quadrado.png");
             imgarea.BackgroundImageLayout = ImageLayout.Zoom;
             BackColor = Color.SeaGreen;
             lblformula.Text = "L x L";
@@ -127,12 +127,14 @@ namespace Calculadora_de_Áreas
             txt2.Text = "";
             txt3.Text = "";
             lbl2.Text = "Lado (L):";
+            txt2.Location = new Point(145, 274);
+            lbl2.Location = new Point(172, 256);
             txt2.Focus();
         }
 
         private void rdbretangulo_CheckedChanged(object sender, EventArgs e)
         {
-            imgarea.Image = Image.FromFile(@"C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex4- CalculadoraDeAreas\retangulo.png");
+            imgarea.Image = Image.FromFile(@"C:\Users\marcos.aazevedo3\source\repos\Ex4- CalculadoraDeAreas\Calculadora de Áreas\Resources\retangulo.png");
             BackColor = Color.LightGray;
             lblformula.Text = "A x L";
             lblformula.Visible = true;
@@ -148,12 +150,16 @@ namespace Calculadora_de_Áreas
             txt3.Text = "";
             lbl1.Text = "Lado (a):";
             lbl2.Text = "Lado (b):";
+            txt1.Location = new Point(67, 274);
+            txt2.Location = new Point(219, 274);
+            lbl1.Location = new Point(94, 256);
+            lbl2.Location = new Point(246, 256);
             txt1.Focus();
         }
 
         private void rdbtriangulo_CheckedChanged(object sender, EventArgs e)
         {
-            imgarea.Image = Image.FromFile(@"C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex4- CalculadoraDeAreas\triangulo.png");
+            imgarea.Image = Image.FromFile(@"C:\Users\marcos.aazevedo3\source\repos\Ex4- CalculadoraDeAreas\Calculadora de Áreas\Resources\triangulo.png");
             BackColor = Color.SeaGreen;
             lblformula.Text = "(B x h) / 2";
             lblformula.Visible = true;
@@ -169,12 +175,16 @@ namespace Calculadora_de_Áreas
             txt3.Text = "";
             lbl1.Text = "Base (b):";
             lbl2.Text = "Altura (h):";
+            txt1.Location = new Point(67, 274);
+            txt2.Location = new Point(219, 274);
+            lbl1.Location = new Point(94, 256);
+            lbl2.Location = new Point(246, 256);
             txt1.Focus();
         }
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
-            imgarea.Image = Image.FromFile(@"C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex4- CalculadoraDeAreas\circulo.png");
+            imgarea.Image = Image.FromFile(@"C:\Users\marcos.aazevedo3\source\repos\Ex4- CalculadoraDeAreas\Calculadora de Áreas\Resources\circulo.png");
             BackColor = Color.LightYellow;
             lblformula.Text = "Pi * r²";
             lblformula.Visible = true;
@@ -189,12 +199,14 @@ namespace Calculadora_de_Áreas
             txt2.Text = "";
             txt3.Text = "";
             lbl2.Text = "Raio (r):";
+            txt2.Location = new Point(145, 274);
+            lbl2.Location = new Point(172, 256);
             txt2.Focus();
         }
 
         private void rdbtrapezio_CheckedChanged(object sender, EventArgs e)
         {
-            imgarea.Image = Image.FromFile(@"C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex4- CalculadoraDeAreas\trapezio.png");
+            imgarea.Image = Image.FromFile(@"C:\Users\marcos.aazevedo3\source\repos\Ex4- CalculadoraDeAreas\Calculadora de Áreas\Resources\trapezio.png");
             BackColor = Color.LightGray;
             lblformula.Text = "((B * b) * h) / 2";
             lblformula.Visible = true;
@@ -211,6 +223,12 @@ namespace Calculadora_de_Áreas
             lbl1.Text = "Base (B):";
             lbl2.Text = "Base (b):";
             lbl3.Text = "Altura (h):";
+            txt1.Location = new Point(16, 274);
+            txt2.Location = new Point(145, 274);
+            txt3.Location = new Point(272, 274);
+            lbl1.Location = new Point(43, 256);
+            lbl2.Location = new Point(172, 256);
+            lbl3.Location = new Point(298, 256);
             txt1.Focus();
         }
     }
