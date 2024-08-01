@@ -14,7 +14,7 @@ Inicio
            escreva("Digite um número: ")
            leia(numero)
            
-           se (numero < 10) ou (numero > 20) entao
+           se (numero < 10) e (numero > 20) entao
               fora <- fora +1
            senao
               dentro <- dentro +1
