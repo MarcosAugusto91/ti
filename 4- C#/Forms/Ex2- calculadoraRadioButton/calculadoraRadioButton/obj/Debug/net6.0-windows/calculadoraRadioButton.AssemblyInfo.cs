@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("calculadoraRadioButton")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41c5518e1f377d6f52475c8d405a1170bd63d56c")]
 [assembly: System.Reflection.AssemblyProductAttribute("calculadoraRadioButton")]
 [assembly: System.Reflection.AssemblyTitleAttribute("calculadoraRadioButton")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
