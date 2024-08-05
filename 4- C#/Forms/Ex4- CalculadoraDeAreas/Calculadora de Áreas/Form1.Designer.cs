@@ -129,6 +129,7 @@
             // 
             imgarea.BackgroundImage = (Image)resources.GetObject("imgarea.BackgroundImage");
             imgarea.BackgroundImageLayout = ImageLayout.Stretch;
+            imgarea.Image = Properties.Resources.quadrado;
             imgarea.Location = new Point(146, 45);
             imgarea.Name = "imgarea";
             imgarea.Size = new Size(227, 119);
@@ -138,7 +139,7 @@
             // 
             // txt1
             // 
-            txt1.Location = new Point(16, 274);
+            txt1.Location = new Point(21, 274);
             txt1.Name = "txt1";
             txt1.Size = new Size(100, 23);
             txt1.TabIndex = 7;
@@ -154,7 +155,7 @@
             // 
             // txt3
             // 
-            txt3.Location = new Point(272, 274);
+            txt3.Location = new Point(266, 274);
             txt3.Name = "txt3";
             txt3.Size = new Size(100, 23);
             txt3.TabIndex = 9;
@@ -163,7 +164,7 @@
             // lbl1
             // 
             lbl1.AutoSize = true;
-            lbl1.Location = new Point(43, 256);
+            lbl1.Location = new Point(48, 256);
             lbl1.Name = "lbl1";
             lbl1.Size = new Size(47, 15);
             lbl1.TabIndex = 10;
@@ -183,7 +184,7 @@
             // lbl3
             // 
             lbl3.AutoSize = true;
-            lbl3.Location = new Point(298, 256);
+            lbl3.Location = new Point(292, 256);
             lbl3.Name = "lbl3";
             lbl3.Size = new Size(47, 15);
             lbl3.TabIndex = 12;
@@ -204,7 +205,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(53, 375);
+            label4.Location = new Point(273, 381);
             label4.Name = "label4";
             label4.Size = new Size(86, 21);
             label4.TabIndex = 14;
@@ -214,7 +215,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(233, 375);
+            label5.Location = new Point(9, 381);
             label5.Name = "label5";
             label5.Size = new Size(86, 21);
             label5.TabIndex = 15;
@@ -224,7 +225,7 @@
             // 
             lblresultado.AutoSize = true;
             lblresultado.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblresultado.Location = new Point(67, 407);
+            lblresultado.Location = new Point(273, 413);
             lblresultado.Name = "lblresultado";
             lblresultado.Size = new Size(52, 21);
             lblresultado.TabIndex = 16;
@@ -235,7 +236,7 @@
             // 
             lblexpressao.AutoSize = true;
             lblexpressao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblexpressao.Location = new Point(237, 407);
+            lblexpressao.Location = new Point(10, 413);
             lblexpressao.Name = "lblexpressao";
             lblexpressao.Size = new Size(52, 21);
             lblexpressao.TabIndex = 17;
