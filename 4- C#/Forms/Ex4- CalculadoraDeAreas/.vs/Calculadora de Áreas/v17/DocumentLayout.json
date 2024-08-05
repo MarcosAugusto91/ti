@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Ei! Brownie\\Documents\\GitHub\\ti\\4- C#\\Forms\\Ex4- CalculadoraDeAreas\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{117381B5-A583-4024-8D53-CE5C607AD904}|Calculadora de \u00C1reas\\Calculadora de \u00C1reas.csproj|c:\\users\\ei! brownie\\documents\\github\\ti\\4- c#\\forms\\ex4- calculadoradeareas\\calculadora de \u00E1reas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{117381B5-A583-4024-8D53-CE5C607AD904}|Calculadora de \u00C1reas\\Calculadora de \u00C1reas.csproj|solutionrelative:calculadora de \u00E1reas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{117381B5-A583-4024-8D53-CE5C607AD904}|Calculadora de \u00C1reas\\Calculadora de \u00C1reas.csproj|C:\\Users\\Ei! Brownie\\Documents\\GitHub\\ti\\4- C#\\Forms\\Ex4- CalculadoraDeAreas\\calculadora de \u00E1reas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{117381B5-A583-4024-8D53-CE5C607AD904}|Calculadora de \u00C1reas\\Calculadora de \u00C1reas.csproj|solutionrelative:calculadora de \u00E1reas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Ei! Brownie\\Documents\\GitHub\\ti\\4- C#\\Forms\\Ex4- CalculadoraDeAreas\\Calculadora de \u00C1reas\\Form1.cs",
+              "RelativeDocumentMoniker": "Calculadora de \u00C1reas\\Form1.cs",
+              "ToolTip": "C:\\Users\\Ei! Brownie\\Documents\\GitHub\\ti\\4- C#\\Forms\\Ex4- CalculadoraDeAreas\\Calculadora de \u00C1reas\\Form1.cs [Projeto]",
+              "RelativeToolTip": "Calculadora de \u00C1reas\\Form1.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T00:55:19.884Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Ei! Brownie\\Documents\\GitHub\\ti\\4- C#\\Forms\\Ex4- CalculadoraDeAreas\\Calculadora de \u00C1reas\\Form1.cs",
+              "RelativeDocumentMoniker": "Calculadora de \u00C1reas\\Form1.cs",
+              "ToolTip": "C:\\Users\\Ei! Brownie\\Documents\\GitHub\\ti\\4- C#\\Forms\\Ex4- CalculadoraDeAreas\\Calculadora de \u00C1reas\\Form1.cs",
+              "RelativeToolTip": "Calculadora de \u00C1reas\\Form1.cs",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAIwDkAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T00:55:20.118Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

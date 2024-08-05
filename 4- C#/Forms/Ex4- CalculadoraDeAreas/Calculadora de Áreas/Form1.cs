@@ -111,7 +111,7 @@ namespace Calculadora_de_Áreas
 
         private void rdbquadrado_CheckedChanged(object sender, EventArgs e)
         {
-            imgarea.Image = Image.FromFile(@"C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex4- CalculadoraDeAreas\quadrado.png");
+            imgarea.Image = Image.FromFile(@"C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\Ex4- CalculadoraDeAreas\quadrado.png");
             imgarea.BackgroundImageLayout = ImageLayout.Zoom;
             BackColor = Color.SeaGreen;
             lblformula.Text = "L x L";
@@ -132,7 +132,7 @@ namespace Calculadora_de_Áreas
 
         private void rdbretangulo_CheckedChanged(object sender, EventArgs e)
         {
-            imgarea.Image = Image.FromFile(@"C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex4- CalculadoraDeAreas\retangulo.png");
+            imgarea.Image = Image.FromFile(@"C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\Ex4- CalculadoraDeAreas\retangulo.png");
             BackColor = Color.LightGray;
             lblformula.Text = "A x L";
             lblformula.Visible = true;
@@ -153,7 +153,7 @@ namespace Calculadora_de_Áreas
 
         private void rdbtriangulo_CheckedChanged(object sender, EventArgs e)
         {
-            imgarea.Image = Image.FromFile(@"C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex4- CalculadoraDeAreas\triangulo.png");
+            imgarea.Image = Image.FromFile(@"C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\Ex4- CalculadoraDeAreas\triangulo.png");
             BackColor = Color.SeaGreen;
             lblformula.Text = "(B x h) / 2";
             lblformula.Visible = true;
@@ -174,7 +174,7 @@ namespace Calculadora_de_Áreas
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
-            imgarea.Image = Image.FromFile(@"C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex4- CalculadoraDeAreas\circulo.png");
+            imgarea.Image = Image.FromFile(@"C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\Ex4- CalculadoraDeAreas\circulo.png");
             BackColor = Color.LightYellow;
             lblformula.Text = "Pi * r²";
             lblformula.Visible = true;
@@ -194,7 +194,7 @@ namespace Calculadora_de_Áreas
 
         private void rdbtrapezio_CheckedChanged(object sender, EventArgs e)
         {
-            imgarea.Image = Image.FromFile(@"C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex4- CalculadoraDeAreas\trapezio.png");
+            imgarea.Image = Image.FromFile(@"C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\Ex4- CalculadoraDeAreas\trapezio.png");
             BackColor = Color.LightGray;
             lblformula.Text = "((B * b) * h) / 2";
             lblformula.Visible = true;
