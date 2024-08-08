@@ -7,5 +7,10 @@ namespace matricula_de_aluunos
         {
             InitializeComponent();
         }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
