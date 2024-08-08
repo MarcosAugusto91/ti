@@ -1,0 +1,54 @@
+C:\Users\kauan.mcvquaresma\source\repos\matricula de aluunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.csproj.AssemblyReference.cache
+C:\Users\kauan.mcvquaresma\source\repos\matricula de aluunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula_de_aluunos.Form1.resources
+C:\Users\kauan.mcvquaresma\source\repos\matricula de aluunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula_de_aluunos.Properties.Resources.resources
+C:\Users\kauan.mcvquaresma\source\repos\matricula de aluunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.csproj.GenerateResource.cache
+C:\Users\kauan.mcvquaresma\source\repos\matricula de aluunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kauan.mcvquaresma\source\repos\matricula de aluunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.AssemblyInfoInputs.cache
+C:\Users\kauan.mcvquaresma\source\repos\matricula de aluunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.AssemblyInfo.cs
+C:\Users\kauan.mcvquaresma\source\repos\matricula de aluunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.csproj.CoreCompileInputs.cache
+C:\Users\kauan.mcvquaresma\source\repos\matricula de aluunos\matricula de aluunos\bin\Debug\net6.0-windows\matricula de aluunos.exe
+C:\Users\kauan.mcvquaresma\source\repos\matricula de aluunos\matricula de aluunos\bin\Debug\net6.0-windows\matricula de aluunos.deps.json
+C:\Users\kauan.mcvquaresma\source\repos\matricula de aluunos\matricula de aluunos\bin\Debug\net6.0-windows\matricula de aluunos.runtimeconfig.json
+C:\Users\kauan.mcvquaresma\source\repos\matricula de aluunos\matricula de aluunos\bin\Debug\net6.0-windows\matricula de aluunos.dll
+C:\Users\kauan.mcvquaresma\source\repos\matricula de aluunos\matricula de aluunos\bin\Debug\net6.0-windows\matricula de aluunos.pdb
+C:\Users\kauan.mcvquaresma\source\repos\matricula de aluunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.dll
+C:\Users\kauan.mcvquaresma\source\repos\matricula de aluunos\matricula de aluunos\obj\Debug\net6.0-windows\refint\matricula de aluunos.dll
+C:\Users\kauan.mcvquaresma\source\repos\matricula de aluunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.pdb
+C:\Users\kauan.mcvquaresma\source\repos\matricula de aluunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.genruntimeconfig.cache
+C:\Users\kauan.mcvquaresma\source\repos\matricula de aluunos\matricula de aluunos\obj\Debug\net6.0-windows\ref\matricula de aluunos.dll
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matriculasAlunos\matricula de aluunos\bin\Debug\net6.0-windows\matricula de aluunos.exe
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matriculasAlunos\matricula de aluunos\bin\Debug\net6.0-windows\matricula de aluunos.deps.json
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matriculasAlunos\matricula de aluunos\bin\Debug\net6.0-windows\matricula de aluunos.runtimeconfig.json
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matriculasAlunos\matricula de aluunos\bin\Debug\net6.0-windows\matricula de aluunos.dll
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matriculasAlunos\matricula de aluunos\bin\Debug\net6.0-windows\matricula de aluunos.pdb
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matriculasAlunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.csproj.AssemblyReference.cache
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matriculasAlunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula_de_aluunos.Form1.resources
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matriculasAlunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula_de_aluunos.Properties.Resources.resources
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matriculasAlunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.csproj.GenerateResource.cache
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matriculasAlunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.GeneratedMSBuildEditorConfig.editorconfig
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matriculasAlunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.AssemblyInfoInputs.cache
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matriculasAlunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.AssemblyInfo.cs
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matriculasAlunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.csproj.CoreCompileInputs.cache
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matriculasAlunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.dll
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matriculasAlunos\matricula de aluunos\obj\Debug\net6.0-windows\refint\matricula de aluunos.dll
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matriculasAlunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.pdb
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matriculasAlunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.genruntimeconfig.cache
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matriculasAlunos\matricula de aluunos\obj\Debug\net6.0-windows\ref\matricula de aluunos.dll
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matricula de aluunos\matricula de aluunos\bin\Debug\net6.0-windows\matricula de aluunos.exe
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matricula de aluunos\matricula de aluunos\bin\Debug\net6.0-windows\matricula de aluunos.deps.json
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matricula de aluunos\matricula de aluunos\bin\Debug\net6.0-windows\matricula de aluunos.runtimeconfig.json
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matricula de aluunos\matricula de aluunos\bin\Debug\net6.0-windows\matricula de aluunos.dll
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matricula de aluunos\matricula de aluunos\bin\Debug\net6.0-windows\matricula de aluunos.pdb
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matricula de aluunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.csproj.AssemblyReference.cache
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matricula de aluunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula_de_aluunos.Form1.resources
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matricula de aluunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula_de_aluunos.Properties.Resources.resources
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matricula de aluunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.csproj.GenerateResource.cache
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matricula de aluunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.GeneratedMSBuildEditorConfig.editorconfig
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matricula de aluunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.AssemblyInfoInputs.cache
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matricula de aluunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.AssemblyInfo.cs
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matricula de aluunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.csproj.CoreCompileInputs.cache
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matricula de aluunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.dll
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matricula de aluunos\matricula de aluunos\obj\Debug\net6.0-windows\refint\matricula de aluunos.dll
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matricula de aluunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.pdb
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matricula de aluunos\matricula de aluunos\obj\Debug\net6.0-windows\matricula de aluunos.genruntimeconfig.cache
+E:\2- Senac\1- Matérias\1- Senac\Técnido de Desenvolvimento de Sistemas\UC6 - C#\Aulas\Aula 03 - LIst e Combo\matricula de aluunos\matricula de aluunos\obj\Debug\net6.0-windows\ref\matricula de aluunos.dll
