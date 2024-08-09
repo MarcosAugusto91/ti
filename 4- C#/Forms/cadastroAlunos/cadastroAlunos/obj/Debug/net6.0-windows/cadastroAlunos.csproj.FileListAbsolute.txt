@@ -16,3 +16,21 @@ C:\Users\marcos.aazevedo3\Desktop\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\o
 C:\Users\marcos.aazevedo3\Desktop\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\obj\Debug\net6.0-windows\cadastroAlunos.pdb
 C:\Users\marcos.aazevedo3\Desktop\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\obj\Debug\net6.0-windows\cadastroAlunos.genruntimeconfig.cache
 C:\Users\marcos.aazevedo3\Desktop\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\obj\Debug\net6.0-windows\ref\cadastroAlunos.dll
+C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\bin\Debug\net6.0-windows\cadastroAlunos.exe
+C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\bin\Debug\net6.0-windows\cadastroAlunos.deps.json
+C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\bin\Debug\net6.0-windows\cadastroAlunos.runtimeconfig.json
+C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\bin\Debug\net6.0-windows\cadastroAlunos.dll
+C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\bin\Debug\net6.0-windows\cadastroAlunos.pdb
+C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\obj\Debug\net6.0-windows\matricula_de_aluunos.Form1.resources
+C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\obj\Debug\net6.0-windows\matricula_de_aluunos.Properties.Resources.resources
+C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\obj\Debug\net6.0-windows\cadastroAlunos.csproj.GenerateResource.cache
+C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\obj\Debug\net6.0-windows\cadastroAlunos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\obj\Debug\net6.0-windows\cadastroAlunos.AssemblyInfoInputs.cache
+C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\obj\Debug\net6.0-windows\cadastroAlunos.AssemblyInfo.cs
+C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\obj\Debug\net6.0-windows\cadastroAlunos.csproj.CoreCompileInputs.cache
+C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\obj\Debug\net6.0-windows\cadastroAlunos.sourcelink.json
+C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\obj\Debug\net6.0-windows\cadastroAlunos.dll
+C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\obj\Debug\net6.0-windows\refint\cadastroAlunos.dll
+C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\obj\Debug\net6.0-windows\cadastroAlunos.pdb
+C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\obj\Debug\net6.0-windows\cadastroAlunos.genruntimeconfig.cache
+C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\obj\Debug\net6.0-windows\ref\cadastroAlunos.dll

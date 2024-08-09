@@ -1,0 +1,5 @@
+C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\Publish\cadastroAlunos.exe
+C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\Publish\cadastroAlunos.dll
+C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\Publish\cadastroAlunos.deps.json
+C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\Publish\cadastroAlunos.runtimeconfig.json
+C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\cadastroAlunos\cadastroAlunos\Publish\cadastroAlunos.pdb
