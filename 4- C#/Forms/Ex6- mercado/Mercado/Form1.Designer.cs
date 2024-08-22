@@ -32,6 +32,7 @@
             label1 = new Label();
             chbNotaFiscal = new CheckBox();
             groupBox1 = new GroupBox();
+            mktNotaFiscal = new MaskedTextBox();
             button1 = new Button();
             label2 = new Label();
             pictureBox1 = new PictureBox();
@@ -87,15 +88,17 @@
             // chbNotaFiscal
             // 
             chbNotaFiscal.AutoSize = true;
-            chbNotaFiscal.Location = new Point(24, 72);
+            chbNotaFiscal.Location = new Point(28, 67);
             chbNotaFiscal.Name = "chbNotaFiscal";
             chbNotaFiscal.Size = new Size(128, 19);
-            chbNotaFiscal.TabIndex = 2;
+            chbNotaFiscal.TabIndex = 1;
             chbNotaFiscal.Text = "Nota Fiscal Paulista";
             chbNotaFiscal.UseVisualStyleBackColor = true;
+            chbNotaFiscal.CheckedChanged += chbNotaFiscal_CheckedChanged;
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(mktNotaFiscal);
             groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(chbNotaFiscal);
@@ -106,6 +109,15 @@
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Dados do Cliente";
+            // 
+            // mktNotaFiscal
+            // 
+            mktNotaFiscal.Location = new Point(29, 87);
+            mktNotaFiscal.Mask = "000.000.000-00";
+            mktNotaFiscal.Name = "mktNotaFiscal";
+            mktNotaFiscal.Size = new Size(120, 23);
+            mktNotaFiscal.TabIndex = 2;
+            mktNotaFiscal.TextAlign = HorizontalAlignment.Center;
             // 
             // button1
             // 
@@ -119,17 +131,18 @@
             button1.Location = new Point(48, 116);
             button1.Name = "button1";
             button1.Size = new Size(80, 110);
-            button1.TabIndex = 4;
+            button1.TabIndex = 3;
             button1.Text = "Iniciar";
             button1.TextAlign = ContentAlignment.BottomCenter;
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.ActiveCaptionText;
-            label2.Location = new Point(7, 28);
+            label2.Location = new Point(7, 23);
             label2.Name = "label2";
             label2.Size = new Size(165, 32);
             label2.TabIndex = 3;
@@ -183,7 +196,7 @@
             txtQtd.Location = new Point(99, 56);
             txtQtd.Name = "txtQtd";
             txtQtd.Size = new Size(174, 23);
-            txtQtd.TabIndex = 6;
+            txtQtd.TabIndex = 5;
             // 
             // cmbCodigo
             // 
@@ -191,7 +204,7 @@
             cmbCodigo.Location = new Point(99, 24);
             cmbCodigo.Name = "cmbCodigo";
             cmbCodigo.Size = new Size(174, 23);
-            cmbCodigo.TabIndex = 5;
+            cmbCodigo.TabIndex = 4;
             cmbCodigo.SelectedIndexChanged += cmbCodigo_SelectedIndexChanged;
             // 
             // label12
@@ -248,8 +261,9 @@
             btnAdicionar.Location = new Point(300, 71);
             btnAdicionar.Name = "btnAdicionar";
             btnAdicionar.Size = new Size(80, 80);
-            btnAdicionar.TabIndex = 0;
+            btnAdicionar.TabIndex = 6;
             btnAdicionar.UseVisualStyleBackColor = false;
+            btnAdicionar.Click += btnAdicionar_Click;
             // 
             // groupBox3
             // 
@@ -273,27 +287,32 @@
             lstPedido.Location = new Point(10, 22);
             lstPedido.Name = "lstPedido";
             lstPedido.Size = new Size(264, 199);
-            lstPedido.TabIndex = 5;
+            lstPedido.TabIndex = 7;
             // 
             // btnConfExclusao
             // 
             btnConfExclusao.BackColor = SystemColors.ControlDarkDark;
             btnConfExclusao.Cursor = Cursors.Hand;
+            btnConfExclusao.Enabled = false;
             btnConfExclusao.FlatAppearance.BorderSize = 0;
             btnConfExclusao.ForeColor = SystemColors.ButtonHighlight;
             btnConfExclusao.Location = new Point(280, 199);
             btnConfExclusao.Name = "btnConfExclusao";
             btnConfExclusao.Size = new Size(100, 23);
-            btnConfExclusao.TabIndex = 4;
+            btnConfExclusao.TabIndex = 10;
             btnConfExclusao.Text = "Excluir";
             btnConfExclusao.UseVisualStyleBackColor = false;
+            btnConfExclusao.Click += btnConfExclusao_Click;
             // 
             // txtSenha
             // 
+            txtSenha.Enabled = false;
             txtSenha.Location = new Point(280, 172);
             txtSenha.Name = "txtSenha";
+            txtSenha.PasswordChar = '*';
             txtSenha.Size = new Size(100, 23);
-            txtSenha.TabIndex = 3;
+            txtSenha.TabIndex = 9;
+            txtSenha.TextAlign = HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -320,8 +339,9 @@
             btnExcluir.Location = new Point(301, 23);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(80, 80);
-            btnExcluir.TabIndex = 1;
+            btnExcluir.TabIndex = 8;
             btnExcluir.UseVisualStyleBackColor = false;
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // groupBox4
             // 
@@ -352,9 +372,10 @@
             btnPagamento.Location = new Point(170, 118);
             btnPagamento.Name = "btnPagamento";
             btnPagamento.Size = new Size(80, 80);
-            btnPagamento.TabIndex = 9;
+            btnPagamento.TabIndex = 11;
             btnPagamento.UseMnemonic = false;
             btnPagamento.UseVisualStyleBackColor = false;
+            btnPagamento.Click += btnPagamento_Click;
             // 
             // lblTroco
             // 
@@ -430,15 +451,18 @@
             btnFinalizar.Location = new Point(177, 102);
             btnFinalizar.Name = "btnFinalizar";
             btnFinalizar.Size = new Size(80, 80);
-            btnFinalizar.TabIndex = 6;
+            btnFinalizar.TabIndex = 17;
             btnFinalizar.UseVisualStyleBackColor = false;
+            btnFinalizar.Click += btnFinalizar_Click;
             // 
             // txtRecebido
             // 
             txtRecebido.Location = new Point(21, 158);
+            txtRecebido.MaxLength = 6;
             txtRecebido.Name = "txtRecebido";
             txtRecebido.Size = new Size(100, 23);
-            txtRecebido.TabIndex = 5;
+            txtRecebido.TabIndex = 16;
+            txtRecebido.TextChanged += txtRecebido_TextChanged;
             // 
             // label8
             // 
@@ -455,10 +479,11 @@
             rdbDinheiro.Location = new Point(21, 103);
             rdbDinheiro.Name = "rdbDinheiro";
             rdbDinheiro.Size = new Size(70, 19);
-            rdbDinheiro.TabIndex = 3;
+            rdbDinheiro.TabIndex = 15;
             rdbDinheiro.TabStop = true;
             rdbDinheiro.Text = "Dinheiro";
             rdbDinheiro.UseVisualStyleBackColor = true;
+            rdbDinheiro.CheckedChanged += rdbDinheiro_CheckedChanged;
             // 
             // rdbPix
             // 
@@ -466,7 +491,7 @@
             rdbPix.Location = new Point(21, 78);
             rdbPix.Name = "rdbPix";
             rdbPix.Size = new Size(41, 19);
-            rdbPix.TabIndex = 2;
+            rdbPix.TabIndex = 14;
             rdbPix.TabStop = true;
             rdbPix.Text = "Pix";
             rdbPix.UseVisualStyleBackColor = true;
@@ -477,7 +502,7 @@
             rdbCredito.Location = new Point(21, 53);
             rdbCredito.Name = "rdbCredito";
             rdbCredito.Size = new Size(64, 19);
-            rdbCredito.TabIndex = 1;
+            rdbCredito.TabIndex = 13;
             rdbCredito.TabStop = true;
             rdbCredito.Text = "Crédito";
             rdbCredito.UseVisualStyleBackColor = true;
@@ -488,13 +513,14 @@
             rdbDebito.Location = new Point(21, 28);
             rdbDebito.Name = "rdbDebito";
             rdbDebito.Size = new Size(60, 19);
-            rdbDebito.TabIndex = 0;
+            rdbDebito.TabIndex = 12;
             rdbDebito.TabStop = true;
             rdbDebito.Text = "Débito";
             rdbDebito.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
+            AcceptButton = btnAdicionar;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DimGray;
@@ -560,5 +586,6 @@
         private ComboBox cmbCodigo;
         private Label label12;
         private Label label11;
+        private MaskedTextBox mktNotaFiscal;
     }
 }

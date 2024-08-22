@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marcos.aazevedo3\\source\\repos\\Mercado\\Mercado\\Mercado.csproj",
+      "projectUniqueName": "C:\\Users\\marcos.aazevedo3\\Documents\\GitHub\\Logica-e-Linguagens\\4- C#\\Forms\\Ex6- Mercado\\Mercado\\Mercado.csproj",
       "projectName": "Mercado",
-      "projectPath": "C:\\Users\\marcos.aazevedo3\\source\\repos\\Mercado\\Mercado\\Mercado.csproj",
+      "projectPath": "C:\\Users\\marcos.aazevedo3\\Documents\\GitHub\\Logica-e-Linguagens\\4- C#\\Forms\\Ex6- Mercado\\Mercado\\Mercado.csproj",
       "packagesPath": "C:\\Users\\marcos.aazevedo3\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marcos.aazevedo3\\source\\repos\\Mercado\\Mercado\\obj\\",
+      "outputPath": "C:\\Users\\marcos.aazevedo3\\Documents\\GitHub\\Logica-e-Linguagens\\4- C#\\Forms\\Ex6- Mercado\\Mercado\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\marcos.aazevedo3\\AppData\\Roaming\\NuGet\\NuGet.Config",
