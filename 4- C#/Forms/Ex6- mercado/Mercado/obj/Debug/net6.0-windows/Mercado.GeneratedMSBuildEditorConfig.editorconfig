@@ -14,4 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Mercado
-build_property.ProjectDir = C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex6- Mercado\Mercado\
+build_property.ProjectDir = C:\Users\Ei! Brownie\Documents\GitHub\ti\4- C#\Forms\Ex6- Mercado\Mercado\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

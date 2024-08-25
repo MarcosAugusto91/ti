@@ -1,0 +1,52 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Ei! Brownie\\Documents\\GitHub\\ti\\4- C#\\Forms\\Ex6- Mercado\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A7064E94-802D-4495-BA8C-F8E8FA4295CC}|Mercado\\Mercado.csproj|c:\\users\\ei! brownie\\documents\\github\\ti\\4- c#\\forms\\ex6- mercado\\mercado\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7064E94-802D-4495-BA8C-F8E8FA4295CC}|Mercado\\Mercado.csproj|solutionrelative:mercado\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7064E94-802D-4495-BA8C-F8E8FA4295CC}|Mercado\\Mercado.csproj|C:\\Users\\Ei! Brownie\\Documents\\GitHub\\ti\\4- C#\\Forms\\Ex6- Mercado\\mercado\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A7064E94-802D-4495-BA8C-F8E8FA4295CC}|Mercado\\Mercado.csproj|solutionrelative:mercado\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Ei! Brownie\\Documents\\GitHub\\ti\\4- C#\\Forms\\Ex6- Mercado\\Mercado\\Form1.cs",
+              "RelativeDocumentMoniker": "Mercado\\Form1.cs",
+              "ToolTip": "C:\\Users\\Ei! Brownie\\Documents\\GitHub\\ti\\4- C#\\Forms\\Ex6- Mercado\\Mercado\\Form1.cs",
+              "RelativeToolTip": "Mercado\\Form1.cs",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAiwGEAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-25T22:45:17.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Ei! Brownie\\Documents\\GitHub\\ti\\4- C#\\Forms\\Ex6- Mercado\\Mercado\\Form1.cs",
+              "RelativeDocumentMoniker": "Mercado\\Form1.cs",
+              "ToolTip": "C:\\Users\\marcos.aazevedo3\\source\\repos\\Mercado\\Mercado\\Form1.cs [Projeto]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\marcos.aazevedo3\\source\\repos\\Mercado\\Mercado\\Form1.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-08-25T22:45:19.247Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
