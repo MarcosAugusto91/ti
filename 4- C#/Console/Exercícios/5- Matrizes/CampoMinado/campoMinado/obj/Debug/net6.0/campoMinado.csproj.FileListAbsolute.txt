@@ -1,0 +1,15 @@
+C:\Users\marcos.aazevedo3\source\repos\campoMinado\campoMinado\bin\Debug\net6.0\campoMinado.exe
+C:\Users\marcos.aazevedo3\source\repos\campoMinado\campoMinado\bin\Debug\net6.0\campoMinado.deps.json
+C:\Users\marcos.aazevedo3\source\repos\campoMinado\campoMinado\bin\Debug\net6.0\campoMinado.runtimeconfig.json
+C:\Users\marcos.aazevedo3\source\repos\campoMinado\campoMinado\bin\Debug\net6.0\campoMinado.dll
+C:\Users\marcos.aazevedo3\source\repos\campoMinado\campoMinado\bin\Debug\net6.0\campoMinado.pdb
+C:\Users\marcos.aazevedo3\source\repos\campoMinado\campoMinado\obj\Debug\net6.0\campoMinado.csproj.AssemblyReference.cache
+C:\Users\marcos.aazevedo3\source\repos\campoMinado\campoMinado\obj\Debug\net6.0\campoMinado.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marcos.aazevedo3\source\repos\campoMinado\campoMinado\obj\Debug\net6.0\campoMinado.AssemblyInfoInputs.cache
+C:\Users\marcos.aazevedo3\source\repos\campoMinado\campoMinado\obj\Debug\net6.0\campoMinado.AssemblyInfo.cs
+C:\Users\marcos.aazevedo3\source\repos\campoMinado\campoMinado\obj\Debug\net6.0\campoMinado.csproj.CoreCompileInputs.cache
+C:\Users\marcos.aazevedo3\source\repos\campoMinado\campoMinado\obj\Debug\net6.0\campoMinado.dll
+C:\Users\marcos.aazevedo3\source\repos\campoMinado\campoMinado\obj\Debug\net6.0\refint\campoMinado.dll
+C:\Users\marcos.aazevedo3\source\repos\campoMinado\campoMinado\obj\Debug\net6.0\campoMinado.pdb
+C:\Users\marcos.aazevedo3\source\repos\campoMinado\campoMinado\obj\Debug\net6.0\campoMinado.genruntimeconfig.cache
+C:\Users\marcos.aazevedo3\source\repos\campoMinado\campoMinado\obj\Debug\net6.0\ref\campoMinado.dll

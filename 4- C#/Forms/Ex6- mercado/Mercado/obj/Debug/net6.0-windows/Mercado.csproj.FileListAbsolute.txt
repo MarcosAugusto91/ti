@@ -1,0 +1,36 @@
+C:\Users\marcos.aazevedo3\source\repos\Mercado\Mercado\bin\Debug\net6.0-windows\Mercado.exe
+C:\Users\marcos.aazevedo3\source\repos\Mercado\Mercado\bin\Debug\net6.0-windows\Mercado.deps.json
+C:\Users\marcos.aazevedo3\source\repos\Mercado\Mercado\bin\Debug\net6.0-windows\Mercado.runtimeconfig.json
+C:\Users\marcos.aazevedo3\source\repos\Mercado\Mercado\bin\Debug\net6.0-windows\Mercado.dll
+C:\Users\marcos.aazevedo3\source\repos\Mercado\Mercado\bin\Debug\net6.0-windows\Mercado.pdb
+C:\Users\marcos.aazevedo3\source\repos\Mercado\Mercado\obj\Debug\net6.0-windows\Mercado.csproj.AssemblyReference.cache
+C:\Users\marcos.aazevedo3\source\repos\Mercado\Mercado\obj\Debug\net6.0-windows\Mercado.Form1.resources
+C:\Users\marcos.aazevedo3\source\repos\Mercado\Mercado\obj\Debug\net6.0-windows\Mercado.csproj.GenerateResource.cache
+C:\Users\marcos.aazevedo3\source\repos\Mercado\Mercado\obj\Debug\net6.0-windows\Mercado.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marcos.aazevedo3\source\repos\Mercado\Mercado\obj\Debug\net6.0-windows\Mercado.AssemblyInfoInputs.cache
+C:\Users\marcos.aazevedo3\source\repos\Mercado\Mercado\obj\Debug\net6.0-windows\Mercado.AssemblyInfo.cs
+C:\Users\marcos.aazevedo3\source\repos\Mercado\Mercado\obj\Debug\net6.0-windows\Mercado.csproj.CoreCompileInputs.cache
+C:\Users\marcos.aazevedo3\source\repos\Mercado\Mercado\obj\Debug\net6.0-windows\Mercado.dll
+C:\Users\marcos.aazevedo3\source\repos\Mercado\Mercado\obj\Debug\net6.0-windows\refint\Mercado.dll
+C:\Users\marcos.aazevedo3\source\repos\Mercado\Mercado\obj\Debug\net6.0-windows\Mercado.pdb
+C:\Users\marcos.aazevedo3\source\repos\Mercado\Mercado\obj\Debug\net6.0-windows\Mercado.genruntimeconfig.cache
+C:\Users\marcos.aazevedo3\source\repos\Mercado\Mercado\obj\Debug\net6.0-windows\ref\Mercado.dll
+C:\Users\marcos.aazevedo3\source\repos\Mercado\Mercado\obj\Debug\net6.0-windows\Mercado.Properties.Resources.resources
+C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex6- Mercado\Mercado\bin\Debug\net6.0-windows\Mercado.exe
+C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex6- Mercado\Mercado\bin\Debug\net6.0-windows\Mercado.deps.json
+C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex6- Mercado\Mercado\bin\Debug\net6.0-windows\Mercado.runtimeconfig.json
+C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex6- Mercado\Mercado\bin\Debug\net6.0-windows\Mercado.dll
+C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex6- Mercado\Mercado\bin\Debug\net6.0-windows\Mercado.pdb
+C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex6- Mercado\Mercado\obj\Debug\net6.0-windows\Mercado.csproj.AssemblyReference.cache
+C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex6- Mercado\Mercado\obj\Debug\net6.0-windows\Mercado.Form1.resources
+C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex6- Mercado\Mercado\obj\Debug\net6.0-windows\Mercado.Properties.Resources.resources
+C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex6- Mercado\Mercado\obj\Debug\net6.0-windows\Mercado.csproj.GenerateResource.cache
+C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex6- Mercado\Mercado\obj\Debug\net6.0-windows\Mercado.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex6- Mercado\Mercado\obj\Debug\net6.0-windows\Mercado.AssemblyInfoInputs.cache
+C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex6- Mercado\Mercado\obj\Debug\net6.0-windows\Mercado.AssemblyInfo.cs
+C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex6- Mercado\Mercado\obj\Debug\net6.0-windows\Mercado.csproj.CoreCompileInputs.cache
+C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex6- Mercado\Mercado\obj\Debug\net6.0-windows\Mercado.dll
+C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex6- Mercado\Mercado\obj\Debug\net6.0-windows\refint\Mercado.dll
+C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex6- Mercado\Mercado\obj\Debug\net6.0-windows\Mercado.pdb
+C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex6- Mercado\Mercado\obj\Debug\net6.0-windows\Mercado.genruntimeconfig.cache
+C:\Users\marcos.aazevedo3\Documents\GitHub\Logica-e-Linguagens\4- C#\Forms\Ex6- Mercado\Mercado\obj\Debug\net6.0-windows\ref\Mercado.dll

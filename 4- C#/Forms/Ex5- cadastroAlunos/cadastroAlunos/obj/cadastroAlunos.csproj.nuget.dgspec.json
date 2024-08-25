@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marcos.aazevedo3\\Documents\\GitHub\\Logica-e-Linguagens\\4- C#\\Forms\\Ex5- cadastroAlunos\\cadastroAlunos\\cadastroAlunos.csproj": {}
+    "C:\\Users\\marcos.aazevedo3\\Desktop\\ti\\4- C#\\Forms\\Ex5- cadastroAlunos\\cadastroAlunos\\cadastroAlunos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marcos.aazevedo3\\Documents\\GitHub\\Logica-e-Linguagens\\4- C#\\Forms\\Ex5- cadastroAlunos\\cadastroAlunos\\cadastroAlunos.csproj": {
+    "C:\\Users\\marcos.aazevedo3\\Desktop\\ti\\4- C#\\Forms\\Ex5- cadastroAlunos\\cadastroAlunos\\cadastroAlunos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marcos.aazevedo3\\Documents\\GitHub\\Logica-e-Linguagens\\4- C#\\Forms\\Ex5- cadastroAlunos\\cadastroAlunos\\cadastroAlunos.csproj",
+        "projectUniqueName": "C:\\Users\\marcos.aazevedo3\\Desktop\\ti\\4- C#\\Forms\\Ex5- cadastroAlunos\\cadastroAlunos\\cadastroAlunos.csproj",
         "projectName": "cadastroAlunos",
-        "projectPath": "C:\\Users\\marcos.aazevedo3\\Documents\\GitHub\\Logica-e-Linguagens\\4- C#\\Forms\\Ex5- cadastroAlunos\\cadastroAlunos\\cadastroAlunos.csproj",
+        "projectPath": "C:\\Users\\marcos.aazevedo3\\Desktop\\ti\\4- C#\\Forms\\Ex5- cadastroAlunos\\cadastroAlunos\\cadastroAlunos.csproj",
         "packagesPath": "C:\\Users\\marcos.aazevedo3\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marcos.aazevedo3\\Documents\\GitHub\\Logica-e-Linguagens\\4- C#\\Forms\\Ex5- cadastroAlunos\\cadastroAlunos\\obj\\",
+        "outputPath": "C:\\Users\\marcos.aazevedo3\\Desktop\\ti\\4- C#\\Forms\\Ex5- cadastroAlunos\\cadastroAlunos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marcos.aazevedo3\\AppData\\Roaming\\NuGet\\NuGet.Config",
