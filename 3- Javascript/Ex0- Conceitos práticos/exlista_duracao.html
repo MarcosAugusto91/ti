@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //Entrada dos dados
+        let entrada = prompt("Digite a duração do tempo em segundos: ")
+        
+        //Processamento dos dados
+        let horas = (entrada / 3600) | 0
+        let minutos = ((entrada-(horas*3600)) / 60) | 0
+        let segundos = entrada-(horas*3600)-(minutos*60)
+      
+        //Impressão dos dados
+        alert(`Entrada (${entrada}s) corresponde a: ${horas} horas ${minutos} minutos ${segundos} segundos`)
+    </script>
+    
+</body>
+</html>
