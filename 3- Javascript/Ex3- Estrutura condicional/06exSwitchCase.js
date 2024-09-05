@@ -27,4 +27,3 @@ switch (dia){
         console.log('Dia inválido selecionado!')
         break
     }
-

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+
+            //Recebendo os dados
+            //Ao receber dados númericos digite ponto e não vírgula
+            let largura = Number.parseFloat(prompt("Digite a largura do terreno:"))
+            let comprimento = Number.parseFloat(prompt("Digite a largura do terreno:"))
+            let valor = Number.parseFloat(prompt("Digite o valor do metro quadrado R$"))
+            
+            //Processando os dados
+            let area = largura * comprimento   
+            let preco = area * valor
+
+            //Imprimindo os dados
+            alert(`Área total: ${area.toFixed(2)} m² / Preço do terreno: ${preco.toFixed(2).replace('.',',')}`)
+            
+        </script>
+
+
+    </body>
+</html>
