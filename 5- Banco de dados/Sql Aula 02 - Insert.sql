@@ -13,3 +13,7 @@ insert into veiculos (nome, placa, fabricante, modelo, cor, ano, motor, valor)
 values 
 		('Mustang'	,'BQS8526'	,'Mustang'	,'mu'	,'verde'	,'2019'	,2.5	,247000),
 	    ('Palio'	,'JQP1261'	,'Fiat'		,'pa'	,'prata'	,'2010'	,1.0	,19000);
+        
+insert into veiculos (nome, placa, fabricante, modelo, cor, ano, motor, valor)
+values 
+	('Palio'	,'GJM1215'	,'Fiat'		,'pa'	,'preto'	,'2009'	,1.0	,19000);
