@@ -22,3 +22,21 @@ alter table veiculos
 add ano int,
 add motor Double(2,2),
 add valor Decimal(10,2);
+
+-- Alterando o nome de uma coluna na tabela - My SQL
+ALTER TABLE veiculos
+CHANGE COLUMN motor potencia int;
+
+-- Alterando o nome de uma coluna na tabela - SQL SERVER
+alter table veiculos
+rename column motor to potencia;
+
+-- Alterando o nome da tabela
+Alter table carros
+Rename to veiculos;
+
+-- Excluindo coluna da tabela
+alter table veiculos
+drop column modelo;
+
+select * from veiculos;

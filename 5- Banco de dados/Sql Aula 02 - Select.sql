@@ -13,7 +13,7 @@ where cor ='Preto';
 
 -- Ordenando a busca realizada de forma crescente
 select * from veiculos
-where cor = 'Preto'
+where valor > 50000
 order by valor;
 
 -- Ordenando a busca realizada de forma descrecente
@@ -23,7 +23,7 @@ order by valor desc;
 -- Renomeando coluna da tabela
 select 
 	nome,
-    fabricante,
+    fabricante AS 'marca', 
     valor AS 'preço',
     ano    
 from veiculos;
