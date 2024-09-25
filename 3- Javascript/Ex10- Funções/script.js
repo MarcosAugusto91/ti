@@ -4,5 +4,8 @@ function parimp(n){
     } else {
         return "Impar"
     }
+}
 
+function soma(n1 = 0, n2 = 0){
+    return n1 + n2
 }
