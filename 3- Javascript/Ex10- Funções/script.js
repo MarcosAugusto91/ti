@@ -9,3 +9,7 @@ function parimp(n){
 function soma(n1 = 0, n2 = 0){
     return n1 + n2
 }
+
+let quadrado = function aoquadrado(n1){
+    return n1 * n1
+}
