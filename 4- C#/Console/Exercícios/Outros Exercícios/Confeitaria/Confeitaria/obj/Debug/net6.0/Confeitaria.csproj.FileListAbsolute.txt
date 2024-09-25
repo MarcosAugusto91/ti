@@ -1,0 +1,14 @@
+C:\Users\Ei! Brownie\source\repos\Confeitaria\Confeitaria\bin\Debug\net6.0\Confeitaria.exe
+C:\Users\Ei! Brownie\source\repos\Confeitaria\Confeitaria\bin\Debug\net6.0\Confeitaria.deps.json
+C:\Users\Ei! Brownie\source\repos\Confeitaria\Confeitaria\bin\Debug\net6.0\Confeitaria.runtimeconfig.json
+C:\Users\Ei! Brownie\source\repos\Confeitaria\Confeitaria\bin\Debug\net6.0\Confeitaria.dll
+C:\Users\Ei! Brownie\source\repos\Confeitaria\Confeitaria\bin\Debug\net6.0\Confeitaria.pdb
+C:\Users\Ei! Brownie\source\repos\Confeitaria\Confeitaria\obj\Debug\net6.0\Confeitaria.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ei! Brownie\source\repos\Confeitaria\Confeitaria\obj\Debug\net6.0\Confeitaria.AssemblyInfoInputs.cache
+C:\Users\Ei! Brownie\source\repos\Confeitaria\Confeitaria\obj\Debug\net6.0\Confeitaria.AssemblyInfo.cs
+C:\Users\Ei! Brownie\source\repos\Confeitaria\Confeitaria\obj\Debug\net6.0\Confeitaria.csproj.CoreCompileInputs.cache
+C:\Users\Ei! Brownie\source\repos\Confeitaria\Confeitaria\obj\Debug\net6.0\Confeitaria.dll
+C:\Users\Ei! Brownie\source\repos\Confeitaria\Confeitaria\obj\Debug\net6.0\refint\Confeitaria.dll
+C:\Users\Ei! Brownie\source\repos\Confeitaria\Confeitaria\obj\Debug\net6.0\Confeitaria.pdb
+C:\Users\Ei! Brownie\source\repos\Confeitaria\Confeitaria\obj\Debug\net6.0\Confeitaria.genruntimeconfig.cache
+C:\Users\Ei! Brownie\source\repos\Confeitaria\Confeitaria\obj\Debug\net6.0\ref\Confeitaria.dll

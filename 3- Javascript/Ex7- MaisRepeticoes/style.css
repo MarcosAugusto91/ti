@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+#guess {
+    padding: 10px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+#submit-guess {
+    padding: 10px;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
