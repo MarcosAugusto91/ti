@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <script> 
+
+        let n = window.prompt("Digite a quantidade de dados que deseja:");
+        let valores = [];
+        let x = 0;
+
+        for(let pos = 0; pos < n; pos++){
+            x = window.prompt(`Digite o ${pos + 1}º numero:`);
+            valores[pos] = x;
+        } 
+
+        window.alert(valores);
+
+    </script>
+
+</body>
+</html>
