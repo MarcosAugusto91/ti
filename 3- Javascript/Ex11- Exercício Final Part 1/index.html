@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculando valores de uma lista dinâmica</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Adiciona e calcula valores de uma lista dinâmica!</h1>
+    </header>
+    <section>
+        <div id="lista">
+            Digite um número de 0 a 100:
+            <input type="number" id="fnum">
+            <input type="button" value="Adicionar" id="btnAdicionar" onclick="adicionar()">
+            <br>
+            <select name="flista" id="flista" size="8"></select>
+            <br>
+            <input type="button" value="Calcular" id="btnfinalizar" onclick="finalizar()">
+        </div>
+
+        <div id="res">
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Marcos Augusto</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
