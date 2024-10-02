@@ -5,18 +5,18 @@
     <title>Window Open Close Print</title>
 </head>
 <body>
-    <input type="button" value="Open" onclick="openWindow()">    
-    <input type="button" value="Close" onclick="closeWindow()">    
+    <input type="button" value="Open" onclick="abrir()">    
+    <input type="button" value="Close" onclick="fechar()">    
     <input type="button" value="Imprimir" onclick="window.print()">    
 
     <script>
         let janela;
-        function openWindow(){
-            janela = window.open('https://www.google.com', 'Nova Janela', 'width=500,height=500');
+        function abrir(){
+            janela = window.open('https://www.w3schools.com/','Nome da página','_blank');
         }
 
         //verificar solução para o close()
-        function closeWindow(){
+        function fechar(){
             janela.close();
         }
 
