@@ -1,0 +1,25 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Open Close Print</title>
+</head>
+<body>
+    <input type="button" value="Open" onclick="openWindow()">    
+    <input type="button" value="Close" onclick="closeWindow()">    
+    <input type="button" value="Imprimir" onclick="window.print()">    
+
+    <script>
+        let janela;
+        function openWindow(){
+            janela = window.open('https://www.google.com', 'Nova Janela', 'width=500,height=500');
+        }
+
+        //verificar solução para o close()
+        function closeWindow(){
+            janela.close();
+        }
+
+    </script>
+</body>
+</html>

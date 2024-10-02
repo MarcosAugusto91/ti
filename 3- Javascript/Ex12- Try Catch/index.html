@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try Catch</title>
+</head>
+<body>
+    <p>Digite um número de 0 a 100:</p>
+    <input type="text" id="num">
+    <input type="button" value="Calcular" onclick="calcule()">
+    <p id="resultado"></p>
+
+    <script>
+        let botao = document.getElementById('num')
+        let resultado = document.getElementById('resultado')
+
+        function calcule(){
+            try {
+                let numero = Number(num.value)
+                if (numero < 0) {
+                    throw new Error("Número negativo não permitido")
+                }
+                let raiz = Math.sqrt(numero)
+                resultado.innerHTML = `A raiz quadrada é: ${raiz}`
+            } catch(e) {
+                window.alert(e)
+            } finally {
+                console.log('finally')
+            }
+        }
+    </script>
+</body>
+</html>
