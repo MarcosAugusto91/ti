@@ -12,7 +12,6 @@
 }
 
 :root {
-
     --cor0: white;
     --cor1: gray;
     --cor2: #0060AD;
@@ -41,7 +40,7 @@ main {
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 10px;    
 }
 
 nav {
