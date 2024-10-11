@@ -51,7 +51,7 @@ nav {
     background-color: var(--cor3);
 }
 
-a {
+a { 
     display: inline-block;
     width: 16%;
     height: 100%;
