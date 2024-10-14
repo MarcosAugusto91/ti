@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Spicy+Rice&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: 0px;
+}
+
+body{
+    background-image: url(../Imagens/cabecalho.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main{
+    background-color: white;
+    max-width: 980px;
+    min-width: 375px;
+    height: 88vh;
+    margin-top: 90px;
+    border-top-right-radius: 8px;
+}
+
+header{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > p{
+    width: 410px;
+    font-size: 40px;
+    font-family: "Spicy Rice", serif;
+    color: #222e47;
+    align-self: flex-end;
+    margin: 10px;
+}
+
+.logo{
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+}
+
+#menusup{
+    margin-left: 10px;
+    background-color: #F4B359;
+    width: 96%;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+nav > a{
+    padding: 8px;
+    text-decoration: none;
+    color: white;
+    font-family: "Indie Flower", cursive;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+nav > a:hover{
+    background-color: #3D485E;
+}
+
+#corpo{
+    margin: 10px;
+    margin-top: -1px;
+    background-image: url(../Imagens/fundo1.jpg);
+    background-position: center center;
+    background-size: contain;
+    background-attachment: fixed;
+    width: 96%;
+    height: 78%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    color: white;
+    font-size: 30px;
+    font-family: "Indie Flower", cursive;
+}
+
+@media screen and (min-width:200px) and (max-width:520px){ /*Celular*/
+    
+    header > p{
+        font-size: 28px;
+        width: auto;
+    }
+
+    #corpo{
+        font-size: 25px;
+        background-size: cover;
+        background-image: url(../Imagens/fundomobile1.jpg);
+        height: 79%;
+    }
+
+    main{
+        margin-top: 40px;
+        height: 94vh;
+    }
+
+    h2{
+        font-size: 22px;
+        background-color: white;
+        color: #3D485E;
+        padding: 5px;
+        border-radius: 10px;
+        align-self: flex-end;
+        margin-bottom: 70px;
+    }
+
+    .logo{
+        width: 50px;
+        height: 50px;
+    }
+
+    section > .logo{
+        align-self: flex-end;
+        margin-bottom: 70px;
+    }
+
+}
+
+@media screen and (min-width:520px) and (max-width:835px){ /*Tablet*/
+
+    #corpo{
+        font-size: 25px;
+        background-size: cover;
+        background-image: url(../Imagens/fundomobile16.jpg);
+        height: 78%;
+        justify-content: flex-start;
+    }
+}
