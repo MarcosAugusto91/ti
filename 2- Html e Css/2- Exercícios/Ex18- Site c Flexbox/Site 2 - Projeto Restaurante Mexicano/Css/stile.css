@@ -97,7 +97,7 @@ h2{
     #corpo{
         font-size: 25px;
         background-size: cover;
-        background-image: url(../Imagens/fundomobile1.jpg);
+        background-image: url(../Imagens/fundo4.jpg);
         height: 79%;
     }
 
@@ -113,7 +113,7 @@ h2{
         padding: 5px;
         border-radius: 10px;
         align-self: flex-end;
-        margin-bottom: 70px;
+        margin-bottom: 40px;
     }
 
     .logo{
@@ -123,7 +123,7 @@ h2{
 
     section > .logo{
         align-self: flex-end;
-        margin-bottom: 70px;
+        margin-bottom: 40px;
     }
 
 }
