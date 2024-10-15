@@ -1,0 +1,13 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    /*background-color: black;*/
+}
+
+.mosquito1{
+    width: 50px;
+    height: 50px;
+}
