@@ -1,25 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function CriandoBotao({textoBotao}) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <button className='botao'>
+      {textoBotao}
+    </button>
   );
+}
+
+function Formulario(){
+  return(
+    <>
+      <h2>Login: </h2>
+      <input type="text"></input>
+      <h2>Senha: </h2>
+      <input type='password'></input>
+    </>
+  )
+}
+
+function App(){
+  let logado = false;
+  if(!logado){
+    return(<Formulario />)
+  } else{
+      return(
+        <div className='header'>
+          <h1>Meu primeiro botão: </h1>
+          <CriandoBotao textoBotao={"Clique Aqui!"} />
+          <CriandoBotao textoBotao={"Não aqui!"} />
+          <CriandoBotao textoBotao={"Aqui!"} />
+          <CriandoBotao textoBotao={"Aqui poxa!"} />
+          <CriandoBotao textoBotao={"Clique Aqui vai!"} />
+          <CriandoBotao textoBotao={"Aqui!"} />
+          <CriandoBotao textoBotao={"Não Clique Aqui!"} />
+        </div>
+      )
+    }
 }
 
 export default App;
