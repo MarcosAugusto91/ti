@@ -1,5 +1,7 @@
 import './App.css';
 
+//npm start (Serve para rodar o site)
+
 function CriandoBotao({textoBotao}) {
   return (
     <button className='botao'>
@@ -20,7 +22,7 @@ function Formulario(){
 }
 
 function App(){
-  let logado = false;
+  let logado = true;
   if(!logado){
     return(<Formulario />)
   } else{
