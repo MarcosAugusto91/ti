@@ -4,10 +4,51 @@
 }
 
 body{
-    /*background-color: black;*/
+    background-image: url(../imagens/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .mosquito1{
     width: 50px;
     height: 50px;
 }
+
+.mosquito2{
+    width: 75px;
+    height: 75px;
+}
+
+.mosquito3{
+    width: 100px;
+    height: 100px;
+}
+
+.ladoA{
+    transform: scaleX(1);
+}
+
+.ladoB{
+    transform: scaleX(-1);
+}
+
+.painel{
+    position: absolute;
+    width: 190px;
+    padding: 10px;
+    bottom: 0px;
+    border-top: solid 1px white;
+    background-color: white;
+    opacity: 70%;
+}
+
+.vidas{
+
+}
+
+.cronometro{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+

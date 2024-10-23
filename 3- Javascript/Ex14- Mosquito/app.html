@@ -9,6 +9,18 @@
 </head>
 <body onresize="ajustaTamanhoTela()">
 
-    <script> randomizaPosicao() </script>
+    <div class="painel">
+        <div class="vidas">
+            <img src="imagens/coracao_cheio.png" alt="coracao_cheio">
+            <img src="imagens/coracao_cheio.png" alt="coracao_cheio">
+            <img src="imagens/coracao_cheio.png" alt="coracao_cheio">
+        </div>
+        <div class="cronometro">Tempo restante: ???</div>
+    </div>
+
+
+    <script>  
+        setInterval(function(){randomizaPosicao()},1000)
+    </script>
 </body>
 </html>
