@@ -18,9 +18,12 @@
 
 
     <script>  
-        let tempo = 5
+        let tempo = 30
         document.getElementById('cronometro').innerHTML = tempo
-        let criaMosquito = setInterval(function(){randomizaPosicao()},1000)
+        let criaMosquito 
+        window.onload = function(){
+            criaMosquito = setInterval(function(){randomizaPosicao()},temporizador)
+        }
     </script>
     <script src="scripts/jogo.js"></script>
 </body>

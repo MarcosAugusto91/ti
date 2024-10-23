@@ -1,6 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    cursor: url(../imagens/mata_mosca.png)25 25, pointer;
 }
 
 body{
@@ -79,4 +80,25 @@ body{
     border-color: green;
     color: white;
     margin-top: -10px;
+}
+
+.selecione{
+    background-color: white;
+    color:white;
+    font-size: 16px;
+}
+
+.facil{
+    background-color: green;
+    color: white;
+}
+
+.normal{
+    background-color: orange;
+    color: white;
+}
+
+.dificil{
+    background-color: red;
+    color: white;
 }
