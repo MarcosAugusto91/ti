@@ -54,3 +54,29 @@ body{
     color: black;
 }
 
+.flex{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn_reiniciar{
+    background-color: red;
+    border-color: red;
+    color: white;
+    margin-top: -50px;
+}
+
+.btn_reiniciar, .btn_iniciar, .combo{
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    width: 130px;
+}
+
+.btn_iniciar{
+    background-color: green;
+    border-color: green;
+    color: white;
+    margin-top: -10px;
+}

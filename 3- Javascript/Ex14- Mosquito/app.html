@@ -9,16 +9,18 @@
 
     <div class="painel">
         <div class="vidas">
-            <img src="imagens/coracao_cheio.png" alt="coracao_cheio">
-            <img src="imagens/coracao_cheio.png" alt="coracao_cheio">
-            <img src="imagens/coracao_cheio.png" alt="coracao_cheio">
+            <img id="v1" src="imagens/coracao_cheio.png" alt="coracao_cheio">
+            <img id="v2" src="imagens/coracao_cheio.png" alt="coracao_cheio">
+            <img id="v3" src="imagens/coracao_cheio.png" alt="coracao_cheio">
         </div>
-        <div class="cronometro">Tempo restante: ???</div>
+        <div class="cronometro">Tempo restante: <span id="cronometro"></span></div>
     </div>
 
 
     <script>  
-        setInterval(function(){randomizaPosicao()},1000)
+        let tempo = 5
+        document.getElementById('cronometro').innerHTML = tempo
+        let criaMosquito = setInterval(function(){randomizaPosicao()},1000)
     </script>
     <script src="scripts/jogo.js"></script>
 </body>

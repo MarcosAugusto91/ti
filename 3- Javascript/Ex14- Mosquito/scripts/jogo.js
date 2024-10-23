@@ -1,4 +1,5 @@
 let altura, largura = 0
+let vidas = 1
 
 function ajustaTamanhoTela() {
     altura = window.innerHeight
@@ -8,12 +9,31 @@ function ajustaTamanhoTela() {
 
 ajustaTamanhoTela()
 
+let cronometro = setInterval(
+    function(){
+            tempo -= 1
+                if( tempo < 0){
+                    clearInterval(cronometro)
+                    clearInterval(criaMosquito)
+                    window.location.href = 'vitoria.html'
+                } else{ 
+                document.getElementById('cronometro').innerHTML = tempo
+                }
+            }, 1000)
+
 function randomizaPosicao(){
 
     //remover mosquito anterior
     if(document.getElementById('mosquito')) {
         document.getElementById('mosquito').remove() 
-    }
+
+        if(vidas > 3){
+            window.location.href = 'fim_de_jogo.html'}
+            else{
+            document.getElementById('v' + vidas).src = 'imagens/coracao_vazio.png'
+            vidas++
+            }
+        }
 
     let posicaoX = Math.floor(Math.random() * largura) -100
     let posicaoY = Math.floor(Math.random() * altura) -100
@@ -31,8 +51,8 @@ function randomizaPosicao(){
 	mosquito.style.top = posicaoY + 'px'
 	mosquito.style.position = 'absolute'
     mosquito.id = 'mosquito'
-    let clicou = () => alert('elemento clicado!')
-    mosquito.onclick = clicou
+    mosquito.onclick = function() {
+        this.remove()}
 
     //colocar o elemento na tela
     document.body.appendChild(mosquito)
@@ -62,4 +82,14 @@ function ladoAleatorio(){
         case 1:
             return "ladoB"
     }
+}
+
+//reiniciando o jogo
+function reiniciar(){
+    window.location.href = 'index.html'
+}
+
+//iniciando o jogo
+function iniciar(){
+    window.location.href = 'app.html'
 }
