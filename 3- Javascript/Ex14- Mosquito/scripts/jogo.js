@@ -18,8 +18,8 @@ function randomizaPosicao(){
     let posicaoX = Math.floor(Math.random() * largura) -100
     let posicaoY = Math.floor(Math.random() * altura) -100
 
-    posicaoX = posicaoX < 0 ? 0 : posicaoX 
-    posicaoY = posicaoY < 0 ? 0 : posicaoY 
+    posicaoX = posicaoX < 0 ? 0 : posicaoX
+    posicaoY = posicaoY < 0 ? 0 : posicaoY
 
     console.log(posicaoX, posicaoY)
 
@@ -31,6 +31,8 @@ function randomizaPosicao(){
 	mosquito.style.top = posicaoY + 'px'
 	mosquito.style.position = 'absolute'
     mosquito.id = 'mosquito'
+    let clicou = () => alert('elemento clicado!')
+    mosquito.onclick = clicou
 
     //colocar o elemento na tela
     document.body.appendChild(mosquito)
