@@ -171,3 +171,13 @@ footer > p{
     text-align: center;
     padding: 15px;
 }
+
+.logonovo{
+    width: 50px;
+    height: 50px;
+}
+
+.logonovo:hover{
+    background-color: gray;
+    border-radius: 50%;
+}
