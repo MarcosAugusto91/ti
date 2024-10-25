@@ -3,7 +3,7 @@ let vidas = 1
 let temporizador = 1500
 ajustaTamanhoTela()
 
-//Seleciona o tempo de acordo com o nivel
+//Seleciona a velocidade de acordo com o nivel
 let nivel = window.location.search
     nivel = nivel.replace('?', '')
     
