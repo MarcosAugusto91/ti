@@ -1,6 +1,6 @@
 <?php
 
-// $frutas = array('banana','maçã','morango');
+//$frutas = array('banana','maçã','morango');
 
 // $frutas = [];
 
@@ -22,6 +22,5 @@
  echo '<pre>';
  var_dump($_cadastroAlunos);
  echo '</pre>';
-
 
 ?>
