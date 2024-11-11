@@ -25,11 +25,12 @@ for ($idx = 0; $idx < count($usuarios); $idx++) {
 }
 
 if($usuarioAutenticado){
-    echo 'Login efetuado com sucesso!';
+    // VALIDANDO A SESSÃO
     $_SESSION['autenticado'] = 'sim';
-} else{
+    header('location: home.php');
+} else {
+    // VALIDANDO A SESSÃO
     $_SESSION['autenticado'] = 'nao';
     header('location: index.php?login=erro');
 }
 
-// VALIDANDO A SESSÃO
