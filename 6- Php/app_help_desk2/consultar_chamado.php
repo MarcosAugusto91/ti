@@ -1,5 +1,22 @@
 <?php
- require_once "validador_acesso.php";
+  require_once "validador_acesso.php";
+
+  //declarando variável
+  $chamados = [];
+
+  //Abrindo o arquivo para consultar os dados
+  $arquivo = fopen('registros.hd', 'r'); 
+
+  //Enquanto não for o final do arquivo ele entra;
+  while(!feof($arquivo)){
+    //Pega a linha e guarda no registro
+    $registro = fgets($arquivo);
+    //Pega o registro e guarda num array, onde conterá todos os chamados
+    $chamados[] = $registro;
+  }
+
+  //sem esquecer de fechar o arquivo
+  fclose($arquivo);
 ?>
 
 <html>
@@ -21,7 +38,7 @@
   <body>
 
     <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="home.php">
         <img src="../app_help_desk2/imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
         App Help Desk
       </a>
@@ -38,27 +55,32 @@
             
             <div class="card-body">
               
+            <!-- Rodamos um foreach passando por todos os chamados -->
+              <?php foreach($chamados as $chamado){ ?>
+
+                <!-- Usamos o explode para separar os valores de cada chamado em um novo array -->
+                <?php $chamado_dados = explode('|', $chamado); 
+                
+                //Para validar que só será exibido um novo card se possuir todos os valores preenchidos
+                  if(count($chamado_dados) < 3){
+                    continue; }
+                ?>
+
               <div class="card mb-3 bg-light">
                 <div class="card-body">
-                  <h5 class="card-title">Título do chamado...</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Categoria</h6>
-                  <p class="card-text">Descrição do chamado...</p>
 
+                  <!-- Nos 3 itens abaixo aplicamos os valores respectivos em cada um deles -->
+                  <h5 class="card-title"><?php echo $chamado_dados[0] ?></h5>
+                  <h6 class="card-subtitle mb-2 text-muted"><?php echo $chamado_dados[1] ?></h6>
+                  <p class="card-text"><?php echo $chamado_dados[2] ?></p>
+                
                 </div>
               </div>
-
-              <div class="card mb-3 bg-light">
-                <div class="card-body">
-                  <h5 class="card-title">Título do chamado...</h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Categoria</h6>
-                  <p class="card-text">Descrição do chamado...</p>
-
-                </div>
-              </div>
-
+              <?php } ?>
+              
               <div class="row mt-5">
                 <div class="col-6">
-                  <button class="btn btn-lg btn-warning btn-block" type="submit">Voltar</button>
+                  <a class="btn btn-lg btn-warning btn-block" href="home.php">Voltar</a>
                 </div>
               </div>
             </div>
