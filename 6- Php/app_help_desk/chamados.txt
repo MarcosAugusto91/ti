@@ -1,8 +1,0 @@
-Computador|Software|Muito lento, formatação
-Impressora|Impressora|Não imprime
-Notebook|Hardware|Não liga
-Computador Intel I7|Rede|Não conecta no wifi
-Suporte|Criação Usuário|Suporte para criação de novos usuários de redes
-Mouse|Hardware|Scroll não funciona
-Notebook|Hardware|Erro na tela
-Celular|Rede|Não conecta Wifi

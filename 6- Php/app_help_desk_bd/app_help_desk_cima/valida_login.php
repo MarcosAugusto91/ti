@@ -3,9 +3,9 @@ session_start();
 
 //Usuários pré-cadastrados
 $usuarios = array(
-    ['email' => 'marcosaugusto_gja@hotmail.com',    'senha' => '123'],
-    ['email' => 'joyci_sn@hotmail.com',             'senha' => '123456'],
-    ['email' => 'ariowsvaldo@hotmail.com',          'senha' => '0']
+    ['id' => '1', 'perfil' => 'adm', 'nome' => 'Marcos', 'email' => 'marcosaugusto_gja@hotmail.com',    'senha' => '123'],
+    ['id' => '2', 'perfil' => 'user', 'nome' => 'Joyci', 'email' => 'joyci_sn@hotmail.com',             'senha' => '123456'],
+    ['id' => '3', 'perfil' => 'user', 'nome' => 'Ariosvaldo' , 'email' => 'ariosvaldo@hotmail.com',          'senha' => '0']
 );
 
 $usuarioAutenticado = false;
@@ -18,6 +18,9 @@ $senhaUsuario = $_GET['senha'];
 for ($idx = 0; $idx < count($usuarios); $idx++) {
     if ($emailUsuario == $usuarios[$idx]['email'] && $senhaUsuario == $usuarios[$idx]['senha']) {
         $usuarioAutenticado = true;
+        $_SESSION['id'] = $usuarios[$idx]['id'];
+        $_SESSION['perfil'] = $usuarios[$idx]['perfil'];
+        $_SESSION['nome'] = $usuarios[$idx]['nome'];
         break;
     } else {
         $usuarioAutenticado = false;

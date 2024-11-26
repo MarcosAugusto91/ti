@@ -5,7 +5,7 @@
   $chamados = [];
 
   //Abrindo o arquivo para consultar os dados
-  $arquivo = fopen('registros.hd', 'r'); 
+  $arquivo = fopen('../../app_help_desk_cima/registros.hd', 'r'); 
 
   //Enquanto não for o final do arquivo ele entra;
   while(!feof($arquivo)){
@@ -60,19 +60,28 @@
 
                 <!-- Usamos o explode para separar os valores de cada chamado em um novo array -->
                 <?php $chamado_dados = explode('|', $chamado); 
-                
+
                 //Para validar que só será exibido um novo card se possuir todos os valores preenchidos
-                  if(count($chamado_dados) < 3){
+                  if(count($chamado_dados) < 6){
                     continue; }
+                
+                //Valida primeiro se o perfil é de usuário, depois se o usuário for diferente passa pro próximo
+                if($_SESSION['perfil'] === 'user'){
+                  if($chamado_dados[0] != $_SESSION['id'] ){
+                    continue; }
+                  }
                 ?>
 
               <div class="card mb-3 bg-light">
                 <div class="card-body">
 
                   <!-- Nos 3 itens abaixo aplicamos os valores respectivos em cada um deles -->
-                  <h5 class="card-title"><?php echo $chamado_dados[0] ?></h5>
-                  <h6 class="card-subtitle mb-2 text-muted"><?php echo $chamado_dados[1] ?></h6>
-                  <p class="card-text"><?php echo $chamado_dados[2] ?></p>
+                  <h5 class="card-title"><?php echo $chamado_dados[3] ?></h5>
+                  <h6 class="card-subtitle mb-2 text-muted">
+                    <?php echo '<p style="color: green; margin-bottom: 2px;"> Usuário: ' . $chamado_dados[2] . '</p>';?>
+                  </h6>
+                  <h6 class="card-subtitle mb-2 text-muted"><?php echo $chamado_dados[4] ?></h6>
+                  <p class="card-text"><?php echo $chamado_dados[5] ?></p>
                 
                 </div>
               </div>
