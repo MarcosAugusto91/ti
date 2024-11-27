@@ -22,7 +22,8 @@ require_once "validador_acesso.php";
 <body>
   <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="home.php">
-      <img src="../app_help_desk2/imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      <img src="" alt="">
+      <img src="../app_help_desk_BD/imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
       App Help Desk
     </a>
   </nav>
@@ -40,7 +41,14 @@ require_once "validador_acesso.php";
                   alert('Chamado cadastrado com sucesso!')
                 </script>
               </div>
+            <?php } else if (isset($_GET['cadastro']) && $_GET['cadastro'] === 'falha'){ ?>
+              <div style="color: red;">
+                <script>
+                  alert('Erro de inserção de chamado no banco, contate o administrador!')
+                </script>
+              </div>
             <?php } ?>
+
           </div>
           <div class="card-body">
             <div class="row">
@@ -50,23 +58,25 @@ require_once "validador_acesso.php";
                 <form action="registra_chamado.php" method="POST">
                   <div class="form-group">
                     <label>Título</label>
-                    <input name="titulo" type="text" class="form-control" placeholder="Título">
+                    <input name="titulo" type="text" class="form-control" placeholder="Título" required>
                   </div>
 
                   <div class="form-group">
                     <label>Categoria</label>
-                    <select name="categoria" class="form-control">
-                      <option>Criação Usuário</option>
-                      <option>Impressora</option>
-                      <option>Hardware</option>
-                      <option>Software</option>
-                      <option>Rede</option>
+                    <select name="categoria" class="form-control" required>
+                      <option value="" disabled selected>Selecione uma opção!</option>
+                      <option value="Criação Usuário">Criação Usuário</option>
+                      <option value="Impressora">Impressora</option>
+                      <option value="Hardware">Hardware</option>
+                      <option value="Software">Software</option>
+                      <option value="Rede">Rede</option>
+                      <option value="Formatação">Formatação</option>
                     </select>
                   </div>
 
                   <div class="form-group">
                     <label>Descrição</label>
-                    <textarea name="descricao" class="form-control" rows="3"></textarea>
+                    <textarea name="descricao" class="form-control" rows="3" required></textarea>
                   </div>
 
                   <div class="row mt-5">

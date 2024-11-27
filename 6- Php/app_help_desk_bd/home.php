@@ -23,7 +23,7 @@ require_once "validador_acesso.php";
 
   <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="#">
-      <img src="../app_help_desk2/imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      <img src="../app_help_desk_bd/imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
       App Help Desk
     </a>
     <ul class="navbar-nav">
@@ -43,16 +43,34 @@ require_once "validador_acesso.php";
           </div>
           <div class="card-body">
             <div class="row">
-              <div class="col-6 d-flex justify-content-center">
+              <div class="col-3 d-flex justify-content-center">
                 <a href="abrir_chamado.php">
-                  <img src="../app_help_desk2/imagens/formulario_abrir_chamado.png" width="70" height="70">
+                  <img src="../app_help_desk_bd/imagens/formulario_abrir_chamado.png" width="70" height="70">
+                  <p>&nbsp&nbsp&nbsp&nbspAbrir</p>
                 </a>
+                
               </div>
-              <div class="col-6 d-flex justify-content-center">
+              <div class="col-3 d-flex justify-content-center">
                 <a href="consultar_chamado.php">
-                  <img src="../app_help_desk2/imagens/formulario_consultar_chamado.png" width="70" height="70">
+                  <img src="../app_help_desk_bd/imagens/formulario_consultar_chamado.png" width="70" height="70">
+                  <p>Consultar</p>
+                </a>
+              </div>              
+              
+              <div class="col-3 d-flex justify-content-center">
+                <a href="#">
+                  <img src="../app_help_desk_bd/imagens/autorizacao.png" width="70" height="70">
+                  <p>Autorizar</p>
                 </a>
               </div>
+
+              <div class="col-3 d-flex justify-content-center">
+                <a href="#">
+                  <img src="../app_help_desk_bd/imagens/editar-arquivo.png" width="70" height="70">
+                  <p>&nbspEditar</p>
+                </a>
+              </div>
+              
             </div>
           </div>
         </div>

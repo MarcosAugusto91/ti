@@ -1,27 +1,19 @@
 <?php
     require_once "validador_acesso.php";
+    require 'config.php';
 
-    //Organizando os dados, retirando | dos possíveis valores
-    $id = str_replace('|', '-', $_SESSION['id']);
-    $perfil = str_replace('|', '-', $_SESSION['perfil']);
-    $nome = str_replace('|', '-', $_SESSION['nome']);
-    $titulo = str_replace('|', '-', $_POST['titulo']);
-    $categoria = str_replace('|', '-', $_POST['categoria']);
-    $descricao = str_replace('|', '-', $_POST['descricao']);
-    
-    //Concatenando os valores de cada parâmetro, separado por |
-    $dados = $id . '|' . $perfil . '|'  . $nome . '|' . $titulo . '|' . $categoria . '|' . $descricao . PHP_EOL;
+    $titulo = $_POST['titulo'];
+    $categoria = $_POST['categoria'];
+    $descricao = $_POST['descricao'];
+    $id_usuario = $_SESSION['id'];
 
-    var_dump($dados);
+    //Inserção de dados no banco
+    $sql = "INSERT INTO chamados(titulo, categoria, descricao, id_usuario) VALUES('{$titulo}', '{$categoria}', '{$descricao}', '{$id_usuario}')";
 
-    //Abrindo o arquivo e armazenando em uma variável
-    $arquivo = fopen('../../app_help_desk_cima/registros.hd','a');
-    
-    //Escrevendo no arquivo
-    fwrite($arquivo, $dados);
-    //Fechando o arquivo
-    fclose($arquivo);
+    $res = $conexao->query($sql);
 
-    //Redirecionando o arquivo e passando os dados para efetivar um aviso com alert em javascript
-    header('location: abrir_chamado.php?cadastro=efetuado')
+        if($res==true){
+            //Redirecionando o arquivo e passando os dados para efetivar um aviso com alert em javascript
+            header('location: abrir_chamado.php?cadastro=efetuado');
+        } else { header('location: abrir_chamado.php?cadastro=falha');}
 ?>
