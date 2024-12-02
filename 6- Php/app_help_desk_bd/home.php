@@ -1,5 +1,10 @@
 <?php
 require_once "validador_acesso.php";
+require_once "config.php";
+
+$sql = "SELECT perfil FROM usuarios WHERE id_usuario ={$_SESSION['id']}";
+$res = $conexao->query($sql);
+$row = $res->fetch_object();
 ?>
 
 <html>
@@ -43,39 +48,75 @@ require_once "validador_acesso.php";
           </div>
           <div class="card-body">
             <div class="row">
-              <div class="col-3 d-flex justify-content-center">
+              <div class="col-2 d-flex justify-content-center">
                 <a href="abrir_chamado.php">
                   <img src="../app_help_desk_bd/imagens/formulario_abrir_chamado.png" width="70" height="70">
                   <p>&nbsp&nbsp&nbsp&nbspAbrir</p>
                 </a>
-                
+
               </div>
-              <div class="col-3 d-flex justify-content-center">
+              <div class="col-2 d-flex justify-content-center">
                 <a href="consultar_chamado.php">
                   <img src="../app_help_desk_bd/imagens/formulario_consultar_chamado.png" width="70" height="70">
                   <p>Consultar</p>
                 </a>
-              </div>              
-              
-              <div class="col-3 d-flex justify-content-center">
-                <a href="#">
+              </div>
+
+              <?php if ($row->perfil != 'Adm') { ?>
+                <div class="col-2 d-flex justify-content-center">
+                  <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
+                    <img src="../app_help_desk_bd/imagens/editar-arquivo.png" width="70" height="70">
+                    <p>&nbspEditar</p>
+                  </a>
+                </div>
+
+                <div class="col-2 d-flex justify-content-center">
+                <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
                   <img src="../app_help_desk_bd/imagens/autorizacao.png" width="70" height="70">
                   <p>Autorizar</p>
                 </a>
               </div>
 
-              <div class="col-3 d-flex justify-content-center">
-                <a href="#">
-                  <img src="../app_help_desk_bd/imagens/editar-arquivo.png" width="70" height="70">
-                  <p>&nbspEditar</p>
+              <div class="col-2 d-flex justify-content-center">
+                <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
+                  <img src="../app_help_desk_bd/imagens/usuarios.png" width="70" height="70">
+                  <p>&nbspUsuários</p>
                 </a>
               </div>
-              
+
+              <?php } else { ?>
+                <div class="col-2 d-flex justify-content-center">
+                  <a href="editar_chamado.php">
+                    <img src="../app_help_desk_bd/imagens/editar-arquivo.png" width="70" height="70">
+                    <p>&nbspEditar</p>
+                  </a>
+                </div>
+
+                <div class="col-2 d-flex justify-content-center">
+                <a href="autorizar_usuarios.php">
+                  <img src="../app_help_desk_bd/imagens/autorizacao.png" width="70" height="70">
+                  <p>Autorizar</p>
+                </a>
+              </div>
+
+              <div class="col-2 d-flex justify-content-center">
+                <a href="usuarios.php">
+                  <img src="../app_help_desk_bd/imagens/usuarios.png" width="70" height="70">
+                  <p>&nbspUsuários</p>
+                </a>
+              </div>
+              <?php } ?>
+
+              <div class="col-2 d-flex justify-content-center">
+                <a href="#">
+                  <img src="../app_help_desk_bd/imagens/help.png" width="70" height="70">
+                  <p>&nbsp &nbsp Help</p>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
 </body>
-
 </html>

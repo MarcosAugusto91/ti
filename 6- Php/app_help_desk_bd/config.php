@@ -1,9 +1,3 @@
 <?php
-    define('HOST','localhost');
-    define('USER','root');
-    define('PASS','');
-    define('BASE','helpdesk');
-    
-    //Criar a string de conexão
-    $conexao = new mysqli(HOST,USER,PASS,BASE);
+    require '../../app_help_desk_bd_cima/config.php';
 ?>

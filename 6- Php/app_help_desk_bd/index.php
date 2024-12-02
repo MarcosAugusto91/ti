@@ -43,6 +43,12 @@
                   <a href="cadastro.php">Novo? Cadastre-se!</a>
                 </div>
               </div>
+
+              <?php
+                //SE CADASTRO TIVER SIDO EFETUADO
+                if (isset($_GET['usuario']) && $_GET['usuario'] === 'sucesso') { ?>
+                  <script> alert('Usuário Cadastrado com sucesso!');</script>
+              <?php } ?>  
               
               <?php
                 //VALIDA SE O PARÂMETRO LOGIN EXISTE E SE FOI AUTENTICADO

@@ -1,22 +1,20 @@
 <?php
   require_once "validador_acesso.php";
+  require "config.php";
 
-  //declarando variável
-  $chamados = [];
+// Ajusta a consulta SQL com base no perfil do usuário
+if ($_SESSION['perfil'] != 'Adm') {
+    $sql = "SELECT * FROM chamados WHERE id_usuario = {$_SESSION['id']}";
+} else {
+    $sql = "SELECT * FROM chamados";
+}
 
-  //Abrindo o arquivo para consultar os dados
-  $arquivo = fopen('../../app_help_desk_cima/registros.hd', 'r'); 
+  $res = $conexao->query($sql);
+  $qtd = $res->num_rows;
 
-  //Enquanto não for o final do arquivo ele entra;
-  while(!feof($arquivo)){
-    //Pega a linha e guarda no registro
-    $registro = fgets($arquivo);
-    //Pega o registro e guarda num array, onde conterá todos os chamados
-    $chamados[] = $registro;
-  }
-
-  //sem esquecer de fechar o arquivo
-  fclose($arquivo);
+  $sql = "SELECT * FROM usuarios";
+  $resusuarios = $conexao->query($sql);
+  $qtdusuarios = $resusuarios->num_rows;
 ?>
 
 <html>
@@ -56,33 +54,29 @@
             <div class="card-body">
               
             <!-- Rodamos um foreach passando por todos os chamados -->
-              <?php foreach($chamados as $chamado){ ?>
-
-                <!-- Usamos o explode para separar os valores de cada chamado em um novo array -->
-                <?php $chamado_dados = explode('|', $chamado); 
-
-                //Para validar que só será exibido um novo card se possuir todos os valores preenchidos
-                  if(count($chamado_dados) < 6){
-                    continue; }
-                
-                //Valida primeiro se o perfil é de usuário, depois se o usuário for diferente passa pro próximo
-                if($_SESSION['perfil'] === 'user'){
-                  if($chamado_dados[0] != $_SESSION['id'] ){
-                    continue; }
-                  }
-                ?>
+              <?php while($row = $res->fetch_object()){ ?>
 
               <div class="card mb-3 bg-light">
                 <div class="card-body">
 
                   <!-- Nos 3 itens abaixo aplicamos os valores respectivos em cada um deles -->
-                  <h5 class="card-title"><?php echo $chamado_dados[3] ?></h5>
-                  <h6 class="card-subtitle mb-2 text-muted">
-                    <?php echo '<p style="color: green; margin-bottom: 2px;"> Usuário: ' . $chamado_dados[2] . '</p>';?>
+                  <h5 class="card-title"><?php echo $row -> titulo ?></h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Categoria: <?php echo $row -> categoria ?></h6>
+                  <p class="card-text">Descrição: <?php echo $row -> descricao ?></p>
+                  <h6 class="card-subtitle mb-2 text-muted" style="text-align: right;">
+                    <?php 
+                    $idchamado = $row -> id_chamado;
+                    $idusuario = $row -> id_usuario;
+                    $resusuarios->data_seek(0); // Reinicia o ponteiro do resultado da consulta de usuários
+                    while ($user = $resusuarios->fetch_object()){
+                        if ($user -> id_usuario == $idusuario){
+                          echo '<p style="color: green; margin-bottom: 2px;"> Usuário: ' . $user -> nome . '</p>';
+                            break; // Sair do loop após encontrar o usuário
+                        }
+                      }
+                    ?>
                   </h6>
-                  <h6 class="card-subtitle mb-2 text-muted"><?php echo $chamado_dados[4] ?></h6>
-                  <p class="card-text"><?php echo $chamado_dados[5] ?></p>
-                
+                  <h6 class="card-title" style="text-align: right;">Ordem de Serviço: <?php echo $row -> id_chamado ?></h6>
                 </div>
               </div>
               <?php } ?>

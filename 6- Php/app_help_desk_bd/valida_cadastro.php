@@ -1,9 +1,5 @@
 <?php
     include ('config.php');
-
-    echo '<pre>';
-    var_dump($_POST);
-    echo '</pre>';
    
     if($_POST['perfil'] === "-- Selecione --")
     {
@@ -21,7 +17,7 @@
         $res = $conexao->query($sql);
 
         if($res==true){
-            header('location: cadastro.php?usuario=sucesso');
+            header('location: index.php?usuario=sucesso');
         } else { header('location: cadastro.php?usuario=falha');}
 
         
