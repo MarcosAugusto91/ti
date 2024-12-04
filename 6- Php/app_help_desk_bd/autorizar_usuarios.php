@@ -4,14 +4,11 @@
 ?>
 
 <html>
-
 <head>
   <meta charset="utf-8" />
   <title>App Help Desk</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-
 </head>
 
 <body>
@@ -29,6 +26,12 @@
     <div class="container">
         <br>
         <?php
+
+          if(isset($_GET['usuario']) && $_GET['usuario'] == 'adm'){?>
+            <script>alert('Usuário atribuido como Administrador')</script><?php
+          } else if(isset($_GET['usuario']) && $_GET['usuario'] == 'usuario') { ?>
+            <script>alert('Usuário atribuido como Usuário')</script><?php
+          }
 
             $sql = "SELECT * FROM usuarios where perfil ='Administrador'";
             $res = $conexao->query($sql);
@@ -50,17 +53,15 @@
                     print "<td>" . $row -> nome . "</td>";
                     print "<td>" . $row -> email . "</td>";
                     print "<td>" . $row -> perfil . "</td>";
-                    print "<td>
-                        <button class='btn btn-success' onclick=\"location.href='autorizacao.php?id=". $row -> id_usuario . "autorizar='sim'';\">S</button>
-                        <button class='btn btn-danger' onclick=\"location.href='autorizacao.php?id=". $row -> id_usuario . "autorizar='nao'';\">N</button>
-                    </td>";
+            
+                    print "<td><button class='btn btn-success' onclick=\"location.href='autorizacao.php?id=". $row -> id_usuario . "&autorizar=sim';\">S</button>
+                    <button class='btn btn-danger' onclick=\"location.href='autorizacao.php?id=". $row -> id_usuario . "&autorizar=nao';\">N</button>
+                    </td>"; 
                     print "</tr>";        
                 }
                 print "</table>";
             }
-
         ?>
     </div>
 </body>
-
 </html>

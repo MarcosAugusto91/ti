@@ -40,7 +40,7 @@
           <div class="card-body">
             <form action="valida_cadastro.php" method="POST">
               <div class="form-group">
-                <input name="nome" type="text" class="form-control" placeholder="Nome Completo" required>
+                <input name="nome" type="text" class="form-control" placeholder="Nome Completo" required autofocus>
               </div>              
               <div class="form-group">
                 <input name="email" type="email" class="form-control" placeholder="E-mail" required>

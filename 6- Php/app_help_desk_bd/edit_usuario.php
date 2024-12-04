@@ -56,7 +56,7 @@ $row = $res->fetch_object();
                   <div class="form-group">
                     <label>Nome: </label>
                     <input name="nome" type="text" class="form-control" 
-                    value="<?php print $row->nome;?>" required>
+                    value="<?php print $row->nome;?>" required autofocus>
                   </div>
                   
                   <div class="form-group">
