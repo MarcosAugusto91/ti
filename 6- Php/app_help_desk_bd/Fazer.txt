@@ -1,7 +1,11 @@
 Autorizar;
-Criar um HELP;
+Validar se o e-mail já não está cadastrado;
+Colocar confirmação se realmente deseja excluir;
 Colocar Bem-vindo Usuário X;
 Inserir Status de andamento do chamado;
-Colocar confirmação se realmente deseja excluir;
+Criar a tela de relatório com:
 Total de chamados em aberto em cada andamento(Aberto, iniciado, finalizado);
+Exibindo todos eles separados de acordo com oque selecionamos;
+
+Futuro:
 Esqueci minha senha; Com validação após 3 tentativas;

@@ -78,9 +78,8 @@ $qtdusuarios = $resusuarios->num_rows;
 
                   <div class="form-group">
                     <label>Descrição</label>
-                    <textarea name="descricao" class="form-control" rows="3" required >
-                      <?php print $row-> descricao;?>
-                    </textarea>
+                    <!-- APLICADO A FUNÇÃO TRIM PARA QUE NÃO SEJA INSERIDO ESPAÇOS INDESEJADOS -->
+                    <textarea name="descricao" class="form-control" rows="3" required><?php echo trim($row->descricao);?></textarea>
                   </div>
 
                   <div class="row mt-5">

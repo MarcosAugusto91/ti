@@ -84,6 +84,13 @@ $row = $res->fetch_object();
                 </a>
               </div>
 
+              <div class="col-2 d-flex justify-content-center">
+                <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
+                  <img src="../app_help_desk_bd/imagens/relatorio.png" width="70" height="70">
+                  <p>Relatórios</p>
+                </a>
+              </div>
+
               <?php } else { ?>
                 <div class="col-2 d-flex justify-content-center">
                   <a href="editar_chamado.php">
@@ -105,17 +112,26 @@ $row = $res->fetch_object();
                   <p>&nbspUsuários</p>
                 </a>
               </div>
-              <?php } ?>
 
               <div class="col-2 d-flex justify-content-center">
-                <a href="#">
-                  <img src="../app_help_desk_bd/imagens/help.png" width="70" height="70">
-                  <p>&nbsp &nbsp Help</p>
+                <a href="relatorios.php">
+                  <img src="../app_help_desk_bd/imagens/relatorio.png" width="70" height="70">
+                  <p>Relatórios</p>
                 </a>
               </div>
+              <?php } ?>
             </div>
           </div>
         </div>
+
+        <div class="card-home">
+          <div class="card">
+            <img src="imagens/helpdesk.svg" alt="Banner" height="230px">
+            <h6 style="text-align: center;">App Help Desk</h6>
+            <p style="text-align: center;">Assistência de qualidade para sua empresa!</p>
+          </div>
+        </div>
+
       </div>
     </div>
 </body>
