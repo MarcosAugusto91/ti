@@ -11,8 +11,6 @@ if($_GET['autorizar'] == 'sim'){
     $res = $conexao->query($sql);
     header('location: autorizar_usuarios.php?usuario=usuario');
 }
-
-
 ?>
 
 <html>
