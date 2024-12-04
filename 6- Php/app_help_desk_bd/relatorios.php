@@ -2,9 +2,31 @@
 require_once "validador_acesso.php";
 require_once "config.php";
 
-$sql = "SELECT perfil FROM usuarios WHERE id_usuario ={$_SESSION['id']}";
-$res = $conexao->query($sql);
-$row = $res->fetch_object();
+// Inicializando as variáveis 
+$totalAbertos = 0; 
+$totalAndamento = 0; 
+$totalFinalizados = 0; 
+
+// Consulta para obter todos os chamados 
+$sql = "SELECT statuschamado FROM chamados"; $res = $conexao->query($sql); 
+
+// Verifica se a consulta retornou resultados 
+if ($res) { 
+  // Itera sobre cada registro retornado 
+  while ($row = $res->fetch_assoc()) { 
+    switch ($row['statuschamado']) { 
+      case 'Aberto': 
+        $totalAbertos++; 
+        break; 
+      case 'Andamento': 
+        $totalAndamento++; 
+        break; 
+      case 'Finalizado': 
+        $totalFinalizados++; 
+        break; 
+      } 
+    } 
+  }
 ?>
 
 <html>
@@ -50,23 +72,29 @@ $row = $res->fetch_object();
           <div class="card-body">
             <div class="row">
               <div class="col-4 d-flex justify-content-center">
-                <a href="abrir_chamado.php" class="text-danger">
+                <a href="abertos.php" class="text-danger">
                   <img src="../app_help_desk_bd/imagens/abertos.png" width="70" height="70">
-                  <p>&nbsp Abertos</p>
+                  <p>Abertos(<?php 
+                      print($totalAbertos);
+                  ?>)</p>
                 </a>
               </div>
 
               <div class="col-4 d-flex justify-content-center">
-                <a href="consultar_chamado.php" style="color:darkorange">
+                <a href="andamento.php" style="color:darkorange">
                   <img src="../app_help_desk_bd/imagens/andamento.png" width="70" height="70">
-                  <p>Andamento</p>
+                  <p>Andamento(<?php 
+                      print($totalAndamento);
+                  ?>)</p>
                 </a>
               </div>
 
               <div class="col-4 d-flex justify-content-center">
-                <a href="consultar_chamado.php" style="color:teal">
+                <a href="finalizado.php" style="color:teal">
                   <img src="../app_help_desk_bd/imagens/finalizados.png" width="70" height="70">
-                  <p>Finalizados</p>
+                  <p>Finalizados(<?php 
+                      print($totalFinalizados);
+                  ?>)</p>
                 </a>
               </div>
 

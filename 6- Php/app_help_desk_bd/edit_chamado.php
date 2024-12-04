@@ -66,7 +66,7 @@ $qtdusuarios = $resusuarios->num_rows;
                   <div class="form-group">
                     <label>Categoria</label>
                     <select name="categoria" class="form-control" required>
-                      <option value="" disabled selected><?php print $row->categoria;?></option>
+                      <option value="<?php print $row->categoria;?>" selected><?php print $row->categoria;?></option>
                       <option value="Criação Usuário">Criação Usuário</option>
                       <option value="Impressora">Impressora</option>
                       <option value="Hardware">Hardware</option>
@@ -77,9 +77,25 @@ $qtdusuarios = $resusuarios->num_rows;
                   </div>
 
                   <div class="form-group">
-                    <label>Descrição</label>
+                    <label>Status</label>
+                    <select name="status" class="form-control" required>
+                      <option value="" disabled selected>Escolha</option>
+                      <option value="Aberto">Aberto</option>
+                      <option value="Andamento">Em andamento</option>
+                      <option value="Finalizado">Finalizado</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Descrição Usuário</label>
                     <!-- APLICADO A FUNÇÃO TRIM PARA QUE NÃO SEJA INSERIDO ESPAÇOS INDESEJADOS -->
-                    <textarea name="descricao" class="form-control" rows="3" required><?php echo trim($row->descricao);?></textarea>
+                    <textarea name="descricao" class="form-control" rows="3" required disabled><?php echo trim($row->descricao);?></textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Descrição Técnico</label>
+                    <!-- APLICADO A FUNÇÃO TRIM PARA QUE NÃO SEJA INSERIDO ESPAÇOS INDESEJADOS -->
+                    <textarea name="descricaotecnico" class="form-control" rows="3" required><?php echo trim($row->descricaotecnico);?></textarea>
                   </div>
 
                   <div class="row mt-5">
