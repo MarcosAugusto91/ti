@@ -13,10 +13,6 @@ $senhaUsuario = md5($_GET['senha']);
     $res = $conexao->query($sql);
     $row = $res->fetch_object();
 
-    echo '<pre>';
-    var_dump($row);
-    echo '</pre>';
-
 // AUTENTICANDO O USUÁRIO
     if ($emailUsuario == $row->email && $senhaUsuario == $row->senha) {
         $usuarioAutenticado = true;

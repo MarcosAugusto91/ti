@@ -3,7 +3,7 @@
     require 'config.php';
 
     $titulo = $_POST['titulo'];
-    $categoria = htmlspecialchars($_POST['categoria']);
+    $categoria = $_POST['categoria'];
     $descricao = $_POST['descricao'];
     $id_usuario = $_SESSION['id'];
 

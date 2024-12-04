@@ -51,8 +51,8 @@
                     print "<td>" . $row -> email . "</td>";
                     print "<td>" . $row -> perfil . "</td>";
                     print "<td>
-                        <button class='btn btn-success'>S</button>
-                        <button class='btn btn-danger'>N</button>
+                        <button class='btn btn-success' onclick=\"location.href='autorizacao.php?id=". $row -> id_usuario . "autorizar='sim'';\">S</button>
+                        <button class='btn btn-danger' onclick=\"location.href='autorizacao.php?id=". $row -> id_usuario . "autorizar='nao'';\">N</button>
                     </td>";
                     print "</tr>";        
                 }
