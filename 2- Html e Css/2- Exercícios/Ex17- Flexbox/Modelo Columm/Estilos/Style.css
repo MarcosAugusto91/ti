@@ -6,10 +6,21 @@
     font-family: "Sour Gummy", sans-serif;
 }
 
+body{
+    background-image: url(../Imagens/background.jpg);
+    background-size: cover;
+}
+
 header{
     width: 200px;
-    margin: auto;
     font-size: 25px;
+    display: block;
+    background-color: rgb(4, 2, 42);
+    width: 100vw;
+    text-align: center;
+    color: white;
+    opacity: 80%;
+    padding: 10px;
 }
 
 
@@ -17,7 +28,6 @@ header{
     /*background-color: gray;*/
     width: 100vw;
     display: flex;
-    background-image: url(../Imagens/background.jpg);
 }
 
 .containerlateral{
@@ -79,12 +89,13 @@ section{
     border-radius: 5px;
     margin: 5px;
     width: 200px;
-    height: 260px;
+    height: 350px;
     background-color: white;
     display: flex ;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    flex: auto;
 }
 
 section>p{
@@ -93,13 +104,18 @@ section>p{
 
 .imgconteudo{
     border-radius: 5px;
-    width: 180px;
+    width: 96%;
+    max-height: 300px;
 }
 
 footer{
     background-color: rgb(16, 15, 15);
     color: white;
     text-align: right;
+}
+
+footer > p{
+    padding-right: 10px;
 }
 
 @media screen and (min-width:100px) and (max-width:1000px){
