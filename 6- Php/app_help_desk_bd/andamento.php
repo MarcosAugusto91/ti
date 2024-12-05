@@ -9,6 +9,38 @@
   <title>App Help Desk</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="icon" href="imagens/logo.png" type="image/x-icon">
+  <style>
+    .table-responsive {
+      overflow-x: auto;
+    }
+    .btn-sm {
+      padding: 5px;
+      min-width: auto;
+    }
+    .thead-light th {
+      background-color: #ffffff;
+      font-weight: bold;
+      text-align: center;
+    }
+    td, th {
+      text-align: center;
+    }
+    .status-andamento {
+      background-color: orange; /* Fundo laranja */
+      color: #ffffff; /* Texto branco */
+      font-weight: bold;
+      width: 200px; /* Aumenta o espaço da coluna */
+    }
+    .total-chamados {
+      text-align: left; /* Alinha à esquerda */
+    }
+    @media (max-width: 1000px) {
+      .hide-on-small {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -24,55 +56,63 @@
     </ul>
   </nav>
 
-    <div class="container">
-        <br>
-        <?php
-            $sql = "SELECT count(statuschamado) as 'Total' FROM chamados WHERE statuschamado ='Andamento'";
-            $res = $conexao->query($sql);
-            $row = $res->fetch_assoc(); 
-            $total = $row['Total'];
+  <div class="container">
+    <br>
+    <?php
+        $sql = "SELECT count(statuschamado) as 'Total' FROM chamados WHERE statuschamado ='Andamento'";
+        $res = $conexao->query($sql);
+        $row = $res->fetch_assoc(); 
+        $total = $row['Total'];
 
-            $sql = "SELECT * FROM chamados WHERE statuschamado ='Andamento'";
-            $res = $conexao->query($sql);
-            $qtd = $res->num_rows;
+        $sql = "SELECT * FROM chamados WHERE statuschamado ='Andamento'";
+        $res = $conexao->query($sql);
+        $qtd = $res->num_rows;
 
-            $sql = "SELECT * FROM usuarios";
-            $resusuarios = $conexao->query($sql);
-            $qtdusuarios = $resusuarios->num_rows;
+        $sql = "SELECT * FROM usuarios";
+        $resusuarios = $conexao->query($sql);
+        $qtdusuarios = $resusuarios->num_rows;
 
-            if($qtd > 0){
-                print "<table class='table table-hover table-bordered'>";
-                print "<th class='btn' style='background-color: orange; color: white;' colspan=1>Status em Andamento</th>";
-                print "<th colspan=4> $total Chamados</th>";
+        if($qtd > 0){
+            print "<div class='table-responsive'>";
+            print "<table class='table table-hover table-bordered table-sm'>";
+            print "<thead class='thead-light'>";
+            print "<tr>";
+            print "<th class='status-andamento'> Status em Andamento </th>";
+            print "<th colspan=4 class='total-chamados' style='text-align: left;'> $total Chamados</th>";
+            print "</tr>";
+            print "<tr>";
+            print "<th scope='col'>Chamado</th>";
+            print "<th scope='col'>Título</th>";
+            print "<th scope='col' class='hide-on-small'>Categoria</th>";
+            print "<th scope='col' class='hide-on-small'>Descrição</th>";
+            print "<th scope='col'>Usuário</th>";
+            print "</tr>";
+            print "</thead>";
+            print "<tbody>";
+
+            while($row = $res->fetch_object()){
                 print "<tr>";
-                print "<th>Chamado</th>";
-                print "<th>Título</th>";
-                print "<th>Categoria</th>";
-                print "<th>Descrição</th>";
-                print "<th>Usuário</th>";
-                print "</tr>";
-
-                while($row = $res->fetch_object()){
-                    print "<tr>";
-                    print "<td>".  $row->id_chamado."</td>";
-                    print "<td>" . $row -> titulo . "</td>";
-                    print "<td>" . $row -> categoria . "</td>";
-                    print "<td>" . $row -> descricao . "</td>";
-                    
-                    $idchamado = $row -> id_chamado;
-                    $idusuario = $row -> id_usuario;
-                    $resusuarios->data_seek(0); // Reinicia o ponteiro do resultado da consulta de usuários
-                    while ($user = $resusuarios->fetch_object()){
-                        if ($user -> id_usuario == $idusuario){
-                            print "<td>" . $user -> nome . "</td>";
-                            break; // Adicionado para sair do loop após encontrar o usuário
-                        }
+                print "<td>" . $row -> id_chamado . "</td>";
+                print "<td>" . $row -> titulo . "</td>";
+                print "<td class='hide-on-small'>" . $row -> categoria . "</td>";
+                print "<td class='hide-on-small'>" . $row -> descricao . "</td>";
+                
+                $idchamado = $row -> id_chamado;
+                $idusuario = $row -> id_usuario;
+                $resusuarios->data_seek(0); // Reinicia o ponteiro do resultado da consulta de usuários
+                while ($user = $resusuarios->fetch_object()){
+                    if ($user -> id_usuario == $idusuario){
+                        print "<td>" . $user -> nome . "</td>";
+                        break; // Adicionado para sair do loop após encontrar o usuário
                     }
                 }
-                print "</table>";
+                print "</tr>";
             }
-        ?>
-    </div>
+            print "</tbody>";
+            print "</table>";
+            print "</div>";
+        }
+    ?>
+  </div>
 </body>
-
 </html>

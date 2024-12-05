@@ -9,6 +9,34 @@
   <title>App Help Desk</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="icon" href="imagens/logo.png" type="image/x-icon">
+  <style>
+    .table-responsive {
+      overflow-x: auto;
+    }
+    .btn-sm {
+      padding: 5px; /* Define um padding de 5px para os botões */
+      min-width: auto; /* Remove a largura mínima */
+    }
+    .thead-light th {
+      background-color: #ffffff; /* Define a cor de fundo branco */
+      font-weight: bold; /* Define o texto em negrito */
+      text-align: center; /* Centraliza o texto */
+    }
+    td, th {
+      text-align: center; /* Centraliza o conteúdo das células */
+    }
+    @media (max-width: 1000px) {
+      .hide-on-small {
+        display: none;
+      }
+    }
+    @media (max-width: 300px) {
+      .hide-on-extra-small {
+        display: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -40,32 +68,38 @@
             $qtd = $res->num_rows;
 
             if($qtd > 0){
-                print "<table class='table table-hover table-bordered'>";
+                print "<div class='table-responsive'>";
+                print "<table class='table table-hover table-bordered table-sm'>";
+                print "<thead class='thead-light'>"; // Cabeçalho branco com texto em negrito
                 print "<tr>";
-                print "<th>ID</th>";
-                print "<th>Usuário</th>";
-                print "<th>E-mail</th>";
-                print "<th>Perfil</th>";
-                print "<th>Autorizar</th>";
+                print "<th scope='col'>ID</th>";
+                print "<th scope='col'>Usuário</th>";
+                print "<th scope='col' class='hide-on-small'>E-mail</th>";
+                print "<th scope='col' class='hide-on-small'>Perfil</th>";
+                print "<th scope='col'>Autorizar</th>";
                 print "</tr>";
+                print "</thead>";
+                print "<tbody>";
 
                 while($row = $res->fetch_object()){
                     print "<tr>";
                     print "<td>" . $row -> id_usuario . "</td>";
                     print "<td>" . $row -> nome . "</td>";
-                    print "<td>" . $row -> email . "</td>";
-                    print "<td>" . $row -> perfil . "</td>";
+                    print "<td class='hide-on-small'>" . $row -> email . "</td>";
+                    print "<td class='hide-on-small'>" . $row -> perfil . "</td>";
             
                     if ($row -> perfil == 'Administrador'){
-                    print "<td><button class='btn btn-success' onclick=\"location.href='autorizacao.php?id=". $row -> id_usuario . "&autorizar=simA';\">S</button>
-                    <button class='btn btn-danger' onclick=\"location.href='autorizacao.php?id=". $row -> id_usuario . "&autorizar=nao';\">N</button></td>"; } 
+                    print "<td><button class='btn btn-success btn-sm' onclick=\"location.href='autorizacao.php?id=". $row -> id_usuario . "&autorizar=simA';\">S</button>
+                    <button class='btn btn-danger btn-sm' onclick=\"location.href='autorizacao.php?id=". $row -> id_usuario . "&autorizar=nao';\">N</button></td>"; } 
                     else if ($row -> perfil == 'Tecnico'){
-                      print "<td><button class='btn btn-success' onclick=\"location.href='autorizacao.php?id=". $row -> id_usuario . "&autorizar=simT';\">S</button>
-                    <button class='btn btn-danger' onclick=\"location.href='autorizacao.php?id=". $row -> id_usuario . "&autorizar=nao';\">N</button></td>";}
+                      print "<td><button class='btn btn-success btn-sm' onclick=\"location.href='autorizacao.php?id=". $row -> id_usuario . "&autorizar=simT';\">S</button>
+                    <button class='btn btn-danger btn-sm' onclick=\"location.href='autorizacao.php?id=". $row -> id_usuario . "&autorizar=nao';\">N</button></td>";}
 
                     print "</tr>";        
                 }
+                print "</tbody>";
                 print "</table>";
+                print "</div>";
             }
         ?>
     </div>

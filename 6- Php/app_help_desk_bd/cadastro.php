@@ -5,6 +5,7 @@
   <title>App Help Desk</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="icon" href="imagens/logo.png" type="image/x-icon">
 
   <style>
     .card-login {
@@ -56,6 +57,11 @@
                     <option>Tecnico</option>
                     <option>Administrador</option>
                 </select>
+                <?php //VALIDA SE O USUÁRIO JÁ NÃO ESTAVA CADASTRADO
+                    if(isset($_GET['email']) && $_GET['email'] === 'erro') { ?>
+                        <div class="text-danger" style="text-align: center;"> E-Mail já cadastrado!</div>
+                <?php } ?>
+
                 <?php //VALIDA SE O PERFIL É VALIDO
                     if(isset($_GET['validaperfil']) && $_GET['validaperfil'] === 'erro') { ?>
                         <div class="text-danger" style="text-align: center;"> Obrigatório selecionar um perfil!</div>

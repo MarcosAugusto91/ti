@@ -19,6 +19,7 @@ $qtdusuarios = $resusuarios->num_rows;
   <title>App Help Desk</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="icon" href="imagens/logo.png" type="image/x-icon">
 
   <style>
     .card-abrir-chamado {
@@ -26,13 +27,20 @@ $qtdusuarios = $resusuarios->num_rows;
       width: 100%;
       margin: 0 auto;
     }
+    .hide-on-small {
+      display: none;
+    }
+    @media (min-width: 1000px) {
+      .hide-on-small {
+        display: inline;
+      }
+    }
   </style>
 </head>
 
 <body>
   <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="home.php">
-      <img src="" alt="">
       <img src="../app_help_desk_BD/imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
       App Help Desk
     </a>
@@ -58,19 +66,17 @@ $qtdusuarios = $resusuarios->num_rows;
               <div class="col">
                 <form action="conf_edit_chamado.php" method="POST">
 
-                  <input name="id_chamado" type="hidden" class="form-control"
-                    value="<?php print $row->id_chamado; ?>" required>
+                  <input name="id_chamado" type="hidden" class="form-control" value="<?php print $row->id_chamado; ?>" required>
 
                   <div class="form-group">
                     <label>Título</label>
-                    <input name="titulo" type="text" class="form-control"
-                      value="<?php print $row->titulo; ?>" required autofocus>
+                    <input name="titulo" type="text" class="form-control" value="<?php print $row->titulo; ?>" required autofocus>
                   </div>
 
                   <div class="card-body">
                     <div class="row">
                       <div class="col-6 d-flex justify-content-center">
-                        <label class="col-2 d-flex justify-content-center align-self-center">Categoria</label>
+                        <label class="col-2 d-flex justify-content-center align-self-center hide-on-small">Categoria</label>
                         <select name="categoria" class="form-control" required>
                           <option value="<?php print $row->categoria; ?>" selected><?php print $row->categoria; ?></option>
                           <option value="Criação Usuário">Criação Usuário</option>
@@ -86,7 +92,7 @@ $qtdusuarios = $resusuarios->num_rows;
                       </div>
 
                       <div class="col-6 d-flex justify-content-center">
-                        <label class="col-2 d-flex justify-content-center align-self-center">Status</label>
+                        <label class="col-2 d-flex justify-content-center align-self-center hide-on-small">Status</label>
                         <select name="status" class="form-control" required>
                           <option value="" disabled selected>Escolha</option>
                           <option value="Aberto">Aberto</option>
@@ -97,16 +103,13 @@ $qtdusuarios = $resusuarios->num_rows;
                     </div>
                   </div>
 
-
                   <div class="form-group">
                     <label>Descrição do Usuário</label>
-                    <!-- APLICADO A FUNÇÃO TRIM PARA QUE NÃO SEJA INSERIDO ESPAÇOS INDESEJADOS -->
                     <textarea name="descricao" class="form-control" rows="3" required disabled><?php echo trim($row->descricao); ?></textarea>
                   </div>
 
                   <div class="form-group">
                     <label>Descrição do Técnico</label>
-                    <!-- APLICADO A FUNÇÃO TRIM PARA QUE NÃO SEJA INSERIDO ESPAÇOS INDESEJADOS -->
                     <textarea name="descricaotecnico" class="form-control" rows="3" required><?php echo trim($row->descricaotecnico); ?></textarea>
                   </div>
 
