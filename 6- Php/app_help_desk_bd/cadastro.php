@@ -36,6 +36,7 @@
         <div class="card">
           <div class="card-header">
             Cadastre-se:
+            <img src="imagens/user.png" style="margin-left: 175px; width:35px" alt="">
           </div>
           <div class="card-body">
             <form action="valida_cadastro.php" method="POST">
@@ -52,6 +53,7 @@
                 <select name="perfil" class="form-control">
                     <option style="text-align: center;">-- Selecione --</option>
                     <option>Usuario</option>
+                    <option>Tecnico</option>
                     <option>Administrador</option>
                 </select>
                 <?php //VALIDA SE O PERFIL É VALIDO

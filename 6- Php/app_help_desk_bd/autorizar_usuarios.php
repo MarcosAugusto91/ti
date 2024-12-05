@@ -29,11 +29,13 @@
 
           if(isset($_GET['usuario']) && $_GET['usuario'] == 'adm'){?>
             <script>alert('Usuário atribuido como Administrador')</script><?php
+          } else if(isset($_GET['usuario']) && $_GET['usuario'] == 'tec') { ?>
+            <script>alert('Usuário atribuido como Técnico')</script><?php
           } else if(isset($_GET['usuario']) && $_GET['usuario'] == 'usuario') { ?>
             <script>alert('Usuário atribuido como Usuário')</script><?php
           }
 
-            $sql = "SELECT * FROM usuarios where perfil ='Administrador'";
+            $sql = "SELECT * FROM usuarios where perfil ='Administrador' or perfil = 'Tecnico';";
             $res = $conexao->query($sql);
             $qtd = $res->num_rows;
 
@@ -54,9 +56,13 @@
                     print "<td>" . $row -> email . "</td>";
                     print "<td>" . $row -> perfil . "</td>";
             
-                    print "<td><button class='btn btn-success' onclick=\"location.href='autorizacao.php?id=". $row -> id_usuario . "&autorizar=sim';\">S</button>
-                    <button class='btn btn-danger' onclick=\"location.href='autorizacao.php?id=". $row -> id_usuario . "&autorizar=nao';\">N</button>
-                    </td>"; 
+                    if ($row -> perfil == 'Administrador'){
+                    print "<td><button class='btn btn-success' onclick=\"location.href='autorizacao.php?id=". $row -> id_usuario . "&autorizar=simA';\">S</button>
+                    <button class='btn btn-danger' onclick=\"location.href='autorizacao.php?id=". $row -> id_usuario . "&autorizar=nao';\">N</button></td>"; } 
+                    else if ($row -> perfil == 'Tecnico'){
+                      print "<td><button class='btn btn-success' onclick=\"location.href='autorizacao.php?id=". $row -> id_usuario . "&autorizar=simT';\">S</button>
+                    <button class='btn btn-danger' onclick=\"location.href='autorizacao.php?id=". $row -> id_usuario . "&autorizar=nao';\">N</button></td>";}
+
                     print "</tr>";        
                 }
                 print "</table>";

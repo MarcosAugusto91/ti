@@ -1,14 +1,22 @@
-1- Melhor a disposição dos campos da tela de editar chamado;
-2- Criar o Perfil técnico que também poderá editar o chamado;
-3- Colocar o campo valor para que seja cobrado;
-4- Validar se o e-mail já não está cadastrado;
-5- Colocar confirmação se realmente deseja excluir;
-6- Colocar Bem-vindo Usuário X;
+1- Deixar tabelas responsivas;
+2- Validar se o e-mail já não está cadastrado;
+3- Colocar confirmação se realmente deseja excluir;
+4- Colocar Bem-vindo Usuário X;
+5- Mudar fonte HELP-DESK;
+6- Colocar Favicon;
 
 Futuro:
+Inserir contato do Usuário
+Inserir endereço do Usuário
+Inserir data de inserção do chamado
+Criar validação de acordo com a necessidade de tempo do chamado em Aberto
+Inserir data de fechamento do chamado;
 Esqueci minha senha; Com validação após 3 tentativas;
+Carregar uma foto de perfil no momento do cadastro;
+Criar limite de quantidade de registros por tela;
+Aceitar pagamentos;
 
-
+BANCO:
 drop database helpdesk;
 drop table chamados;
 drop table usuarios;

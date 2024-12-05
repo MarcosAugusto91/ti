@@ -6,9 +6,10 @@
     $categoria = $_POST['categoria'];
     $descricao = $_POST['descricao'];
     $id_usuario = $_SESSION['id'];
+    $statuschamado = 'Aberto';
 
     //Inserção de dados no banco
-    $sql = "INSERT INTO chamados(titulo, categoria, descricao, id_usuario) VALUES('{$titulo}', '{$categoria}', '{$descricao}', '{$id_usuario}')";
+    $sql = "INSERT INTO chamados(titulo, categoria, descricao, id_usuario, statuschamado) VALUES('{$titulo}', '{$categoria}', '{$descricao}', '{$id_usuario}', '{$statuschamado}')";
 
     $res = $conexao->query($sql);
 

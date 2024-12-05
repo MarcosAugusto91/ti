@@ -35,6 +35,7 @@
           <div class="card-body">
             <form action="valida_login.php" method="GET">
               <div class="form-group">
+                <img src="imagens/user.png" style="padding-bottom: 15px; width: 200px; margin-left:50px;" alt="Ícone de usuário">
                 <input name="email" type="email" class="form-control" placeholder="E-mail" autofocus>
               </div>
               <div class="form-group">

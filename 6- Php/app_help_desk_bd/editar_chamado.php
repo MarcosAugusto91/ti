@@ -55,9 +55,10 @@
                 print "<th>Chamado</th>";
                 print "<th>Título</th>";
                 print "<th>Categoria</th>";
-                print "<th>Descrição</th>";
-                print "<th>Descrição Técnico</th>";
+                print "<th>Descrição do Usuário</th>";
+                print "<th>Descrição do Técnico</th>";
                 print "<th>Status</th>";
+                print "<th>Valor</th>";
                 print "<th>Usuário</th>";
                 print "<th>Editar</th>";
                 print "<th>Excluir</th>";
@@ -70,7 +71,9 @@
                     print "<td>" . $row -> categoria . "</td>";
                     print "<td>" . $row -> descricao . "</td>";
                     print "<td>" . $row -> descricaotecnico . "</td>";
-                    print "<td>" . $row -> statuschamado . "</td>";
+                    print "<td>" . $row -> statuschamado . "</td>";                    
+                    print "<td>" . $row -> valor . "</td>";                    
+
                     
                     $idchamado = $row -> id_chamado;
                     $idusuario = $row -> id_usuario;

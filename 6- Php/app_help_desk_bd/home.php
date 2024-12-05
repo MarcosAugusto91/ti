@@ -62,7 +62,7 @@ $row = $res->fetch_object();
                 </a>
               </div>
 
-              <?php if ($row->perfil != 'Adm') { ?>
+              <?php if ($row->perfil != 'Adm' && $row->perfil != 'Tec') { ?>
                 <div class="col-2 d-flex justify-content-center">
                   <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
                     <img src="../app_help_desk_bd/imagens/editar-arquivo.png" width="70" height="70">
@@ -91,7 +91,36 @@ $row = $res->fetch_object();
                 </a>
               </div>
 
-              <?php } else { ?>
+              <?php } else if ($row-> perfil == 'Tec') { ?>
+                <div class="col-2 d-flex justify-content-center">
+                  <a href="editar_chamado.php">
+                    <img src="../app_help_desk_bd/imagens/editar-arquivo.png" width="70" height="70">
+                    <p>&nbspEditar</p>
+                  </a>
+                </div>
+
+                <div class="col-2 d-flex justify-content-center">
+                <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
+                  <img src="../app_help_desk_bd/imagens/autorizacao.png" width="70" height="70">
+                  <p>Autorizar</p>
+                </a>
+              </div>
+
+              <div class="col-2 d-flex justify-content-center">
+                <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
+                  <img src="../app_help_desk_bd/imagens/usuarios.png" width="70" height="70">
+                  <p>&nbspUsuários</p>
+                </a>
+              </div>
+
+              <div class="col-2 d-flex justify-content-center">
+                <a href="#" style="filter: grayscale(100%); opacity: 0.5;">
+                  <img src="../app_help_desk_bd/imagens/relatorio.png" width="70" height="70">
+                  <p>Relatórios</p>
+                </a>
+              </div>
+
+                <?php } else { ?>
                 <div class="col-2 d-flex justify-content-center">
                   <a href="editar_chamado.php">
                     <img src="../app_help_desk_bd/imagens/editar-arquivo.png" width="70" height="70">
@@ -120,6 +149,7 @@ $row = $res->fetch_object();
                 </a>
               </div>
               <?php } ?>
+
             </div>
           </div>
         </div>

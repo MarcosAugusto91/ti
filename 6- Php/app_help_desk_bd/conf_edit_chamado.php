@@ -7,9 +7,10 @@
     $id_chamado = $_POST['id_chamado'];
     $descricaotecnico = $_POST['descricaotecnico'];
     $statuschamado = $_POST['status'];
+    $valor = $_POST['valor'];
 
     //Atualização de dados no banco
-    $sql = "UPDATE chamados SET titulo = '$titulo', categoria = '$categoria', descricaotecnico = '$descricaotecnico', statuschamado = '$statuschamado' WHERE id_chamado = $id_chamado";
+    $sql = "UPDATE chamados SET titulo = '$titulo', categoria = '$categoria', descricaotecnico = '$descricaotecnico', statuschamado = '$statuschamado', valor = '$valor' WHERE id_chamado = $id_chamado";
 
     $res = $conexao->query($sql);
 

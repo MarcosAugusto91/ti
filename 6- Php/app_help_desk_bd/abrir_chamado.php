@@ -71,6 +71,9 @@ require_once "validador_acesso.php";
                       <option value="Software">Software</option>
                       <option value="Rede">Rede</option>
                       <option value="Formatação">Formatação</option>
+                      <option value="Orçamento">Orçamento</option>
+                      <option value="Desenvolvimento">Desenvolvimento</option>
+                      <option value="Outros">Outros</option>
                     </select>
                   </div>
 

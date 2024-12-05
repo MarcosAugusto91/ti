@@ -36,66 +36,83 @@ $qtdusuarios = $resusuarios->num_rows;
       <img src="../app_help_desk_BD/imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
       App Help Desk
     </a>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Editar Chamado</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="editar_chamado.php">VOLTAR</a>
+      </li>
+    </ul>
   </nav>
 
   <div class="container">
     <div class="row">
       <div class="card-abrir-chamado">
         <div class="card">
-          <div class="card-header">Editar chamado</div>
+          <div class="card-header">Ordem de Serviço <?php print $row->id_chamado; ?></div>
           <div class="card-body">
             <div class="row">
               <div class="col">
                 <form action="conf_edit_chamado.php" method="POST">
-                  
-                  <input name="id_chamado" type="hidden" class="form-control" 
-                  value="<?php print $row->id_chamado;?>" required>
-                
-                  <div class="form-group">
-                    <label>Ordem de serviço: </label>
-                    <input name="id" type="text" class="form-control" 
-                    value="<?php print $row->id_chamado;?>" required disabled>
-                  </div>
-                  
+
+                  <input name="id_chamado" type="hidden" class="form-control"
+                    value="<?php print $row->id_chamado; ?>" required>
+
                   <div class="form-group">
                     <label>Título</label>
-                    <input name="titulo" type="text" class="form-control" 
-                    value="<?php print $row->titulo;?>" required autofocus>
+                    <input name="titulo" type="text" class="form-control"
+                      value="<?php print $row->titulo; ?>" required autofocus>
                   </div>
 
-                  <div class="form-group">
-                    <label>Categoria</label>
-                    <select name="categoria" class="form-control" required>
-                      <option value="<?php print $row->categoria;?>" selected><?php print $row->categoria;?></option>
-                      <option value="Criação Usuário">Criação Usuário</option>
-                      <option value="Impressora">Impressora</option>
-                      <option value="Hardware">Hardware</option>
-                      <option value="Software">Software</option>
-                      <option value="Rede">Rede</option>
-                      <option value="Formatação">Formatação</option>
-                    </select>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-6 d-flex justify-content-center">
+                        <label class="col-2 d-flex justify-content-center align-self-center">Categoria</label>
+                        <select name="categoria" class="form-control" required>
+                          <option value="<?php print $row->categoria; ?>" selected><?php print $row->categoria; ?></option>
+                          <option value="Criação Usuário">Criação Usuário</option>
+                          <option value="Impressora">Impressora</option>
+                          <option value="Hardware">Hardware</option>
+                          <option value="Software">Software</option>
+                          <option value="Rede">Rede</option>
+                          <option value="Formatação">Formatação</option>
+                          <option value="Orçamento">Orçamento</option>
+                          <option value="Desenvolvimento">Desenvolvimento</option>
+                          <option value="Outros">Outros</option>
+                        </select>
+                      </div>
+
+                      <div class="col-6 d-flex justify-content-center">
+                        <label class="col-2 d-flex justify-content-center align-self-center">Status</label>
+                        <select name="status" class="form-control" required>
+                          <option value="" disabled selected>Escolha</option>
+                          <option value="Aberto">Aberto</option>
+                          <option value="Andamento">Em andamento</option>
+                          <option value="Finalizado">Finalizado</option>
+                        </select>
+                      </div>
+                    </div>
                   </div>
 
-                  <div class="form-group">
-                    <label>Status</label>
-                    <select name="status" class="form-control" required>
-                      <option value="" disabled selected>Escolha</option>
-                      <option value="Aberto">Aberto</option>
-                      <option value="Andamento">Em andamento</option>
-                      <option value="Finalizado">Finalizado</option>
-                    </select>
-                  </div>
 
                   <div class="form-group">
-                    <label>Descrição Usuário</label>
+                    <label>Descrição do Usuário</label>
                     <!-- APLICADO A FUNÇÃO TRIM PARA QUE NÃO SEJA INSERIDO ESPAÇOS INDESEJADOS -->
-                    <textarea name="descricao" class="form-control" rows="3" required disabled><?php echo trim($row->descricao);?></textarea>
+                    <textarea name="descricao" class="form-control" rows="3" required disabled><?php echo trim($row->descricao); ?></textarea>
                   </div>
 
                   <div class="form-group">
-                    <label>Descrição Técnico</label>
+                    <label>Descrição do Técnico</label>
                     <!-- APLICADO A FUNÇÃO TRIM PARA QUE NÃO SEJA INSERIDO ESPAÇOS INDESEJADOS -->
-                    <textarea name="descricaotecnico" class="form-control" rows="3" required><?php echo trim($row->descricaotecnico);?></textarea>
+                    <textarea name="descricaotecnico" class="form-control" rows="3" required><?php echo trim($row->descricaotecnico); ?></textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Valor</label>
+                    <input name="valor" type="text" class="form-control" value="<?php print $row->valor; ?>" required autofocus>
                   </div>
 
                   <div class="row mt-5">
@@ -108,7 +125,6 @@ $qtdusuarios = $resusuarios->num_rows;
                     </div>
                   </div>
                 </form>
-
               </div>
             </div>
           </div>
