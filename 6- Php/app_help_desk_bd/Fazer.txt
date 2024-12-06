@@ -21,7 +21,8 @@ drop table chamados;
 drop table usuarios;
 
 create database helpdesk;
-	create table usuarios (
+	
+    create table usuarios (
     
     id_usuario int primary key auto_increment,
     nome varchar(120),
