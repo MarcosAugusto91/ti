@@ -27,6 +27,12 @@ $row = $res->fetch_object();
 
 <body>
 
+  <?php
+    //VALIDA SE USUÁRIO TEM PERMISSÃO DE ACESSO A PÁGINA
+    if (isset($_GET['permissao']) && $_GET['permissao'] === 'nao') { ?>
+       <script> alert('Seu usuário não tem permissão para acessar esta página!');</script>
+  <?php } ?>
+
   <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="#">
       <img src="../app_help_desk_bd/imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">

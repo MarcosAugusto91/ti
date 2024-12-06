@@ -1,5 +1,9 @@
 <?php
     require_once "validador_acesso.php";
+    if(!isset($_SESSION['perfil']) || ($_SESSION['perfil'] == 'Usuario')){
+      header('location: home.php?permissao=nao');
+    } else if(!isset($_SESSION['perfil']) || ($_SESSION['perfil'] == 'Tecnico')){
+      header('location: home.php?permissao=nao');}
     require "config.php";
 ?>
 
@@ -71,7 +75,7 @@
 
     <div class="container">
         <br>
-        <?php
+          <?php
             $sql = "SELECT * FROM chamados";
             $res = $conexao->query($sql);
             $qtd = $res->num_rows;
