@@ -9,7 +9,8 @@ $totalAndamento = 0;
 $totalFinalizados = 0; 
 
 // Consulta para obter todos os chamados 
-$sql = "SELECT statuschamado FROM chamados"; $res = $conexao->query($sql); 
+$sql = "SELECT statuschamado FROM chamados"; 
+$res = $conexao->query($sql); 
 
 // Verifica se a consulta retornou resultados 
 if ($res) { 
@@ -24,7 +25,7 @@ if ($res) {
         break; 
       case 'Finalizado': 
         $totalFinalizados++; 
-        break; 
+        break;
       } 
     } 
   }
