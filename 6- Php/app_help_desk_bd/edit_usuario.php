@@ -1,5 +1,6 @@
 <?php
 require_once "validador_acesso.php";
+require_once "validador_perfil.php";
 require_once "config.php";
 
 $sql = "SELECT * FROM usuarios WHERE id_usuario = {$_GET['id']}";
