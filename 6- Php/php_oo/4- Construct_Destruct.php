@@ -2,15 +2,16 @@
 
 class Pessoa{
 
-     public $nome = null;
+    public $nome = null;
 
+    //Iniciando o objeto com atributo obrigatório;
     function __construct($nome){
-        echo 'objeto iniciado';
+        echo 'Objeto iniciado: <br/>';
         $this-> nome = $nome;
     }
 
     function __destruct(){
-        echo '<br/><br/> Objeto removido';
+        echo '<br/> Objeto removido';
     }
 
 
@@ -35,8 +36,8 @@ class Pessoa{
     echo $pessoa-> correr();
 
     $pessoa-> __set('nome','Jorge');
-    echo '<br/> Nome atualizado: ' . $pessoa-> __get('nome'); 
-
+    echo '<br/><br/> Nome atualizado: ' . $pessoa-> __get('nome'); 
+    echo $pessoa-> correr();
+    echo "<br/>";
     unset($pessoa); 
-    
 ?>

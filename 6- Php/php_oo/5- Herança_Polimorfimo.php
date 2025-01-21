@@ -1,5 +1,16 @@
 <?php
 
+    /*
+
+    HERANÇA: 
+    Poder herdar atributos e métodos de uma classe pai (Modelo)
+
+    POLIMORFISMO: 
+    Mesmo herdando atributos ou métodos do pai, o filho tem liberdade para 
+    ter o mesmo atributo ou método diferente do pai;
+    
+    */
+
     class Veiculo {
 
         public $ano = null;
@@ -13,7 +24,7 @@
         function freiar()
         { echo "freiar"; }
 
-        function macha()
+        function marcha()
         { echo "Pé para embreagem e mão para passar macha!"; 
         }
 
@@ -33,7 +44,7 @@
 
 
     Class Moto extends Veiculo{
-        function macha()
+        function marcha()
         { echo "Mão para embreagem e pé para passar macha!"; }
     }
 
@@ -62,15 +73,17 @@
     echo "<br/>";
     echo "Possui teto solar: " . $ferrari ->__get("tetosolar");
     echo "<br/>";
-    echo $ferrari->macha();
+    echo $ferrari->marcha();
     echo "<br/>";     
     echo "<hr>";  
 
     echo "<b>Moto Honda: </b>";
-    echo $honda->macha();
+    echo $honda->marcha();
     echo "<hr>";
 
     echo "<b>Caminhão Volvo: </b>";
     echo $volvo-> cacamba();
     echo "<hr>";
+
+    //echo $ferrari-> cacamba();
 ?>

@@ -1,9 +1,9 @@
 <?php
 
 class Pai {
-    private $nome = 'Jorge'; //disponível para o proprio obj(class)
-    protected $sobrenome = 'Silva'; //disponível para o proprio obj(class)
-    public $humor = 'Feliz';
+    private $nome = 'Jorge'; //disponível para o proprio obj(class), nem os próprios filhos podem acessar;
+    protected $sobrenome = 'Silva'; //disponível para o proprio obj(class) ou filhos, mas não para aplicação;
+    public $humor = 'Feliz'; //Disponível para aplicação quanto para outros objetos;
 
 
     // public function getNome(){
