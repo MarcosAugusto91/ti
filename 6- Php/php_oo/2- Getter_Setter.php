@@ -24,10 +24,6 @@
             $this->numFilhos = $numFilhos;
         }
 
-        function __set($atributo, $valor){
-            $this->$atributo = $valor;
-        }
-
         function getNumFilhos(){
             return $this->numFilhos;
         }
@@ -36,14 +32,18 @@
             return $this->nome;
         }
 
+        function resumirCadFunc() {
+            return "$this->nome possui $this->numFilhos filho(s)";
+        } 
+
+        function __set($atributo, $valor){
+            $this->$atributo = $valor;
+        }
+
         function __get($atributo){
             return $this->$atributo;
         }
     
-        function resumirCadFunc() {
-            return "$this->nome possui $this->numFilhos filho(s)";
-
-        }   
     }
     //Criando um usuário usando a Classe(modelo) Funcionário
     $y = new Funcionario();
@@ -51,7 +51,7 @@
     $y->setNome("Marcos");
     $y->setNumFilhos(0);
     $y->__set("cargo","Professor");
-    $y->__set("salario","4.200,00");
+    $y->__set("salario","9.999,00");
 
     echo "Teste funcionário Y: </br>";
     echo $y->resumirCadFunc();

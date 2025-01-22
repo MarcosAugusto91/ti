@@ -1,0 +1,35 @@
+Instalação CLI: 
+1- https://reactnative.dev/
+2- Get Started
+3- Can I use React Native without a Framework?
+4- Environment
+5- Abra o powershell como ADM
+6- Get-ExecutionPolicy
+7- Set-ExecutionPolicy AllSigned
+8- Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+9- Reinicia o PowerShell: choco -v
+10- choco install -y nodejs-lts microsoft-openjdk17 yarn
+11- No cmd: 
+node -v
+npm -v	(É o gerenciador de pacote do node)
+java –version
+12- Abra esta: C:\Program Files\Microsoft\ ou esta: C:\Program Files\OpenJDK
+13- Pesquise no windows: Sistemas -> Sobre -> Configurações avançadas do sistema -> Variáveis do sistema -> Novo
+14- Nome da variável: JAVA_HOME / Valor da variável: C:\Program Files\Microsoft\jdk-17.0.13.11-hotspot (Tanto em cima quanto embaixo)
+15- Baixe e Instale o Android Studio
+16- Na instalaçao o Virtual Device tem que estar marcado, depois Next até aparecer instalação customizada(custom)
+17- Se a máquina for intel pode instalar o HAXM / Marcar também: Performance (Android Emulator...) e Android Virtual Device
+18- Após instalar na tela inicial: More Actions (ou 3 pontinhos) -> SDK Manager -> Intalar Android 13 e 11
+19- Em SDK Tools -> SDK Build Tools, Android Emulator, SDK-Plataform Tools, Google Play Services, HAXM
+20- Copie o caminho que está marcado em Android SDK Location: C:\SDK
+21- Voltar para variáveis de ambiente: ANDROID_HOME - C:\SDK
+22- Na variável PATH, clique em editar: novo: 
+%ANDROID_HOME%\emulator
+%ANDROID_HOME%\tools
+%ANDROID_HOME%\tools\bin
+%ANDROID_HOME%\platform-tools
+23- Na tela inicial do Android Studio: More Actions (ou 3 pontinhos) -> Virtual Device Manager -> Exclua o Padrão
+24- Criar um novo -> Pixel 2 (COM SÍMBOLO DA PLAYSTORE)-> Selecionar preferencialmente Android 11(R) -> Finish
+ 
+
+nodejs,org/en
