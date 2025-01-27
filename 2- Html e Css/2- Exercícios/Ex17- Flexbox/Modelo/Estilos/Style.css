@@ -6,11 +6,12 @@
 .container{
     background-color: gray;
     display: flex;
-    flex-direction: row; /*row-reverse column column-reverse EX1 */
-    flex-wrap: nowrap; /*wrap wrap-reverse nowrap*/
-    /* flex-flow: row nowrap; */
-    justify-content: flex-start; /* flex-end center space-between space-around Hori */ 
+    /*flex-direction: column; /*row-reverse column column-reverse EX1 */
+    /*flex-wrap: wrap; /*wrap wrap-reverse nowrap*/
+    flex-flow: row wrap;
+    justify-content: space-around; /* flex-end center space-between space-around Hori */ 
     /* align-items: center; /*stretch center flex-start flex-end baseline  Vertical*/
+    /* align-content: center;*/
 }
 
 .itens{
@@ -21,16 +22,18 @@
     margin: 10px;
     width: 150px;
     height: 100px;
+    /*align-self: center;
+    /*justify-self:center;
     /*flex:auto;*/
-    /*flex-grow:3;*/
+    /*flex-grow:1;
     /*flex-shrink:5;*/
     /*flex-basis:auto;*/
 }
 
-.ordem1{order: 1;}
+.ordem1{order: 6;}
 .ordem2{order: 2;}
 .ordem3{order: 3;}
 .ordem4{order: 4;}
 .ordem5{order: 5;}
-.ordem6{order: 6;}
+.ordem6{order: 1;}
 .ordem7{order: 7;}
