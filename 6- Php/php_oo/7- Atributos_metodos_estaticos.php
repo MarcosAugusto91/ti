@@ -20,7 +20,7 @@
 
     }
 
-    //Nos métodos ou atributos normais nós precisamos instanciar a classe conforme demonstrado na linha inferior:
+    //Nos métodos ou atributos normais nós precisamos instanciar a classe conforme demonstrado na linha abaixo:
     $exemplo1 = new Estatico();
     echo $exemplo1->atributo2;
     echo "<br/>";
