@@ -31,5 +31,6 @@ java –version
 23- Na tela inicial do Android Studio: More Actions (ou 3 pontinhos) -> Virtual Device Manager -> Exclua o Padrão
 24- Criar um novo -> Pixel 2 (COM SÍMBOLO DA PLAYSTORE)-> Selecionar preferencialmente Android 11(R) -> Finish
  
-
+https://sujeitoprogramador.com/ambiente-windows/
+https://reactnative.dev/docs/set-up-your-environment
 nodejs,org/en
