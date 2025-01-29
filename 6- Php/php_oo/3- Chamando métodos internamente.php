@@ -18,7 +18,8 @@
         }
 
         function escrever(){
-            return $this->__get('nome') . " possui " . $this->__get("titulos") . " títulos mundiais! <br/><hr>";
+            return $this->__get('nome') . " possui " . $this->__get("titulos") . 
+            " títulos mundiais! <br/><hr>";
         }
     }
     
