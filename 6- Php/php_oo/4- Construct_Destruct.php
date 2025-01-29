@@ -28,7 +28,6 @@ class Pessoa{
     }
 }
 
-
     $pessoa = new Pessoa('Marcos');
     //unset($pessoa); 
     echo '<br/> Nome: ' . $pessoa-> __get('nome');
@@ -39,5 +38,15 @@ class Pessoa{
     echo '<br/><br/> Nome atualizado: ' . $pessoa-> __get('nome'); 
     echo $pessoa-> correr();
     echo "<br/>";
+    unset($pessoa); 
+    echo "<hr>";
+
+    //---------------------------------------------------------
+
+    $pessoa2 = new Pessoa('Daniel');
+    //unset($pessoa); 
+    echo '<br/> Nome: ' . $pessoa2-> __get('nome');
+    
+    echo $pessoa2-> correr();
     unset($pessoa); 
 ?>
