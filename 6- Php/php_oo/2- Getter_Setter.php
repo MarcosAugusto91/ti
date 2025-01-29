@@ -45,6 +45,7 @@
         }
     
     }
+
     //Criando um usuário usando a Classe(modelo) Funcionário
     $y = new Funcionario();
 
