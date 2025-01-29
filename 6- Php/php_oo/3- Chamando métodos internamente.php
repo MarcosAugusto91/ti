@@ -1,7 +1,7 @@
 <?php 
 
     //MODELO
-    Class Times{
+    class Times{
 
         //ATRIBUTOS
         public $nome;
