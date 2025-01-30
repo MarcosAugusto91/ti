@@ -38,7 +38,7 @@ let cronometro = setInterval( function(){
 
 
 function randomizaPosicao(){
-    //remover mosquito anterior
+    //remover mosquito anterior caso não tenha sido clicado a tempo:
     if(document.getElementById('mosquito')) {
         document.getElementById('mosquito').remove() 
 

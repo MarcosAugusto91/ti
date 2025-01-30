@@ -4,6 +4,7 @@ function verificar(){
     var sexo = window.document.getElementsByName('sexo')
     var texto = window.document.getElementById('texto')
     var img = window.document.getElementById('imagem')
+    
     var ano = Number(anos.value)
     var idade = 2024 - ano
     var genero =''
