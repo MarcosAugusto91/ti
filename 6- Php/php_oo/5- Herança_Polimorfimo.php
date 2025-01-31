@@ -11,7 +11,7 @@
     
     */
 
-    class Veiculo {
+    abstract class Veiculo {
 
         public $ano = null;
         public $velocidade = null;
