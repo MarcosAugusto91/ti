@@ -1,7 +1,7 @@
 <?php
 
 class Pai {
-    private $nome = 'Jorge'; //disponível para o proprio obj(class), nem os próprios filhos podem acessar;
+    private $nome = 'Jorge'; //disponível para o proprio obj(class), nem os próprios filhos podem acessar, mas não para aplicação;
     protected $sobrenome = 'Silva'; //disponível para o proprio obj(class) ou filhos, mas não para aplicação;
     public $humor = 'Feliz'; //Disponível para aplicação quanto para outros objetos;
 
