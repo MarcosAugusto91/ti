@@ -32,7 +32,5 @@
 
     echo $spiderman -> exibirAtributos();
     echo $batman -> exibirAtributos();
-    echo $superman -> exibirAtributos();
-
-    
+    echo $superman -> exibirAtributos();  
 ?>

@@ -20,13 +20,7 @@
             $this->nome = $nome;
         }
 
-        function setNumFilhos($numFilhos){
-            $this->numFilhos = $numFilhos;
-        }
 
-        function getNumFilhos(){
-            return $this->numFilhos;
-        }
 
         function getNome(){
             return $this->nome;
@@ -36,12 +30,21 @@
             return "$this->nome possui $this->numFilhos filho(s)";
         } 
 
+        function setNumFilhos($numFilhos){
+            $this->numFilhos = $numFilhos;
+        }
+
         function __set($atributo, $valor){
             $this->$atributo = $valor;
         }
 
         function __get($atributo){
             return $this->$atributo;
+           
+        }
+
+        function getNumFilhos(){
+            return $this->numFilhos;
         }
     
     }

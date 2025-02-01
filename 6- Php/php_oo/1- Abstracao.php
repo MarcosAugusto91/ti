@@ -21,12 +21,19 @@
         function modificaNome($nome){
             $this->nome = $nome;
         }
-
     }
 
-    $y = new Funcionario();
+    $func1 = new Funcionario;
+    echo $func1->resumirCadFunc();
+    echo "<br/>";  
+    $func1 -> modificaNome("Rafael");
+    $func1 -> modificarNumFilhos(3);
+    echo    $func1->resumirCadFunc();  
+    
+    echo "<hr>"; 
 
-    $y -> modificaNome("Rafael");
-    $y -> modificarNumFilhos(3);
-    echo $y->resumirCadFunc();    
+    $func2 = new Funcionario;
+    $func2 -> modificaNome("Marcos");
+    $func2 -> modificarNumFilhos(0);
+    echo    $func2->resumirCadFunc();    
 ?>
