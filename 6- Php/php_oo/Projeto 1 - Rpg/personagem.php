@@ -34,6 +34,26 @@ if ($classe === 'Guerreiro') {
     $personagem = new Ogro();
 } else if ($classe === 'Animal') {
     $personagem = new Animal();
+} else if ($classe === 'Fantasma') {
+    $personagem = new Fantasma();
+} else if ($classe === 'Dinossauro') {
+    $personagem = new Dinossauro();
+} else if ($classe === 'Soldado') {
+    $personagem = new Soldado();
+} else if ($classe === 'Anao') {
+    $personagem = new Anao();
+} else if ($classe === 'Dragao') {
+    $personagem = new Dragao();
+} else if ($classe === 'Elfo') {
+    $personagem = new Elfo();
+} else if ($classe === 'Frankstein') {
+    $personagem = new Frankstein();
+} else if ($classe === 'Saci') {
+    $personagem = new Saci();
+} else if ($classe === 'Zumbi') {
+    $personagem = new Zumbi();
+} else if ($classe === 'Lobisomem') {
+    $personagem = new Lobisomem();
 }
 
 //Setando os valores tipo e raça
@@ -75,52 +95,54 @@ $personagem->__set('raca', $raca);
     </ul>
     </nav>
 
-    <div class="container">
-        <div class="row">
 
-            <div class="card-login" style="margin-top: -15px; width: 500px;">
-                <div class="card" style="background-color: transparent; backdrop-filter: blur(30px);opacity: 80%;">
-                    <div class="card-header" style="color: white; text-align:center;">
-                        <h3><?php echo $nome; ?></h3>
-                    </div>
-                    <div class="card-body">
-                        <form action="personagem.php" method="GET">
-
-                            <div class="form-group" style="color: white; text-align:center;">
-
-                                <div style="display: flex; flex-flow:row; justify-content:space-around; align-items:center;">
-                                    <p style="margin: 0px;"><?php echo "<strong>Classe:</strong> {$personagem->__get('classe')} <br> <strong>Tipo:</strong> {$personagem->__get('tipo')} <br> <strong>Raça:</strong> {$personagem->__get('raca')}"; ?></p>
-                                    <img src="sources/<?php echo $personagem -> __get('img'); ?>.png" style="padding-bottom: 15px; height:210px;" alt="Ícone de usuário">
-                                </div>
-                                
-                                
-                                <hr style="background-color:white">
-                                <h3>Atributos</h3>
-                                <p style="margin: 0px;"><?php echo "Força: {$personagem->__get('forca')} / Defesa: {$personagem->__get('defesa')}"; ?></p>
-                                <p style="margin: 0px;"><?php echo "Esquiva: {$personagem->__get('esquiva')} / Velocidade: {$personagem->__get('velocidade')}"; ?></p>
-                                <p style="margin: 0px;"><?php echo "Inteligência: {$personagem->__get('inteligencia')} / Vida: {$personagem->__get('vida')}"; ?>
-
-                                <hr style="background-color:white">
-
-                                
-                                <div style="display: flex; flex-flow:row; justify-content:space-around">
-                                    <div>
-                                        <h3>Ações</h3>
-                                        <p style="margin: 0px;"><?php echo $personagem->ataqueComum(); ?></p>
-                                        <p style="margin: 0px;"><?php echo $personagem->defender(); ?></p>
-                                        <p style="margin: 0px;"><?php echo $personagem->esquivar(); ?></p>
-                                        <p style="margin: 0px; margin-bottom:-20px"><?php echo $personagem->fugir(); ?></p>
+    <div style="display:flex; height:80%; flex-flow:row; justify-content:center; align-items:center;";>
+        <div class="container">
+            <div class="row">
+                <div class="card-login" style="margin-top: -20px; width: 400px;">
+                    <div class="card" style="background-color: transparent; backdrop-filter: blur(30px);opacity: 80%;">
+                        <div class="card-header" style="color: white; text-align:center;">
+                            <h3 style="margin:-5px;"><?php echo $nome; ?></h3>
+                            <p style="margin: 0px; font-size:12px; width:100%; padding-top:5px"><?php echo "{$personagem->__get('descricao')}"; ?></p>
+                        </div>
+                        <div class="card-body">
+                            <form action="personagem.php" method="GET">
+                                <div class="form-group" style="color: white; text-align:center;">
+                                    <div style="display: flex; flex-flow:row; margin:-15px; justify-content:space-around; align-items:center;">
+                                        <div style="display:flex;">
+                                            <p style="margin: 0px;"><?php echo "<strong>Classe:</strong> {$personagem->__get('classe')} <br> <strong>Tipo:</strong> {$personagem->__get('tipo')} <br> <strong>Raça:</strong> {$personagem->__get('raca')}"; ?></p>
+                                        </div>
+                                        <img src="sources/<?php echo $personagem -> __get('img'); ?>.png" style="padding-bottom: 15px; height:210px;" alt="Ícone de usuário">
                                     </div>
-                                    <div>
-                                        <h3>Especiais</h3>
-                                        <p style="margin: 0px;"><?php echo $personagem->ataqueEspecial(); ?></p>
+        
+        
+                                    <hr style="background-color:white">
+                                    <h3>Atributos</h3>
+                                    <p style="margin: 0px;"><?php echo "Força: {$personagem->__get('forca')} / Defesa: {$personagem->__get('defesa')}"; ?></p>
+                                    <p style="margin: 0px;"><?php echo "Esquiva: {$personagem->__get('esquiva')} / Velocidade: {$personagem->__get('velocidade')}"; ?></p>
+                                    <p style="margin: 0px;"><?php echo "Inteligência: {$personagem->__get('inteligencia')} / Vida: {$personagem->__get('vida')}"; ?>
+                                    <hr style="background-color:white">
+        
+                                    <div style="display: flex; flex-flow:row; justify-content:space-around; margin-bottom:-5px;">
+                                        <div>
+                                            <h3>Ações</h3>
+                                            <p style="margin: 0px;"><?php echo $personagem->ataqueComum(); ?></p>
+                                            <p style="margin: 0px;"><?php echo $personagem->defender(); ?></p>
+                                            <p style="margin: 0px;"><?php echo $personagem->esquivar(); ?></p>
+                                            <p style="margin: 0px; margin-bottom:-20px"><?php echo $personagem->fugir(); ?></p>
+                                        </div>
+                                        <div>
+                                            <h3>Especiais</h3>
+                                            <p style="margin: 0px;"><?php echo $personagem->ataqueEspecial(); ?></p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+    </div>
+
 </body>
 
 </html>

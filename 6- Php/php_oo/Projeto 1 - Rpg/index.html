@@ -1,9 +1,11 @@
 <html>
+
 <head>
   <meta charset="utf-8" />
   <title>Projeto RPG</title>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <link rel="stylesheet" href="estilos/Style.css">
 
@@ -20,73 +22,86 @@
 
   <nav class="navbar navbar-dark" style="background-color:#071222;">
     <a class="navbar-brand" href="#">
-      <img src="sources/logo.png" style="border-radius: 150px; margin-right: 5px;" width="30" height="30" class="d-inline-block align-top" alt="">
-    Projeto RPG
+      <img src="sources/logo.png" style="border-radius: 150px; margin-right: 5px;" width="30" height="30"
+        class="d-inline-block align-top" alt="">
+      Projeto RPG
     </a>
   </nav>
 
-  <div class="container">
-    <div class="row">
+  <div style="display:flex; height:80%; flex-flow:row; justify-content:center; align-items:center;" ;>
+    <div class="container">
+      <div class="row">
 
-      <div class="card-login" style="margin-top: -15px;">
-        <div class="card" style="background-color: transparent; backdrop-filter: blur(30px);opacity: 80%;" >
-          <div class="card-header" style="color: white;">
-            Crie seu Personagem
-          </div>
-          <div class="card-body">
-            <form  action="personagem.php" method="GET">
-              
-              <div class="form-group">
-                <img src="sources/logo.png" style="padding-bottom: 15px; margin-left: 50px; width: 200px;" alt="Ícone de usuário">
-                <input name="nome" type="nome" class="form-control" placeholder="Nome" autofocus>
-              </div>
+        <div class="card-login" style="margin-top: -15px;">
+          <div class="card" style="background-color: transparent; backdrop-filter: blur(30px);opacity: 80%;">
+            <div class="card-header" style="color: white;">
+              Crie seu Personagem
+            </div>
+            <div class="card-body">
+              <form action="personagem.php" method="GET">
 
-              <div class="form-group">
-                <select name="classe" id="classe" class="form-control">
-                  <option value="0">Selecione a classe:</option>
-                  <option value="Guerreiro">Guerreiro</option>
-                  <option value="Arqueiro">Arqueiro</option>
-                  <option value="Mago">Mago</option>
-                  <option value="Barbaro">Bárbaro</option>
-                  <option value="Monge">Monge</option>
-                  <option value="Lutador">Lutador</option>
-                  <option value="Ladrao">Ladrão</option>
-                  <option value="Ninja">Ninja</option>
-                  <option value="Bardo">Bardo</option>
-                  <option value="Pirata">Pirata</option>
-                  <option value="Android">Android</option>
-                  <option value="Ogro">Ogro</option>
-                  <option value="Animal">Animal</option>
-              </select>
-              </div>
+                <div class="form-group">
+                  <img src="sources/logo.png" style="padding-bottom: 15px; margin-left: 50px; width: 200px;"
+                    alt="Ícone de usuário">
+                  <input name="nome" type="nome" class="form-control" placeholder="Nome" autofocus>
+                </div>
 
-              <div class="form-group">
-                <select name="tipo" id="tipo" class="form-control">
-                  <option value="0">Selecione o tipo:</option>
-                  <option value="Heroi">Herói</option>
-                  <option value="AntiHeroi">Anti-Herói</option>
-                  <option value="Vilão">Vilão</option>
-                  <option value="Deus">Deus</option>
-                  <option value="Semi-Deus">Semi-Deus</option>
-                  <option value="Normal">Normal</option>
-              </select>
-              </div>
+                <div class="form-group">
+                  <select name="classe" id="classe" class="form-control">
+                    <option value="0">Selecione a classe:</option>
+                    <option value="Guerreiro">Guerreiro</option>
+                    <option value="Arqueiro">Arqueiro</option>
+                    <option value="Mago">Mago</option>
+                    <option value="Barbaro">Bárbaro</option>
+                    <option value="Monge">Monge</option>
+                    <option value="Lutador">Lutador</option>
+                    <option value="Ladrao">Ladrão</option>
+                    <option value="Ninja">Ninja</option>
+                    <option value="Bardo">Bardo</option>
+                    <option value="Pirata">Pirata</option>
+                    <option value="Android">Android</option>
+                    <option value="Ogro">Ogro</option>
+                    <option value="Animal">Animal</option>
+                    <option value="Fantasma">Fantasma</option>
+                    <option value="Dinossauro">Dinossauro</option>
+                    <option value="Soldado">Soldado</option>
+                    <option value="Dragao">Dragão</option>
+                    <option value="Zumbi">Zumbi</option>
+                    <option value="Anao">Anão</option>
+                    <option value="Elfo">Elfo</option>
+                    <option value="Frankstein">Frankstein</option>
+                    <option value="Saci">Saci</option>
+                    <option value="Lobisomem">Lobisomem</option>
+                  </select>
+                </div>
 
-              <div class="form-group">
-                <select name="raca" id="raca" class="form-control">
-                  <option value="0">Selecione a Raça:</option>
-                  <option value="Humano">Humano</option>
-                  <option value="Animal">Animal</option>
-                  <option value="Anao">Anão</option>
-                  <option value="Elfo">Elfo</option>
-                  <option value="Mitologico">Mitológico</option>
-                  <option value="Dragao">Dragão</option>
-                  <option value="Monstro">Monstro</option>
-              </select>
-              </div>
-            
-              <button class="btn btn-lg btn-info btn-block" style="background-color:#071222; border-color: #071222; margin-bottom: -25px;" type="submit">Criar</button>
-            </form>
+                <div class="form-group">
+                  <select name="tipo" id="tipo" class="form-control">
+                    <option value="0">Selecione o tipo:</option>
+                    <option value="Heroi">Herói</option>
+                    <option value="AntiHeroi">Anti-Herói</option>
+                    <option value="Vilão">Vilão</option>
+                    <option value="Deus">Deus</option>
+                    <option value="Semi-Deus">Semi-Deus</option>
+                    <option value="Normal">Normal</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <select name="raca" id="raca" class="form-control">
+                    <option value="0">Selecione a Raça:</option>
+                    <option value="Humano">Humano</option>
+                    <option value="Mitologico">Mitológico</option>
+                    <option value="Folclore">Folclore</option>
+                    <option value="Monstro">Monstro</option>
+                  </select>
+                </div>
+
+                <button class="btn btn-lg btn-info btn-block"
+                  style="background-color:#071222; border-color: #071222; margin-bottom: -25px;"
+                  type="submit">Criar</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
