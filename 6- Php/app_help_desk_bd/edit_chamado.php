@@ -1,14 +1,10 @@
 <?php
 require_once "validador_acesso.php";
-if(!isset($_SESSION['perfil']) || ($_SESSION['perfil'] == 'Usuario')){
-  header('location: home.php?permissao=nao');
-} else if(!isset($_SESSION['perfil']) || ($_SESSION['perfil'] == 'Tecnico')){
-  header('location: home.php?permissao=nao');}
 require_once "config.php";
 
 $sql = "SELECT * FROM chamados WHERE id_chamado = {$_GET['id']}";
 $res = $conexao->query($sql);
-$qtd = $res->num_rows; //comentar esta linha
+$qtd = $res->num_rows;
 $row = $res->fetch_object();
 
 $sql = "SELECT * FROM usuarios";

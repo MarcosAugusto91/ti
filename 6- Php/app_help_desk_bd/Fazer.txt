@@ -13,7 +13,6 @@ Criar validação de acordo com a necessidade de tempo do chamado em Aberto
 Esqueci minha senha; Com validação após 3 tentativas;
 Criar limite de quantidade de registros por tela;
 Aceitar pagamentos;
-Atualização assíncrona;
 
 BANCO:
 drop database helpdesk;
@@ -21,8 +20,7 @@ drop table chamados;
 drop table usuarios;
 
 create database helpdesk;
-	
-    create table usuarios (
+	create table usuarios (
     
     id_usuario int primary key auto_increment,
     nome varchar(120),
