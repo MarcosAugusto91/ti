@@ -100,8 +100,7 @@ $personagem->__set('raca', $raca);
         <div class="container">
             <div class="row">
                 <div class="card-login" style="margin-top: -20px; width: 400px;">
-                    
-                <div class="card" style="background-color: transparent; backdrop-filter: blur(30px);opacity: 80%;">
+                    <div class="card" style="background-color: transparent; backdrop-filter: blur(30px);opacity: 80%;">
                         <div class="card-header" style="color: white; text-align:center;">
                             <h3 style="margin:-5px;"><?php echo $nome; ?></h3>
                             <p style="margin: 0px; font-size:12px; width:100%; padding-top:5px"><?php echo "{$personagem->__get('descricao')}"; ?></p>
