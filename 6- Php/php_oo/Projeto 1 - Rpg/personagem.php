@@ -139,9 +139,9 @@ $personagem->__set('raca', $raca);
                                     </div>
                                 </div>
                         </div>
-                    </div>
-                </div>
+                 </div>
             </div>
+        </div>
     </div>
 
 </body>
