@@ -36,7 +36,7 @@
 	}
 
 	$pai = new Pai();
-	//echo $pai->humor;
+	echo $pai->humor;
 	echo $pai->executarAcao();
 
 ?>
