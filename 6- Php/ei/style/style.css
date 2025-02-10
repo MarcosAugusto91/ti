@@ -1,0 +1,108 @@
+
+
+body {
+    background-image: url("../img/7.png");
+}
+
+.navbar {
+    margin-bottom: 100px;
+    background-color: black;
+}
+
+.navbar img {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.card-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Estilização do card */
+.card {
+    background-color: rgba(0, 0, 0, 0.685);
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    text-align: center;
+}
+
+/* Estilização do cabeçalho do card */
+.card-header {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Imagem do usuário */
+.card-body img {
+    width: 200px;
+    height: 200px;
+}
+
+/* Inputs do formulário */
+.form-control {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.3);
+    outline: none;
+    box-shadow: none;
+}
+
+/* Botão de login */
+button {
+    background-color: #FAD129;
+    border: none;
+    color: black;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #f7d346;
+}
+
+/* Link de cadastro */
+.linkCadastro {
+    margin-top: 25px;
+}
+
+.linkCadastro a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.linkCadastro a:hover {
+    text-decoration: underline;
+}
+
+/* Link de Recuperação de Senha */
+.linkRSenha a{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.linkRSenha a:hover {
+    text-decoration: underline;
+}
