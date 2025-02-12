@@ -64,3 +64,5 @@
 	$c = new \B\Cliente();
 	print_r($c);
 	echo $c->__get('nome');
+
+	?>
