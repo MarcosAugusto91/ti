@@ -83,27 +83,29 @@ $personagem->__set('raca', $raca);
 
 <body>
 
-    <nav class="navbar navbar-dark" style="background-color:#071222;">
+    <nav class="navbar navbar-dark" style="background-color:#071222; margin-bottom:35px">
         <a class="navbar-brand" href="#">
             <img src="sources/logo.png" style="border-radius: 150px; margin-right: 5px;" width="30" height="30" class="d-inline-block align-top" alt="">
             Projeto RPG
         </a>
         <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">VOLTAR</a>
-      </li>
-    </ul>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">VOLTAR</a>
+            </li>
+        </ul>
     </nav>
 
 
-    <div style="display:flex; height:80%; flex-flow:row; justify-content:center; align-items:center;";>
+    <div style="display:flex; height:85%; flex-flow:row; justify-content:center; align-items:center;" ;>
         <div class="container">
             <div class="row">
-                <div class="card-login" style="margin-top: -20px; width: 400px;">
+                <div class="card-login" style="width: 450px;">
                     <div class="card" style="background-color: transparent; backdrop-filter: blur(30px);opacity: 80%;">
                         <div class="card-header" style="color: white; text-align:center;">
-                            <h3 style="margin:-5px;"><?php echo $nome; ?></h3>
-                            <p style="margin: 0px; font-size:12px; width:100%; padding-top:5px"><?php echo "{$personagem->__get('descricao')}"; ?></p>
+                            <div style="display:flex; justify-content:space-around; align-items:center;">
+                                <h3 style="margin:-5px; width:35%"><?php echo $nome; ?></h3>
+                                <p style="margin: 0px; font-size:11px; width:100%; padding-top:5px; padding-left:10px;"><?php echo "{$personagem->__get('descricao')}"; ?></p>
+                            </div>
                         </div>
                         <div class="card-body">
                             <form action="personagem.php" method="GET">
@@ -112,17 +114,17 @@ $personagem->__set('raca', $raca);
                                         <div style="display:flex;">
                                             <p style="margin: 0px;"><?php echo "<strong>Classe:</strong> {$personagem->__get('classe')} <br> <strong>Tipo:</strong> {$personagem->__get('tipo')} <br> <strong>Raça:</strong> {$personagem->__get('raca')}"; ?></p>
                                         </div>
-                                        <img src="sources/<?php echo $personagem -> __get('img'); ?>.png" style="padding-bottom: 15px; height:210px;" alt="Ícone de usuário">
+                                        <img src="sources/<?php echo $personagem->__get('img'); ?>.png" style="padding-bottom: 15px; height:210px;" alt="Ícone de usuário">
                                     </div>
-        
-        
+
+
                                     <hr style="background-color:white">
                                     <h3>Atributos</h3>
                                     <p style="margin: 0px;"><?php echo "Força: {$personagem->__get('forca')} / Defesa: {$personagem->__get('defesa')}"; ?></p>
                                     <p style="margin: 0px;"><?php echo "Esquiva: {$personagem->__get('esquiva')} / Velocidade: {$personagem->__get('velocidade')}"; ?></p>
                                     <p style="margin: 0px;"><?php echo "Inteligência: {$personagem->__get('inteligencia')} / Vida: {$personagem->__get('vida')}"; ?>
-                                    <hr style="background-color:white">
-        
+                                        <hr style="background-color:white">
+
                                     <div style="display: flex; flex-flow:row; justify-content:space-around; margin-bottom:-5px;">
                                         <div>
                                             <h3>Ações</h3>
@@ -138,10 +140,10 @@ $personagem->__set('raca', $raca);
                                     </div>
                                 </div>
                         </div>
-                 </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
 </body>
 
