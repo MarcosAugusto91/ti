@@ -17,7 +17,7 @@
     background-image: url(../imagens/fundo2.jpg);
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 200px 200px 200px 80px ;
+    grid-template-rows: 200px 200px 150px 80px ;
     /*grid-auto-rows: 200px*/
     /*grid-gap: 10px;*/
     /*grid-column-gap:10px;*/
@@ -35,8 +35,9 @@
     /*grid-column: 1 / 6;*/
     border: 1px solid green;
     grid-area: header;
-    justify-self: center;
-    align-self: center;
+    /*justify-self: center;
+    align-self: center;*/
+    background-color: green;
 }
 
 .main{
@@ -44,14 +45,17 @@
     /*grid-row: 2 / 4 */
     grid-area: main;
     border: 1px solid red;
+    background-color: aqua;
+    color: black;
 }
 
 .aside{
-    justify-self: center;
-    align-self: center;
+    /*justify-self: center;
+    align-self: center;*/
     /*grid-column: 1 / 2; */
     grid-area: aside;  
     border: 1px solid blue;
+    background-color: blue;
 }
 
 .footer{
@@ -62,6 +66,7 @@
     grid-area: footer;
     display: grid;
     border: 1px solid black;
+    background-color: black;
 }
 
 /* justify-self:
