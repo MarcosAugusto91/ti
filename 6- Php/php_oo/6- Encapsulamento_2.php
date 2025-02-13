@@ -126,3 +126,5 @@ $filho = new Filho();
     $fiho->executarMania();
     echo '<br/>';
     $filho->x();
+
+    ?>
