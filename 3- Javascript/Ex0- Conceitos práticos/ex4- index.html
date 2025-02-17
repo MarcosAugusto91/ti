@@ -12,10 +12,10 @@
         let nome = prompt("Digite seu nome: ")
         alert("Seu nome possui " + nome.length + " letras") //Atributo utilizado para contar os caracteres do objeto selecionado
 
-        document.write("Seu <strong>nome</strong> em letras maiúsculas: " + nome.toUpperCase()) // Método/Função para colocar todo o valor em CAIXA ALTA
-        document.write("<br/>Seu <strong>nome</strong> em letras minúsculas: " + nome.toLowerCase()) // Método/Função para colocar todo o valor em Minúsculo
-        //Marcoslet nome = "Testando"
+        document.write(`eu ${nome} em letras maiúsculas: <strong>${nome.toUpperCase()}</strong>`) // Método/Função para colocar todo o valor em CAIXA ALTA
 
+        document.write(`<br/>Seu ${nome} em letras minúsculas: <strong>${nome.toLowerCase()}</strong>`) // Método/Função para colocar todo o valor em Minúsculo
+        //Marcoslet nome = "Testando"
     </script>
 
 </body>
