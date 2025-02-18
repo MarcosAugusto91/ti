@@ -13,3 +13,5 @@
 	$c = new C2();
 	print_r($c);
 	echo $c->__get('nome');
+
+?>
