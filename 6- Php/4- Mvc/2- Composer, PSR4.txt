@@ -1,0 +1,17 @@
+Composer: Gerenciador de dependências;
+PSR-4: A PSR-4 é uma recomendação do PHP-FIG (PHP Framework Interoperability Group) que define um padrão para o autoloading de classes em PHP.
+
+1- Acesse getcomposer.org;
+2- Download -> Composer-Setup.exe
+3- No diretório: miniframework>php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" :Vai aparecer o arquivo: composer-setup no diretório;
+4- Caso queira pode usar o comando abaixo para verificar se deu certo o download: php -r "if (hash_file('sha384', 'composer-setup.php') === 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') { echo 'Installer verified'.PHP_EOL; } else { echo 'Installer corrupt'.PHP_EOL; unlink('composer-setup.php'); exit(1); }"
+5- php composer-setup.php : Será feita a instalação do composer;
+6- Após a instalação podemos remover o arquivo composer-setup do nosso diretório com o seguinte comando: php -r "unlink('composer-setup.php');"
+7- No diretório miniframework devemos criar um arquivo composer.json
+8- Configure o arquivo Json de acordo com o arquivo fornecido;
+9- Após configurar o arquivo Json dentro diretório miniframework execute o seguinte comando: php composer.phar install
+10- Vai dar um erro, basta colocar o arquivo composer.phar fornecido pelo professor e executa-lo novamente que funcionará;
+11- Insira o comando require_once "../vendor/autoload.php"; no arquivo index.php que está no diretório public
+Estamos inserindo esta linha para que o Index que é nosso ponto de entrada para o site tenha o autoload carregado que por sua vez carregará todos os controladores, views e models para nosso projeto;
+12- Inicie novamente o servidor e verifique se ainda continua aparecendo a mensagem Está funcionando;
+13- Composer devidamente configurado em nosso projeto;

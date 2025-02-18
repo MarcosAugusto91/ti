@@ -1,0 +1,18 @@
+MVC - Model View Controller (Padrão de Arquitetura mais utilizada);
+3 Camadas de divisão do código;
+
+Controller: Recebe as requisições e chama o Model ou View quando necessário, ela define oque deve acontecer e quando deve acontecer;
+Model: A camada model é responsável pelas regras de negócio e pela interação com o banco de dados;
+View: Camada responsável pela exibição de uma página Html, xml ou json;
+
+1- Criação da estrutura:
+1.1- Crie uma pasta no C: projetos/miniframework dentro dele criar o diretório app e public
+(A pasta public é comparada ao diretório htdocs);
+1.2- No diretório app crie três diretórios: controllers, models, views
+1.3- No diretório public crie um arquivo chamado index.php (Será o responsável pela chamada, por receber a requisição);
+1.4- Insira um código simples em php: <?php echo 'Está funcionando'; ?>
+1.5- Mas para rodar não vamos usar o Xampp, vamos criar um servidor por meio da instalação do PHP que já está instalado em nossa máquina;
+1.6- Abra o cmd e digite php -v / o comando não funcionará, somente no caminho: cd c:/xampp/php
+1.7- Para corrigir vá em meu computador - propriedades - conf. avançadas de sistema - variáveis de ambiente - na parte de cima dupli clique em path - inclua o caminho C:\xampp\php lá dentro. ***Importante não mexa e nem exclua nenhuma outra opção!
+1.8- Feche e abra novamente o cmd acesse: C:\Projetos\miniframework\public e execute o comando php -S localhost:8080
+1.9- Vá no navegador e digite a seguinte URL: localhost:8080 você startou e inicializou um servidor PHP;
