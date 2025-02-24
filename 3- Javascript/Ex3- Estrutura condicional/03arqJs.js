@@ -1,7 +1,7 @@
 function calcular() {
-    var vel = window.document.getElementById('vel')
-    var resp = window.document.getElementById('resp')
-    var velocidade = Number(vel.value)
+    let vel = window.document.getElementById('vel')
+    let resp = window.document.getElementById('resp')
+    let velocidade = Number(vel.value)
     // resp.innerHTML = `Sua velocidade atual é ${velocidade}Km/h`
 
     if (velocidade <= 40) {
