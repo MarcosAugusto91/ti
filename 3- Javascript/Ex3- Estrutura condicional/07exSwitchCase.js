@@ -8,7 +8,7 @@ console.log(selecao.value);
 
 switch (dia){
     case 0:
-        resposta.innerHTML = 'Hoje é Domingo!';
+        resposta.innerHTML = '<strong>Hoje é Domingo!</strong>';
         resposta.style.color = 'blue';
         break;
     case 1:
