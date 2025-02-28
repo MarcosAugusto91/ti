@@ -1,0 +1,33 @@
+1- Dentro de app crie um arquivo chamado Route.php
+2- Coloque o namespace da pasta onde está inserido, para que o autoload consiga acessar este arquivo Route; ex: namespace app e crie uma classe route{};
+3- Depois disso você pode instanciar ele dentro do arquivo index.php; Ex: $route = new \app\Route;
+4- Dentro do arquivo Route na classe Route crie uma função que servirá para pegar a Url que o usuário tentou acessar;       
+public function getUrl(){
+            return $_SERVER;
+        }
+5- De volta no arquivo index.php vamos acessar a função getUrl() e dar um print_r para verificarmos os dados que constam na super global $_SERVER; ***Cuidado para verificar como você colocou o namespace no composer.json, se tiver alguma caracter maiúsculo ou minúsculo diferente ele não conseguirá acessar pelo autoload; Ex: print_r($route->getUrl());
+6- Verifique o campo REQUEST_URI que aparecer na tela, ele mostra para você qual a URL que o usuário tentou conectar;
+7- Tente acessar localhost:8080/contato e verifique que o campo REQUEST_URI muda;
+
+8- Vamos na função e alterar para return parse_url($_SERVER['REQUEST_URI']);
+*A função PARSE serve para retornar seus componentes;
+
+9- Faremos agora mais uma alteração para return parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+*Desta forma o resultado será somente o caminho que precisamos;
+
+10- Vamos criar outra função dentro do arquivo Routes:
+        public function initRoutes(){
+            $routes['home'] = array(
+                'route' => '/',
+                'controller' => 'indexController',
+                'action' => 'index'
+            );
+            $routes['sobre_nos'] = array(
+                'route' => 'sobre_nos',
+                'controller' => 'indexController',
+                'action' => 'sobre_nos'
+            );
+        }
+
+11- Vamos criar nosso primeiro controlador, dentro da pasta controller crie indexController.php;
+12- Crie o arquivo .htaccess (Serve como parametrização do apache) no diretório public e na hora de salvar como o arquivo não tem nome, tem que salver ".htaccess"

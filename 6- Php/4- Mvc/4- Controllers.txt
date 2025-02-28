@@ -1,0 +1,71 @@
+1- No arquivo já criado IndexController:     
+
+namespace App\Controllers;
+
+    class IndexController {
+
+        //Actions da estrutura MVC:
+        public function index(){
+            echo 'Chegamos ao IndexController e disparamos a action index';
+        } 
+
+        public function sobreNos(){
+            echo 'Chegamos ao IndexController e disparamos a action sobreNos';
+        } 
+
+    }
+
+2- No arquivo Route agora precisamos inicializar as rotas para que consigamos chegar no arquivo IndexController e executarmos a Action correta:
+ 
+        private $routes;
+
+        public function __construct(){
+            $this->initRoutes();
+        }
+
+        public function getRoutes(){
+            return $this->routes;
+        }
+
+        public function setRoutes(array $routes){
+            $this->routes = $routes;
+        }
+
+3- E dentro da function initRoutes no final acrescentamos:
+$this->setRoutes($routes); 
+para que ele preencha a variável private $routes com os arrays que temos dentro do initRoutes();
+
+4- Já em index.php acrescente as linhas abaixo para que você consiga verificar que os arrays foram inseridos corretamente dentro da variável $routes e vamos imprimir na tela para ver:
+    echo '<hr>';
+    echo '<pre>';
+    print_r($route->getRoutes());
+    echo '</pre>';
+
+5- Depois de testar vamos voltar ao arquivo Route.php e criar a função run() dentro da classe:
+        public function run($url){
+            echo '***' .$url. '***';
+        }
+
+Depois lá no construct devemos chamar o Run para rodar após o initRoutes():
+$this->run($this->getUrl());
+
+6- Voltando na função Run: (Para que ele execute dentro dela a função getRoutes e traga todos os Paths que configuramos, com seus respectivos atributos:
+            foreach($this->getRoutes() as $key => $route){
+               print_r($route);
+               echo '<br>';
+            }
+
+7- No final ajustamos a função Run da forma abaixo para que com a Url obtida possamos comparar com as rotas traçadas anteriormente, chegando ao controlador correto e executando a ação de acordo com a URL requerida:
+
+        public function run($url){
+            foreach($this->getRoutes() as $key => $route){
+               if($url == $route['route']){
+
+                $class = "App\\Controllers\\".$route['controller'];
+                $controller = new $class;
+
+                $action = $route['action'];
+                $controller->$action();
+               }
+            }
+        }
