@@ -9,8 +9,8 @@
     /*flex-direction: column; /*row-reverse column column-reverse EX1 */
     /*flex-wrap: wrap; /*wrap wrap-reverse nowrap*/
     flex-flow: row wrap;
-    justify-content: space-around; /* flex-end center space-between space-around Hori */ 
-    /* align-items: center; /*stretch center flex-start flex-end baseline  Vertical*/
+    justify-content: center; /* flex-end center space-between space-around Hori */ 
+    align-items: center; /*stretch center flex-start flex-end baseline  Vertical*/
     /* align-content: center;*/
 }
 
@@ -23,11 +23,11 @@
     width: 150px;
     height: 100px;
     /*align-self: center;
-    /*justify-self:center;
-    /*flex:auto;*/
-    /*flex-grow:1;
-    /*flex-shrink:5;*/
-    /*flex-basis:auto;*/
+    justify-self:center;
+    flex:auto;
+    flex-grow:1;
+    flex-shrink:5;
+    flex-basis:auto;*/
 }
 
 .ordem1{order: 6;}
