@@ -13,6 +13,6 @@ View: Camada responsável pela exibição de uma página Html, xml ou json;
 1.4- Insira um código simples em php: <?php echo 'Está funcionando'; ?>
 1.5- Mas para rodar não vamos usar o Xampp, vamos criar um servidor por meio da instalação do PHP que já está instalado em nossa máquina;
 1.6- Abra o cmd e digite php -v / o comando não funcionará, somente no caminho: cd c:/xampp/php
-1.7- Para corrigir vá em meu computador - propriedades - conf. avançadas de sistema - variáveis de ambiente - na parte de cima dupli clique em path - inclua o caminho C:\xampp\php lá dentro. ***Importante não mexa e nem exclua nenhuma outra opção!
-1.8- Feche e abra novamente o cmd acesse: C:\Projetos\miniframework\public e execute o comando php -S localhost:8080
+1.7- Para corrigir vá em meu computador - propriedades - conf. avançadas de sistema - variáveis de ambiente - na parte de cima duplo clique em path - inclua o caminho C:\xampp\php lá dentro. ***Importante não mexa e nem exclua nenhuma outra opção!
+1.8- Feche e abra novamente o cmd acesse: C:\Projetos\miniframework\public e execute o comando php -S localhost:8080 - Caso não funcione execute setx PATH "%PATH%;c:/xampp/php"
 1.9- Vá no navegador e digite a seguinte URL: localhost:8080 você startou e inicializou um servidor PHP;
