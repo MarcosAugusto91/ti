@@ -1,5 +1,5 @@
 1- Dentro de app crie um arquivo chamado Route.php
-2- Coloque o namespace da pasta onde está inserido, para que o autoload consiga acessar este arquivo Route; ex: namespace app e crie uma classe route{};
+2- Coloque o namespace da pasta onde está inserido, para que o autoload consiga acessar este arquivo Route; ex: namespace App e crie uma classe Route{};
 3- Depois disso você pode instanciar ele dentro do arquivo index.php; Ex: $route = new \app\Route;
 4- Dentro do arquivo Route na classe Route crie uma função que servirá para pegar a Url que o usuário tentou acessar;       
 public function getUrl(){
