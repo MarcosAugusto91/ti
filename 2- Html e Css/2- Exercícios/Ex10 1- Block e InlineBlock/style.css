@@ -1,0 +1,40 @@
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+}
+
+body{
+    margin:auto;
+}
+
+.container{
+ display: inline-block; 
+    width: 600px;
+    height: 800px;
+    background-color: gray;
+}
+
+.titulo{
+    font-size: 30px;
+    color: blue;
+}
+
+.sub-titulo{
+    font-size: 15px;
+    color: red;
+}
+
+#tituloespecial{
+
+font-size: 150px;
+
+}
+
+p{
+    background-color: black;
+    color: white;
+    display: inline-block;
+    padding: 10px;
+    margin:50px
+}

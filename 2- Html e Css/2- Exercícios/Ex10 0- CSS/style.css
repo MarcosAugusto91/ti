@@ -15,6 +15,10 @@ body {
     margin-right: -4px;
 }
 
+#texto2{
+    color: blue;
+}
+
 .titulo {
     color: white;
     background-color: lightslategray;

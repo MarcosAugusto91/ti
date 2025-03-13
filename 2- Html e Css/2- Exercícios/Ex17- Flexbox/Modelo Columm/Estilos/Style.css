@@ -70,7 +70,7 @@ header{
 
 section:hover{
     opacity: 100%;
-    filter:grayscale(0);
+    filter:grayscale(0);    
 }
 
 main{
