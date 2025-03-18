@@ -15,16 +15,18 @@
         <input id="n1" type="number" placeholder="Digite o 1º número"> + 
         <input id="n2" type="number" placeholder="Digite o 2º número">
         <input id="somar" type="button" onclick="somar()" value="Somar">
-        <h4 id="res"></h2>
+        <h4 id="res"></h4>
         <h3 id="resp2"></h3>
     </div>
 
     <script>
         function somar(){
+            //var n1 = Number.parseFloat(window.document.getElementById('n1').value)
             var n1 = window.document.getElementById('n1')
             var n2 = window.document.getElementById('n2')
             var res = window.document.getElementById('res')
             var resp2 = window.document.getElementById('resp2')
+
             var c1 = Number(n1.value)
             var c2 = Number(n2.value)
 
