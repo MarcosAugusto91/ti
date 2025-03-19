@@ -18,9 +18,8 @@
         <div id="div07" onclick="clicar()" onmouseenter="ent7()" onmouseout="sair7()">7</div>        
         <div id="div08" onclick="clicar()" onmouseenter="ent8()" onmouseout="sair8()">8</div>        
         <div id="div09" onclick="clicar()" onmouseenter="ent9()" onmouseout="sair9()">9</div>        
-        <div id="div10" onclick="clicar()" onmouseenter="ent10()" onmouseout="sair10()">10</div>
-        </main>              
-    </main>
+        <div id="div10">10</div>
+    </main>              
 
     <script>
         var a = window.document.getElementById('div01')
@@ -33,6 +32,10 @@
         var h = window.document.getElementById('div08')
         var i = window.document.getElementById('div09')
         var j = window.document.getElementById('div10')
+
+        j.addEventListener('click', clicar);
+        j.addEventListener('mouseenter', ent10);
+        j.addEventListener('mouseout', sair10);
         //var a = window.document.querySelector('div.teste')
         
 
@@ -120,8 +123,6 @@
         function sair10(){
         j.style.backgroundColor = 'white'
         }
-
-
     </script>
 
     

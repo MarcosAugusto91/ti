@@ -1,5 +1,3 @@
-console.log('O Console funcionou corretamente!')
-
 var vel = 60
 
 if (vel > 60) {
