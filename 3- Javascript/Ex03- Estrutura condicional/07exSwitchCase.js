@@ -4,7 +4,7 @@ let selecao = window.document.getElementById('dia');
 let dia = Number(selecao.value);
 let resposta = window.document.getElementById('resposta');
 
-console.log(selecao.value);
+console.log(dia);
 
 switch (dia){
     case 0:
