@@ -3,9 +3,21 @@ session_start();
 
 //Usuários pré-cadastrados
 $usuarios = array(
-    ['id' => '1', 'perfil' => 'adm', 'nome' => 'Marcos', 'email' => 'marcosaugusto_gja@hotmail.com',    'senha' => '123'],
-    ['id' => '2', 'perfil' => 'user', 'nome' => 'Joyci', 'email' => 'joyci_sn@hotmail.com',             'senha' => '123456'],
-    ['id' => '3', 'perfil' => 'user', 'nome' => 'Ariosvaldo' , 'email' => 'ariosvaldo@hotmail.com',          'senha' => '0']
+    ['id' => '1', 
+    'perfil' => 'adm', 
+    'nome' => 'Marcos', 
+    'email' => 'marcosaugusto_gja@hotmail.com',    
+    'senha' => '123'],
+    ['id' => '2',
+    'perfil' => 'user',
+    'nome' => 'Joyci',
+    'email' => 'joyci_sn@hotmail.com',
+    'senha' => '123456'],
+    ['id' => '3',
+    'perfil' => 'user',
+    'nome' => 'Ariosvaldo',
+    'email' => 'ariosvaldo@hotmail.com',
+    'senha' => '0']
 );
 
 $usuarioAutenticado = false;
@@ -36,4 +48,4 @@ if($usuarioAutenticado){
     $_SESSION['autenticado'] = 'nao';
     header('location: index.php?login=erro');
 }
-
+?>
