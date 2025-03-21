@@ -1,5 +1,8 @@
-let x = 0;
 
+        //EX PARES CONSECUTIVOS
+
+let x = 0;
+ 
 do {
     x = Number(prompt('Digite um número'));
 

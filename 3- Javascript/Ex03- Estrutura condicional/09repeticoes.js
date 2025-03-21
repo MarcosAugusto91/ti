@@ -1,3 +1,5 @@
+
+//EX VALIDAÇÃO DE NOTAS
 let n1 = -1;
 let n2 = -1;
 
