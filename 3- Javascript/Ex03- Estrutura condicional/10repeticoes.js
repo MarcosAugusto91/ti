@@ -1,5 +1,5 @@
 
-        //EX PARES CONSECUTIVOS
+//EX PARES CONSECUTIVOS
 
 let x = 0;
  

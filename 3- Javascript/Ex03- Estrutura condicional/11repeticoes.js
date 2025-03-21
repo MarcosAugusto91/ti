@@ -1,9 +1,10 @@
 
-    //EX TABUADA
-let n =prompt('Digite o número que deseja a tabuada:');
+//EX TABUADA
 
-for(x=1;x<=100;x++){
+let n = prompt('Digite o número que deseja a tabuada:');
 
-    let resultado = x*n;
+for (x = 1; x <= 100; x++) {
+
+    let resultado = x * n;
     console.log(`${n} * ${x} = ${resultado};`);
 }
