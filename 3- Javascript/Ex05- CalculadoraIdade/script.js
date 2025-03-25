@@ -6,7 +6,7 @@ function verificar(){
     var img = window.document.getElementById('imagem')
     
     var ano = Number(anos.value)
-    var idade = 2024 - ano
+    var idade = 2025 - ano
     var genero =''
     
     if (sexo[0].checked){
@@ -18,7 +18,7 @@ function verificar(){
     switch(genero){
         case 'M':
             if(idade > 124 || idade < 1){
-                texto.innerText = 'ERRO - Digite uma data válida (De 1900 à 2023)'
+                texto.innerText = 'ERRO - Digite uma data válida (De 1900 à 2024)'
                 window.alert('[ERRO] - Digite uma data válida (De 1900 à 2023)')
                 img.style.display = 'none'
             } else if(idade <= 2){
