@@ -9,7 +9,7 @@ body{
 }
 
 .container{
- display: inline-block; 
+    display: inline-block;
     width: 600px;
     height: 800px;
     background-color: gray;
