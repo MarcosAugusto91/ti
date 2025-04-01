@@ -42,7 +42,7 @@
     /*Exemplo 2*/
     const transacoes = [
         { tipo: 'deposito', valor: 100 },
-        { tipo: 'retirada', valor: 50 },
+        { tipo: 'pix', valor: 50 },
         { tipo: 'deposito', valor: 200 }
     ];
 
