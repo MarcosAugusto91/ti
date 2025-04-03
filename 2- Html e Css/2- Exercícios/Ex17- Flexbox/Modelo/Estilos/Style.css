@@ -11,7 +11,6 @@
     flex-flow: row wrap;
     justify-content: center; /* flex-end center space-between space-around Hori */ 
     align-items: center; /*stretch center flex-start flex-end baseline  Vertical*/
-    /* align-content: center;*/
 }
 
 .itens{
