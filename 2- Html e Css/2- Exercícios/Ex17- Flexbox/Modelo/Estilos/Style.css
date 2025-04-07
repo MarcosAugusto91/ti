@@ -6,14 +6,18 @@
 .container{
     background-color: gray;
     display: flex;
-    /*flex-direction: column; /*row-reverse column column-reverse EX1 */
+    /*flex-direction: row; /*row-reverse column column-reverse EX1 */
     /*flex-wrap: wrap; /*wrap wrap-reverse nowrap*/
     flex-flow: row wrap;
-    justify-content: center; /* flex-end center space-between space-around Hori */ 
-    align-items: center; /*stretch center flex-start flex-end baseline  Vertical*/
+
+    justify-content: flex-start; /* flex-end center space-between  space-around EIXO PRINCIPAL */ 
 }
 
 .itens{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
     background-color: white;
     border: 0.1px solid gray;
     text-align: center;

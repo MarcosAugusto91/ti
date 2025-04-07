@@ -23,8 +23,8 @@
     /*grid-column-gap:10px;*/
     /*grid-row-gap:10px;*/
     grid-template-areas: "header header header header header header header header header header header header" 
-                         "aside  aside   null   null   main   main   main   main  main   main   main   main"
-                         "aside  aside   null   null   main   main   main   main   main  main   main   main"
+                         "aside  aside   null   null   main   main   main   main  main   main   main  main"
+                         "aside  aside   null   null   main   main   main   main   main  main   main  main"
                          "footer footer footer footer footer footer footer footer footer footer footer footer";
     /* align-items: start; center, end; stretch */
     /* justify-items: start;  center, end; */
