@@ -2,10 +2,10 @@ Instalação framework com Expo:
 0- Acesso o site do expo: https://expo.dev/ e vá em Docs
 1- Crie a pasta que irá utilizar;
 2- Acesse ela pelo cmd
-3- Digite o comando: npx create-expo-app@latest primeiroProjeto (esse comando está na tela Docs do Expo);
+3- Digite o comando: npx create-expo-app@latest primeiroProjeto (esse comando está na tela Docs do Expo) -t blank;
 4- cd nomedapasta para entrar dentro da pasta do projeto que foi criada pelo comando anterior;
 5- npx expo start para inicializar o nosso aplicativo
-6- Pelo celular instale o Expo Go e leia o QR Code para rodar o aplicativo pelo seu celular, ou rode pelo Android de acordo com as instruções na tela; (Lembrando que para rodar pelo celular devemos estar na mesma rede Wifi ou conectar por cabo);
+6- Pelo celular instale o Expo Go e leia o QR Code para rodar o aplicativo pelo seu celular, ou rode pelo Android de acordo com as instruções na tela; (Lembrando que para rodar pelo celular devemos estar cd..cdna mesma rede Wifi ou conectar por cabo);
 7- Ctrl-m abre o menu do app no emulador;
 8- Faremos um novo projeto agora com o layout em branco: npx create-expo-app@latest primeiroProjetoExpo -t após executarmos colocamos na opção Blank;
 9- Pronto criado um novo projeto agora com o Layout todo zerado;
