@@ -12,11 +12,11 @@
         <input name="nome" type="text" placeholder="ex: Marcos"></input>
 
         <label for="peso">Peso:</label>     
-        <input name="peso" type="number" placeholder="ex: 70"></input>
+        <input name="peso" type="number" placeholder="ex: 69.5" step="0.01"></input>
 
         <label for="altura">Altura:</label> 
-        <input name="altura" type="text" placeholder="ex: 1.78"></input>
-        <button tipe="submit">Calcular</button>
+        <input name="altura" type="number" placeholder="ex: 1.78" step="0.01"></input>
+        <button type="submit">Calcular</button>
     </form>
 
 </body>
