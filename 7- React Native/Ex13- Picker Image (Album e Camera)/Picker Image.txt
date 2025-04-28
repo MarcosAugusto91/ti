@@ -1,0 +1,13 @@
+Utilizando Câmera e Album
+
+CLI: 
+Basta ir no github e pesquisar por React Native image picker e verificar a documentação: https://github.com/react-native-image-picker/react-native-image-picker#readme
+
+EXPO:
+1- Em expo.dev procure por imagePicker ou acesse: https://docs.expo.dev/versions/latest/sdk/imagepicker/
+
+2- Instale-o com o seguinte comando: npx expo install expo-image-picker
+
+3- Coloque o puglin do ImagePicker dentro do arquivo app.json (Conforme a documentação);
+
+4- import * as ImagePicker from 'expo-image-picker';
