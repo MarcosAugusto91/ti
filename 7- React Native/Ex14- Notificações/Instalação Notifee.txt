@@ -1,0 +1,25 @@
+CLI
+1- Notifee.app -> Get Started -> Installation
+2- npm install @notifee/react-native
+3- npx react-native run-android
+4- import notifee from '@notifee/react-native'
+--------------------------------------------------
+EXPO
+1- Notifee.app -> Get Started -> Installation
+2- npm install @notifee/react-native
+3- Em app.json acrescentar:
+"plugins": [
+  "@notifee/react-native"
+]
+4- No expo instalar mais uma biblioteca (expo-build-properties) Obs: expoGo não vai funcionar;
+comando: npx expo install expo-build-properties
+5- Também é necessário colocar no arquivo app.json:
+"plugins": [
+  "@notifee/react-native",
+  [
+    "expo-build-properties"
+  ]
+]
+6- Realizar um prebuilding do projeto: No mesmo diretório do projeto com expo: npx expo prebuild só confirmar com enter; Você vai ver que a partir de agora o projeto no expo vai ter acesso a pasta nativa do android que normalmente não tem.
+7- Para rodar npx expo run:android
+8- import notifee from '@notifee/react-native'
