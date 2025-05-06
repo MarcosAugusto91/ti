@@ -23,3 +23,5 @@ comando: npx expo install expo-build-properties
 6- Realizar um prebuilding do projeto: No mesmo diretório do projeto com expo: npx expo prebuild só confirmar com enter; Você vai ver que a partir de agora o projeto no expo vai ter acesso a pasta nativa do android que normalmente não tem.
 7- Para rodar npx expo run:android
 8- import notifee from '@notifee/react-native'
+
+C:\Users\marcos.aazevedo3\AppData\Local\Android\Sdk

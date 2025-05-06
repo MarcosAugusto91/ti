@@ -1,5 +1,6 @@
 Instalação CLI: 
 1- https://reactnative.dev/
+npx @react-native-community/cli@latest init AwesomeProject
 2- Get Started
 3- Can I use React Native without a Framework?
 4- Environment
