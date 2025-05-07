@@ -1,0 +1,64 @@
+Alterando nome do App:
+Dentro do arquivo app.json os dois primeiros campos são Name e DisplayName que podem ser alterados;
+
+***Realizar um prebuilding do projeto: No mesmo diretório do projeto com expo: npx expo prebuild só confirmar com enter; Você vai ver que a partir de agora o projeto no expo vai ter acesso a pasta nativa do android que normalmente não tem e agora pode fazer o mesmo processo abaixo do CLI.
+
+Dentro a pasta nativa Android >> app >> src >> main >> res >> values >> strings: alterar o name
+--------------------------------------------------
+Alterando logo
+
+EXPO:
+Para alterar pelo expo basta acessar a pasta assets e trocar os arquivos icons presentes lá;
+
+CLI:
+Para alterar pelo CLI acesse a pasta android >> app >> src >> main >> res >> altere os icones de todas as pastas, há diversos tamanhos de ícones que devem ser criados e colocados em suas respectivas pastas, para que fique com uma boa resolução em todos os dispositivos;
+--------------------------------------------------
+Gerando APK
+Onde encontrar o passo a passo oficial atualizado:
+Dentro da documentação do reactNative basta pesquisar por publish
+
+1- Dentro da pasta do nosso projeto executar o seguinte comando:
+keytool -genkeypair -v -storetype PKCS12 -keystore my-upload-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
+
+Outro exemplo: npx expo startkeytool -genkeypair -v -storetype PKCS12 -keystore cronometo.keystore -alias cronometro-key-alias -keyalg RSA -keysize 2048 -validity 10000
+
+2- Após você gerar uma senha e responder um questionário será gerado a key dentro da pasta do projeto com a extensão .keystore
+
+3- Configurando as variáveis: Na pasta android >> gradle >> gradle.properties >> Colar no final do arquivo: 
+MYAPP_UPLOAD_STORE_FILE=my-upload-key.keystore
+MYAPP_UPLOAD_KEY_ALIAS=my-key-alias
+MYAPP_UPLOAD_STORE_PASSWORD=*****
+MYAPP_UPLOAD_KEY_PASSWORD=*****
+
+4- Agora configurar para que o arquivo acesse as informações da variável:
+Na pasta: android >> app >> build.gradle vá até signingConfigs e cole dentro abaixo de debug:
+
+release {
+            if (project.hasProperty('MYAPP_UPLOAD_STORE_FILE')) {
+                storeFile file(MYAPP_UPLOAD_STORE_FILE)
+                storePassword MYAPP_UPLOAD_STORE_PASSWORD
+                keyAlias MYAPP_UPLOAD_KEY_ALIAS
+                keyPassword MYAPP_UPLOAD_KEY_PASSWORD
+            }
+        }
+
+5- Dentro do mesmo arquivo agora dentro de buildTypes/release:
+cole no início:
+ signingConfig signingConfigs.release
+
+6- Execute no cmd: cd android
+7- Execute no cmd: gradlew bundleRelease e aguarde ele criar o arquivo;
+8- O arquivo será gerado em: android >> app >> build >> outputs >> bundle >> release >> app.release.aab
+
+9- Caso haja necessidade de gerar uma nova versão basta acessar: android >> app >> src >> build.gradle >> buscar os comandos versionCode e versioName e alterar e executar o comando 7 novamente
+
+----------------------------------------------------
+Preparando keystore
+1- Dentro de android >> app >> src >> build.gradle >> em buildTypes >> release >> retirar a linha: signingConfig signingConfigs.debug e salve o arquivo;
+2- Pegar a keystore gerada e colar na pasta android >> app >> para garantir que irá junto na hora de gerar o apk;
+3- Agora é interessante apagar o arquivo no release e regerar o build igual o passo: 7
+
+-----------------------------------------------------
+Publicando App -> Vídeo
+URL: https://developer.android.com/?hl=pt-br
+Mais >> GooglePlay >> Login PlayConsole >> Ao logar o próprio site da Google vai solicitando as informações, inclusive de pagamento (uma única vez) e no final você encaminha seu arquivo .aab (Apk / Build / Release) e publica seu APP na Google Store.
