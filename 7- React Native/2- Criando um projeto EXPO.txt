@@ -1,0 +1,13 @@
+CRIANDO UM PROJETO COM EXPO
+1- Crie a pasta onde deseja colocar o projeto
+2- Clique na barra de endereço e digite CMD (Irá abrir o CMD já com a pasta que deseja; Função só funciona no W10 e 11);
+
+3- CRIANDO NOVO PROJETO: 	npx create-expo-app@latest -t blank
+4- ENTRANDO NO PROJETO:		dentro do CMD: cd nomeDoProjeto
+5- EXECUTANDO O PROJETO: 	npx expo start
+
+6- INSTALANDO EXPO GO:		Instale o Expo Go no seu celular e leia o QR Code gerado no CMD para rodar o aplicativo pelo seu celular, ou rode pelo Emulador do Android Studio de acordo com as instruções na tela; 
+(Lembrando que para rodar pelo celular devemos estar na mesma rede Wifi ou conectar por cabo);
+
+-----------------------------------------------------------------------------------------------------
+Para Consulta: https://expo.dev/ e vá em Docs

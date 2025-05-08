@@ -1,0 +1,8 @@
+CRIANDO UM PROJETO COM CLI
+1- Crie a pasta onde deseja colocar o projeto
+2- Clique na barra de endereço e digite CMD (Irá abrir o CMD já com a pasta que deseja; Função só funciona no W10 e 11);
+3- Deixe o emulador do Android Studio rodando
+
+3- CRIANDO NOVO PROJETO:	npx @react-native-community/cli@latest init nomeDoProjeto
+4- ENTRANDO NO PROJETO:		dentro do CMD: cd nomeDoProjeto
+5- EXECUTANDO O PROJETO: 	npm run android

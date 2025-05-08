@@ -1,0 +1,47 @@
+PERMISSÕES E INSTALAÇÕES INICIAIS
+1- Abra o powershell como ADM (NÃO TEMOS PERMISSÃO)
+2- Get-ExecutionPolicy
+3- Set-ExecutionPolicy AllSigned
+
+4- INSTALANDO O CHOCO: 		Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
+5- Reinicia o PowerShell: choco -v
+
+6- INSTALANDO O NODE E JDK:	choco install -y nodejs-lts microsoft-openjdk17 yarn
+
+7- VERIFICANDO VERSÕES: No cmd: node -v / npm -v (É o gerenciador de pacote do node) / java –version
+---------------------------------------------------------------------------------------------------------
+ANDROID STUDIO
+1- Baixe e Instale o Android Studio
+2- Na instalaçao o Virtual Device tem que estar marcado, depois Next até aparecer instalação customizada(custom)
+3- Se a máquina for intel pode instalar o HAXM / Marcar também: Performance (Android Emulator...) e Android Virtual Device
+4- Após instalar na tela inicial: More Actions (ou 3 pontinhos) -> SDK Manager -> Intalar Android 13 e 11
+5- Em SDK Tools -> SDK Build Tools, Android Emulator, SDK-Plataform Tools, Google Play Services, HAXM
+6- Copie o caminho que está marcado em Android SDK Location: C:\SDK
+7- Na tela inicial do Android Studio: More Actions (ou 3 pontinhos) -> Virtual Device Manager -> Exclua o Padrão
+8- Criar um novo -> Pixel 2 (COM SÍMBOLO DA PLAYSTORE)-> Selecionar preferencialmente Android 11(R) -> Finish
+---------------------------------------------------------------------------------------------------------
+VARIÁVEIS DE AMBIENTE
+1- O JDK será instalado em uma das pastas a seguir: C:\Program Files\Microsoft\ ou C:\Program Files\OpenJDK
+2- Pesquise no windows: Sistemas -> Sobre -> Configurações avançadas do sistema -> Variáveis do sistema -> Novo (NÃO TEMOS PERMISSÃO)
+3- Nome da variável: JAVA_HOME = C:\Program Files\Microsoft\jdk-com a versão que foi instalada no seu (Insira tanto em cima quanto embaixo)
+4- Nome da variável: ANDROID_HOME = C:\Users\seu usuário\AppData\Local\Android\Sdk ou copie o caminho que está marcado em Android SDK Location: C:\SDK (Que só estará disponível após a instalação do ANDROID STUDIO
+5- Na variável PATH, clique em editar: novo: 
+%ANDROID_HOME%\emulator
+%ANDROID_HOME%\tools
+%ANDROID_HOME%\tools\bin
+%ANDROID_HOME%\platform-tools
+
+Comandos para forçar a criação e setar uma variável de ambiente:
+CRIA E SETA O VALOR, MAS FUNC APENAS NESTE CMD:		set ANDROID_HOME=C:\Users\COLOQUESEUUSUARIO\AppData\Local\Android\Sdk
+SETA O VALOR GLOBALMENTE PARA TODOS OS CMD's: 		setx ANDROID_HOME "C:\Users\COLOQUESEUUSUARIO\AppData\Local\Android\Sdk"
+---------------------------------------------------------------------------------------------------------
+PARA CONSULTA:
+1- https://reactnative.dev/
+2- Get Started
+3- Can I use React Native without a Framework?
+4- Environment
+
+https://sujeitoprogramador.com/ambiente-windows/
+https://reactnative.dev/docs/set-up-your-environment
+nodejs,org/en

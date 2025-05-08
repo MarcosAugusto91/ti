@@ -1,6 +1,0 @@
-1- Abra o emulador dentro do Android Studio
-2- Abra a pasta onde deseja colocar o projeto
-3- Clique na barra de endereço e digite CMD(Irá abrir o CMD já com a pasta que deseja; Função só funciona no W10 e 11
-4- Execute o seguinte comando: npx @react-native-community/cli@latest init meuApp
-5- cd meuApp para entrar na pasta do projeto criado;
-6- npm run android
