@@ -5,7 +5,6 @@
     <body>
 
     <?php
-
         $numeros = [];
         while (count($numeros) <= 5) {
 
@@ -18,7 +17,6 @@
         echo '<pre>';
         print_r($numeros);
         echo '</pre>';
-
     ?> 
     </body>
 </html>
