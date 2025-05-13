@@ -1,0 +1,7 @@
+   <mapView
+	mapType="hybrid" //standard / satellite
+        scrollEnabled={true}
+        zoomEnabled={true}
+        rotateEnabled={true}
+        showsTraffic={true}
+    />
