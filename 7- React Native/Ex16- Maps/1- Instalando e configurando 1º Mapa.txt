@@ -1,29 +1,32 @@
 Instalação Api Maps:
+
 1- Instale: npm install react-native-maps@0.23.0 --save
+2- Faça o pre-build: npx expo prebuild
 
-2- Crie sua api do maps:
-2.1- Acesse Google Maps Plataform
-2.2- Crie um projeto e vincule um cartão
-2.3- Recebe a chave da API: AIzaSyBj5M9TPhBuQSQbohgB1uDZCAkf1UKriYo
-2.4- Em Api e services procure por: Maps SDK for Android e Maps SDK for IOS e Ative-as;
+3- Crie sua api do maps:
+3.1- Acesse Google Maps Plataform
+3.2- Crie um projeto e vincule um cartão
+3.3- Recebe a chave da API: AIzaSyBj5M9TPhBuQSQbohgB1uDZCAkf1UKriYo
+Nova: AIzaSyBdcd0RUI2hcM2KAUbD-j_i8y2epXP33R0
+3.4- Em Api e services procure por: Maps SDK for Android e Maps SDK for IOS e Ative-as;
 
-3- Execute o seguinte comando no cmd: 
+4- Execute o seguinte comando no cmd: 
 CLI: react-native link react-native-maps
 EXPO: npx expo install react-native-maps
 Execute e veja se o projeto está rodando normalmente
 
-4- Acesse a pasta android >> app >> src >> main >> arquivo androidManifest.xml
-4.1- Dentro da tag application adicione:
+5- Acesse a pasta android >> app >> src >> main >> arquivo androidManifest.xml
+5.1- Dentro da tag application adicione:
 <meta-data
 android:name="com.google.android.geo.API_KEY"
 android:value="AIzaSyBj5M9TPhBuQSQbohgB1uDZCAkf1UKriYo"/>
 
 <uses-library android:name="org.apache.http.legacy" android:required="false"/>
 
-4.2 Um pouco mais acima no mesmo arquivo você vai encontrar as permissões, adicione:
+5.2 Um pouco mais acima no mesmo arquivo você vai encontrar as permissões, adicione:
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
-5- Agora só adicione o MapView no código app para visualizar o mapa e rode o app:
+6- Agora só adicione o MapView no código app para visualizar o mapa e rode o app:
       <MapView
         style={{width:350, height:350}}
         initialRegion={{
