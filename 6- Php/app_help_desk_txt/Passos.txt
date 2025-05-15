@@ -1,0 +1,33 @@
+Passos:
+1º Realizar a autenticação;
+2º Utilizar a função header para re-direcionar de volta para a página index caso os dados estejam inválidos;
+3º Junto do re-direcionamento enviar um parâmetro com um valor para conseguirmos validar por meio do $_GET;
+4º Após isso validar na página index novamente se deu erro e exibir a mensagem antes do botão enviar, utilizar o ISSET para evitar erros caso a pessoa vá logar pela primeira vez;
+ 
+5º Iniciar Sessão em todas as páginas que forem utilizar a sessão, lembrar que o comando session_start(); deve ser executado antes que qualquer comando de output do script;
+6º No arquivo valida_login onde autenticamos o usuário, já podemos usar a variável global $_SESSION e criar um parâmetro nela para saber se foi autenticado ou não;
+7º Nos arquivos que só serão acessados caso o usuário esteja autenticado, podemos recuperar este valor do parâmetro e verificar se foi ou não, assim podendo deixar acessar o conteúdo ou redirecionando para página de login;
+8º Por fim na página de login podemos receber um erro diferente pela URL, seleciona-lo e passar uma mensagem de proibido acesso sem login;
+ 
+9 Utilizar o require_once para aplicar a sessão em todas as páginas;
+
+
+10 Colocar os links para demais páginas;
+11 Criar um link para deslogar, sair
+12 Utilizar um script separado para logoff e dentro iniciar e destruir a sessão, por fim redirecionar para index.php
+ 
+13 Hora de registrar os chamados, inicialmente vou configurar o form e seus inputs;
+14 Depois encaminhar os dados para um arquivo por exemplo chamado registra_chamado.php e nele vamos inicialmente utilizar a função fopen para abrir um arquivo que iremos preencher com os valores;
+15 Concatenar os valores de cada parâmetro por exemplo da variavel $_POST e guardar numa variável;
+16 Importante ao concatenar colocar um caractere para separar cada informação;
+17 Importante também validar se esse caractere não foi utilizado pelo usuário ao digitar, usar o str_replace para substituir este caractere por outro;
+18 Agora basta usar o comando fwrite para escrever os dados e utilizar a função PHP_EOL para que ele pule a linha no final de cada inserção de dado;
+19 Não esqueça de fechar o arquivo fclose antes de redirecionar a página.
+
+29 Agora inicialmente precisamos criar mais um valor dentro do array SESSION contendo o ID de cada usuário;
+30 E acrescentar este valor também dentro dos dados no arquivo txt
+31 Ajustar a exibição para que o ID não fique aparecendo dentro dos chamados desnecessariamente ou colocar mais um campo caso queira exibir o ID do usuário que incluiu aquele chamado;
+32 Agora criar mais um valor dentro do array SESSION contendo dois tipos de perfis, Administradores[0] e usuários[1]
+33 Na hora de montar a exibição dos chamados caso seja administrador pode aparecer todos os chamados(Nada muda), caso seja um usuário comum devemos comparar o Perfil do usuário logado com o salvo no arquivo em cada registro e deixar aparecer somente os dele;
+ 
+34 Para finalizar vamos adicionar segurança nos nossos scripts, basta verificar quais são os arquivos que contém dados confidenciais e retirar da pasta HTDocs para um diretório acima e ajustar os links
