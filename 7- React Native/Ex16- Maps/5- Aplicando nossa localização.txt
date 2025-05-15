@@ -1,0 +1,2 @@
+npx expo install expo-location
+import * as Location from 'expo-location';
