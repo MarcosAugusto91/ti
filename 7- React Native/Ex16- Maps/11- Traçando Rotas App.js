@@ -10,9 +10,9 @@ import {
   Button,
   ScrollView,
 } from 'react-native';
-import MapView, { Marker } from 'react-native-maps';
-import * as Location from 'expo-location';
-import MapViewDirections from 'react-native-maps-directions';
+import MapView, { Marker } from 'react-native-maps'; //Importando componente para usar o MAPVIEW
+import * as Location from 'expo-location'; //Importando componente para acessar localização do gps
+import MapViewDirections from 'react-native-maps-directions'; //Importando componente para construção das rotas
 
 export default class App extends Component {
   constructor(props) {
@@ -22,6 +22,8 @@ export default class App extends Component {
       destLocation: null,
       lat: '',
       long: '',
+
+      //Objeto que contém todos meus marcadores e onde será adicionado os novos
       markers: [
         { key: 0, coords: { latitude: -22.951916, longitude: -43.282585 }, title: 'Cristo Redentor', description: 'Estátua de Jesus Cristo com 30 metros de altura.' },
         { key: 1, coords: { latitude: -13.1631988, longitude: -72.5452621 }, title: 'Machu Picchu', description: 'Antiga cidade inca nos Andes peruanos, altitude: 2400m.' },
@@ -45,6 +47,7 @@ export default class App extends Component {
     this.mapRef = null; // Referência para o MapView
   }
 
+  //Função executada na construção da tela que pede permissão para uso do gps e aplica nossa localização atual na variável REGION
   async componentDidMount() {
     let { status } = await Location.requestForegroundPermissionsAsync();
     if (status !== 'granted') {
@@ -187,6 +190,7 @@ export default class App extends Component {
           }
         </MapView>
 
+      {/* ---------------------------------------------------------------------------------------------------------- */}
 
         {/* SCROLLVIEW COM AS CIDADES DA BAIXADA PARA TRAÇAR ROTAS */}
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.box}>
@@ -257,6 +261,7 @@ export default class App extends Component {
           </View>
         </ScrollView>
 
+      {/* ---------------------------------------------------------------------------------------------------------- */}
 
         {/* VIEWS COM BOTÕES DAS MARAVILHAS DO MUNDO */}
         <View style={styles.container2}>
@@ -307,7 +312,7 @@ export default class App extends Component {
           </TouchableOpacity>
         </View>
 
-
+      {/* ---------------------------------------------------------------------------------------------------------- */}
 
         {/* MODAL DE ADIÇÃO DE MARCADOR */}
         {this.state.modalVisible && (
@@ -329,6 +334,7 @@ export default class App extends Component {
           </View>
         )}
 
+      {/* ---------------------------------------------------------------------------------------------------------- */}
 
         {/* RODAPÉ */}
         <View style={styles.rodape}>
@@ -340,6 +346,8 @@ export default class App extends Component {
     );
   }
 }
+
+      {/* ---------------------------------------------------------------------------------------------------------- */}
 
 //Criação dos estilos
 const styles = StyleSheet.create({
