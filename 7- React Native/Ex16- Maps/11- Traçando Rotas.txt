@@ -1,0 +1,38 @@
+1- npm install react-native-maps-directions --save
+2- No site do google cloud > api > serviços > painel > Ativar o Directions API
+3- import MapViewDirections from 'react-native-maps-directions';
+4- No construtor criar uma variável para localização de destino: destLocation:null,
+5- Adicionar dentro do mapView:
+	<MapViewDirections
+            origin={region}
+            destination={destLocation}
+            apikey='AIzaSyBj5M9TPhBuQSQbohgB1uDZCAkf1UKriYo'
+            strokeWidth={5}
+            strokeColor='blue'
+          
+	/>
+6- Adicione os styles conforme o arquivo fornecido;
+7- Adicione uma função onPress que passará as informações de latitude e longitude para o destLocation conforme o arquivo fornecido;
+------------------------------------------------------------------------
+Após tudo isso ainda ocorrerá um erro com um IP no console, abaixo segue oque devemos configurar no Google Plataform para que este IP seja liberado para ser utilizado pela API:
+
+1- Acesse o Google Cloud Console:
+2- Vá para console.cloud.google.com
+3- Faça login com sua conta Google, se ainda não estiver logado.
+4- Selecione o projeto:
+5- No menu superior, clique na lista de projetos e escolha o projeto que contém sua API key.
+6- Acesse a seção de APIs e Serviços:
+7- No menu lateral esquerdo, clique em "APIs e Serviços".
+Depois, clique em "Credenciais".
+8- Encontre sua API key:
+9- Na lista de credenciais, localize a API key que está apresentando o erro.
+10- Clique no nome da API key para editar suas configurações.
+11- Verifique as restrições de IP:
+12- Na seção "Restrições de IP" (ou similar), veja se há restrições de IP configuradas.
+13- Se a restrição estiver ativada e o IP 181.222.44.161 não estiver listado, adicione-o.
+14- Adicione o IP autorizado:
+15- Selecione a opção de restringir por IPs.
+16- Insira o IP 181.222.44.161 na lista de IPs autorizados.
+17- Salve as alterações.
+18- Aguarde a propagação:
+As mudanças podem levar alguns minutos para entrarem em vigor.
