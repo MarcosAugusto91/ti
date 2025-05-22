@@ -34,18 +34,26 @@ export default class App extends Component {
         { key: 6, coords: { latitude: 40.4319118, longitude: 116.5678 }, title: 'Muralhas da China', description: 'Fortificação milenar com mais de 20.000km de extensão.' },
         { key: 7, coords: { latitude: 29.9752297, longitude: 31.1310329 }, title: 'Pirâmides do Egito', description: 'Sítio arqueológico com as Grandes Pirâmides, a Grande Esfinge.' }
       ],
+
+      //Marcador da Rota
+      markerRota: [],
       modalVisible: false,
       novoTitulo: '',
       novaDescricao: '',
-      coordenadaTemp: null
+      coordenadaTemp: null,
+      distancia: null,
+      duracao: null,
     };
 
     this.mudouMapa = this.mudouMapa.bind(this);
     this.trocarCidade = this.trocarCidade.bind(this);
     this.latitudeClicada = this.latitudeClicada.bind(this);
     this.adicionarMarcador = this.adicionarMarcador.bind(this);
+    this.adicionarMarcadorDaRota = this.adicionarMarcadorDaRota.bind(this);
     this.mapRef = null; // Referência para o MapView
   }
+
+  //FUNÇÕES---------------------------------------------------------------------------
 
   //Função executada na construção da tela que pede permissão para uso do gps e aplica nossa localização atual na variável REGION
   async componentDidMount() {
@@ -97,6 +105,23 @@ export default class App extends Component {
     });
   }
 
+  adicionarMarcadorDaRota() {
+    const { destLocation } = this.state;
+  
+    if (!destLocation) return;
+  
+    const novoMarcador = {
+      key: 0, // Sempre 0, pois só existe 1 marcador de rota
+      coords: destLocation,
+      title: 'Destino Selecionado',
+      description: 'Boa viagem!'
+    };
+  
+    this.setState({
+      markerRota: [novoMarcador] // Substitui qualquer marcador anterior
+    });
+  }
+
   //FUNÇÃO ARMAZENA LATITUDE E LONGITUDE TODA VEZ QUE MUDAMOS A POSIÇÃO NO MAPA
   mudouMapa(region) {
     this.setState({
@@ -120,7 +145,7 @@ export default class App extends Component {
 
   render() {
     //REFERENCIANDO TODAS MINHAS PROPRIEDADES PARA RESUMIR O CÓDIGO
-    const { region, lat, long, markers, destLocation } = this.state;
+    const { region, lat, long, markers, destLocation, markerRota } = this.state;
 
     //VARIÁVEIS CONSTANDO OS CAMINHOS DAS IMAGENS
     const bandeiras = {
@@ -133,18 +158,20 @@ export default class App extends Component {
       China: require('./img/china.png'),
       Egito: require('./img/egito.png'),
       Logo: require('./img/monumento.png'),
+      PinCustomizado: require('./img/pin3.png'),
     }
 
     return (
+      //ESTRUTURA----------------------------------------------------------------------
       <View style={styles.container}>
-        
-        {/* BARRA SUPERIOR COM LOGO E NOME DO APP */}
+
+        {/* BARRA SUPERIOR COM LOGO E NOME DO APP -----------------------------------*/}
         <View style={styles.barraSuperior}>
           <Image style={styles.Logo} source={bandeiras.Logo} />
           <Text style={styles.titulo}>Maravilhas do mundo!</Text>
         </View>
 
-        {/* MAPA DO APLICATIVO COM SUAS CONFIGURAÇÕES  */}
+        {/* MAPA DO APLICATIVO COM SUAS CONFIGURAÇÕES--------------------------------*/}
         <MapView
           ref={(ref) => { this.mapRef = ref; }} // Definindo a referência do MapView
           style={styles.mapa}
@@ -157,7 +184,7 @@ export default class App extends Component {
           onPress={this.latitudeClicada}
         >
 
-          {/* RODANDO TODOS MEUS MARCADORES E APLICANDO NA TELA */}
+          {/* RODANDO TODOS MEUS MARCADORES E APLICANDO NA TELA ----------------*/}
           {markers.map((marker) => (
             <Marker
               key={marker.key}
@@ -167,7 +194,18 @@ export default class App extends Component {
             />
           ))}
 
-          {/* CONFIGURAÇÕES PARA APLICAÇÃO DAS ROTAS TRAÇADAS */}
+          {/* RODANDO O MARCADOR DA ROTA SELECIONADA----------------------------*/}
+          {markerRota.map((markerRota) => (
+            <Marker
+              key={markerRota.key}
+              coordinate={markerRota.coords}
+              title={markerRota.title}
+              description={markerRota.description}
+              image={bandeiras.PinCustomizado}
+            />
+          ))}
+
+          {/* CONFIGURAÇÕES PARA APLICAÇÃO DAS ROTAS TRAÇADAS ------------------*/}
           {this.state.destLocation &&
             <MapViewDirections
               origin={this.state.region} //Origem da rota
@@ -175,13 +213,29 @@ export default class App extends Component {
               apikey='AIzaSyBj5M9TPhBuQSQbohgB1uDZCAkf1UKriYo' //Utilizar esta chave no máximo 1000 consultas por mês
               strokeWidth={4} //Grossura do traço da rota
               strokeColor='#7ED63F' //Cor do traço da rota
-              onReady={result =>{
+              onReady={result => {
+                
+                const distancia = result.distance.toFixed(2); // Ex: "10.45"
+                const duracao = Math.ceil(result.duration);   // Ex: "12"
+              
+                // Atualiza o estado com a distância e duração
+                this.setState({
+                  distancia: result.distance,
+                  duracao: result.duration,
+                  markerRota: [{
+                    key: 0,
+                    coords: this.state.destLocation,
+                    title: `Distância: ${distancia} km`,
+                    description: `Duração: ${duracao} min`
+                  }]
+                });
+
                 this.mapRef.fitToCoordinates(result.coordinates, {
-                  edgePadding:{
-                    right:50,
-                    left:50,
-                    top:50,
-                    bottom:80
+                  edgePadding: {
+                    right: 85,
+                    left: 85,
+                    top: 85,
+                    bottom: 85
                   }
                 })
               }}
@@ -190,80 +244,122 @@ export default class App extends Component {
           }
         </MapView>
 
-      {/* ---------------------------------------------------------------------------------------------------------- */}
-
-        {/* SCROLLVIEW COM AS CIDADES DA BAIXADA PARA TRAÇAR ROTAS */}
+        {/*------------ SCROLLVIEW COM AS CIDADES DA BAIXADA PARA TRAÇAR ROTAS -----------*/}
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.box}>
+
+          {/* SANTOS */}
           <View style={styles.localView}>
-            <TouchableOpacity style={styles.localBtn} onPress={()=> {
-              this.setState({destLocation: {
-                latitude:-23.959261,
-                longitude:-46.3319156
-              }})
-            }}>
+            <TouchableOpacity
+              style={styles.localBtn}
+              onPress={() => {
+                this.setState({
+                  destLocation: {
+                    latitude: -23.959261,
+                    longitude: -46.3319156,
+                  },
+                }, () => {
+                  // Callback é executado depois que o estado é atualizado
+                  this.adicionarMarcadorDaRota();
+                });
+              }}
+            >
               <Text style={styles.localText}>Santos</Text>
             </TouchableOpacity>
           </View>
 
+          {/* GUARUJÁ */}
           <View style={styles.localView}>
-            <TouchableOpacity style={styles.localBtn} onPress={()=> {
-              this.setState({destLocation: {
-                latitude:-23.9947943,
-                longitude:-46.2570896
-              }})
+            <TouchableOpacity style={styles.localBtn} 
+            onPress={() => {
+              this.setState({
+                destLocation: {
+                  latitude: -23.9947943,
+                  longitude: -46.2570896
+                },
+              }, () => {
+                // Callback é executado depois que o estado é atualizado
+                this.adicionarMarcadorDaRota();
+              }
+            );
             }}>
               <Text style={styles.localText}>Guarujá</Text>
             </TouchableOpacity>
           </View>
 
+          {/* SÃO VICENTE */}
           <View style={styles.localView}>
-            <TouchableOpacity style={styles.localBtn} onPress={()=> {
-              this.setState({destLocation: {
-                latitude:-23.9603404,
-                longitude:-46.3970159
-              }})
+            <TouchableOpacity style={styles.localBtn} onPress={() => {
+              this.setState({
+                destLocation: {
+                  latitude: -23.9603404,
+                  longitude: -46.3970159
+                },
+              }, () => {
+                // Callback é executado depois que o estado é atualizado
+                this.adicionarMarcadorDaRota();
+              });
             }}>
-              <Text style={styles.localText}>São Vicente</Text>
+              <Text style={styles.localText}>S. Vicente</Text>
             </TouchableOpacity>
           </View>
 
+          {/* PRAIA GRANDE */}
           <View style={styles.localView}>
-            <TouchableOpacity style={styles.localBtn} onPress={()=> {
-              this.setState({destLocation: {
-                latitude:-24.0031566,
-                longitude:-46.4179811
-              }})
+            <TouchableOpacity style={styles.localBtn} onPress={() => {
+              this.setState({
+                destLocation: {
+                  latitude: -24.0031566,
+                  longitude: -46.4179811
+                }
+              }, () => {
+                // Callback é executado depois que o estado é atualizado
+                this.adicionarMarcadorDaRota();
+              }
+            )
             }}>
               <Text style={styles.localText}>P. Grande</Text>
             </TouchableOpacity>
           </View>
 
+          {/* CUBATÃO */}
           <View style={styles.localView}>
-            <TouchableOpacity style={styles.localBtn} onPress={()=> {
-              this.setState({destLocation: {
-                latitude:-23.891885,
-                longitude:-46.4249356
-              }})
+            <TouchableOpacity style={styles.localBtn} onPress={() => {
+              this.setState({
+                destLocation: {
+                  latitude: -23.891885,
+                  longitude: -46.4249356
+                }
+              }, () => {
+                // Callback é executado depois que o estado é atualizado
+                this.adicionarMarcadorDaRota();
+              }
+            )
             }}>
               <Text style={styles.localText}>Cubatão</Text>
             </TouchableOpacity>
-          </View>          
-          
+          </View>
+
+          {/* SÃO PAULO */}
           <View style={styles.localView}>
-            <TouchableOpacity style={styles.localBtn} onPress={()=> {
-              this.setState({destLocation: {
-                latitude:-23.5557844,
-                longitude:-46.6396832
-              }})
+            <TouchableOpacity style={styles.localBtn} onPress={() => {
+              this.setState({
+                destLocation: {
+                  latitude: -23.5557844,
+                  longitude: -46.6396832
+                }
+              }, () => {
+                // Callback é executado depois que o estado é atualizado
+                this.adicionarMarcadorDaRota();
+              }
+            )
             }}>
               <Text style={styles.localText}>São Paulo</Text>
             </TouchableOpacity>
           </View>
         </ScrollView>
 
-      {/* ---------------------------------------------------------------------------------------------------------- */}
 
-        {/* VIEWS COM BOTÕES DAS MARAVILHAS DO MUNDO */}
+        {/*------------ VIEWS COM BOTÕES DAS MARAVILHAS DO MUNDO ------------*/}
         <View style={styles.container2}>
           <TouchableOpacity style={styles.botao} onPress={() => { this.trocarCidade(markers[0].coords.latitude, markers[0].coords.longitude) }}>
             <Image style={styles.bandeira} source={bandeiras.Brasil} />
@@ -312,9 +408,8 @@ export default class App extends Component {
           </TouchableOpacity>
         </View>
 
-      {/* ---------------------------------------------------------------------------------------------------------- */}
 
-        {/* MODAL DE ADIÇÃO DE MARCADOR */}
+        {/*------------ MODAL DE ADIÇÃO DE MARCADOR ------------*/}
         {this.state.modalVisible && (
           <View style={styles.modalView}>
             <Text style={{ fontWeight: 'bold', fontSize: 16, marginBottom: 10 }}>Novo Marcador</Text>
@@ -334,20 +429,21 @@ export default class App extends Component {
           </View>
         )}
 
-      {/* ---------------------------------------------------------------------------------------------------------- */}
 
-        {/* RODAPÉ */}
+        {/*------------ RODAPÉ ------------*/}
+
         <View style={styles.rodape}>
           <Text style={{ color: 'white' }}>Latitude: {lat} </Text>
           <Text style={{ color: 'white' }}>Longitude: {long} </Text>
         </View>
+
         <StatusBar style="auto" />
       </View>
     );
   }
 }
 
-      {/* ---------------------------------------------------------------------------------------------------------- */}
+{/* ---------------------------------------------------------------------------------------------------------- */ }
 
 //Criação dos estilos
 const styles = StyleSheet.create({
@@ -412,7 +508,7 @@ const styles = StyleSheet.create({
   },
   modalView: {
     position: 'absolute',
-    bottom: 50,
+    bottom: 110,
     left: 0,
     right: 0,
     backgroundColor: 'white',
@@ -456,6 +552,8 @@ const styles = StyleSheet.create({
   localText: {
     color: 'white',
     width: 75,
-    textAlign:'center'
+    textAlign: 'center',
+    fontSize:16
+    
   }
 });
