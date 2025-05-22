@@ -14,7 +14,6 @@
         public $altura = null;
         public $peso = null;
 
-
         //métodos
         function setNome($nome){
             $this->nome = $nome;
@@ -84,5 +83,4 @@
     echo "<hr>";
     echo "Teste funcionário M: </br>";
     echo $m-> __get("nome") . " " . $m-> __get("sobrenome") . " ama " . $m-> __get("musica") . " e joga " . $m-> __get("esporte");
-
 ?>

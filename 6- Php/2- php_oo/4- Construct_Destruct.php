@@ -48,5 +48,6 @@ class Pessoa{
     echo '<br/> Nome: ' . $pessoa2-> __get('nome');
     
     echo $pessoa2-> correr();
-    unset($pessoa); 
+    unset($pessoa2); 
+    
 ?>

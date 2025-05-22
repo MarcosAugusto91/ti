@@ -23,7 +23,7 @@
         }
     }
 
-    $func1 = new Funcionario;
+    $func1 = new Funcionario; //Instanciei minha classe em um objeto
     echo $func1->resumirCadFunc();
     echo "<br/>";  
     $func1 -> modificaNome("Rafael");
