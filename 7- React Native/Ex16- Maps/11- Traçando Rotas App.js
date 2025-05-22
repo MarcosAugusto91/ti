@@ -65,6 +65,7 @@ export default class App extends Component {
     });
   }
 
+  //FUNÇÃO PEGA A LATITUDE E LONGITUDE CLICADA, ARMAZENA EM COORDENADA TEMP E MOSTRA O MODAL PARA INSERÇÃO DO MARKER NOVO
   latitudeClicada(e) {
     const coordenada = e.nativeEvent.coordinate;
     this.setState({
@@ -73,6 +74,7 @@ export default class App extends Component {
     });
   }
 
+  //AO PREENCHERMOS A INFORMAÇÃO NO MODAL E CLICARMOS NO BOTÃO CHAMAMOS ESTA FUNÇÃO QUE CRIAR O NOVO MARCADOR COM SEUS ATRIBUTOS KEY, COORDS, TITLE E DESCRIPTION, POSTERIORMENTE O MARKERS.MAP SE ENCARREGA DE APLICA-LO NA TELA
   adicionarMarcador() {
     const { markers, coordenadaTemp, novoTitulo, novaDescricao } = this.state;
 
@@ -84,14 +86,15 @@ export default class App extends Component {
     };
 
     this.setState({
-      markers: [...markers, novoMarcador],
-      modalVisible: false,
-      novoTitulo: '',
+      markers: [...markers, novoMarcador],  //AQUI ELE INSERE O NOVO MARCADOR NOS MARKERS
+      modalVisible: false,                  //OCULTA O MODAL
+      novoTitulo: '',                       //E LIMPA AS DEMAIS INFORMAÇÕES
       novaDescricao: '',
       coordenadaTemp: null
     });
   }
 
+  //FUNÇÃO ARMAZENA LATITUDE E LONGITUDE TODA VEZ QUE MUDAMOS A POSIÇÃO NO MAPA
   mudouMapa(region) {
     this.setState({
       lat: region.latitude,
@@ -99,6 +102,7 @@ export default class App extends Component {
     });
   }
 
+  //FUNÇÃO QUE MUDA O LOCAL PARA MARAVILHA SELECIONADA
   trocarCidade(latitude, longitude) {
     let novaRegiao = {
       latitude: latitude,
@@ -112,8 +116,10 @@ export default class App extends Component {
   }
 
   render() {
+    //REFERENCIANDO TODAS MINHAS PROPRIEDADES PARA RESUMIR O CÓDIGO
     const { region, lat, long, markers, destLocation } = this.state;
 
+    //VARIÁVEIS CONSTANDO OS CAMINHOS DAS IMAGENS
     const bandeiras = {
       Brasil: require('./img/brasil.jpg'),
       Peru: require('./img/peru.png'),
@@ -128,10 +134,14 @@ export default class App extends Component {
 
     return (
       <View style={styles.container}>
+        
+        {/* BARRA SUPERIOR COM LOGO E NOME DO APP */}
         <View style={styles.barraSuperior}>
           <Image style={styles.Logo} source={bandeiras.Logo} />
           <Text style={styles.titulo}>Maravilhas do mundo!</Text>
         </View>
+
+        {/* MAPA DO APLICATIVO COM SUAS CONFIGURAÇÕES  */}
         <MapView
           ref={(ref) => { this.mapRef = ref; }} // Definindo a referência do MapView
           style={styles.mapa}
@@ -143,6 +153,8 @@ export default class App extends Component {
           onRegionChange={this.mudouMapa}
           onPress={this.latitudeClicada}
         >
+
+          {/* RODANDO TODOS MEUS MARCADORES E APLICANDO NA TELA */}
           {markers.map((marker) => (
             <Marker
               key={marker.key}
@@ -152,20 +164,21 @@ export default class App extends Component {
             />
           ))}
 
+          {/* CONFIGURAÇÕES PARA APLICAÇÃO DAS ROTAS TRAÇADAS */}
           {this.state.destLocation &&
             <MapViewDirections
-              origin={this.state.region}
-              destination={this.state.destLocation}
-              apikey='AIzaSyBj5M9TPhBuQSQbohgB1uDZCAkf1UKriYo'
-              strokeWidth={4}
-              strokeColor='#7ED63F'
+              origin={this.state.region} //Origem da rota
+              destination={this.state.destLocation} //Destino da rota
+              apikey='AIzaSyBj5M9TPhBuQSQbohgB1uDZCAkf1UKriYo' //Utilizar esta chave no máximo 1000 consultas por mês
+              strokeWidth={4} //Grossura do traço da rota
+              strokeColor='#7ED63F' //Cor do traço da rota
               onReady={result =>{
                 this.mapRef.fitToCoordinates(result.coordinates, {
                   edgePadding:{
                     right:50,
                     left:50,
                     top:50,
-                    bottom:50
+                    bottom:80
                   }
                 })
               }}
@@ -174,6 +187,8 @@ export default class App extends Component {
           }
         </MapView>
 
+
+        {/* SCROLLVIEW COM AS CIDADES DA BAIXADA PARA TRAÇAR ROTAS */}
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={styles.box}>
           <View style={styles.localView}>
             <TouchableOpacity style={styles.localBtn} onPress={()=> {
@@ -242,6 +257,8 @@ export default class App extends Component {
           </View>
         </ScrollView>
 
+
+        {/* VIEWS COM BOTÕES DAS MARAVILHAS DO MUNDO */}
         <View style={styles.container2}>
           <TouchableOpacity style={styles.botao} onPress={() => { this.trocarCidade(markers[0].coords.latitude, markers[0].coords.longitude) }}>
             <Image style={styles.bandeira} source={bandeiras.Brasil} />
@@ -288,8 +305,9 @@ export default class App extends Component {
             <Image style={styles.bandeira} source={bandeiras.Egito} />
             <Text style={styles.textoBotao}>Pirâmides do Egito</Text>
           </TouchableOpacity>
-
         </View>
+
+
 
         {/* MODAL DE ADIÇÃO DE MARCADOR */}
         {this.state.modalVisible && (
@@ -311,6 +329,8 @@ export default class App extends Component {
           </View>
         )}
 
+
+        {/* RODAPÉ */}
         <View style={styles.rodape}>
           <Text style={{ color: 'white' }}>Latitude: {lat} </Text>
           <Text style={{ color: 'white' }}>Longitude: {long} </Text>
@@ -321,6 +341,7 @@ export default class App extends Component {
   }
 }
 
+//Criação dos estilos
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -361,7 +382,7 @@ const styles = StyleSheet.create({
   },
   mapa: {
     width: '100%',
-    height: 480
+    height: 400
   },
   botao: {
     margin: 10,
@@ -407,7 +428,7 @@ const styles = StyleSheet.create({
   },
   box: {
     position: 'absolute',
-    top: 540,
+    top: 465,
   },
   localView: {
     height: 40,
