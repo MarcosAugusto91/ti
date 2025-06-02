@@ -110,6 +110,7 @@ class App extends Component {
           </TouchableOpacity>
         </View>
 
+        {/* Dentro do MODAL abaixo chamamos o componente filho Entrar */}
         <Modal transparent={true} animationType="slide" visible={this.state.modalVisible}>
           <View style={{ margin: 15, flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             
