@@ -60,29 +60,37 @@ class Lista extends Component{
     return(
       <View style={styles.areaFeed}>
         
+        {/* View contém a foto miniatura e nome do usuário*/}
         <View style={styles.viewPerfil}>
+          {/* Trás a miniatura */}
           <Image
           source={{uri: this.state.feed.imgperfil}}
           style={styles.fotoPerfil}
           />
-
+          
+          {/* Trás nome do usuário */}
           <Text style={styles.nomeUsuario}> {this.state.feed.nome} </Text>
         </View>
 
+
+        {/* Trás a foto publicada */}
         <Image
         resizeMode="cover"
         style={styles.fotoPublicacao}
         source={{uri: this.state.feed.imgPublicacao}}
         />
 
-
+        {/* View contém o botão de like e o de compartilhamento */}
         <View style={styles.areaBtn}>
+          {/* Botão de like */}
       	  <TouchableOpacity onPress={this.like}>
             <Image
             source={this.carregaIcone(this.state.feed.likeada)}
             style={styles.iconelike}
             />
           </TouchableOpacity>
+
+          {/* Trás de compartilhar */}
           <TouchableOpacity style={styles.btnSend}>
             <Image
             source={require('../img/send.png')}
@@ -91,19 +99,22 @@ class Lista extends Component{
           </TouchableOpacity>
         </View>
 
+        {/* Mostrando quantos likes a postagem possui */}
         {this.mostraLikes(this.state.feed.likers)}
 
+        {/* View trás o nome do usuário e a descrição da foto */}
         <View style={styles.viewRodape}>
+          {/* Nome do usuário */}
           <Text style={styles.nomeRodape}>
             {this.state.feed.nome}
           </Text>
 
+          {/* Descrição da foto */}
           <Text style={styles.descRodape}>
             {this.state.feed.descricao}
           </Text>
         </View>
-
-
+        
       </View>
     );
   }
