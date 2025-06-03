@@ -70,7 +70,7 @@ if ($_SESSION['perfil'] != 'Adm') {
                     $idusuario = $row -> id_usuario;
                     $resusuarios->data_seek(0); // Reinicia o ponteiro do resultado da consulta de usuários
                     while ($user = $resusuarios->fetch_object()){
-                        if ($user -> id_usuario == $idusuario){
+                        if ($user -> id_usuario == $idusuario){ 
                           echo '<p style="color: green; margin-bottom: 2px;"> Usuário: ' . $user -> nome . '</p>';
                             break; // Sair do loop após encontrar o usuário
                         }
