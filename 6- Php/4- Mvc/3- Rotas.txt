@@ -30,4 +30,4 @@ public function getUrl(){
         }
 
 11- Vamos criar nosso primeiro controlador, dentro da pasta controller crie indexController.php;
-12- Crie o arquivo .htaccess (Serve como parametrização do apache) no diretório public e na hora de salvar como o arquivo não tem nome, tem que salver ".htaccess"
+12- Crie o arquivo .htaccess (Serve como parametrização do apache) no diretório public e na hora de salvar como o arquivo não tem nome, tem que salvar ".htaccess"
