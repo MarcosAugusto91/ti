@@ -3,6 +3,10 @@ import { View, StyleSheet, Text} from 'react-native';
 
 import {Picker} from '@react-native-picker/picker';
 //ANTES DE IMPORTAR PRECISA FAZER A INSTALAÇÃO: npm install @react-native-picker/picker --save
+//Se continuar sem funcionar execute pelo Yarn: yarn add @react-native-picker/picker
+//E segundo as novas recomendações temos que ejetar primeiro: npx expo prebuild
+
+
 
 
 
