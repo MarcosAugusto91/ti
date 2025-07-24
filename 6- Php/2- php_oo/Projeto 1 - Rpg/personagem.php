@@ -7,54 +7,55 @@ $classe = $_GET['classe'];
 $tipo = $_GET['tipo'];
 $raca = $_GET['raca'];
 
+$personagem = new $classe();
 
-if ($classe === 'Guerreiro') {
-    $personagem = new Guerreiro();
-} else if ($classe === 'Arqueiro') {
-    $personagem = new Arqueiro();
-} else if ($classe === 'Mago') {
-    $personagem = new Mago();
-} else if ($classe === 'Barbaro') {
-    $personagem = new Barbaro();
-} else if ($classe === 'Monge') {
-    $personagem = new Monge();
-} else if ($classe === 'Lutador') {
-    $personagem = new Lutador();
-} else if ($classe === 'Ladrao') {
-    $personagem = new Ladrao();
-} else if ($classe === 'Ninja') {
-    $personagem = new Ninja();
-} else if ($classe === 'Bardo') {
-    $personagem = new Bardo();
-} else if ($classe === 'Pirata') {
-    $personagem = new Pirata();
-} else if ($classe === 'Android') {
-    $personagem = new Android();
-} else if ($classe === 'Ogro') {
-    $personagem = new Ogro();
-} else if ($classe === 'Animal') {
-    $personagem = new Animal();
-} else if ($classe === 'Fantasma') {
-    $personagem = new Fantasma();
-} else if ($classe === 'Dinossauro') {
-    $personagem = new Dinossauro();
-} else if ($classe === 'Soldado') {
-    $personagem = new Soldado();
-} else if ($classe === 'Anao') {
-    $personagem = new Anao();
-} else if ($classe === 'Dragao') {
-    $personagem = new Dragao();
-} else if ($classe === 'Elfo') {
-    $personagem = new Elfo();
-} else if ($classe === 'Frankstein') {
-    $personagem = new Frankstein();
-} else if ($classe === 'Saci') {
-    $personagem = new Saci();
-} else if ($classe === 'Zumbi') {
-    $personagem = new Zumbi();
-} else if ($classe === 'Lobisomem') {
-    $personagem = new Lobisomem();
-}
+// if ($classe === 'Guerreiro') {
+//     $personagem = new Guerreiro();
+// } else if ($classe === 'Arqueiro') {
+//     $personagem = new Arqueiro();
+// } else if ($classe === 'Mago') {
+//     $personagem = new Mago();
+// } else if ($classe === 'Barbaro') {
+//     $personagem = new Barbaro();
+// } else if ($classe === 'Monge') {
+//     $personagem = new Monge();
+// } else if ($classe === 'Lutador') {
+//     $personagem = new Lutador();
+// } else if ($classe === 'Ladrao') {
+//     $personagem = new Ladrao();
+// } else if ($classe === 'Ninja') {
+//     $personagem = new Ninja();
+// } else if ($classe === 'Bardo') {
+//     $personagem = new Bardo();
+// } else if ($classe === 'Pirata') {
+//     $personagem = new Pirata();
+// } else if ($classe === 'Android') {
+//     $personagem = new Android();
+// } else if ($classe === 'Ogro') {
+//     $personagem = new Ogro();
+// } else if ($classe === 'Animal') {
+//     $personagem = new Animal();
+// } else if ($classe === 'Fantasma') {
+//     $personagem = new Fantasma();
+// } else if ($classe === 'Dinossauro') {
+//     $personagem = new Dinossauro();
+// } else if ($classe === 'Soldado') {
+//     $personagem = new Soldado();
+// } else if ($classe === 'Anao') {
+//     $personagem = new Anao();
+// } else if ($classe === 'Dragao') {
+//     $personagem = new Dragao();
+// } else if ($classe === 'Elfo') {
+//     $personagem = new Elfo();
+// } else if ($classe === 'Frankstein') {
+//     $personagem = new Frankstein();
+// } else if ($classe === 'Saci') {
+//     $personagem = new Saci();
+// } else if ($classe === 'Zumbi') {
+//     $personagem = new Zumbi();
+// } else if ($classe === 'Lobisomem') {
+//     $personagem = new Lobisomem();
+// }
 
 //Setando os valores tipo e raça
 $personagem->__set('classe', $classe);
