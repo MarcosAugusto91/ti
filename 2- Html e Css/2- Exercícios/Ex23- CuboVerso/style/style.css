@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Indie+Flower&family=Spicy+Rice&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: white;
+}
+
+header{
+    width: 90%;
+    margin: auto;
+    background-color: #2F0060;
+    margin-bottom: 20px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    }
+
+header > a > p{
+    text-align: right;
+}
+
+.logo{
+    padding: 15px;
+    padding-right: 0px;
+    height: 70px;
+}
+
+.textoLogo{
+    padding-bottom: 32px;
+    height: 30px;
+    text-align: center;
+}
+
+main{
+    margin: auto;
+    width: 90%;
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.banner{
+    max-width: 100%;
+    height: 250px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #EBB915;
+}
+
+.conteudo{
+    width: 98.5%;
+    margin: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #2F0060;
+}
+
+.cards{
+    margin-top: 10px;
+    background-color: white;
+    width: 228px;
+    height: 380px;
+    display: inline-block;
+}
+
+.imgCard{
+    width: 208px;
+    height: 320px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.imgCard:hover{
+    opacity: 0.6;
+}
+
+article > a{
+    margin-top: 5px;
+    color: #2F0060;
+    font-size: 20px;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: white;
+    color: #2F0060;
+    font-size: 40px;
+    margin-top:-5px;
+}
+
+.conteudo2{
+    background-color: rgb(235, 185, 21);
+}
+
+.imgconteudo{
+    max-width: 400px;
+    min-width: 400px;
+}
+
+.conteudo3{
+    background-color: #2F0060;
+    text-align: right;
+}
+
+aside > img{
+    border-radius: 5px;
+    width: 450px;
+    height: 450px;
+    margin: 15px;
+}
+
+footer{
+    margin: auto;
+    width: 90%;
+    background-color: rgb(46, 45, 45);
+    padding: 5px 0px 5px 0px;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+}
+
+@media screen and (min-width:100px) and (max-width:558px){
+    .cards, .imgCard{width: 98%;}
+}
