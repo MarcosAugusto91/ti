@@ -1,0 +1,155 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 60px;
+  }
+  
+  /* Cabeçalho fixo */
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    z-index: 1000;
+  }
+  
+  .logo {
+    height: 40px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 20px;
+  }
+  
+  .hero-text {
+    text-align: center;
+    max-width: 600px;
+  }
+  
+  .headline {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .subheadline {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Botão CTA */
+  .cta-button {
+    background-color: #0078D4;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+  }
+  
+  .cta-button:hover {
+    background-color: #005fa3;
+  }
+  
+  /* Botão fixo mobile */
+  .sticky-cta {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  /* Benefícios */
+  .benefits {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .benefits-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  
+  .benefits-list li {
+    font-size: 1rem;
+  }
+  
+  .icon {
+    font-size: 1.2rem;
+    margin-right: 8px;
+  }
+  
+  /* Prova social */
+  .social-proof {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .testimonials p {
+    margin: 10px 0;
+    font-style: italic;
+  }
+  
+  /* Garantia */
+  .guarantee {
+    padding: 20px;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  /* CTA final */
+  .final-cta {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  /* Responsivo */
+  @media (min-width: 768px) {
+    .hero {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .hero-text {
+      text-align: left;
+    }
+  
+    .sticky-cta {
+      display: none;
+    }
+  }
+  
