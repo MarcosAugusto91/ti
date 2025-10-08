@@ -20,7 +20,7 @@
     background-color: dimgray;
     grid-column: 1/3;
     grid-row: 2/4;
-    z-index: 1;
+    z-index: 3;
 }
 
 .main{
