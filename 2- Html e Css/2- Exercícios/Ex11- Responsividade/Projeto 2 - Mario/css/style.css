@@ -33,13 +33,15 @@ body {
     background-attachment: fixed;
 }
 
+
+
+
 main {
     max-width: 800px;
     min-width: 320px;
     background-color: var(--cor0);
     margin: auto;
     margin-top: 10px;
-    margin-bottom: 10px;
     padding: 10px;
     border-radius: 10px;    
 }
@@ -61,7 +63,6 @@ a {
     text-align: center;
     top: auto;
     color: white;
-    padding: 5px;
     font-weight: bold;
 }
 

@@ -1,0 +1,45 @@
+*{
+    margin: 0px;
+    padding:0px;
+}
+
+body{
+    background-color: rgb(32, 34, 34);
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
+div{
+    width: 500px;
+    background-color: white;
+    padding: 10px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 5px 50px 5px 5px;
+}
+
+h1{
+    font-size: 60px;
+    color: black;
+    text-align: center;
+}
+
+h2{
+    font-size: 30px;
+    background-color: aqua;
+    color: blue;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+p{
+    font-size: 12px;
+    font-style: italic;
+    text-align: justify;
+    color: black;
+    background-color: gray;
+    padding: 10px;
+    border-radius: 5px;
+}
