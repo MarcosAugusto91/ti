@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let horaInicial = parseInt(prompt("Digite a hora inicial do jogo (0-23):"));
+        let horaFinal = parseInt(prompt("Digite a hora final do jogo (0-23):"));
+
+        let duracao;
+
+        if (horaFinal > horaInicial) {
+            duracao = horaFinal - horaInicial;
+        } else {
+            duracao = (24 - horaInicial) + horaFinal;
+        }
+
+        alert(`O jogo durou ${duracao} hora(s).`);
+    </script>
+</body>
+</html>

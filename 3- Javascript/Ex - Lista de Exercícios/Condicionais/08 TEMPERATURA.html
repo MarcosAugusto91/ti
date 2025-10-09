@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //Entrada dos dados
+        let escala = Number.parseFloat(prompt("Em qual escala você quer informar a temperatura? \n1 - Celsius \n2 - Fahrenheit"))
+        let temp = Number.parseFloat(prompt("Informe a temperatura: "))
+
+        //Processamento e Saída
+        if (escala == 1) {
+            let fahrenheit = (temp * 9 / 5) + 32
+            alert(`A temperatura de ${temp}°C corresponde a ${fahrenheit.toFixed(2)}°F`)
+        } else if (escala == 2) {   
+            let celsius = (temp - 32) * 5 / 9
+            alert(`A temperatura de ${temp}°F corresponde a ${celsius.toFixed(2)}°C`)
+        } else {
+            alert("Escala inválida!")
+        }           
+
+        /* && - E (AND)
+           || - OU (OR)
+           !  - NÃO (NOT) 
+        */
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let salario = parseFloat(prompt("Digite o salário atual:"));
+        let novoSalario, aumento, porcentagem;
+
+        if (salario <= 1000) {
+            porcentagem = 20;
+        } else if (salario > 1000  && salario <= 3000) {
+            porcentagem = 15;
+        } else if (salario > 3000 && salario <= 8000) {
+            porcentagem = 10;
+        } else {
+            porcentagem = 5;
+        }
+
+        aumento = salario * (porcentagem / 100);
+        novoSalario = salario + aumento;
+
+        document.write(`Salário antes do reajuste: R$ ${salario.toFixed(2)}<br>`);
+        document.write(`Percentual de aumento aplicado: ${porcentagem}%<br>`);
+        document.write(`Valor do aumento: R$ ${aumento.toFixed(2)}<br>`);
+        document.write(`Novo salário após o aumento: R$ ${novoSalario.toFixed(2)}<br>`);
+    </script>
+
+
+    
+</body>
+</html>

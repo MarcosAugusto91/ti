@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //Entrada dos dados
+        let consumo = Number.parseFloat(prompt("Quantidade de Minutos consumidos:"))
+
+        if (consumo <= 100){
+            alert(`Valor a pagar: R$ 50,00`)
+        } else {
+            let pagar = 50.00 + ((consumo - 100) * 2)
+            alert(`Valor a pagar: R$ ${pagar.toFixed(2)}`)
+        }
+
+    </script>
+
+</body>
+
+</html>

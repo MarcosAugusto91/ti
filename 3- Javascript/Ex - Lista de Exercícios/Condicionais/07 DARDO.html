@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Entrada dos dados
+        let a = Number.parseFloat(prompt("Primeiro lançamento:"))
+        let b = Number.parseFloat(prompt("Segundo lançamento:"))
+        let c = Number.parseFloat(prompt("Terceiro lançamento:"))
+
+        if (a > b && a > c) {
+            alert(`Maior distância ${a}`)
+        } else if (b > a && b > c) {
+            alert(`Maior distância ${b}`)
+        } else {
+            alert(`Maior distância ${c}`)
+        }
+
+        /* && - E (AND)
+           || - OU (OR)
+           !  - NÃO (NOT) 
+        */
+    </script>
+
+
+</body>
+
+</html>

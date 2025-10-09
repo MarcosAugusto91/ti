@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num1 = parseInt(prompt("Digite o primeiro número: "));
+        let num2 = parseInt(prompt("Digite o segundo número: "));
+
+        // Verifica se num1 é múltiplo de num2 ou se num2 é múltiplo de num1
+        /* Explicação:
+         - O operador % (módulo) retorna o resto da divisão entre dois números.
+         - Se o resto da divisão de num1 por num2 for igual a zero, significa que num1 é múltiplo de num2.
+         - Da mesma forma, se o resto da divisão de num2 por num1 for igual a zero, significa que num2 é múltiplo de num1.
+         - Portanto, se qualquer uma dessas condições for verdadeira, os números são múltiplos.
+        */
+
+        if (num1 % num2 === 0 || num2 % num1 === 0) {
+            console.log("São múltiplos");
+        } else {
+            console.log("Não são múltiplos");
+        }
+    </script>
+</body>
+</html>

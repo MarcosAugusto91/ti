@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //Entrada dos dados
+        let a = Number.parseFloat(prompt("Digite o coeficiente A"))
+        let b = Number.parseFloat(prompt("Digite o coeficiente B"))
+        let c = Number.parseFloat(prompt("Digite o coeficiente C"))
+
+        // Calculando o delta (b² - 4ac)
+        let delta = b * b - 4 * a * c;
+
+        // Verificando se delta é negativo, zero ou positivo
+        if (delta < 0) {
+            alert(`Não existem raízes reais`)
+        } else {
+            // Calculando as duas raízes reais
+            let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+
+            alert(`x1 = ${x1.toFixed(4)} / x2 = ${x2.toFixed(4)}`)
+        }
+
+    </script>
+
+</body>
+
+</html>

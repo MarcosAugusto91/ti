@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //Entrada dos dados
+        alert("Bem vindo a Mercearia do Zé!") 
+        let valor = Number.parseFloat(prompt("Digite o valor do produto:"))
+        let quantidade = Number.parseInt(prompt("Digite a quantidade comprada:"))
+        let pago = Number.parseFloat(prompt("Digite o valor pago:"))
+
+        let total = valor * quantidade
+        let troco = pago - total
+        if (troco < 0) {
+            alert(`Faltam R$ ${Math.abs(troco).toFixed(2)} para completar o valor da compra.`)
+        } else if (troco === 0) {
+            alert("Obrigado por comprar conosco!")
+        } else {
+            alert(`Seu troco é R$ ${troco.toFixed(2)}. Volte sempre!`)
+        }
+
+    </script>
+
+</body>
+
+</html>

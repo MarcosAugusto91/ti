@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //Entrada dos dados
+        let a = Number.parseFloat(prompt("Digite o primeiro número"))
+        let b = Number.parseFloat(prompt("Digite o segundo número"))
+        let c = Number.parseFloat(prompt("Digite o terceiro número"))
+
+        if (a < b && a < c) {
+            alert(`O menor número é ${a}`)
+        } else if (b < a && b < c) {
+            alert(`O menor número é ${b}`)
+        } else {
+            alert(`O menor número é ${c}`)
+        }
+
+        /* && - E (AND)
+           || - OU (OR)
+           !  - NÃO (NOT) 
+        */
+    </script>
+
+</body>
+
+</html>
