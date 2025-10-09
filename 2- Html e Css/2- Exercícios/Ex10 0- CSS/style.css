@@ -95,3 +95,8 @@ p:hover {
 #rodape:hover{
     background-color: gray;
 }
+
+.texto3 {
+    color: red;
+    text-decoration: underline;
+}
