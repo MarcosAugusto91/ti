@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        let idade = 0;
+        let soma = 0;
+        let contador = 0;
+
+        while (idade >= 0) {
+            idade = parseInt(prompt("Digite a idade (valor negativo para encerrar):"));
+
+            if (idade <= 0) {
+                break;
+            }
+            soma = soma + idade;
+            //soma += idade;
+            contador++;
+        }
+
+        if (contador === 0) {
+            alert("IMPOSSIVEL CALCULAR (NENHUMA IDADE VÁLIDA RECEBIDA)");
+        } else {
+            let media = soma / contador;
+            alert(`Foi recebido ${contador} idades e a média delas é ${media.toFixed(2)}`);
+        }
+    </script>
+
+</body>
+</html>
