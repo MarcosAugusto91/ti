@@ -12,25 +12,31 @@
         let codigo = Number.parseInt(prompt("Informe o código do produto: \n1 - Refrigerante \n2 - Pão na Chapa \n3 - Pão com ovo \n4 - X-Salada \n5 - X-Burguer"))
         let quantidade = Number.parseInt(prompt("Informe a quantidade: "))
 
-        //Processamento e Saída
-        if (codigo == 1) {
-            let total = quantidade * 5.00
-            alert(`O total a pagar é R$ ${total.toFixed(2)}`)
-        } else if (codigo == 2) {
-            let total = quantidade * 3.50
-            alert(`O total a pagar é R$ ${total.toFixed(2)}`)
-        } else if (codigo == 3) {
-            let total = quantidade * 4.80
-            alert(`O total a pagar é R$ ${total.toFixed(2)}`)
-        } else if (codigo == 4) {
-            let total = quantidade * 8.90
-            alert(`O total a pagar é R$ ${total.toFixed(2)}`)
-        } else if (codigo == 5) {
-            let total = quantidade * 7.32
-            alert(`O total a pagar é R$ ${total.toFixed(2)}`)
-        } else {
-            alert("Código inválido!")
-        }           
+        switch (codigo) {
+            case 1:
+                let total1 = quantidade * 5.00
+                alert(`O total a pagar é R$ ${total1.toFixed(2)}`)
+                break; 
+            case 2:
+                let total2 = quantidade * 3.50
+                alert(`O total a pagar é R$ ${total2.toFixed(2)}`)
+                break;
+            case 3:
+                let total3 = quantidade * 4.80
+                alert(`O total a pagar é R$ ${total3.toFixed(2)}`)
+                break;
+            case 4:
+                let total4 = quantidade * 8.90
+                alert(`O total a pagar é R$ ${total4.toFixed(2)}`)
+                break;
+            case 5:
+                let total5 = quantidade * 7.32
+                alert(`O total a pagar é R$ ${total5.toFixed(2)}`)
+                break;
+            default:
+                alert("Código inválido!")
+                break;
+        }
     </script>
     
 </body>
