@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let nota1 = -1;
+        let nota2 = -1;
+
+        while (nota1 < 0 || nota1 > 10) {
+            nota1 = parseFloat(prompt("Digite a primeira nota (0 a 10):"));
+            if (nota1 < 0 || nota1 > 10) {
+                alert("Nota inválida! Por favor, insira uma nota entre 0 e 10.");
+            }
+        }
+
+        while (nota2 < 0 || nota2 > 10) {
+            nota2 = parseFloat(prompt("Digite a segunda nota (0 a 10):"));
+            if (nota2 < 0 || nota2 > 10) {
+                alert("Nota inválida! Por favor, insira uma nota entre 0 e 10.");
+            }
+        }
+
+        let media = (nota1 + nota2) / 2;
+        alert("A média semestral é: " + media.toFixed(2));
+
+        
+    </script>
+</body>
+</html>
