@@ -1,8 +1,15 @@
 function calcular() {
-    let vel = window.document.getElementById('vel')
+    let vel = window.document.getElementById('vel') //POR ID
+    
+    /* 
+    let vel = window.document.getElementsByTagName('input')[0] //POR TAG
+    let vel = window.document.getElementsByName('vel') //POR NAME
+    let vel = window.document.getElementsByClassName('vel') //POR CLASS
+    let vel = window.document.querySelector('input.vel') //POR SELECTOR   
+    */
+
     let resp = window.document.getElementById('resp')
     let velocidade = Number(vel.value)
-    // resp.innerHTML = `Sua velocidade atual é ${velocidade}Km/h`
 
     if (velocidade <= 40) {
         resp.innerText = 'Você está dentro da velocidade Permitida!'

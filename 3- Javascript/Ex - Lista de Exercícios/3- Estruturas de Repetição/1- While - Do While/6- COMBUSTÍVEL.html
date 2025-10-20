@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let alcool = 0
+        let gasolina = 0
+        let diesel = 0
+        let codigo = 0
+        while (codigo != 4) {
+            codigo = Number(prompt('Digite o código do combustível abastecido:\n1.Álcool\n2.Gasolina\n3.Diesel\n4.Fim'))
+            switch (codigo) {
+                case 1:
+                    alcool++
+                    break
+                case 2:
+                    gasolina++
+                    break
+                case 3:
+                    diesel++
+                    break
+                case 4:
+                    break
+                default:
+                    alert('Código inválido! Tente novamente.')
+            }
+        }
+        document.write('MUITO OBRIGADO<br>')
+        document.write(`Álcool: ${alcool}<br>`)
+        document.write(`Gasolina: ${gasolina}<br>`)
+        document.write(`Diesel: ${diesel}<br>`)
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let entrada = null;
+        do {
+            entrada = parseInt(prompt("Digite um valor inteiro (0 para sair): "));
+            if (entrada !== 0) {
+                let inicio = (entrada % 2 === 0) ? entrada : entrada + 1; // Começa do próximo par se for ímpar
+                let soma = 0;
+                let contador = 0;
+                let atual = inicio;
+                while (contador < 5) {
+                    soma += atual;
+                    atual += 2;
+                    contador++;
+                }
+                alert(`A soma dos 5 pares consecutivos a partir de ${entrada} é: ${soma}`);
+            }
+        } while (entrada !== 0);
+        
+    </script>
+</body>
+</html>
