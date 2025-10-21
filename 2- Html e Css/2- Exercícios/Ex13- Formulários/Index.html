@@ -47,7 +47,7 @@
             <fieldset>
                 <legend>Datas: </legend>
                 <label class="datas" for="imes">Período Letivo:</label>
-                <input type="month" name="mes" id="imes" value="2024-06"><br>
+                <input type="month" name="mes" id="imes" required><br>
 
                 <label class="datas" for="idia">Dia da prova:</label>
                 <input type="date" name="dia" id="idia" value="2024-06-10"><br>
@@ -56,7 +56,7 @@
                 <input type="time" name="hora" id="ihora" value="08:00"><br>
                 
                 <label class="datas" for="icor">Cores:</label>
-                <input type="color" name="cor" id="icor" value="000000">
+                <input type="color" name="cor" id="icor" value="#FFFFFF" required>
        
                 <label class="datas" for="inivel">Satisfação:</label>
                 <input type="range" name="nivel" id="inivel" min="0" max="10" value="5" oninput="valor.innerHTML = Number(inivel.value)">
@@ -92,7 +92,7 @@
                 <br>
 
                 <label for="imsg">Mensagem:</label><br>
-                <textarea name="msg" id="imsg" cols="30" rows="2"></textarea>
+                <textarea name="msg" id="imsg" cols="52" rows="10"></textarea>
             </fieldset>
 
      
