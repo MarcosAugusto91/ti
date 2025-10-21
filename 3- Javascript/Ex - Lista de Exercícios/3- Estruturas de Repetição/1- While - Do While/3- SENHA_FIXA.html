@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let senhaCorreta = 2002;
+        let senhaInformada;
+
+        do {
+            senhaInformada = parseInt(prompt("Digite a senha:"));
+
+            if (senhaInformada !== senhaCorreta) {
+                alert("Senha Invalida! Tente novamente:");
+            }
+
+        } while (senhaInformada !== senhaCorreta);
+
+        alert("Acesso Permitido");
+    </script>
+    
+</body>
+</html>
