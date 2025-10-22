@@ -5,12 +5,19 @@
 
 .container{
     background-color: gray;
-    display: flex;
-    /*flex-direction: row; /*row-reverse column column-reverse EX1 */
-    /*flex-wrap: wrap; /*wrap wrap-reverse nowrap*/
-    flex-flow: row wrap;
 
-    justify-content: flex-start; /* flex-end center space-between  space-around EIXO PRINCIPAL */ 
+    display: flex; /* Define que vai utilizar a Tecnologia Flexbox */
+    flex-direction: row; /*row-reverse column column-reverse EX1 */
+    flex-wrap: wrap; /*wrap wrap-reverse nowrap*/
+    /*flex-flow: row wrap;*/
+
+    /*EIXO PRINCIPAL -> MAIN AXIS*/
+    justify-content: flex-end; /* flex-end center space-between  space-around */ 
+
+    /*EIXO SECUNDÁRIO -> CROSS AXIS*/
+    align-items: flex-start; /* Usado com nowrap */
+    /*align-content: flex-start; Usado com o wrap */
+    height: 600px;
 }
 
 .itens{
@@ -24,7 +31,7 @@
     padding: 10px;
     margin: 10px;
     width: 150px;
-    height: 100px;
+    height: 150px;
     /*align-self: center;
     justify-self:center;
     flex:auto;
@@ -33,10 +40,10 @@
     flex-basis:auto;*/
 }
 
-.ordem1{order: 6;}
+.ordem1{order: 1;}
 .ordem2{order: 2;}
 .ordem3{order: 3;}
-.ordem4{order: 4;}
+.ordem4{order: 4; align-self: flex-end; justify-self: flex-start;}
 .ordem5{order: 5;}
-.ordem6{order: 1;}
+.ordem6{order: 6;}
 .ordem7{order: 7;}

@@ -33,9 +33,6 @@ body {
     background-attachment: fixed;
 }
 
-
-
-
 main {
     max-width: 800px;
     min-width: 320px;
@@ -291,7 +288,6 @@ th,td {
 tbody>tr:nth-child(even) {
     background-color: lightgray;
 }
-
 
 .galeriabody{
     background-image: url(../imagens/Wallpaper1.jpeg);

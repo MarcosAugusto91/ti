@@ -25,10 +25,10 @@ main{
 }
 
 .phone{display:block;}
-.tablet{display:none}
-.pc{display:none}
-.tv{display:none}
-.print{display:none}
+.tablet{display:none;}
+.pc{display:none;}
+.tv{display:none;}
+.print{display:none;}
 
 img{
     margin: auto;
