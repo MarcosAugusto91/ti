@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let N = parseInt(prompt("Digite a quantidade de números que serão lidos:"));
+        for (let i = 0; i < N; i++) {
+            let valor = parseInt(prompt("Digite um número inteiro:"));
+            if (valor === 0) {
+                console.log("NULO");
+            } else {
+                let paridade = (valor % 2 === 0) ? "PAR" : "IMPAR";
+                let sinal = (valor > 0) ? "POSITIVO" : "NEGATIVO";
+                alert(paridade + " " + sinal);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

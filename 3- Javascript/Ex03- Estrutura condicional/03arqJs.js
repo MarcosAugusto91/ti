@@ -1,6 +1,5 @@
 function calcular() {
     let vel = window.document.getElementById('vel') //POR ID
-    
     /* 
     let vel = window.document.getElementsByTagName('input')[0] //POR TAG
     let vel = window.document.getElementsByName('vel') //POR NAME

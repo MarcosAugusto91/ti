@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let N = parseInt(prompt("Digite a quantidade de valores que serão lidos:"));
+        let dentro = 0;
+        let fora = 0;
+        for (let i = 0; i < N; i++) {
+            let X = parseInt(prompt("Digite um valor inteiro:"));
+            if (X >= 10 && X <= 20) {
+                dentro++;
+            } else {
+                fora++;
+            }
+        }
+        alert(dentro + " dentro");
+        alert(fora + " fora");
+    </script>
+</body>
+
+</html>

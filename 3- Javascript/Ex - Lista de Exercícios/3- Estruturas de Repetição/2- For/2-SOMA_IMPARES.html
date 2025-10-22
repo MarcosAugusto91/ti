@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let x = parseInt(prompt("Digite o valor de X:"));
+        let y = parseInt(prompt("Digite o valor de Y:"));
+
+        let menor = Math.min(x, y); // A função Math.min retorna o menor valor entre x e y
+        let maior = Math.max(x, y); // A função Math.max retorna o maior valor entre x e y
+
+        let somaImpares = 0;
+
+        for (let i = menor + 1; i < maior; i++) {
+            if (i % 2 !== 0) { // Verifica se o número é ímpar
+                somaImpares += i;
+            }
+        }
+
+        alert(`A soma dos números ímpares entre ${x} e ${y} é: ${somaImpares}`); 
+    </script>
+</body>
+</html>

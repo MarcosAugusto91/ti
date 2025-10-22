@@ -1,4 +1,4 @@
-var vel = 60
+let vel = 60
 
 if (vel > 60) {
     console.log(`A velocidade do seu carro era de ${vel}km/h, você será multado!` )
