@@ -94,7 +94,4 @@ function verificar(){
             }
         break
         }
-    
-
-
 }
