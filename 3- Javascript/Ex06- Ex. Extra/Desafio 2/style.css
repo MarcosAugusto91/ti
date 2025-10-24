@@ -37,16 +37,57 @@ h1{
 }
 
 #nivel{
-    margin: 10px;
     background-color: #5270a1;
     color:white;
+    width: 40px;
+    text-align: center;
     border-radius:5px;
     font-size:20px;
     cursor:pointer;
 }
 
 label{
-    margin-top:20px;
     font-size:20px;
     color: #456292;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#btniniciar{
+    margin: 0px 0px 0px 5px;
+    height: 30px;
+    width: 60px;
+}
+
+#jogo{
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+    display: none;
+}
+
+#valor{
+    margin-left: 5px;
+    background-color: #5270a1;
+    color:white;
+    width: 40px;
+    text-align: center;
+    border-radius:5px;
+    font-size:20px;
+    cursor:pointer;
+}
+
+#btnconfirmar{
+    margin: 0px 0px 0px 5px;
+    height: 30px;
+    width: 60px;
 }
