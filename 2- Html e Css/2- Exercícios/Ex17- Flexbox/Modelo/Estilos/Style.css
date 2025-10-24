@@ -12,11 +12,11 @@
     /*flex-flow: row wrap;*/
 
     /*EIXO PRINCIPAL -> MAIN AXIS*/
-    justify-content: flex-end; /* flex-end center space-between  space-around */ 
+    justify-content: center; /* flex-end center space-between  space-around */ 
 
     /*EIXO SECUNDÁRIO -> CROSS AXIS*/
-    align-items: flex-start; /* Usado com nowrap */
-    /*align-content: flex-start; Usado com o wrap */
+    /*align-items:flex-end; /* Usado com nowrap */
+    /*align-content: space-around; /*Usado com o wrap */
     height: 600px;
 }
 
@@ -34,16 +34,16 @@
     height: 150px;
     /*align-self: center;
     justify-self:center;
-    flex:auto;
-    flex-grow:1;
+    flex:auto;*/
+    /*flex-grow:1;/*
     flex-shrink:5;
-    flex-basis:auto;*/
+    flex-basis:200px*/
 }
 
 .ordem1{order: 1;}
 .ordem2{order: 2;}
 .ordem3{order: 3;}
-.ordem4{order: 4; align-self: flex-end; justify-self: flex-start;}
+.ordem4{order: 7; align-self: flex-end; justify-self: flex-start;}
 .ordem5{order: 5;}
 .ordem6{order: 6;}
-.ordem7{order: 7;}
+.ordem7{order: 4;}
