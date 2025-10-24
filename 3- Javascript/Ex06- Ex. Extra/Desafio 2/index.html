@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da Adivinhação</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div class="container">
-        <div class="containerItem">
+        <div class="containerRegras">
             <h1>Jogo da Adivinhação</h1>
-
-            <div class="divNivel">
-                <form id="formulario">
-                    <label for="nivel">Dificuldade:</label>
-                    <input id="nivel" type="number" min="1" max="3" value="1">
-
-                    <input type="button" value="iniciar" id="btniniciar" onclick="iniciar()">
-                </form>
-                <form id="jogo">
-                    <label for="nivel">Digite um Valor: </label>
-                    <input id="valor" type="number">
-                    <input type="button" value="iniciar" id="btnconfirmar" onclick="jogar()">
-                </form>
-
-                <p id="resultado"></p>
-            </div>
-
+            <h2>Regras:</h2>
+            <p class="azul">Nível 1: Decifre o número de 1 a 10 (3 Tentativas)</p>
+            <p class="azul">Nível 2: Decifre o número de 1 a 100 (10 Tentativas)</p>
+            <p class="azul">Nível 3: Decifre o número de 1 a 1000 (15 Tentativas)</p>
         </div>
 
-    </div>  
-    
+        <div class="divnivel">
+            <form id="formnivel">
+                <label class="white" for="nivel">Dificuldade:</label>
+                <input id="nivel" type="number" min="1" max="3" value="1">
+                <input type="button" value="iniciar" id="btniniciar" onclick="iniciar()">
+            </form>
+            <form id="formjogo">
+                <label class="white" for="nivel">Digite um Valor: </label>
+                <input id="valortentativa" type="number" min="1">
+                <input type="button" value="iniciar" id="btnconfirmar" onclick="jogar()">
+        </div>
+        <div id="divresultado">
+            <p id="resultado"></p>
+        </div>
+    </div>
+
     <script src="script.js" type="text/javascript" defer></script>
 </body>
+
 </html>

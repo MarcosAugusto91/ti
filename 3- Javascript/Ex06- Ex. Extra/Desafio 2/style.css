@@ -4,22 +4,33 @@
     box-sizing: none;
 }
 
-
-.container{
-    width:100vw;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background-color:#5270a1;
+body{
+    background-color: #5270a1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
 }
 
-.containerItem{
+
+.container{
     width:400px;
     height:400px;
-    background-color:#fff;
     display:flex;
-    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-content:flex-start;
+    background-color:aliceblue;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.containerRegras{
+    width:400px;
+    height:200px;
+    background-color:white;
+    display:flex;
     justify-content:center;
     align-items:flex-start;
     border-radius:5px;
@@ -29,11 +40,24 @@
 h1{
     text-align: center;
     width: 100%;
-    margin-bottom:20px;
     background-color: #456292;
     color:white;
     padding: 10px;
-    border-radius: 5px 5px 0px 0px;
+}
+
+h2, .azul{
+    color: #5270a1;
+}
+
+.divnivel{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #5270a1;
+    width: 100%;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
 }
 
 #nivel{
@@ -54,25 +78,27 @@ label{
     justify-content: center;
 }
 
-form{
-    width: 100%;
-    padding: 5px;
-    display: flex;
-    justify-content: flex-start;
-}
 
 #btniniciar{
     margin: 0px 0px 0px 5px;
     height: 30px;
     width: 60px;
+    border-radius:5px;
+    border: 0px;
 }
 
-#jogo{
+
+#formjogo, #formnivel{
     width: 100%;
     padding: 5px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     display: none;
+    border-radius: 5px;
+}
+
+#formnivel{
+    display: flex;
 }
 
 #valor{
@@ -86,8 +112,34 @@ form{
     cursor:pointer;
 }
 
+#valortentativa{
+    background-color: #5270a1;
+    color:white;
+    width: 40px;
+    text-align: center;
+    border-radius:5px;
+    font-size:20px;
+    cursor:pointer;
+}
+
 #btnconfirmar{
-    margin: 0px 0px 0px 5px;
+    margin-left: 5px;
     height: 30px;
     width: 60px;
+    border-radius:5px;
+    border: 0px;
+}
+
+
+.white{
+    color: white;
+}
+
+#divresultado{
+    height: 150px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
