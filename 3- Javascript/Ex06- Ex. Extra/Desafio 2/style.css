@@ -125,7 +125,7 @@ label{
 #btnconfirmar{
     margin-left: 5px;
     height: 30px;
-    width: 60px;
+    width: 100px;
     border-radius:5px;
     border: 0px;
 }
@@ -142,4 +142,12 @@ label{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#resultado{
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    color: #456292;
+    font-weight: bold;
 }
