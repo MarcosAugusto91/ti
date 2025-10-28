@@ -6,7 +6,7 @@ function carregar(){
     var img = window.document.getElementById('imagem')
     var corpo = window.document.getElementById('corpo')
 
-    /*hora=03;*/
+    hora=13;
 
     if (hora >= 0 && hora <= 5) {
         horas.innerText = `Boa madrugada, agora são ${hora} hora ${minuto} min!`
