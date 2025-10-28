@@ -119,7 +119,7 @@ function iniciar() {
             case 2:
                 // Validando o valor jogado
                 if (valorjogado < 1 || valorjogado > 100) {
-                    alert("Digite um valor válido entre 1 e 10!");
+                    alert("Digite um valor válido entre 1 e 100!");
                     return;
                 }
                 // Verificando se o usuário acertou
@@ -159,7 +159,7 @@ function iniciar() {
             case 3:
                 // Validando o valor jogado
                 if (valorjogado < 1 || valorjogado > 1000) {
-                    alert("Digite um valor válido entre 1 e 10!");
+                    alert("Digite um valor válido entre 1 e 1000!");
                     return;
                 }
                 // Verificando se o usuário acertou
