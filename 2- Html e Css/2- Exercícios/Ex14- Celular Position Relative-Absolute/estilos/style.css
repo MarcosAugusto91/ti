@@ -23,6 +23,7 @@ main{
     background-size:cover ;
     height: 640px;
     width: 317px;
+    z-index: -1;
 }
 
 section{
@@ -36,16 +37,23 @@ img{
     width: 50px;
     border-radius: 50px;
     margin: 10px;
+    opacity: 60%;
 }
 
 nav{
-    text-align: right;
+    position: absolute;
+    right: 5px;
+    margin-top: 10px;
     padding: 5px;
 }
 
 img:hover {
-    border: 2px solid white;
+    /*border: 1.5px solid rgb(61, 60, 60);*/
     box-shadow: 2px 2px 5px black;
+    transform: scale(300%) translateX(-60%) rotate(360deg);
+    opacity: 100%;
+    transition: 1.0s;
+    border-radius: 5px;
 }
 
 iframe{
@@ -55,12 +63,12 @@ iframe{
     background-size: cover;
 }
 
-a{
+/* a{
     width: 100%;
     height: 100%;
-}
+} */
 
-/* Configurações de CSS referente as telas */
+/* Configurações de CSS referente as telas HOME */
 
 .imgtela{
     width: 100%;
@@ -68,6 +76,7 @@ a{
     margin: 0px;
     margin-bottom: -4px;
     padding: 0px;
+    opacity: 100%;
 }
 
 .imgtela:hover{
