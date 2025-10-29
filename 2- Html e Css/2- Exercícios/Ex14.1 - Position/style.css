@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#container{
+    background-color: blue;
+    position: relative;
+    height: 500px;
+    width: 500px;
+    margin: auto;
+}
+
+#conteudo{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) ;
+
+
+}
