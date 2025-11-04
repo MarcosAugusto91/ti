@@ -15,63 +15,68 @@
 
 .container{ /* DIV PAI */
     background-image: url(../imagens/fundo2.jpg);
+    height: 100vh;
+
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 200px 200px 150px 80px ;
-    /*grid-auto-rows: 200px*/
-    /*grid-gap: 10px;*/
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 100px 300px 300px 80px 80px;
+    
+    /*grid-auto-rows: 200px;*/
+    /*grid-auto-columns: 200px; */
+
+    grid-gap: 5px;
     /*grid-column-gap:10px;*/
     /*grid-row-gap:10px;*/
-    grid-template-areas: "header header header header header header header header header header header header" 
+
+    justify-items: start;  /*center, end; */
+    align-items: start; /*center, end; stretch */
+
+    /*grid-template-areas: "header header header header header header header header header header header header" 
                          "aside  aside   null   null   main   main   main   main  main   main   main  main"
                          "aside  aside   null   null   main   main   main   main   main  main   main  main"
-                         "footer footer footer footer footer footer footer footer footer footer footer footer";
-    /* align-items: start; center, end; stretch */
-    /* justify-items: start;  center, end; */
+                         "footer footer footer footer footer footer footer footer footer footer footer footer";*/
 }
 
 /* FILHOS */
+
 .header{
-    /*grid-column: 1 / 6;*/
-    border: 1px solid green;
-    grid-area: header;
-    /*justify-self: center;
-    align-self: center;*/
+    grid-column: 1 / -1;
+    /*grid-area: header;*/
+    justify-self: stretch;
+    align-self: stretch;
     background-color: green;
 }
 
 .main{
-    /*grid-column: 4 / 6;*/
-    /*grid-row: 2 / 4 */
-    grid-area: main;
-    border: 1px solid red;
+    grid-column: 2 / -1;
+    grid-row: 2 / 4;
+    align-self: stretch;
+    /*grid-area: main;*/
     background-color: aqua;
     color: black;
 }
 
 .aside{
-    /*justify-self: center;
-    align-self: center;*/
-    /*grid-column: 1 / 2; */
-    grid-area: aside;  
-    border: 1px solid blue;
-    background-color: blue;
+    justify-self: stretch;
+    align-self: stretch;
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    /* grid-area: aside; */
+    background-color: red;
 }
 
 .footer{
-    /*grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 3;
-    grid-row-end: 6 ;*/
-    grid-area: footer;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 4;
+    grid-row-end: 5 ;
+    align-self: stretch;
+    justify-self: stretch;
+
+    /* grid-area: footer; */
     display: grid;
-    border: 1px solid black;
     background-color: black;
-
 }
-
-/* justify-self:
-align-self: */
 
 h1, p{
     padding: 10px;
