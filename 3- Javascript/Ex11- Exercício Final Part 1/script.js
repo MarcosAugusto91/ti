@@ -46,7 +46,6 @@ function finalizar() {
 
     if (valores.length <= 0) {
         window.alert('Insira valores na lista antes de calcular!')
-
     } else {
 
         for (let pos in valores) {
@@ -55,7 +54,7 @@ function finalizar() {
         media = soma / valores.length
         Math.round(media, 2)
 
-        valores.sort((a, b) => a - b)
+        valores.sort((a, b) => a - b) // Ordena os valores em ordem crescente
 
         resultado.innerHTML = `<p>Ao todo, temos <strong>${total}</strong> números cadastrados!</p> 
                                <p>O menor valor da lista é <strong>${Number(valores[0])}</strong></p>

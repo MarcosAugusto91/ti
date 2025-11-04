@@ -1,0 +1,86 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(pista.png);
+    background-size: cover;
+    background-position: left top;
+}
+
+#papaleguas {
+    position: absolute;
+    top: 120px;
+    background-image: url(papaleguas.gif);
+    width: 160px;
+    height: 70px;
+    background-size: cover;
+    animation: correr 2s  infinite linear;
+}
+
+@keyframes correr {
+
+    0% {
+        transform: translateX(0) rotate(25%);
+    }
+
+    15% {
+        transform: translateX(750px);
+    }    
+    
+    30% {
+        transform: translateX(1500px);
+    }
+
+    31% {
+        transform: translateX(1600px) 
+        rotate(30deg);
+    }
+
+    35%{
+        transform: 
+        translateX(1950px)
+        rotate(70deg)
+        translateY(300px);
+    }
+
+    38%{
+        transform: 
+        rotate(90deg)
+        translateZ(2000px 500px);
+    }    
+    
+    60%{
+        transform: 
+        translateX(1600px) 
+        translateY(550px)
+        rotate(180deg);
+    }
+
+    75%{
+        transform: 
+        translateX(600px) 
+        translateY(550px)
+        rotate(180deg);
+    }
+
+    80%{
+        transform:
+        translateX(470px)
+        translateY(550px)
+        rotate(90deg);
+    }
+
+    100%{        
+        transform: 
+        translateX(400px)
+        translateY(1000px)
+        rotate(90deg);
+    }
+    
+}
+

@@ -1,0 +1,48 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(148, 147, 147);
+}
+
+#papaleguas {
+    position: absolute;
+    bottom: 10px;
+    background-image: url(papaleguas.gif);
+    width: 160px;
+    height: 70px;
+    background-size: cover;
+    animation: correr 6s infinite linear;
+}
+
+@keyframes correr {
+
+    0% {
+        transform: translateX(0) rotate(25%);
+    }
+
+    30% {
+        transform: translateX(calc(100vw - 160px));
+    }
+
+    50%{
+        transform: translateX(calc(100vw - 160px)) translateY(calc(100px - 100vh));
+        background-image: url(papaleguas2.gif);
+    }
+
+    80%{
+        transform: translateY(calc(100px - 100vh));
+        
+    }
+
+    100%{
+        transform:translateY(100vh - 100px);
+        background-image: url(papaleguas.gif);
+    }
+}
+
