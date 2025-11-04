@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+div{
+    display: inline-block;
+    height: 100px;
+    width: 30%;
+    background-color: blue;
+    margin: 10px;
+}
+
+.divfloat{
+   background-color: red;
+   float: right;
+   width: 100px; 
+}
