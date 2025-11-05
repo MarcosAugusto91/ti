@@ -1,0 +1,84 @@
+@charset "UFT-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*
+    LEMBRETE:
+    grid-track: linha ou coluna inteira
+    grid-lines: linhas de divisão 
+    grid-area: área que será ocupada
+    gap: espaçamento
+*/
+
+.container{ /* DIV PAI */
+    background-image: url(../imagens/fundo2.jpg);
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 100px 300px 300px 80px 80px;
+    
+    /*grid-auto-rows: 200px;*/
+    /*grid-auto-columns: 200px; */
+
+    grid-gap: 5px;
+    /*grid-column-gap:10px;*/
+    /*grid-row-gap:10px;*/
+
+    justify-items: start;  /*center, end; */
+    align-items: start; /*center, end; stretch */
+
+    /*grid-template-areas: "header header header header header header header header header header header header" 
+                         "aside  aside   null   null   main   main   main   main  main   main   main  main"
+                         "aside  aside   null   null   main   main   main   main   main  main   main  main"
+                         "footer footer footer footer footer footer footer footer footer footer footer footer";*/
+}
+
+/* FILHOS */
+
+.header{
+    grid-column: 1 / -1;
+    /*grid-area: header;*/
+    justify-self: stretch;
+    align-self: stretch;
+    background-color: green;
+}
+
+.main{
+    grid-column: 2 / -1;
+    grid-row: 2 / 4;
+    align-self: stretch;
+    /*grid-area: main;*/
+    background-color: aqua;
+    color: black;
+}
+
+.aside{
+    justify-self: stretch;
+    align-self: stretch;
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    /* grid-area: aside; */
+    background-color: red;
+}
+
+.footer{
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 4;
+    grid-row-end: 5 ;
+    align-self: stretch;
+    justify-self: stretch;
+
+    /* grid-area: footer; */
+    display: grid;
+    background-color: black;
+}
+
+h1, p{
+    padding: 10px;
+    color: white;
+}
