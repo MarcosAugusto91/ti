@@ -1,23 +1,24 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     border: none;
     color: white;
 }
 
-.noturno{
+.noturno {
     background-image: url(Sources/fundo.jpg);
     background-size: cover;
     transition: 1s;
 }
 
-.sol{
+.sol {
     background-image: url(Sources/sol.jpg);
     background-size: cover;
     transition: 1s;
+    /*background-color: white; backdrop-filter: blur(30px);opacity: 80%;*/
 }
 
-header{
+header {
     position: sticky;
     top: 0px;
     display: flex;
@@ -28,32 +29,42 @@ header{
     z-index: 10;
 }
 
-.logo-nome{
+.logo-nome {
     display: flex;
     align-items: center;
 }
 
-.logo{
+.logo {
     margin-top: 55px;
     margin-left: 10px;
     width: 140px;
     height: 140px;
+    animation: foguete 2s infinite;
 }
 
-.nome{
+/* .logo:hover {
+    transform: translateX(100px) translateY(-200px);
+    transition: 2s;
+} */
+
+.nome {
     padding: 10px;
     width: 150px;
     height: 60px;
 }
 
-.modo, .modonoturno{
+.nome:hover {
+    animation: nome 0.5s linear;
+}
+
+.modo, .modonoturno {
     width: 40px;
     height: 40px;
     cursor: pointer;
     margin-right: 20px;
 }
 
-.modonoturno{
+.modonoturno {
     transform: rotate(0deg);
     transition: 1s;
 }
@@ -63,16 +74,23 @@ header{
     transition: 1s;
 }
 
+.modo:hover{
+    transform: scale(1.5) rotate(0deg);
+    transition: 1s;
+}
 
-main{
+main {
     margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 20px repeat(9,100px);
+    grid-template-rows: 20px repeat(9, 100px);
     grid-auto-rows: 80px;
 }
 
-.session1, .session2, .session3, .session4{
+.session1,
+.session2,
+.session3,
+.session4 {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
@@ -83,35 +101,35 @@ main{
     cursor: pointer;
 }
 
-.session1{
+.session1 {
     grid-column: 2 / 6;
     grid-row: 2 / 6;
     background-image: url(Sources/fundo1.jpg);
     background-size: cover;
 }
 
-.session2{
+.session2 {
     grid-column: 6 / 12;
     grid-row: 2 / 6;
     background-image: url(Sources/fundo2.jpeg);
     background-position: center;
 }
 
-.session3{
+.session3 {
     grid-column: 2 / 8;
     grid-row: 6 / 10;
     background-image: url(Sources/fundo3.jpeg);
     background-size: cover;
 }
 
-.session4{
+.session4 {
     grid-column: 8 / 12;
     grid-row: 6 / 10;
     background-image: url(Sources/fundo4.jpeg);
     background-size: cover;
 }
 
-h1{
+h1 {
     background-color: black;
     margin: 10px;
     padding: 10px;
@@ -119,7 +137,10 @@ h1{
     border-radius: 5px;
 }
 
-.session1:hover, .session2:hover, .session3:hover, .session4:hover{
+.session1:hover,
+.session2:hover,
+.session3:hover,
+.session4:hover {
 
     transform: scale(1.03);
     transition: 1.5s;
@@ -127,14 +148,14 @@ h1{
     border: none;
 }
 
-nav{
+nav {
     width: 60px;
     height: 110px;
     position: fixed;
-    background-color:rgb(52, 4, 97);
+    background-color: rgb(52, 4, 97);
     opacity: 80%;
-    top:85vh;
-    right:-1px;
+    top: 85vh;
+    right: -1px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     display: flex;
@@ -143,17 +164,17 @@ nav{
     align-items: center;
 }
 
-.imgnav{
+.imgnav {
     width: 40px;
     cursor: pointer;
 }
 
-.imgnav:hover{
-   transform: scale(1.1) rotate(360deg);
-   transition: 2s;
+.imgnav:hover {
+    transform: scale(1.1) rotate(360deg);
+    transition: 2s;
 }
 
-.footer{
+.footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -163,35 +184,61 @@ nav{
     flex-wrap: wrap;
 }
 
-.footer2{
+.footer2 {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 200px;
     width: 100%;
-    background: linear-gradient(to bottom, white, rgb(151, 149, 149), rgb(68, 67, 67) , black);
+    background: linear-gradient(to bottom, black,black);
     flex-wrap: wrap;
 }
 
-footer>h1{
-    margin-top:50px;
+footer>h1 {
+    margin-top: 50px;
     background-color: transparent;
     width: 100vw;
     text-align: center;
 }
 
-/* .footer2>h1{
-    margin:30px;
+.footer2>h1 {
+    margin-top: 40px;
     background-color: transparent;
     width: 100vw;
+    text-align: center;
 }
 
 .footer2>p{
-    margin-top: -100px;
+    margin-top: -80px;
     opacity: 70%;
-} */
+}
 
-footer>p{
+footer>p {
     margin-top: -50px;
     opacity: 70%;
+}
+
+@keyframes nome {
+
+    50% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes foguete {
+
+    50% {
+        transform: translateX(100px)
+        translateY(-200px);
+    }
+
+    100% {
+        transform: translateX(0px)
+        translateY(0px)
+        rotate(180deg);
+    }
 }
