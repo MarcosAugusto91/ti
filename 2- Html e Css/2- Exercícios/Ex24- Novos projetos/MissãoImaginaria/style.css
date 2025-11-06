@@ -39,6 +39,7 @@ header {
     margin-left: 10px;
     width: 140px;
     height: 140px;
+
     animation: foguete 2s infinite;
 }
 
@@ -53,9 +54,9 @@ header {
     height: 60px;
 }
 
-.nome:hover {
+/* .nome:hover {
     animation: nome 0.5s linear;
-}
+} */
 
 .modo, .modonoturno {
     width: 40px;
@@ -241,4 +242,5 @@ footer>p {
         translateY(0px)
         rotate(180deg);
     }
+
 }
