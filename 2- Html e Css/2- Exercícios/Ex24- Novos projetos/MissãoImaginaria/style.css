@@ -40,7 +40,7 @@ header {
     width: 140px;
     height: 140px;
 
-    animation: foguete 2s infinite;
+    animation: foguete 2s infinite forwards;
 }
 
 /* .logo:hover {
@@ -95,7 +95,7 @@ main {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
-    border-radius: 3px;
+    border-radius: 5px;
     margin: 10px;
     opacity: 0%;
     border: 5px solid rgb(142, 59, 220);
