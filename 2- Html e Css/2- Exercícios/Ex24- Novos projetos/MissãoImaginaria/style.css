@@ -1,0 +1,146 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    color: white;
+}
+
+body{
+    background-image: url(Sources/fundo.jpg);
+    background-size: cover;
+}
+
+header{
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: rgb(52, 4, 97);
+    height: 90px;
+    z-index: 10;
+}
+
+.logo{
+    margin-top: 55px;
+    margin-left: 10px;
+    width: 140px;
+    height: 140px;
+}
+
+.nome{
+    padding: 10px;
+    width: 150px;
+    height: 60px;
+}
+
+main{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(12, 1FR);
+    grid-template-rows: 20px repeat(9,100px);
+    grid-auto-rows: 80px;
+}
+
+.session1, .session2, .session3, .session4{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    border-radius: 3px;
+    margin: 10px;
+    opacity: 0%;
+    border: 5px solid rgb(142, 59, 220);
+    cursor: pointer;
+}
+
+.session1{
+    grid-column: 2 / 6;
+    grid-row: 2 / 6;
+    background-image: url(Sources/fundo1.jpg);
+    background-size: cover;
+}
+
+.session2{
+    grid-column: 6 / 12;
+    grid-row: 2 / 6;
+    background-image: url(Sources/fundo2.jpeg);
+    background-position: center;
+}
+
+.session3{
+    grid-column: 2 / 8;
+    grid-row: 6 / 10;
+    background-image: url(Sources/fundo3.jpeg);
+    background-size: cover;
+}
+
+.session4{
+    grid-column: 8 / 12;
+    grid-row: 6 / 10;
+    background-image: url(Sources/fundo4.jpeg);
+    background-size: cover;
+}
+
+h1{
+    background-color: black;
+    margin: 10px;
+    padding: 10px;
+    opacity: 70%;
+    border-radius: 5px;
+}
+
+.session1:hover, .session2:hover, .session3:hover, .session4:hover{
+
+    transform: scale(1.03);
+    transition: 1.5s;
+    opacity: 100%;
+    border: none;
+}
+
+nav{
+    width: 60px;
+    height: 110px;
+    position: fixed;
+    background-color:rgb(52, 4, 97);
+    opacity: 80%;
+    top:150px;
+    right:-1px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.imgnav{
+    width: 40px;
+    cursor: pointer;
+}
+
+.imgnav:hover{
+   transform: scale(1.1) rotate(360deg);
+   transition: 2s;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100vw;
+    background: linear-gradient(to bottom, #000000, rgb(30, 7, 53), rgb(49, 6, 89), rgb(52, 4, 97));
+    flex-wrap: wrap;
+}
+
+footer>h1{
+    margin-top:50px;
+    background-color: transparent;
+    width: 100vw;
+    text-align: center;
+}
+
+footer>p{
+    margin-top: -50px;
+    opacity: 70%;
+}
