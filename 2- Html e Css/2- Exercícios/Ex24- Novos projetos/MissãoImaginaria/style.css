@@ -5,20 +5,32 @@
     color: white;
 }
 
-body{
+.noturno{
     background-image: url(Sources/fundo.jpg);
     background-size: cover;
+    transition: 1s;
+}
+
+.sol{
+    background-image: url(Sources/sol.jpg);
+    background-size: cover;
+    transition: 1s;
 }
 
 header{
     position: sticky;
     top: 0px;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
     background-color: rgb(52, 4, 97);
     height: 90px;
     z-index: 10;
+}
+
+.logo-nome{
+    display: flex;
+    align-items: center;
 }
 
 .logo{
@@ -34,10 +46,28 @@ header{
     height: 60px;
 }
 
+.modo, .modonoturno{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.modonoturno{
+    transform: rotate(0deg);
+    transition: 1s;
+}
+
+.modo{
+    transform: rotate(180deg);
+    transition: 1s;
+}
+
+
 main{
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(12, 1FR);
+    grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 20px repeat(9,100px);
     grid-auto-rows: 80px;
 }
@@ -123,13 +153,23 @@ nav{
    transition: 2s;
 }
 
-footer{
+.footer{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 200px;
-    width: 100vw;
+    width: 100%;
     background: linear-gradient(to bottom, #000000, rgb(30, 7, 53), rgb(49, 6, 89), rgb(52, 4, 97));
+    flex-wrap: wrap;
+}
+
+.footer2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    background: linear-gradient(to bottom, white, rgb(151, 149, 149), rgb(68, 67, 67) , black);
     flex-wrap: wrap;
 }
 
@@ -139,6 +179,17 @@ footer>h1{
     width: 100vw;
     text-align: center;
 }
+
+/* .footer2>h1{
+    margin:30px;
+    background-color: transparent;
+    width: 100vw;
+}
+
+.footer2>p{
+    margin-top: -100px;
+    opacity: 70%;
+} */
 
 footer>p{
     margin-top: -50px;
