@@ -6,6 +6,7 @@ function mode() {
 
   trocaImagem();
   ajustarRodape();
+  ajustarBanner();
 
   function trocaImagem() {
     const fundo = document.querySelector('.noturno, .sol');
@@ -17,7 +18,12 @@ function mode() {
     const rodape = document.querySelector('footer');
     rodape.classList.toggle('footer2');
     rodape.classList.toggle('footer');
-    
-
   }
+
+  function ajustarBanner(){
+    const banner = document.querySelector('.banner, .banner2');
+    banner.classList.toggle('banner2');
+    banner.classList.toggle('banner');
+  }
+
 }

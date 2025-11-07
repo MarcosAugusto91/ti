@@ -80,6 +80,20 @@ header {
     transition: 1s;
 }
 
+.banner{
+    background-image: url(Sources/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    opacity: 90%;
+    width: 100%;
+    height: 400px;
+    box-shadow: 2px 2px 2px 2px;
+}
+
+.banner2{
+    display: none;
+}
+
 main {
     margin-top: 50px;
     display: grid;
@@ -148,6 +162,14 @@ h1 {
     opacity: 100%;
     border: none;
 }
+
+/* .cards{
+    background-image: url(Sources/cards.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 1750px;
+    margin-bottom: 100px;
+} */
 
 nav {
     width: 60px;
