@@ -1,0 +1,35 @@
+Extensões:
+Es7 + React/Redux
+Material Icon Theme
+Power Shell (Sem ser o do Windows)
+
+Instalação: (VITE OU NEXT)
+npm create vite@latest
+y
+nome do projeto
+React
+Javascript / Typescript
+Rolldown no
+Yes
+------------------------------------
+cd NomedoProjeto
+npm install
+npm run dev
+package.json = dependências
+-------------------------------------
+
+GIT
+
+-------------------------------------
+
+Criando componentes
+
+-------------------------------------
+
+_reset.css
+base.css
+
+Comentar o css app e index;
+Ou apagar o conteúdo do index.css e app.css
+
+segundo a convenção a global é no index, pode colocar o reset lá dentro
