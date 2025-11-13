@@ -1,0 +1,37 @@
+.card {
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.card.default {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+.card.elevated {
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card.elevated:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card.outlined {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+}
+
+.title {
+  margin: 0 0 16px 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.content {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
