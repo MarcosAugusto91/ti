@@ -13,6 +13,8 @@ import Admin from './pages/admin/Admin';
 import FormCategoria from './pages/admin/components/FormCategoria';
 import CatAdmin from './pages/admin/CatAdmin';
 import FormSubCategoria from './pages/admin/components/FormSubCategoria';
+import AdminLayout from './pages/admin/AdminLayout';
+import PostAdmin from './pages/PostAdmin';
 
 
 function App() {
@@ -21,13 +23,20 @@ function App() {
       <Cabecalho />
       <Routes>
         {/* Use element={Componente /} para renderizar */}
-        <Route path='/admin' element={<Admin />} />
         <Route path='admin/novacategoria' element={<FormCategoria />} />
         <Route path='admin/:id' element={<FormCategoria />} />
         <Route path='admin/categoria/:id' element={<CatAdmin />} />
         <Route path='admin/sub/:id' element={<FormSubCategoria />} />
         <Route path='/' element={<Home />} />
         <Route path='/posts/:id' element={<Post />} />
+
+        
+        <Route path='/admin/' element={<AdminLayout />}>
+          <Route index element={<Admin />} />
+          <Route path='posts' element={<PostAdmin />}/>
+        </Route>
+
+        {/* <Route path='admin/posts' element={<PostAdmin />}/> */}
 
         {/* 
           Esta é a rota pai. Ela renderiza o <Categoria />

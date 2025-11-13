@@ -3,7 +3,10 @@
     {
       "id": "bem-estar",
       "nome": "bem-estar",
-      "subcategorias": []
+      "subcategorias": [
+        "Teste 1",
+        "Teste 2"
+      ]
     },
     {
       "id": "comportamento",
@@ -25,22 +28,9 @@
       "id": "Humanas",
       "nome": "Humanas",
       "subcategorias": []
-    },
-    {
-      "id": "Exatas",
-      "nome": "Exatas",
-      "subcategorias": []
     }
   ],
   "posts": [
-    {
-      "id": "1",
-      "title": "Banho no catiorrinho",
-      "metadescription": "Use as utensilios certos para banhar seu cão",
-      "body": "Banhos regulares mantém os pelos e pele de seu cachorro limpa, renovada e saudável. O processo de ensaboar e escovar remove resíduos de pelos e peles que já estão mortas, providenciando um maior respiro da pele de seu cachorro",
-      "categoria": "bem-estar",
-      "subcategoria": "higiene"
-    },
     {
       "id": "2",
       "title": "Seu catiorrinho merece um tapete refrescante",
