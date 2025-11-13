@@ -3,10 +3,7 @@
     {
       "id": "bem-estar",
       "nome": "bem-estar",
-      "subcategorias": [
-        "higiene",
-        "saude"
-      ]
+      "subcategorias": []
     },
     {
       "id": "comportamento",
@@ -19,16 +16,19 @@
     {
       "id": "Tecnologia",
       "nome": "Tecnologia",
+      "subcategorias": [
+        "Front-End",
+        "Back-End"
+      ]
+    },
+    {
+      "id": "Humanas",
+      "nome": "Humanas",
       "subcategorias": []
     },
     {
       "id": "Exatas",
       "nome": "Exatas",
-      "subcategorias": []
-    },
-    {
-      "id": "Humanas",
-      "nome": "Humanas",
       "subcategorias": []
     }
   ],

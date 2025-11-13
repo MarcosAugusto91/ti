@@ -29,7 +29,7 @@ const ListaCatAdmin = () => {
                 <thead>
                     <tr>
                         <th className="tabela__coluna--g">Categoria</th>
-                        <th colSpan="3" className="tabela__coluna--p tabela__alinhamento--direita">
+                        <th colSpan="4" className="tabela__coluna--p tabela__alinhamento--direita">
                             <Link to="/admin/NovaCategoria">
                                 <Button
                                     variant="outlined"
@@ -51,6 +51,7 @@ const ListaCatAdmin = () => {
                                 <td className="tabela__coluna--m">
                                     <Link to={`/categoria/${categoria.id}`}>{categoria.nome}</Link>
                                 </td>
+
                                 <td colSpan="2" className="tabela__coluna--p tabela__alinhamento--direita">
                                     {/* Botão EDITAR */}
                                     <Link
@@ -68,7 +69,8 @@ const ListaCatAdmin = () => {
                                             Editar
                                         </Button>
                                     </Link>
-
+                                </td>
+                                <td>
                                     {/* Botão EXCLUIR */}
                                     <Link
                                         to="/admin"
@@ -80,10 +82,30 @@ const ListaCatAdmin = () => {
                                             variant="contained"
                                             color="error"
                                             sx={{ margin: "0 0.25rem" }}
-                                            // Usa o sistema de estilização SX
-                                            // Verificar documentação do MUI
+                                        // Usa o sistema de estilização SX
+                                        // Verificar documentação do MUI
                                         >
                                             Excluir
+                                        </Button>
+                                    </Link>
+
+                                    </td>
+                                    <td>
+
+                                    {/* Botão SubCategoria */}
+                                    <Link
+                                        to={`/admin/categoria/${categoria.id}`}
+                                        textDecoration="none"
+                                    >
+                                        <Button
+                                            type="button"
+                                            variant="contained"
+                                            color="primary"
+                                            sx={{ margin: "0 0.25rem" }}
+                                        // Usa o sistema de estilização SX
+                                        // Verificar documentação do MUI
+                                        >
+                                            SubCategoria
                                         </Button>
                                     </Link>
 
