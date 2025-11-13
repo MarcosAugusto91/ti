@@ -373,7 +373,11 @@ onClick={() => excluir(categoria)} no Botão excluir
 
 E estava faltando importar a API: 
 import { api, busca } from "../../../api";
+
 ----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+
 CAPÍTULO 7:
 
 No arquivo ListaCadAdmin.jsx: No botão editar:
