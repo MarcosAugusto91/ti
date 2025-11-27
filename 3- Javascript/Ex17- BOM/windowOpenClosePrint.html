@@ -1,0 +1,26 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Open Close Print</title>
+</head>
+<body>
+    <input type="button" value="Open" onclick="abrir()">    
+    <input type="button" value="Close" onclick="fechar()">    
+    <input type="button" value="Imprimir" onclick="window.print()">    
+
+    <script>
+        let janela;
+        
+        function abrir(){
+            janela = window.open('https://www.w3schools.com/','Nome da página','_blank');
+        }
+
+        //verificar solução para o close()
+        function fechar(){
+            janela.close();
+        }
+
+    </script>
+</body>
+</html>

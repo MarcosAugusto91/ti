@@ -1,0 +1,104 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    cursor: url(../imagens/mata_mosca.png)25 25, pointer;
+}
+
+body{
+    background-image: url(../imagens/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mosquito1{
+    width: 50px;
+    height: 50px;
+}
+
+.mosquito2{
+    width: 75px;
+    height: 75px;
+}
+
+.mosquito3{
+    width: 100px;
+    height: 100px;
+}
+
+.ladoA{
+    transform: scaleX(1);
+}
+
+.ladoB{
+    transform: scaleX(-1);
+}
+
+.painel{
+    position: absolute;
+    width: 190px;
+    padding: 10px;
+    left: 0px;
+    bottom: 0px;
+    border-top: solid 1px white;
+    background-color: white;
+    opacity: 70%;
+}
+
+.vidas{
+    float: left;
+}
+
+.cronometro{
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn_reiniciar{
+    background-color: red;
+    border-color: red;
+    color: white;
+    margin-top: -50px;
+}
+
+.btn_reiniciar, .btn_iniciar, .combo{
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    width: 130px;
+}
+
+.btn_iniciar{
+    background-color: green;
+    border-color: green;
+    color: white;
+    margin-top: -10px;
+}
+
+.selecione{
+    background-color: white;
+    color:white;
+    font-size: 16px;
+}
+
+.facil{
+    background-color: green;
+    color: white;
+}
+
+.normal{
+    background-color: orange;
+    color: white;
+}
+
+.dificil{
+    background-color: red;
+    color: white;
+}
