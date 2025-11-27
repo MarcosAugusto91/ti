@@ -1,6 +1,9 @@
 /********************************MAP*************************************/
 
-    /*Exemplo 1*/
+    /*Exemplo 1*/ 
+    // O código cria um array de números e utiliza o método map para calcular a raiz quadrada de cada número no array. 
+    // O resultado é formatado para duas casas decimais usando toFixed(2) e armazenado em um novo array chamado raizDeNumeros. Finalmente, o array resultante é exibido no console.
+
     const numeros = [10,15,30,50,70,9,6,3]
     let raizDeNumeros = numeros.map(elem => Math.sqrt(elem).toFixed(2))
     console.log('Raizes: ' + raizDeNumeros)

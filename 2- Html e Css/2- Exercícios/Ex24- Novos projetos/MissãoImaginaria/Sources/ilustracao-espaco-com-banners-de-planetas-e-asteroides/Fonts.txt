@@ -1,0 +1,13 @@
+Fonts used in this design:
+
+Font: Zilla Slab
+Author: Typotheque
+Url: https://fonts.google.com/specimen/Zilla+Slab
+
+Font: Orbitron
+Author: Matt McInerney
+Url: https://fonts.google.com/specimen/Orbitron
+
+Font: Zen Dots
+Author: Yoshimichi Ohira
+Url: https://fonts.google.com/specimen/Zen+Dots
