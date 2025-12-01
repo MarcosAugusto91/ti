@@ -11,7 +11,6 @@ pessoa.saudacao(); // Chama o método saudacao do objeto Pessoa
 console.log(pessoa.nome); // Acessa a propriedade nome do objeto Pessoa
 console.log(pessoa.idade); // Acessa a propriedade idade do objeto Pessoa
 
-
 console.log('--------------------------------------------------------------------------');
 
 const animal = {
