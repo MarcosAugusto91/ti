@@ -10,9 +10,9 @@ const h1Texto = document.createTextNode('Título Principal');
 h1.appendChild(h1Texto);
 
 // Formas de adicionar o h1 ao corpo
-// corpo.appendChild(h1);
+corpo.appendChild(h1);
 // p.insertBefore(h1, text); Não utilizar
-corpo.insertAdjacentElement('beforebegin', h1);
+//corpo.insertAdjacentElement('beforebegin', h1);
 //corpo.insertAdjacentElement('beforeend', h1);
 
 corpo.removeChild(p);
