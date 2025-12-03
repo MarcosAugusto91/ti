@@ -11,7 +11,6 @@
         //métodos
         function resumirCadFunc() {
             return "$this->nome possui $this->numFilhos filho(s)";
-
         }
 
         function modificarNumFilhos($numFilhos){
