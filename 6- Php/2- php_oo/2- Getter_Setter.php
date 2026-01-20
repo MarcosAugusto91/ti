@@ -51,6 +51,8 @@
 
     $y->setNome("Marcos");
     $y->setNumFilhos(0);
+    echo $y->resumirCadFunc();
+
     $y->__set("cargo","Professor");
     $y->__set("salario","9.999,00");
 

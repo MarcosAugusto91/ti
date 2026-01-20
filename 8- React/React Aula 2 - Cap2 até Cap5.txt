@@ -1,0 +1,453 @@
+CAPÍTULO 2: 
+
+Estrutura básica de Rotas, sem rotas:
+function App() {
+  const Router = () => {
+    const location = window.location.pathname
+    if(location === '/sobre'){
+      return <Sobre />
+    } else {
+      return <Home />
+    }
+  }
+  return (
+    <>
+      { Router() }    
+    </>
+  );
+}
+ 
+export default App;
+
+----------------------------------------------------------
+Fazendo rotas com o Routers:
+
+Instalando as Routers:
+npm install react-router-dom
+
+Para importar a Rota instalada:
+import {Browser as Router, Routes, Route} from 'react-router-dom'
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        {/* Use element={Componente/} para renderizar */}
+        <Route path='/' element={<Home />} />
+        <Route path='/sobre' element={<Sobre />} />
+      </Routes>
+    </Router>
+  );
+}
+
+Exercício para construir mais uma página;
+
+---------------------------------------------------------
+---------------------------------------------------------
+---------------------------------------------------------
+
+CAPÍTULO 3:
+
+Criar a página 404 com Css;
+Importar ela no app.jsx
+Colocar a Rota;
+---------------------------------------------------------
+Criar a pasta componentes dentro de Src;
+Criar o arquivo cabeçalho.jsx
+Criar o Cabecalho.css dentro da pasta css/componentes
+Importar o Css no arquivo cabeçalho.jsx
+
+Extremamente importante no componente cabeçalho trocar os links de A para <Link> porém necessário importar o Link anteriormente:
+import { Link } from 'react-router-dom';
+
+Antes:
+<li><a href="/" className="menu-item menu-item--entrar">Entrar</a></li>
+
+Depois:
+<li><Link to="/sobre" className="menu-item">Sobre</Link></li>
+
+Exercício solicitar que o aluno faça mais páginas e um footer
+
+---------------------------------------------------------
+---------------------------------------------------------
+---------------------------------------------------------
+
+CAPÍTULO 4:
+Parar o servidor;
+
+Instalar Json Server
+npm install json-server --save-dev ou
+npm i json-server -D
+
+---------------------------------------------------------
+
+No arquivo package json abaixo da linha "preview": "vite preview" acrescentar uma vírgula e colar a linha abaixo:
+"server": "json-server --watch db.json --port 5000"
+
+--------------------------------------------------------
+
+Carregar o arquivo db.json: colar ele na raiz do projeto;
+
+Pode inicializar o nosso terminal novamente: npm run dev;
+
+Abrir outro terminal dentro do seu projeto e rodar o seguinte comando para rodar o servidor npm run server
+
+Testando o servidor json: localhost:5000
+
+No arquivo Json pode pedir para os alunos criarem mais categorias;
+
+Criar mais um terminal e instalar o axios:
+npm install axios
+Se quiser pode conferir a dependência dentro do arquivo package.json: "axios": "^1.13.2",
+
+Criar o arquivo api.jsx dentro de SRC:
+import axios from 'axios';
+
+//1. exportar a instancia da base
+export const api = axios.create({
+    baseURL: 'http://localhost:5000' //Endereço do Servidor Json
+}
+)
+
+// 2. Função de busca genérica assíncrona
+// Recebe a URL (Ex: '/posts ou '/categorias) e
+// callback opcional para o sucesso.
+export const busca = async (url) => {
+    //A busca é feita a partir da instância da API
+    const resposta = await api.get(url);
+}
+
+--------------------------------------------------------
+Criar um arquivo ListaPost.jsx dentro de SRC/COMPONENTS:
+
+import { busca } from '../api.jsx';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+
+const ListaPost = (url) => {
+    const [posts, setPosts] = useState([]);
+    return (
+        <section className='posts container'>
+            {
+                posts.map((posts) =>
+                    <Link className={`cartao-post cartao-post--${post.categoria}`} to={`/posts/${post.id}`} >
+                        <article key={post.id}>
+                            <h3 className="cartao-post__titulo">
+                                {post.title}
+                            </h3>
+                            <p className="cartao-post__meta">
+                                {post.metadescription}
+                            </p>
+                        </article>
+                    </Link>
+                )
+            }
+        </section>
+    )
+}
+
+export default ListaPost;
+
+Desafio para o aluno encontrar mais um campo para que ele busque também;
+
+----------------------------------------------------------
+Volta no arquivo Api.Jsx e acrescenta:
+export const busca = async (url, setDado) => {
+    //A busca é feita a partir da instância da API
+    const resposta = await api.get(url);
+
+    // Atualiza o estado com os dados obtidos
+    setDado(resposta.data);
+}
+
+----------------------------------------------------------
+Na página Home chamar a ListaPost no lugar da Section que tinha lá
+
+----------------------------------------------------------
+Criar uma page Post.jsx:
+import {useState, useEffect } from 'react';
+import { busca } from '../api/api';
+
+const Post = () => { 
+  const[post, setPost] = useState({})
+
+  useEffect(() => {
+    busca(`/posts/${id}`, setPost)
+  }, [id])
+
+  return(
+    <main className="container flex flex--centro">
+      <article className="cartao post">
+        <h2 className="cartao__titulo">{post.title}</h2>
+        <h3 className="cartao-post__meta">{post.metadescription}</h3>
+        <br />
+        <p className="carta__texto">{post.body}</p>
+      </article>
+    </main>
+  )
+}
+
+export default Post
+-------------------------------------------------------
+Criar um arquivo post.css na raiz do css
+.post {
+  margin-top: 1.25rem;
+}
+--------------------------------------------------------
+Em app.jsx colocar:
+import Post from './pages/Post'
+<Route path='/post/:id' element={<Post />} />
+--------------------------------------------------------
+Em post.jsx importar o useParams:
+import { useParams } from 'react-router-dom';
+E utiliza-lo:
+const Post = () => { 
+  const{ id } = useParams()
+---------------------------------------------------------
+Dentro do App.jsx não esquecer de carregar o post.css
+
+---------------------------------------------------------
+Para evitar o problema de conseguir usar códigos de ID's que não existem dentro de Post.jsx:
+import { useNavigate, useParams } from 'react-router-dom';
+
+const Post = () => { 
+  const{ id } = useParams()
+
+  const[post, setPost] = useState({})
+
+  const navegar = useNavigate();
+
+   useEffect(() => {
+    // Busca o post usando o ID capturado
+    busca(`/posts/${id}`, setPost)
+    .catch(() => {
+      // Em caso de erro, navega para a página 404
+      // O useNavigate que faz o redirecionamento
+      navegar('/erro404');
+    });
+  }, [id])
+
+---------------------------------------------------------
+---------------------------------------------------------
+---------------------------------------------------------
+
+CAPÍTULO 5
+
+Colocar o arquivo blog.css dentro de CSS
+---------------------------------------------------------
+Dentro de SRC >> Components >> Criar o arquivo ListaCategorias.jsx:
+
+import { useState, useEffectEvent } from "react";
+import { Link } from 'react-router-dom';
+import { busca } from "../api.js";
+import '../assets/css/blog.css';
+
+
+const ListaCategorias = () => {
+    const [categorias, setCategorias] = useState([]);
+
+    useEffect(() => {
+        busca('categorias', setCategorias);
+    }, []);
+
+    return (
+        <ul className="lista-categorias container flex">
+            {
+                categorias.map((categoria) => (
+                    <Link to={`/categoria/${categoria.id}`}>
+                        <li className={`lista-categorias__categoria lista-categorias__categoria--${categoria.id}`}>
+                            {categoria.nome}
+                        </li>
+                    </Link>
+                ))
+            }
+        </ul>
+    )
+};
+
+export default ListaCategorias;
+----------------------------------------------------------
+Em Home importar ListaCategorias:
+import ListaCategorias from '../components/ListaCategorias'
+
+ {<ListaCategorias />}
+            <ListaPost url="/posts" />
+----------------------------------------------------------
+Agora vamos filtrar os POST de acordo com o botão que criamos pelo ListaCategorias:
+
+Primeiro verificar o log:
+import { busca } from "../api.jsx";
+import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom'
+
+const ListaPost = ({ url }) => {
+
+    const [posts, setPosts] = useState([])
+
+    useEffect(() => {
+        busca(url, setPosts)
+    }, [])
+
+    return (
+
+        <section className="posts container">
+            {
+                posts.map((post) => {
+                    console.log(post);
+                    <Link className={`cartao-post cartao-post--${post.categoria}`} to={`/posts/${post.id}`} >
+                        <article key={post.id}>
+                            <h3 className="cartao-post__titulo">
+                                {post.title}
+                            </h3>
+                            <p className="cartao-post__meta">
+                                {post.metadescription}
+                            </p>
+                        </article>
+                    </Link>
+                })
+            }
+        </section>
+
+    )
+}
+
+export default ListaPost
+---------------------------------------------------------
+Criar uma página Categorias.jsx dentro de Pages:
+
+import '../assets/css/blog.css';
+import ListaCategorias from '../components/ListaCategorias';
+
+const Categorias = () => {
+    return(
+        <>
+            <div className='container'>
+                <h2 className='titulo-pagina'>Pet Notícias</h2>
+            </div>
+            <ListaCategorias />
+        </>
+    )
+}
+
+export default Categorias;
+---------------------------------------------------------
+Dentro de App.jsx
+Importar a página categorias.jsx:
+import Categorias from './pages/Categorias'
+
+E no mesmo arquivo colocar a Rota:
+<Route path='/categoria/:id' element={<Categorias />} />
+----------------------------------------------------------
+Dentro da Página Categorias:
+Acrescentar ListaPost:
+
+import { busca } from "../api.jsx";
+import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom'
+
+const ListaPost = ({ url }) => {
+
+    const [posts, setPosts] = useState([])
+
+    useEffect(() => {
+        busca(url, setPosts)
+    }, [url])
+
+    console.clear();
+
+    return (
+
+        <section className="posts container">
+            {posts.map((post) => {
+                console.log(post);
+                return (
+                    <Link className={`cartao-post cartao-post--${post.categoria}`} to={`/posts/${post.id}`} >
+                        <article key={post.id}>
+                            <h3 className="cartao-post__titulo">
+                                {post.title}
+                            </h3>
+                            <p className="cartao-post__meta">
+                                {post.metadescription}
+                            </p>
+                        </article>
+                    </Link>
+                )
+            })
+
+            }
+        </section>
+
+    )
+}
+
+export default ListaPost
+
+E no Categorias: 
+import { useParams } from 'react-router-dom';
+import '../assets/css/blog.css';
+import ListaCategorias from '../components/ListaCategorias';
+import ListaPost from '../components/ListaPost';
+
+const Categorias = () => {
+    // Captura o ID da categoria da URL (ex: bem-estar)
+    const { id } = useParams();
+
+    return(
+        <>
+            <div className='container'>
+                <h2 className='titulo-pagina'>Pet Notícias</h2>
+            </div>
+            <ListaCategorias />
+            {/*
+                Renderiza o ListaPost diretamente
+                passamos a URL a busca filtrada para a API (Json Server)
+                Ex: /posts?categoria=bem-estar
+            */}
+            <ListaPost url={`/posts?categoria=${id}`} />
+        </>
+    )
+}
+
+export default Categorias;
+----------------------------------------------------------
+Criar a Page: Subcategorias
+import { useParams } from "react-router-dom";
+import ListaPost from "../components/ListaPost";
+
+const SubCategorias = () => {
+    //Captura o parâmetro :subcategoria da URL
+    const { subcategoria } = useParams();
+
+    return(
+        //render do ListPost com a URL filtrada pela subcategoria
+        <ListaPost url={`/posts?categoria=${subcategoria}`} />
+    )
+}
+
+export default SubCategorias;
+---------------------------------------------------------
+Criar o CategoriaPosts:
+import { useParams } from "react-router-dom";
+import ListaPost from "../components/ListaPost";
+
+const CategoriaPosts = () => {
+    //Captura o parâmetro :id da URL (que vem da rota pai)
+    const { id } = useParams();
+
+    return(
+        //render do ListPost com a URL filtrada pela categoria
+        
+        <ListaPost url={`/posts?categoria=${id}`} />
+    )
+}
+
+export default CategoriaPosts;
+----------------------------------------------------------
+Alterações no Categorias:
+
+
+----------------------------------------------------------
+No APP.JSX
+Importa: import SubCategorias from './pages/SubCategorias'
+<Route path='/categoria/:categoria/:subcategoria' element={<SubCategorias />} />

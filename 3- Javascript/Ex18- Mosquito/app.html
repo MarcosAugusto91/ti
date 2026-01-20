@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Ex18- Mosquito/css/style.css"></head>
+<body onresize="ajustaTamanhoTela()">
+
+    <div class="painel">
+        <div class="vidas">
+            <img id="v1" src="imagens/coracao_cheio.png" alt="coracao_cheio">
+            <img id="v2" src="imagens/coracao_cheio.png" alt="coracao_cheio">
+            <img id="v3" src="imagens/coracao_cheio.png" alt="coracao_cheio">
+        </div>
+        <div class="cronometro">Tempo restante: <span id="cronometro"></span></div>
+    </div>
+
+
+    <script>  
+        let tempo = 30
+        document.getElementById('cronometro').innerHTML = tempo
+        let criaMosquito 
+        window.onload = function(){
+            criaMosquito = setInterval(function(){randomizaPosicao()},temporizador)
+        }
+    </script>
+    <script src="scripts/jogo.js"></script>
+</body>
+</html>

@@ -1,0 +1,1049 @@
+CAPÍTULO 6:
+Crie uma pasta dentro de pages: admin
+Dentro crie o arquivo admin.jsx:
+const Admin = () => {
+    return(
+        <main>
+            <div className="container">
+                <h2 className="titulo-pagina">Administração</h2>
+            </div>
+        </main> 
+    )
+}
+
+export default Admin
+----------------------------------------------------------------------------
+Dentro do componente Cabeçalho:
+Acrescentar abaixo da linha:<ul className="menu-itens">
+          
+<li>
+    <Link to="/admin" className="menu-item menu-item--entrar">Admin</Link>
+</li>
+----------------------------------------------------------------------------
+Dentro de APP.jsx:
+Importar o componente: import Admin from './pages/admin/Admin';
+Colocar a Rota: <Route path='/admin' element={<Admin />} />
+----------------------------------------------------------------------------
+Dentro de Pages >> admin >> criar a pasta componentes:
+Dentro criar um novo arquivo:ListaCatAdmin.jsx:
+
+import { useEffect, useState } from "react";
+import { busca } from "../../../api";
+import { Link } from "react-router-dom";
+import "../components/tabela.css";
+
+const ListaCatAdmin = () => {
+    const [categorias, setCategorias] = useState([])
+
+    useEffect(() => {
+        busca(`/categorias`, setCategorias)
+    }, [])
+
+    return (
+        <section className="container">
+            <table className="tabela">
+                <thead>
+                    <tr>
+                        <th className="tabela__coluna--g">Categoria</th>
+                        <th colSpan="3" className="tabela__coluna--p tabela__alinhamento--direita">
+                            <Link to="/admin/NovaCategoria">
+                                Nova Categoria
+                            </Link>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        categorias.map((categoria) => (
+                            <tr key={categoria.id}>
+                                <td className="tabela__coluna--m">
+                                    <Link to={`/categoria/${categoria.id}`}>{categoria.nome}</Link>
+                                </td>
+                                <td colSpan="2" className="tabela__coluna--p tabela__alinhamento--direita">
+                                    {/* Botão EDITAR */}
+
+                                    {/* Botão EXCLUIR */}
+
+                                </td>
+                            </tr>
+                        ))
+                    }
+                </tbody>
+            </table>
+        </section>
+    )
+}
+
+export default ListaCatAdmin
+----------------------------------------------------------------------------
+Na mesma pasta criar o arquivo: tabela.css:
+.tabela {
+    margin-top: 2.25rem;
+
+    width: 100%;
+
+    background-color: var(--cor-contraste-claro);
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+
+    border-collapse: initial;
+
+    text-align: left;
+}
+
+.tabela td:first-of-type, .tabela th:first-of-type {
+    padding-left: 1.75rem;
+}
+
+.tabela td:last-of-type, .tabela th:last-of-type {
+    padding-right: 1.75rem;
+}
+
+.tabela thead {
+    font-size: var(--fonte-tamanho-tabela-cabecalho);
+}
+
+.tabela th {
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+    border-bottom: 1px solid var(--cor-secundaria);
+}
+
+.tabela td {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.tabela__alinhamento--direita {
+    text-align: right;
+}
+
+.tabela__coluna--p {
+    width: 20%;
+}
+
+.tabela__coluna--m {
+    width: 25%;
+}
+
+.tabela__coluna--g {
+    width: 50%;
+}
+
+.tabela tr:last-of-type td {
+    padding-bottom: 1.75rem;
+}
+
+.tabela__botoes-controle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.tabela__botoes-controle li:first-of-type {
+    margin-right: 2.25rem;
+}
+----------------------------------------------------------------------------
+No Arquivo Admin.jsx:
+Importar o arquivo ListaCatAdmin.jsx: 
+import ListaCatAdmin from "./components/ListaCatAdmin"
+Colocar abaixo da div: <ListaCatAdmin />
+----------------------------------------------------------------------------
+Abrir outro terminal e instalar o Framework MUI:
+*Antes parar o servidor
+npm install @mui/material @emotion/react @emotion/styled
+----------------------------------------------------------------------------
+Agora no arquivo ListaCatAdmin:
+Importar botão do Framework: import { Button } from "@mui/material";
+
+Dentro de link:
+                            <Link to="/admin/NovaCategoria">
+                                <Button 
+                                variant="contained" 
+                                // fullWidth 
+                                sx={ { marginTop: 1}}
+                                // Usa o sistema de estilização SX
+                                // Verificar documentação do MUI
+                                >
+                                    Nova Categoria
+                                </Button>
+                            </Link>
+----------------------------------------------------------------------------
+Como vai ficar o arquivo:
+import { useEffect, useState } from "react";
+import { busca } from "../../../api";
+import { Link } from "react-router-dom";
+import "../components/tabela.css";
+import { Button } from "@mui/material";
+
+const ListaCatAdmin = () => {
+    const [categorias, setCategorias] = useState([])
+
+    useEffect(() => {
+        busca(`/categorias`, setCategorias)
+    }, [])
+
+    return (
+        <section className="container">
+            <table className="tabela">
+                <thead>
+                    <tr>
+                        <th className="tabela__coluna--g">Categoria</th>
+                        <th colSpan="3" className="tabela__coluna--p tabela__alinhamento--direita">
+                            <Link to="/admin/NovaCategoria">
+                                <Button
+                                    variant="outlined"
+                                    // fullWidth 
+                                    sx={{ marginTop: 1 }}
+                                // Usa o sistema de estilização SX
+                                // Verificar documentação do MUI
+                                >
+                                    Nova Categoria
+                                </Button>
+                            </Link>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        categorias.map((categoria) => (
+                            <tr key={categoria.id}>
+                                <td className="tabela__coluna--m">
+                                    <Link to={`/categoria/${categoria.id}`}>{categoria.nome}</Link>
+                                </td>
+                                <td colSpan="2" className="tabela__coluna--p tabela__alinhamento--direita">
+                                    {/* Botão EDITAR */}
+                                    <Link
+                                        to="/admin"
+                                        style={{textDecoration:"none"}} 
+                                    >
+                                        <Button
+                                            type="button"
+                                            variant="contained"
+                                            style={{ backgroundColor: "#127a99ff" }}
+                                            sx={{ margin: "0 0.25rem" }}
+                                        // Usa o sistema de estilização SX
+                                        // Verificar documentação do MUI
+                                        >
+                                            Editar
+                                        </Button>
+                                    </Link>
+
+                                    {/* Botão EXCLUIR */}
+                                    <Link
+                                        to="/admin"
+                                        textDecoration="none"
+                                    >
+                                        <Button
+                                            type="button"
+                                            variant="contained"
+                                            color="error"
+                                            sx={{ margin: "0 0.25rem" }}
+                                        // Usa o sistema de estilização SX
+                                        // Verificar documentação do MUI
+                                        >
+                                            Excluir
+                                        </Button>
+                                    </Link>
+
+                                </td>
+                            </tr>
+                        ))
+                    }
+                </tbody>
+            </table>
+        </section>
+    )
+}
+
+export default ListaCatAdmin
+----------------------------------------------------------------------------
+Construir um Form para cadastrar uma nova Categoria:
+
+Criar o arquivo dentro de Pages >> admin >> components >> FormCategoria:
+
+import { Button, TextField } from "@mui/material";
+
+const FormCategoria = () => {
+    
+    return ( 
+        <main className="container flex flex--centro">
+            <article className="cartao post">
+                <h2 className="titulo-pagina">Cadastro de Categorias</h2>
+                <br />
+                <form >
+                    <TextField
+                        label="Categoria"
+                        variant="filled"
+                        fullWidth
+                        required
+                    />
+                    <br />
+                    <Button
+                        type="submit"
+                        variant="contained"
+                        sx={{ marginTop: 1 }}
+                        fullWidth
+                    >
+                        Cadastrar
+                    </Button>
+                </form>
+            </article>
+        </main>
+     );
+}
+ 
+export default FormCategoria;
+----------------------------------------------------------------------------
+Importar o componente: import FormCategoria from './pages/admin/components/FormCategoria';
+
+Colocar rota: 
+<Route path='admin/novacategoria' element={<FormCategoria />} />
+----------------------------------------------------------------------------
+FormCategoria ficará:
+import { Button, TextField } from "@mui/material";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { api } from "../../../api";
+
+const FormCategoria = () => {
+        const navigate = useNavigate();
+    const [nomeCategoria, setNomeCategoria] = useState('');
+
+    const CadCategoria = (evento) => {
+        evento.preventDefault();
+
+        // Lógica para POST na API
+        api.post(`/categorias`, {
+            id: nomeCategoria, // (JSON-Server usa 'id', mas o ideal seria a API gerar o ID)
+            nome: nomeCategoria,
+            subcategorias: []
+        })
+            .then(() => {
+                alert("Cadastro realizado com Sucesso!");
+                navigate('/admin'); // ATUALIZAÇÃO: Navega para /admin
+            });
+    }
+    return ( 
+        <main className="container flex flex--centro">
+            <article className="cartao post">
+                <h2 className="titulo-pagina">Cadastro de Categorias</h2>
+                <br />
+                <form onSubmit={CadCategoria} >
+                    <TextField
+                        value ={nomeCategoria}  
+                        onChange={evento => setNomeCategoria(evento.target.value)}
+                        label="Categoria"
+                        variant="filled"
+                        fullWidth
+                        required
+                    />
+                    <br />
+                    <Button
+                        type="submit"
+                        variant="contained"
+                        sx={{ marginTop: 1 }}
+                        fullWidth
+                    >
+                        Cadastrar
+                    </Button>
+                </form>
+            </article>
+        </main>
+     );
+}
+ 
+export default FormCategoria;
+----------------------------------------------------------------------------
+DELETAR CATEGORIA:
+Em ListaCadAdmin.jsx colocar: Após o UseEffect: 
+// Função para deletar a categoria
+    const excluir = (CategoriaDel) => {
+        api.delete(`categorias/${CategoriaDel.id}/`)
+            .then(() => {
+            // Remove a categoria do estado local para atualizar a UI
+            const listaCategorias = categorias
+                .filter(categoria => categoria.id !== CategoriaDel.id);
+            setCategorias([...listaCategorias]);
+        });
+    }
+----------------------------------------------------------------------------
+Ainda dentro do ListaCadAdmin.jsx:
+onClick={() => excluir(categoria)} no Botão excluir 
+
+E estava faltando importar a API: 
+import { api, busca } from "../../../api";
+
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+
+CAPÍTULO 7:
+
+No arquivo ListaCadAdmin.jsx: No botão editar:
+to={`/admin/${categoria.id}`}
+----------------------------------------------------------------------------
+Em App.jsx:
+<Route path='admin/:id' element={<FormCategoria />} />
+----------------------------------------------------------------------------
+Em FormCategoria.jsx:
+Colocamos a lógica para receber o ID e poder deixar o Form de acordo se será para Editar ou Incluir um novo:
+
+import { Button, TextField } from "@mui/material";
+import { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { api } from "../../../api";
+
+const FormCategoria = () => {
+    const navigate = useNavigate();
+    const { id } = useParams(); // Captura o ID da URL
+    const [nomeCategoria, setNomeCategoria] = useState('');
+
+    // Efeito para buscar dados se estiver em modo de edição
+    useEffect(() => {
+        if (id) {
+            api.get(`categorias/${id}/`)
+                .then(resposta => setNomeCategoria(resposta.data.nome));
+        }
+    }, [id]); // Re-executa se o ID mudar
+
+    const CadCategoria = (evento) => {
+        evento.preventDefault();
+
+        // Lógica para POST na API
+        api.post(`/categorias`, {
+            id: nomeCategoria, // (JSON-Server usa 'id', mas o ideal seria a API gerar o ID)
+            nome: nomeCategoria,
+            subcategorias: []
+        })
+            .then(() => {
+                alert("Gravado com Sucesso!");
+                navigate('/admin'); // ATUALIZAÇÃO: Navega para /admin
+            });
+    }
+    return (
+        <main className="container flex flex--centro">
+            <article className="cartao post">
+                <h2 className="titulo-pagina">
+                    {/* título dinâmico */}
+                    {id ? 'Editar Categoria' : 'Cadastro de Categorias'}
+                </h2>
+                <br />
+                <form onSubmit={CadCategoria} >
+                    <TextField
+                        value={nomeCategoria}
+                        onChange={evento => setNomeCategoria(evento.target.value)}
+                        label="Categoria"
+                        variant="filled"
+                        fullWidth
+                        required
+                    />
+                    <br />
+                    <Button
+                        type="submit"
+                        variant="contained"
+                        sx={{ marginTop: 1 }}
+                        fullWidth
+                    >
+                        {id ? 'Salvar Alterações' : 'Cadastrar Categoria'}
+                    </Button>
+                </form>
+            </article>
+        </main>
+    );
+}
+
+export default FormCategoria;
+----------------------------------------------------------------------------
+Agora para gravar na API e ter as duas opções o arquivo em definitivo, tanto edição quanto cadastro:
+
+import { Button, TextField } from "@mui/material";
+import { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { api } from "../../../api";
+
+const FormCategoria = () => {
+    const navigate = useNavigate();
+    const { id } = useParams(); // Captura o ID da URL
+    const [nomeCategoria, setNomeCategoria] = useState('');
+
+    // Efeito para buscar dados se estiver em modo de edição
+    useEffect(() => {
+        if (id) {
+            api.get(`categorias/${id}/`)
+                .then(resposta => setNomeCategoria(resposta.data.nome));
+        }
+    }, [id]); // Re-executa se o ID mudar
+
+    const CadCategoria = (evento) => {
+        evento.preventDefault();
+
+        if (id) {
+            // Modo Edição: Lógica para PUT na API
+            api.put(`/categorias/${id}/`, {
+                id: nomeCategoria,
+                nome: nomeCategoria,
+                subcategorias: []
+            })
+                .then(() => {   
+                    alert("Alterado com Sucesso!");
+                    navigate('/admin'); // ATUALIZAÇÃO: Navega para /admin
+                });
+            } else {
+
+        // Modo Cadastro: Lógica para POST na API
+        api.post(`/categorias`, {
+            id: nomeCategoria, // (JSON-Server usa 'id', mas o ideal seria a API gerar o ID)
+            nome: nomeCategoria,
+            subcategorias: []
+        })
+            .then(() => {
+                alert("Cadastrado com Sucesso!");
+                navigate('/admin'); // ATUALIZAÇÃO: Navega para /admin
+            });
+    }
+}
+    return (
+        <main className="container flex flex--centro">
+            <article className="cartao post">
+                <h2 className="titulo-pagina">
+                    {/* título dinâmico */}
+                    {id ? 'Editar Categoria' : 'Cadastro de Categorias'}
+                </h2>
+                <br />
+                <form onSubmit={CadCategoria} >
+                    <TextField
+                        value={nomeCategoria}
+                        onChange={evento => setNomeCategoria(evento.target.value)}
+                        label="Categoria"
+                        variant="filled"
+                        fullWidth
+                        required
+                    />
+                    <br />
+                    <Button
+                        type="submit"
+                        variant="contained"
+                        sx={{ marginTop: 1 }}
+                        fullWidth
+                    >
+                        {id ? 'Salvar Alterações' : 'Cadastrar Categoria'}
+                    </Button>
+                </form>
+            </article>
+        </main>
+    );
+}
+
+export default FormCategoria;
+
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+
+CAPÍTULO 8 (CRUD da SubCategoria)
+Copiar a page Categoria para pasta admin e renomear para CatAdmin.jsx
+Arrumar as importações
+-----------------------------------------------------------------------------
+Em ListaCatAdmin.jsx
+Duplicar o botão excluir:
+ {/* Botão SubCategoria */}
+                                    <Link
+                                        to={`/admin/categoria/${categoria.id}`}
+                                        textDecoration="none"
+                                    >
+                                        <Button
+                                            type="button"
+                                            variant="contained"
+                                            color="primary"
+                                            sx={{ margin: "0 0.25rem" }}
+                                        // Usa o sistema de estilização SX
+                                        // Verificar documentação do MUI
+                                        >
+                                            SubCategoria
+                                        </Button>
+                                    </Link>
+-----------------------------------------------------------------------------
+De volta em CatAdmin.jsx:
+import { Button } from '@mui/material';
+import { useEffect, useState } from 'react';
+import { useParams, Link, Outlet } from 'react-router-dom';
+import { busca } from '../../api';
+import '../../assets/css/blog.css';
+import ListaCatAdmin from './components/ListaCatAdmin';
+
+const CatAdmin = () => {
+    // Captura o 'id' da categoria (ex: "bem-estar", "comportamento")
+    const { id } = useParams();
+    const [subcategorias, setSubCategorias] = useState([]);
+
+    // Busca as subcategorias da categoria principal
+    useEffect(() => {
+        busca(`/categorias/${id}`, (categoria) => {
+            setSubCategorias(categoria.subcategorias);
+        })
+    }, [id]);
+
+  return (
+    <>
+      <div className="container">
+        <h2 className="titulo-pagina">Administração</h2>
+      </div>
+      <div className='container'>
+        <table className="tabela">
+          <thead>
+            <tr>
+              <th colSpan="3" className="tabela__coluna--g">
+                SubCategoria: <span className='cartao__titulo'>{id}</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr> {
+              subcategorias.map((subcategoria) => (
+                <td className="tabela__coluna--m" key={subcategoria.id}>
+                  {subcategoria}
+                </td>
+              ))
+            }
+              <td>
+                <Link to={`/admin/sub/${id}`}>
+                  <Button
+                    type="button"
+                    variant="contained"
+                    fullWidth
+                    sx={{ marginTop: 1 }}
+                  >
+                    Editar SubCategorias
+                  </Button>
+                </Link>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <ListaCatAdmin />
+    </>
+  )
+}
+
+export default CatAdmin;
+---------------------------------------------------------------------------------
+Agora só falta colocar as rotas no App.Jsx:
+Importar: import CatAdmin from './pages/admin/CatAdmin';
+Colocar Rota: <Route path='admin/categoria/:id' element={<CatAdmin />} />
+---------------------------------------------------------------------------------
+Adicionar FormSubCategoria.jsx dentro de Pages >> admin >> componentes >>
+
+import { useEffect, useState } from "react";
+import { Button, TextField } from "@mui/material";
+import { api, busca } from "../../../api";
+import { useParams, useNavigate } from "react-router-dom";
+
+const FormSubCategoria = () => {
+    const { id } = useParams();
+    const navigate = useNavigate();
+
+    const [nomeCategoria, setNomeCategoria] = useState('');
+    const [subcategorias, setSubCategorias] = useState([]);
+
+    // (Estados para os inputs)
+    const [subCategoria1, setSubCategoria1] = useState('');
+    const [subCategoria2, setSubCategoria2] = useState('');
+
+    // (Lógica de busca e salvamento será adicionada na Atividade 4)
+    // Efeito para buscar o nome da categoria e as subcategorias existentes
+    useEffect(() => {
+        if (id) {
+            api.get(`categorias/${id}`)
+                .then((resposta) => {
+                    setNomeCategoria(resposta.data.nome);
+                    setSubCategorias(resposta.data.subcategorias);
+                    // Pré-preenche os campos (se existirem)
+                    if (resposta.data.subcategorias.length > 0) {
+                        setSubCategoria1(resposta.data.subcategorias[0] || '');
+                        setSubCategoria2(resposta.data.subcategorias[1] || '');
+                    }
+                });
+        }
+    }, [id]);
+
+    // Função de salvamento (PUT)
+    const CadSubCategoria = (evento) => {
+        evento.preventDefault();
+        if (id) {
+            // Filtra subcategorias vazias antes de salvar
+            const subcategoriasFinais = [subCategoria1, subCategoria2].filter(sub => sub.trim() !== '');
+
+            api.put(`/categorias/${id}/`, {
+                id: nomeCategoria, // O doc passa o nome da categoria como ID
+                nome: nomeCategoria,
+                subcategorias: subcategoriasFinais
+            })
+                .then(() => {
+                    alert("Sucesso na atualização!");
+                    navigate('/admin');
+                });
+        }
+    }
+
+    return (
+        <main className="container flex flex--centro">
+            <article className="cartao post">
+                <h3 className="titulo-pagina">
+                    Categoria: {id} / Subcategorias:
+                </h3>
+                {/* Exibe subcategorias atuais */}
+                {
+                    subcategorias.map((subcategoria) => (
+                        <p key={subcategoria.id}>- {subcategoria}</p>
+                    ))
+                }
+                <br />
+                <form onSubmit={CadSubCategoria}>
+                    <TextField
+                        value={subCategoria1}
+                        onChange={(evento) => setSubCategoria1(evento.target.value)}
+                        label="Subcategoria 1"
+                        variant="filled"
+                        fullWidth
+                        required
+                    />
+                    <br />
+                    <TextField
+                        value={subCategoria2}
+                        onChange={(evento) => setSubCategoria2(evento.target.value)}
+                        label="Subcategoria 2"
+                        variant="filled"
+                        fullWidth
+                        sx={{ marginTop: 2 }}
+                    />
+                    <br />
+                    <Button
+                        type="submit"
+                        variant="contained"
+                        sx={{ marginTop: 2 }}
+                        fullWidth
+                    >
+                        Salvar
+                    </Button>
+                </form>
+            </article>
+        </main>
+    );
+};
+
+export default FormSubCategoria;
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Extra:
+Em vite.config.js:
+
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname,'./src'),
+       '@pages': path.resolve(__dirname,'./src/pages/'),
+    }
+  }
+})
+
+Conseguindo importar de forma resumida:
+import Categoria from '@pages/Categoria';
+
+Verificar sobre Barril de importações;
+
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+
+CAPÍTULO 9
+
+Colocar CachorrinhoAdmin dentro da Pasta img
+----------------------------------------------------------------------------
+
+Dentro de pages >> admin >> components >> NavAdmin.jsx
+
+-----------------------------------------------------------------------------
+
+Na Raiz do admin crie o arquivo AdminLayout:
+
+-----------------------------------------------------------------------------
+
+Depois dentro de App.Jsx fazer a importação e a Rota aninhada;
+import AdminLayout from './pages/admin/AdminLayout';
+       
+        <Route path='/admin/' element={<AdminLayout />}>
+          <Route index element={<Admin />} />
+        </Route>
+
+------------------------------------------------------------------------------
+Comentar em CadAdmin e Admin:
+            <div className="container">
+                <h2 className="titulo-pagina">Administração</h2>
+            </div>
+------------------------------------------------------------------------------
+Dentro de Admin >> components >> crie o arquivo ListaPostAdmin.jsx
+// petshop/src/paginas/admin/components/ListaPostAdmin.jsx
+import { Button } from "@mui/material";
+import { useEffect, useState } from "react";
+import { api, busca } from "../../../api/api";
+import { Link } from "react-router-dom";
+
+const ListaPostAdmin = () => {
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        busca(`/posts`, setPosts);
+    }, []);
+
+    const excluir = (PostDel) => {
+        api.delete(`posts/${PostDel.id}/`).then(() => {
+            const listaPosts = posts.filter((post) => post.id !== PostDel.id);
+            setPosts([...listaPosts]);
+        });
+    };
+
+    return (
+        <section className="container">
+            <table className="tabela">
+                <thead>
+                    <tr>
+                        <th className="tabela__coluna--p">Categoria</th>
+                        <th className="tabela__coluna--m">Título</th>
+                        <th className="tabela__coluna--m">Posts</th>
+                        <th className="tabela__coluna--p tabela__alinhamento--direita">
+                            <Link
+                                to="/admin/posts/NovoPost"
+                            >
+                                <Button type="button" variant="contained" fullWidth>
+                                    Novo Post
+                                </Button>
+                            </Link>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {posts.map((post) => (
+                        <tr key={post.id}>
+                            <td>{post.categoria}</td>
+                            <td>
+                                <Link
+                                    to={`/posts/${post.id}`}>{post.title}
+                                </Link>
+                            </td>
+                            <td>{post.metadescription}</td>
+                            <td>
+                                <Link
+                                    to={`/admin/posts/${post.id}`}
+                                    style={{ textDecoration: 'none' }}
+                                >
+                                    <Button
+                                        type="button"
+                                        variant="contained"
+                                        color="warning"
+                                        sx={{ margin: "0.25rem 0" }}
+                                        fullWidth
+                                    >
+                                        Editar
+                                    </Button>
+                                </Link>
+                                <br />
+                                <Button
+                                    type="button"
+                                    variant="contained"
+                                    color="error"
+                                    sx={{ margin: "0.25rem 0" }}
+                                    onClick={() => excluir(post)}
+                                    fullWidth
+                                >
+                                    Excluir
+                                </Button>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </section>
+    );
+};
+
+export default ListaPostAdmin;
+----------------------------------------------------------------------------
+Criar o arquivo FormPost.jsx dentro de Admin >> Components:
+import { Box, Button, FormControl, InputLabel, MenuItem, Select, TextField } from "@mui/material";
+import { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { api } from "../../../api/api";
+import "../components/textarea.css";
+
+const FormPost = () => {
+    const navigate = useNavigate();
+    const { id } = useParams();
+
+    const [title, setTitle] = useState("");
+    const [metadescription, setMetadescription] = useState("");
+    const [body, setBody] = useState("");
+    const [categoria, setCategoria] = useState("");
+
+    const [categorias, setCategorias] = useState([]);
+
+    // Busca as categorias para o Select
+    useEffect(() => {
+        api.get("categorias/")
+            .then((resposta) => setCategorias(resposta.data));
+    }, []);
+
+    // Efeito para buscar dados do post (se estiver em modo Edição)
+    useEffect(() => {
+        if (id) {
+            // Otimizado para uma única chamada de API
+            api.get(`posts/${id}/`)
+                .then((resposta) => {
+                    setTitle(resposta.data.title);
+                    setMetadescription(resposta.data.metadescription);
+                    setBody(resposta.data.body);
+                    setCategoria(resposta.data.categoria);
+                });
+        }
+    }, [id]); // Depende do ID 
+
+    // Função de Submit (PUT ou POST)
+    const CadPost = (evento) => { 
+        evento.preventDefault(); 
+
+        const postData = {
+            title: title,
+            metadescription: metadescription,
+            body: body,
+            categoria: categoria
+        };
+
+        if (id) {
+            // Modo Edição (PUT) 
+            api.put(`/posts/${id}`, postData)
+                .then(() => {
+                    alert("Sucesso na atualização!"); 
+                    navigate("/admin/posts"); 
+                });
+        } else {
+            // Modo Cadastro (POST) 
+            api.post(`/posts`, postData)
+                .then(() => {
+                    alert("Cadastro realizado com Sucesso!"); 
+                    navigate("/admin/posts/"); 
+                });
+        }
+    };
+
+    return (
+        <>
+            <main className="container flex flex--centro">
+                <article className="cartao post">
+                    <h2 className="titulo-pagina">Formulário de Posts</h2>
+                    <Box
+                        sx={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            flexGrow: 1,
+                        }}
+                    >
+                        <Box sx={{ width: "100%" }}>
+                            <form onSubmit={CadPost}>
+                                <TextField
+                                    value={title}
+                                    onChange={(evento) => setTitle(evento.target.value)}
+                                    label="Título"
+                                    variant="filled"
+                                    fullWidth
+                                    required
+                                    margin="dense"
+                                />
+                                <TextField
+                                    value={metadescription}
+                                    onChange={(evento) => setMetadescription(evento.target.value)}
+                                    label="Subtítulo"
+                                    variant="filled"
+                                    fullWidth
+                                    required
+                                    margin="dense"
+                                />
+                                <br />
+                                <br />
+                                <label className="" for="descricao">
+                                    Descrição
+                                </label>
+                                <br />
+                                <textarea
+                                    className="textarea filled"
+                                    name="descricao"
+                                    id="descricao"
+                                    placeholder="Descrição"
+                                    rows="4"
+                                    value={body}
+                                    onChange={(evento) => setBody(evento.target.value)}
+                                ></textarea>
+                                <FormControl margin="dense" fullWidth>
+                                    <InputLabel id="select-categoria">Categoria</InputLabel>
+                                    <Select
+                                        labelId="select-categoria"
+                                        value={categoria}
+                                        onChange={(evento) => setCategoria(evento.target.value)}
+                                    >
+                                        {categorias.map((categoria) => (
+                                            <MenuItem key={categoria.id} value={categoria.id}>
+                                                {categoria.nome}
+                                            </MenuItem>
+                                        ))}
+                                    </Select>{" "}
+                                </FormControl>
+
+                                <br />
+
+                                <Button
+                                    sx={{ marginTop: 1 }}
+                                    type="submit"
+                                    fullWidth
+                                    variant="contained"
+                                >
+                                    Salvar
+                                </Button>
+                            </form>
+                        </Box>
+                    </Box>
+                </article>
+            </main>
+        </>
+    );
+};
+
+export default FormPost;
+--------------------------------------------------------------------------------
+Dentro de Pages criar o arquivo PostAdmin.jsx:
+import '../../assets/css/blog.css';
+import ListaPostAdmin from './components/ListaPostAdmin';
+
+const PostAdmin = () => {
+    
+    return (
+        <>
+            <ListaPostAdmin />
+        </>
+    )
+}
+
+export default PostAdmin
+----------------------------------------------------------------------------------
+Importe o arquivo PostAdmin.jsx dentro do App.Jsx:
+import PostAdmin from './pages/PostAdmin';
+
+E criar a rota aninhada:
+        <Route path='/admin/' element={<AdminLayout />}>
+          <Route index element={<Admin />} />
+          <Route path='posts' element={<PostAdmin />}/>
+        </Route>
+
+Lembrando de corrigir os Arquivos PostAdmin e ListaPostAdmin que estava com os imports com caminho errado;

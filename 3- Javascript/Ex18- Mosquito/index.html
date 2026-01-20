@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Over!</title>
+    <link rel="stylesheet" href="../Ex18- Mosquito/css/style.css"></head>
+</head>
+<body>.
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="flex">
+                    <img src="imagens/game.png" alt="Game Over!">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="flex">
+                    <select class="combo" id="combo">
+                        <option class="selecione" value="0">-------------</option>
+                        <option class="facil" value="facil">Fácil</option>
+                        <option class="normal" value="normal">Normal</option>
+                        <option class="dificil" value="dificil">Difícil</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="flex">
+                    <button class="btn_iniciar" type="button" onclick="iniciar()">Começar</button>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <script src="scripts/jogo.js"></script>  
+</body>
+</html>

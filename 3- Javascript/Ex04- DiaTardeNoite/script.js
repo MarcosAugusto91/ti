@@ -6,10 +6,10 @@ function carregar(){
     var img = window.document.getElementById('imagem')
     var corpo = window.document.getElementById('corpo')
 
-    hora=13;
+    hora=16;
 
     if (hora >= 0 && hora <= 5) {
-        horas.innerText = `Boa madrugada, agora são ${hora} hora ${minuto} min!`
+        horas.innerHTML = `Boa madrugada, agora <strong>são</strong> ${hora} hora ${minuto} min!`
         img.src = 'madrugada.jpg'
         corpo.style.backgroundColor = '#20100D'
     } else if (hora < 12) {
