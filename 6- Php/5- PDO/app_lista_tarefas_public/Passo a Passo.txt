@@ -1,0 +1,22 @@
+1- Criar o diretório app_lista_tarefas fora do diretório público;
+2- Dentro criar o arquivo tarefa.model.php
+3- Criação da classe tarefa:
+    class Tarefa{
+        private $id, $id_status, $tarefa, $data_cadastro;
+    
+        public function __get($atributo){
+            return $this->$atributo;
+        }
+
+        public function __set($atributo, $valor){
+            $this->$atributo = $valor;
+        }
+        
+    }
+4- Criar a classe tarefaService: tarefa.service.php na pasta cima: colocando os métodos para realizar o CRUD;
+
+5- Criar o arquivo conexão tamém na pasta cima;
+
+6- No script nova tarefa.php no form colocar o método post e apontar ele para o script tarefa.controller.php. Definir também o Name para os campos que serão preenchidos; Dentro da pasta cima criar também o arquivo tarefa_controller.php o de dentro vai chamar o de cima com require.
+
+7- Inserindo registros no banco:
