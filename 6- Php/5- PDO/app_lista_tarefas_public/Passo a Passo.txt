@@ -19,4 +19,13 @@
 
 6- No script nova tarefa.php no form colocar o método post e apontar ele para o script tarefa.controller.php. Definir também o Name para os campos que serão preenchidos; Dentro da pasta cima criar também o arquivo tarefa_controller.php o de dentro vai chamar o de cima com require.
 
-7- Inserindo registros no banco:
+7- Inserindo registros no banco: No tarefa_controller.php no diretório cima vamos fazer require dos outros scripts que estão na pasta cima, porém como a chamada virá do tarefa_controller.php do diretório publico o caminho do require será relativo a ele e não do cima;
+*****
+
+8- Retornar mensagem avisando que o registro foi feito com sucesso;
+
+9- Começar a fazer a listagem das tarefas, trazendo os dados do banco para a aplicação; Primeiro Refatoring;
+
+10- Construir a função recuperar para trazer os dados para página todas as tarefas, o mesmo processo pode ser reproduzido na página index no final filtrando pelo status 'pendente';
+
+11-
