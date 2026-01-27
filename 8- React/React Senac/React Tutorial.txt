@@ -1,0 +1,30 @@
+React
+*Biblioteca Javascript
+*SPA (Single Page Application) -> Requisições assíncronas sem o recarregamento da página;
+*A arquitetura do React é baseada em componentes; Cabeçalho, Corpo, Rodapé:
+Vantagem você pode reutilizar o componente, facilita na manutenção;
+*Pode ser inserido em uma aplicação ou podemos criar a aplicação apenas com React;
+*É mantido pelo Meta;
+
+Node.Js:
+*É uma runtime de Javascript
+*Ou seja, uma biblioteca utilizada por um compilador durante a execução do programa, oque ajuda no desempenho da nossa página;
+*Construída na V8 engine (escrita em C++) da Google;
+*Possibilitando criar softwares em JS no lado do servidor;
+*Temos então um código JS rodando em C++ para garantir alta performance;
+
+NPM
+Gerenciador de pacotes do Node; (Php: Compose)
+Vamos poder utilizar bibliotecas de terceiro;
+Executar determinados scripts no nosso programa;
+Dificilmente um software em Node.js não utiliza o npm;
+Os módulos externos ficam numa pasta chamada node_modules;
+Ela deve ser descartável, ou seja, a cada instalação do projeto baixamos todos os pacotes novamente;
+
+1- Instalar o Node: https://nodejs.org/pt-br;
+Vamos baixar um arquivo .msi, que é o instalador;
+É interessante saber que o npm vem junto do Node;
+Após a instalação podemos testar o Node e o npm em um terminal, para validar a instalação;
+Note que os binários precisam estar no PATH, este passo está na instalação do Node.
+*Baixe a versão LTS;
+*Instalar;
