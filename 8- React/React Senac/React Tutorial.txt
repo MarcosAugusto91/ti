@@ -28,3 +28,70 @@ Após a instalação podemos testar o Node e o npm em um terminal, para validar 
 Note que os binários precisam estar no PATH, este passo está na instalação do Node.
 *Baixe a versão LTS;
 *Instalar;
+*Abra o PowerShell para que possamos testar se a instalação funcionou:
+node -v
+npm -v
+Caso não funcione o comando npm no powershell, você pode executar o seguinte comando e aprovar:
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+Para ver as variáveis de sistema: Pesquise no iniciar por environment e abra as variáveis de sistema;
+
+2- Instalar o VSCode, provavelmente já deve estar instalado nas máquinas, mas, caso não esteja:
+https://code.visualstudio.com/Download
+Ele tem algumas vantagens em trabalhar com Node também, como o terminal integrado;
+Além de ser atualizado constantemente e mantido pela Microsoft;
+Muito utilizado no ambiente corporativo;
+Instale a extensão: ES7+ React/Redux/React-Native snippets
+
+Emmet para React:
+*Emmet é uma extensao nativa do VS Code que a ajua a escrever Html mais rápido;
+*Porém ela não vem configurada para o React;
+*Temos que acessar File > Settings > Extensions e procurar por Emmet;
+*Lá vamos incluir a linguagem: javascript - javascriptreact;
+
+Outras configurações e extensões:
+Portugues;
+Prettier - Code formatter
+Duplicar; ctrl+d
+Expandir com abreviação: ctrl+alt+enter
+
+Para finalizar no menu superior procure por terminal  -> novo terminal;
+
+3- NPX é um executor de scripts do node;
+
+4- Criando uma aplicação
+4.1: Comando: npm create vite@latest 
+4.2: Aperte y para confirmar e em seguida coloque o nome do projeto e pressione enter
+*Não utilize letras maiúsculas no nome do app
+4.3: Selecione a opção React
+4.4: Selecione a opção Javascript
+4.5: Na opção Rolldown marque no e enter
+4.6: Selecione Yes e pressione enter
+4.7: Acesse a pasta do projeto criado: cd nomeDoProjeto
+4.8: Instale o npm: npm install; Cria a pasta node_modules
+4.9: Iniciar projetos: npm run dev
+
+5- Estrutura do React:
+node_modules: Onde ficam as dependências do projeto;
+public: Assets estáticos e Html de inicialização;
+pasta src: Onde vamos programas os nossos apps;
+index.html: Arquivo responsável por receber a requisição do usuário, repare que tem uma div com id:'root' onde o javascript adiciona o React ali dentro;
+src/index.js: Arquivo de inicialização do React; (Hoje foi atualizado para src/main.js e ele que será inserido na div root;
+src/App.js: Componente principal da aplicação; Onde vamos programar a tela inicial e demais coisas. Ela é importada em main.js que é renderizado no index.html;
+
+Dicas importantes:
+Sempre programe os códigos das aulas;
+Não pule etapas;
+Faça todos os exercícios;
+Tire dúvidas;
+Ensine, ajudar um colega com dificuldade não ajuda somente quem não entendeu algum assunto, ensinar ajuda MUITO à apreender;
+Entender primeiro, executar depois;
+Praticar para revisar e fixar o conteúdo;
+Repositórios:
+https://github.com/matheusbattisti/curso_react/tree/main/1_INTRO
+https://github.com/marcosaugusto91
+
+Exercício 1: 
+1- Acesso app.js e adicione mais algum elemento Html da sua Escolha;
+2- Crie uma regra de estilo em app.css que altere a cor do seu elemento;
+3- Vá até o arquivo index.html e altere o título da aplicação na meta tag;
+
