@@ -28,4 +28,10 @@
 
 10- Construir a função recuperar para trazer os dados para página todas as tarefas, o mesmo processo pode ser reproduzido na página index no final filtrando pelo status 'pendente';
 
-11-
+11- Criar a edição na parte do front end, no arquivo todas_tarefas.php buscamos o botão de edição e colocamos o onclick nele;
+
+12- Com os dados recebidos em Tarefa controller basta instanciar um novo objeto que fará a conexão com o banco e dentro de tarefa service fazer a function que autualizará no banco de acordo com a Query criada;
+
+13- Para remover basta fazer o mesmo processo que fez para atualizar a tarefa, mudando a query para um delete. O processo é mais simples.
+
+14- Para finalizar basta fazer mais uma vez o mesmo processo agora clicando no último ícone para mudar o status de pendente para realizado.

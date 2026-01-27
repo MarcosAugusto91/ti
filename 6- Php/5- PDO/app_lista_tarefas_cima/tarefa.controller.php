@@ -21,5 +21,40 @@
 		$conexao = new Conexao();
 		$tarefaService = new TarefaService($conexao, $tarefa);
 		$tarefas = $tarefaService->recuperar();
+	} 
+	else if ($acao == 'atualizar'){
+		$tarefa = new Tarefa();
+		$tarefa->__set('id', $_POST['id']);
+		$tarefa->__set('tarefa', $_POST['tarefa']);
+
+		$conexao = new Conexao();
+
+		$tarefaService = new TarefaService($conexao, $tarefa);
+		if($tarefaService->atualizar()){
+			header('Location: todas_tarefas.php');
+		}
+	}
+	else if ($acao == 'remover'){
+		$tarefa = new Tarefa();
+		$tarefa->__set('id', $_GET['id']);
+
+		$conexao = new Conexao();
+
+		$tarefaService = new TarefaService($conexao, $tarefa);
+	
+		$tarefaService->remover();
+		header('Location: todas_tarefas.php');
+	}
+	else if ($acao == 'marcarRealizada'){
+		$tarefa = new Tarefa();
+		$tarefa->__set('id', $_GET['id']);
+
+		$conexao = new Conexao();
+
+		$tarefaService = new TarefaService($conexao, $tarefa);
+		$tarefaService->marcarRealizada();
+	
+		// Implementar marcar como realizada
+		header('Location: todas_tarefas.php');
 	}
 ?>

@@ -7,6 +7,14 @@
 		<link rel="stylesheet" href="css/estilo.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function(){
+				let inputNovaTarefa = document.getElementById('nova_tarefa');
+
+				inputNovaTarefa.focus();
+			});
+		</script>
 	</head>
 
 	<body>
@@ -45,7 +53,7 @@
 								<form method="post" action="tarefa.controller.php?acao=inserir">
 									<div class="form-group">
 										<label>Descrição da tarefa:</label>
-										<input name="tarefa" type="text" class="form-control" placeholder="Exemplo: Lavar o carro">
+										<input name="tarefa" type="text" class="form-control" placeholder="Exemplo: Lavar o carro" id="nova_tarefa">
 									</div>
 
 									<button class="btn btn-success">Cadastrar</button>
