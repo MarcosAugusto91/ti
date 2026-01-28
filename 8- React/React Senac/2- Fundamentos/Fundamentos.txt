@@ -1,0 +1,66 @@
+1- Criando um novo componente:
+Dentro de SRC temos a boa prática de criar um diretório chamado components ou componentes; Nele vamos criar componentes para que sejam importados posteriormente;
+1.1- Após isso vamos criar um arquivo dentro dessa pasta com o nome do componente em PascalCase, por exemplo FirstComponent.jsx (Lembrando que a extensão atual é jsx);
+Exemplo: 
+const FirstComponents = () => {
+    return (
+        <div>
+            <h1>Primeiro Componente</h1>
+            <p>Este é o meu primeiro componente React!</p>
+        </div>
+    );
+}
+
+export default FirstComponents;
+
+1.2 Agora basta importar em App.jsx:
+import FirstComponents from './componentes/FirstComponents'
+E utiliza-lo: <FirstComponents />
+
+2- JSX: Slides;
+
+3- Comentários: // ou /* */ no Javascript 
+{ */ Comentário /* } no Jsx
+
+4- Template Expressions: Quando abrimos e fechamos chaves 
+{ código javascript }, dentro podemos inserir códigos em javascript, parecido com o PHP quando usamos <?= código ?>
+Exemplos em TemplateExpressions.jsx
+
+5- Hierarquia de componentes: Podemos reutilizar um componente em diversos lugares, oque ocasiona em usarmos um componente dentro de outro; Exemplos em MyComponent sendo importado em App.jsx e TemplateExpressions.jsx
+
+6- Eventos/Funções:
+Ao criarmos um component podemos colocar um evento no exemplo abaixo repare que ao chamar no onClick está sem parenteses propositalmente pois sem parenteses ele só será executado quando clicarmos, se colocarmos o parenteses ele executa automaticamente uma vez; Outras duas formas de realizar as funções estão no arquivo: Events.jsx
+
+const Events = () => {
+
+const handleMyEvent = () => {
+    console.log("Evento ativado!"); 
+};
+
+return(
+    <div>
+        <div>
+            <button onClick={handleMyEvent}>Clique Aqui!</button>
+        </div>
+    </div>
+);
+
+}
+
+export default Events;
+
+7- Funções de renderização:
+const renderSomething = (x) => {
+    if(x){
+        return <h1>Renderizando isso!</h1>;
+    } else {
+        return <h1>Também pode renderizar isso!</h1>;
+    }   
+};
+
+ {renderSomething(true)}
+ {renderSomething(false)}
+
+Nesse exemplo ao carregarmos o componente Event pelo App, logo de inicio existe a função renderSomething que é chamada no final do script passando parâmetro true ou false, que permite designar caminhos diferentes. Mas, o mais interessante é que a função é executada de fora do JSX(return) com base no parâmetro recebido dentro;
+
+8- Realizar o desafio do slide;
