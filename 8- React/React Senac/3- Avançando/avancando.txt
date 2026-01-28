@@ -1,0 +1,20 @@
+1- Imagens:
+<div>
+        <p>Começando Sessão 3</p>
+        {/* Imagem em Public */}
+        <div>
+          <img src="/bulbassauro.png" alt="Pokemon Bulbassauro" />
+        </div>
+        <div>
+          <img src="/chamander.png" alt="Pokemon Chamander" />          
+        </div>
+
+        {/* Imagem em Assets */}
+        <div>
+          <img src={Squirtle} alt="Pokemon Squirtle" />  
+        </div>
+      </div>   
+   
+2- Hooks:
+Atalho para criar a base do componente automaticamente: rafce
+Utilizando o useState entendendo que o useState atualiza tela e a mudança direto na variável não. Ex: pasta avancando >> components >> ManageData.jsx
