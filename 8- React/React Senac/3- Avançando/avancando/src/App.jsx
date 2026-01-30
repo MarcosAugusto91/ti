@@ -5,9 +5,15 @@ import './App.css'
 import Squirtle from './assets/squirtle2.png'
 import ManageData from './components/ManageData'
 import ManageData2UseState from './components/ManageData2UseState'
+import ListRender from './components/ListRender'
+import CondicionalRender from './components/CondicionalRender'
+import ShowUserName from './components/ShowUserName'
+import CarDetails from './components/CarDetails'
 
 function App() {
   const [count, setCount] = useState(0)
+  const name = "Marcos Augusto"
+  const [userName] = useState("Marcos Augusto de Azevedo")
 
   return (
     <>
@@ -28,7 +34,19 @@ function App() {
 
        {/* <ManageData /> */}
        <ManageData2UseState />
-       
+       <hr />
+       <ListRender/>
+       <hr />
+       <CondicionalRender/>
+       <hr />
+
+       {/* Props */}
+       <ShowUserName name={userName}/>
+       <hr />
+       {/* Destructuring */}
+       <CarDetails brand="Ferrari" km={100000} color="Preto" />
+       <hr />
+
       </div>      
     </>
   )

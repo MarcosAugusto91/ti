@@ -14,7 +14,127 @@
           <img src={Squirtle} alt="Pokemon Squirtle" />  
         </div>
       </div>   
-   
+------------------------------------------------------------------- 
 2- Hooks:
 Atalho para criar a base do componente automaticamente: rafce
 Utilizando o useState entendendo que o useState atualiza tela e a mudança direto na variável não. Ex: pasta avancando >> components >> ManageData.jsx
+-------------------------------------------------------------------
+3- Renderizando Listas:
+Arquivo Listrender.jsx
+
+import {useState} from 'react'
+
+const ListRender = () => {
+const [list] = useState(["Matheus", "João", "Maria", "Ana"])
+const [users] = useState([
+    {id: 1, name: "Matheus", age: 30},
+    {id: 2, name: "João", age: 25},
+    {id: 3, name: "Maria", age: 28},
+    {id: 4, name: "Ana", age: 22},
+])   
+
+  return (
+    <div>
+        <ul>
+            {/* Renderizando Listas */}
+            { list.map((item, i) => (
+              <li key={i}>{item}</li>  
+            ))}
+        </ul>
+
+        <ul>
+            {/* Renderizando Listas */}
+            {users.map((user) => (
+                <li key={user.id}> 
+                    {user.name} - {user.age} anos
+                </li>
+            ))}
+        </ul>
+    </div>
+  )
+}
+
+export default ListRender
+-------------------------------------------------------------------
+4- Previous State:
+Recuperar valores antigos antes de atualizar o state;
+    const deleteRandom = () => {
+        const randomNumber = Math.floor(Math.random() * 5);
+        
+const [users, setUsers] = useState([
+    {id: 1, name: "Matheus", age: 30},
+    {id: 2, name: "João", age: 25},
+    {id: 3, name: "Maria", age: 28},
+    {id: 4, name: "Ana", age: 22},
+])   
+
+    const deleteRandom = () => {
+        const randomNumber = Math.floor(Math.random() * 5)+1;
+        
+        setUsers((prevUsers) => {
+            return prevUsers.filter((user) => randomNumber !== user.id)      
+    });
+};
+-------------------------------------------------------------------
+5- Renderização Condicional: Arquivo CondicionalRender.Jsx
+    <div>
+        <h1>Isso será exibido?</h1>
+        {/* Condicional simples */}
+        {x && <p>Se x for true, Sim!</p>}
+        {!x && <p>Se x for false, Sim!</p>}
+
+        {/* Operadores Ternários */}
+        {x ? <p>Se x for true, Sim!</p> : <p>Se x for false, Sim!</p>}
+        {name === "Marcos" ? (<p>Olá, Marcos!</p>) : (<p>Olá, João!</p>)}
+        <button onClick={() => setName("João")}>Mudar nome</button>
+    </div>
+
+-------------------------------------------------------------------
+6- Props: Arquivo: ShowUserName.jsx
+Permite passar valores de um componente pai para o componente filho;
+
+em App.jsx:  <ShowUserName name="Marcos"/>
+em ShowUserName.jsx: 
+const ShowUserName = (props) => {
+  return (
+    <div>
+      <p>O nome do usuário é: {props.name}</p>
+    </div>
+  )
+}
+
+export default ShowUserName
+-------------------------------------------------------------------
+7- Desestruturando Props: CarDetails.jsx
+Em app.jsx:
+ {/* Destructuring */}
+       <CarDetails brand="Ferrari" km={100000} color="Preto" />
+Em CarDetails.jsx:
+const CarDetails = ({brand, km, color}) => {
+
+    return (
+    <div>
+        <h2>Detalhes do carro</h2>
+        <ul>
+            <li>Marca: {brand}</li>
+            <li>Kilometragem: {km}</li>
+            <li>Cor: {color}</li>
+        </ul>
+    </div>
+  )
+}
+
+export default CarDetails
+-------------------------------------------------------------------
+8- Reutilização de componentes:
+-------------------------------------------------------------------
+9- Renderização de lista em componentes:
+-------------------------------------------------------------------
+10- Fragments:
+-------------------------------------------------------------------
+11- Prop Children:
+-------------------------------------------------------------------
+12- Função como prop:
+-------------------------------------------------------------------
+13- State lift
+-------------------------------------------------------------------
