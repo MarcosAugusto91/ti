@@ -5,9 +5,9 @@
     <body>
 
     <?php
-
-        $peso = 65;
-        $altura = 1.54;
+        //Enviar os valores pela URL
+        $peso = $_GET['peso'];
+        $altura = $_GET['altura'];
         $imc = $peso / ($altura * $altura);
 
         echo 'Seu Imc é de: '. round($imc,2) . '</br>';
