@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <form action="#" class="was-validated" style="margin: 20px">
+            <div class="form-group">
+              <label for="cliente">Nome:</label>
+              <input type="text" class="form-control" name="cliente" />
+              <div class="valid-feedback">Ok</div>
+              <div class="invalid-feedback">Ops! Verifique seu nome!</div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" class="form-control" name="email" required />
+              <div class="valid-feedback">Ok</div>
+              <div class="invalid-feedback">Ops! Verifique seu e-mail!</div>
+            </div>
+
+            <div class="form-group">
+              <textarea class="form-control" name="pedido"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-success">Enviar</button>
+          </form>
+        </div>
+
+        <div class="col-md-6">
+          <ul class="list-group list-group-horizontal" style="margin: 20px;">
+            <li class="list-group-item list-group-item-warning">Prato 1</li>
+            <li class="list-group-item">Prato 2 (escolha do dia)</li>
+            <li class="list-group-item">Prato 3</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- 
+    Classes para formulários
+
+    .form-control – os campos assumem a largura total da área onde foram criados
+    .form-inline – posiciona os campos lado a lado na horizontal
+    .form-group – usado apenas para agrupar vários elementos
+    .was-validated – indica que deve ser mostrado um feedback após
+    preenchimento
+    .valid-feedback – mensagem a ser exibida se a validação foi ok
+    .invalid-feedback – mensagem a ser exibida se a validação deu
+    como incorreta
+-->
+
+<!-- 
+    Classes para listas
+    .list-group-horizontal – exibe os itens da lista na horizontal.
+    .list-group-item – reservado para os itens da lista, no caso, a tag <li> ou links.
+    .list-grou-item-action – exibe o item com uma cor em destaque
+    .list-group-flush – remove as bordas arredondadas e deixa a lista com um visual mais limpo
+    .list-group-numbered – exibe os itens da lista com numeração automática
+    .list-group-item-primary, .list-group-item-secondary, .list-group-item-success,
+    .list-group-item-danger, .list-group-item-warning, .list-group-item-info,
+    .list-group-item-light, .list-group-item-dark – exibe o item com cores diferentes
+-->
