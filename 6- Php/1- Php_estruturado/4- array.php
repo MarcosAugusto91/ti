@@ -17,12 +17,12 @@
  echo $frutas['b'];
 
  $_cadastroAlunos['nomes'] = ['Marcos', 'Leticia', 'Daniel', ' Gaby', 'Lucas'];
- $_cadastroAlunos['idade'] = [33,16,33,20,18];
+ $_cadastroAlunos['idade'] = [34,16,33,20,18];
 
  echo '<pre>';
  var_dump($_cadastroAlunos);
  echo '</pre>';
 
- echo $_cadastroAlunos['nomes'][0] . $_cadastroAlunos['idade'][0];
+ echo $_cadastroAlunos['nomes'][1] . ' ' . $_cadastroAlunos['idade'][1] . ' anos!!!';
 
 ?>
