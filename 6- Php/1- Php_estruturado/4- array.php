@@ -23,4 +23,6 @@
  var_dump($_cadastroAlunos);
  echo '</pre>';
 
+ echo $_cadastroAlunos['nomes'][0] . $_cadastroAlunos['idade'][0];
+
 ?>
