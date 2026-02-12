@@ -4,9 +4,9 @@
     // echo $_GET["peso"] . '<br>';
     // echo $_GET["altura"];
 
-    $nome = $_GET['nome'];
-    $peso = $_GET['peso'];
-    $altura = $_GET['altura'];
+    $nome = $_POST['nome'];
+    $peso = $_POST['peso'];
+    $altura = $_POST['altura'];
 
     $imc = $peso / ($altura * $altura);
     $imc = round($imc, 2);

@@ -48,6 +48,8 @@
         }
 
         calculaImpostoDeRenda(2200);
+
+        
         echo '</br></br> Imposto do Cálculo 2: R$' . calculaImpostoDeRenda2(3000);
 
 

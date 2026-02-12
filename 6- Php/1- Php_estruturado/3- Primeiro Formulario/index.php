@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <form action="dados.php" method="GET">
+    <form action="dados.php" method="POST">
         <label for="nome">Nome:</label>     
         <input name="nome" id="nome" type="text" placeholder="ex: Marcos"></input>
 
