@@ -44,8 +44,11 @@ function App() {
        <ShowUserName name={userName}/>
        <hr />
        {/* Destructuring */}
-       <CarDetails brand="Ferrari" km={100000} color="Preto" />
+       <CarDetails brand="Ferrari" km={100000} color="Preto"  novo={false}/>
        <hr />
+       {/* Reaproveitando */}
+        <CarDetails brand="Ford" color="Vermelho" km={0} novo={true}/>
+        <CarDetails brand="Fiat" color="Cinza" km={15000} novo={false}/>
 
       </div>      
     </>

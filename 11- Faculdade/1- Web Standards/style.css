@@ -1,0 +1,36 @@
+body{
+    background-color: ghostwhite;
+}
+
+h1{
+    font-size: 72px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h2{
+    font-size: 14px;
+    color: #777777;
+}
+
+h3{
+    font-size: 16px;
+    color: #777777;
+}
+
+h4{
+    font-size: 24px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: darkcyan;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #777777;
+}
+
+li{
+    background-color: darkcyan;
+    border: 1px solid white;
+    color: white;
+    text-decoration: none;
+}

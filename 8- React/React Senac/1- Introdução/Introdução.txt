@@ -43,7 +43,7 @@ Muito utilizado no ambiente corporativo;
 Instale a extensão: ES7+ React/Redux/React-Native snippets
 
 Emmet para React:
-*Emmet é uma extensao nativa do VS Code que a ajua a escrever Html mais rápido;
+*Emmet é uma extensao nativa do VS Code que a ajuda a escrever Html mais rápido;
 *Porém ela não vem configurada para o React;
 *Temos que acessar File > Settings > Extensions e procurar por Emmet;
 *Lá vamos incluir a linguagem: javascript - javascriptreact;
@@ -73,7 +73,7 @@ Para finalizar no menu superior procure por terminal  -> novo terminal;
 5- Estrutura do React:
 node_modules: Onde ficam as dependências do projeto;
 public: Assets estáticos e Html de inicialização;
-pasta src: Onde vamos programas os nossos apps;
+src: Onde vamos programas os nossos apps;
 index.html: Arquivo responsável por receber a requisição do usuário, repare que tem uma div com id:'root' onde o javascript adiciona o React ali dentro;
 src/index.js: Arquivo de inicialização do React; (Hoje foi atualizado para src/main.js e ele que será inserido na div root;
 src/App.js: Componente principal da aplicação; Onde vamos programar a tela inicial e demais coisas. Ela é importada em main.js que é renderizado no index.html;
