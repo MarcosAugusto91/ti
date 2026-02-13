@@ -1,0 +1,59 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 830px;
+    background-image: url("wallpaper.jpg");
+}
+
+.monstro{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 800px;
+    border-radius: 3px;
+}
+
+select{
+    background-color: rgb(187, 186, 186);
+    padding: 10px;
+    border-radius: 5px;
+    width: 180px;
+}
+
+.botao{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(123, 16, 16);
+    color: white;
+    margin-left:5px;
+}
+
+.resposta{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    padding: 10px;
+    background-color: rgb(183, 21, 35);
+    color: white;
+    border-radius: 5px;
+}
+
+img{
+    width: 100%;
+    height: 300px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
