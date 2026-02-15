@@ -6,7 +6,9 @@ const [name, setName] = useState("Marcos");
 
   return (   
     <div>
-        <h1>Isso será exibido?</h1>
+        <h2>Renderizando Condicionalmente</h2>
+
+        <h3>Isso será exibido?</h3>
         {/* Condicional simples */}
         {x && <p>Se x for true, Sim!</p>}
         {!x && <p>Se x for false, Sim!</p>}

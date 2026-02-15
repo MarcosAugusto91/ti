@@ -7,6 +7,7 @@ const ManageData2UseState = () => {
 
   return (
     <div>
+        <h2>Gerenciando Dados com useState</h2>
         <button onClick={() => (nome = "Maria")}>Forma errada</button>
         <p>Nome: {nome}</p>
 
