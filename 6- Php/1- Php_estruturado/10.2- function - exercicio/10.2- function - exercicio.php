@@ -2,7 +2,7 @@
 
     if(isset($_GET['monstro'])){
         $monstro = $_GET['monstro'];
-    } else {
+    } else {    
         $monstro = null;
     }
 
@@ -72,9 +72,22 @@
                 <button class="botao" type="submit">Pronto!</button>
                 <div class="resposta">                
                     <?php 
-                    
-                    if($monstro != null){
+                        if($monstro != null){
                         isset($monstro) ? $monstro($monstro) : dracula("Selecione um monstro");
+
+                        //Não fazer da forma abaixo, pois não é escalável, ou seja, se tiver mais monstros, o código ficará muito grande e difícil de manter. O ideal é usar a função com o nome do monstro como parâmetro, como foi feito acima.
+                        
+                        /*if ($monstro == "dracula") {
+                            dracula($monstro);
+                        } elseif ($monstro == "chucky") {
+                            chucky($monstro);
+                        } elseif ($monstro == "it") {
+                            it($monstro);
+                        } elseif ($monstro == "mumia") {
+                            mumia($monstro);
+                        } elseif ($monstro == "frankstein") {
+                            frankstein($monstro);
+                        }*/
                     }
                     ?>
                     <?php if($monstro == null)  {
