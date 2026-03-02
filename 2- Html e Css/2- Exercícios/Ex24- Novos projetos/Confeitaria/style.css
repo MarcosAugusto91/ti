@@ -2,7 +2,6 @@
     margin: 0px;
     padding: 0px;
     border: none;
-    border: none; /* Mantive seu reset inicial */
     box-sizing: border-box; /* Boa prática para controlar melhor o tamanho dos elementos */
 }
 
@@ -25,7 +24,7 @@ body {
 .social-btn {
     width: 50px;
     height: 50px;
-    background-color: #8A00C4; /* Roxo da paleta */
+    background-color: #8A00C4;
     color: #fff;
     border-radius: 50%;
     display: flex;
@@ -49,34 +48,34 @@ body {
 
 .cabecalho-principal {
     display: flex;
-    justify-content: space-between; /* Joga o logo para a esquerda e a navegação para a direita */
-    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: space-between;
+    align-items: center;
     padding: 8px 40px; /* Espaçamento vertical reduzido para compensar o logo maior */
-    background-color: #FFC700; /* Cor de fundo amarela da marca */
+    background-color: #FFC700;
     border-bottom: none;
     position: sticky; /* Faz o cabeçalho ficar fixo no topo ao rolar a página */
     top: 0;
     width: 100%;
     z-index: 1000;
-    border-bottom: 7px solid #8A00C4; /* Borda inferior preta para destacar o cabeçalho */
+    border-bottom: 7px solid #8A00C4;
 }
 
 .logo {
-    max-height: 65px; /* Aumentado para dar mais destaque */
+    max-height: 65px;
 }
 
 .container-logo {
     display: flex;
-    align-items: center; /* Alinha o texto verticalmente com a imagem */
-    gap: 12px; /* Espacinho entre o logo e o slogan */
+    align-items: center;
+    gap: 12px;
 }
 
 .slogan {
-    font-family: 'Bangers', cursive; /* Fonte Geek estilo HQ */
+    font-family: 'Bangers', cursive;
     font-size: 1.7rem;
     color: #000;
     letter-spacing: 1px;
-    font-weight: normal; /* A fonte já é pesada visualmente */
+    font-weight: normal;
 }
 
 /* --- Estilos do Menu Hambúrguer (Escondido no Desktop) --- */
@@ -119,7 +118,7 @@ body {
 
 .navegacao-principal a {
     text-decoration: none; /* Remove o sublinhado dos links */
-    color: #000; /* Cor do texto (preto) */
+    color: #000;
     font-weight: bold;
     font-size: 17px;
     position: relative; /* Para posicionar a linha */
@@ -206,14 +205,14 @@ body {
     font-family: 'Bangers', cursive;
     font-size: 1.5rem;
     border-radius: 8px;
-    border: 2px solid #000; /* Borda preta para estilo cartoon/geek */
-    box-shadow: 4px 4px 0px #000; /* Sombra dura estilo HQ */
+    border: 2px solid #000;
+    box-shadow: 4px 4px 0px #000;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .btn-acao:hover {
     transform: translate(-2px, -2px); /* Move levemente para cima */
-    box-shadow: 6px 6px 0px #000; /* Aumenta a sombra */
+    box-shadow: 6px 6px 0px #000;
 }
 
 .hero-imagem {
@@ -557,6 +556,13 @@ body {
     border-radius: 50%;
     margin: 0 auto 15px;
     border: 3px solid #FFC700;
+    overflow: hidden; /* Garante que a imagem respeite o círculo */
+}
+
+.foto-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem para cobrir todo o espaço sem distorcer */
 }
 
 .cargo {
@@ -712,6 +718,13 @@ body {
     background-color: #ddd; /* Cor cinza placeholder */
     border-radius: 50%; /* Deixa redondo */
     border: 2px solid #000;
+    overflow: hidden; /* Garante que a imagem respeite o círculo */
+}
+
+.logo-ponto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem para cobrir todo o espaço sem distorcer */
 }
 
 /* --- Rodapé --- */
