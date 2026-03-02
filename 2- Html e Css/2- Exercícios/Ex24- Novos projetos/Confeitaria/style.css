@@ -1,0 +1,739 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    border: none; /* Mantive seu reset inicial */
+    box-sizing: border-box; /* Boa prática para controlar melhor o tamanho dos elementos */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Uma fonte moderna e legível */
+    background-color: #fff;
+}
+
+/* --- Botões Sociais Fixos --- */
+.botoes-sociais-fixos {
+    position: fixed;
+    top: 150px;
+    right: 20px;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-btn {
+    width: 50px;
+    height: 50px;
+    background-color: #8A00C4; /* Roxo da paleta */
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    text-decoration: none;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+}
+
+.social-btn:hover {
+    transform: scale(1.15);
+}
+
+/* Pequeno ajuste para alinhar perfeitamente o ícone do Instagram */
+.social-btn .fa-instagram {
+    position: relative;
+    top: 1px;
+}
+
+.cabecalho-principal {
+    display: flex;
+    justify-content: space-between; /* Joga o logo para a esquerda e a navegação para a direita */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 8px 40px; /* Espaçamento vertical reduzido para compensar o logo maior */
+    background-color: #FFC700; /* Cor de fundo amarela da marca */
+    border-bottom: none;
+    position: sticky; /* Faz o cabeçalho ficar fixo no topo ao rolar a página */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 7px solid #8A00C4; /* Borda inferior preta para destacar o cabeçalho */
+}
+
+.logo {
+    max-height: 65px; /* Aumentado para dar mais destaque */
+}
+
+.container-logo {
+    display: flex;
+    align-items: center; /* Alinha o texto verticalmente com a imagem */
+    gap: 12px; /* Espacinho entre o logo e o slogan */
+}
+
+.slogan {
+    font-family: 'Bangers', cursive; /* Fonte Geek estilo HQ */
+    font-size: 1.7rem;
+    color: #000;
+    letter-spacing: 1px;
+    font-weight: normal; /* A fonte já é pesada visualmente */
+}
+
+/* --- Estilos do Menu Hambúrguer (Escondido no Desktop) --- */
+.menu-toggle {
+    display: none; /* Esconde o checkbox */
+}
+
+.icone-menu {
+    display: none; /* Esconde o ícone no desktop */
+    cursor: pointer;
+}
+
+.hamburguer {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+.hamburguer::before,
+.hamburguer::after {
+    content: '';
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    position: absolute;
+    transition: top 0.3s, transform 0.3s;
+}
+
+.hamburguer::before { top: -8px; }
+.hamburguer::after { top: 8px; }
+
+.navegacao-principal ul {
+    display: flex;
+    list-style: none; /* Remove as bolinhas da lista */
+    gap: 25px; /* Espaçamento entre os itens do menu */
+}
+
+.navegacao-principal a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #000; /* Cor do texto (preto) */
+    font-weight: bold;
+    font-size: 17px;
+    position: relative; /* Para posicionar a linha */
+    padding-bottom: 5px; /* Espaço para a linha */
+    transition: color 0.3s ease;
+}
+
+.navegacao-principal a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #8A00C4;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.navegacao-principal a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* --- Estilos do Banner Principal (Hero) --- */
+.secao-hero {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between;
+    padding: 60px 8%; /* Espaçamento lateral percentual para adaptar melhor */
+    gap: 40px;
+    min-height: 80vh; /* Garante que o banner ocupe uma boa altura da tela */
+}
+
+.hero-conteudo {
+    flex: 1; /* Ocupa metade do espaço disponível */
+    max-width: 600px;
+}
+
+.hero-conteudo h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 4rem; /* Tamanho grande para impacto */
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.subtitulo-hero {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.ano-fundacao {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.contador-brownies {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #FFC700;
+    padding: 10px 15px;
+    margin: 30px 0;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.contador-brownies p {
+    margin: 0;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.btn-acao {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #FFC700;
+    color: #000;
+    text-decoration: none;
+    font-family: 'Bangers', cursive;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    border: 2px solid #000; /* Borda preta para estilo cartoon/geek */
+    box-shadow: 4px 4px 0px #000; /* Sombra dura estilo HQ */
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-acao:hover {
+    transform: translate(-2px, -2px); /* Move levemente para cima */
+    box-shadow: 6px 6px 0px #000; /* Aumenta a sombra */
+}
+
+.hero-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-imagem img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px; /* Cantos levemente arredondados */
+    filter: drop-shadow(10px 10px 0px rgba(0,0,0,0.2)); /* Sombra na imagem */
+}
+
+/* --- Estilos da Seção de Produtos --- */
+.secao-produtos {
+    padding: 60px 8%;
+    background-color: #8A00C4; /* Fundo roxo */
+    margin-top: 60px;
+}
+
+.titulo-secao {
+    font-family: 'Bangers', cursive;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.secao-produtos .titulo-secao {
+    color: #fff;
+}
+
+.grade-produtos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de tamanho igual */
+    gap: 30px; /* Espaço entre os cards */
+}
+
+.card-produto {
+    /* border: 3px solid #000; */
+    border-radius: 6px; /* Bordas menos arredondadas */
+    overflow: hidden; /* Garante que a imagem não saia das bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); /* Sombra bem suave */
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+}
+
+.card-produto:hover {
+    transform: translateY(-3px); /* Efeito de levitação mais sutil */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12); /* Sombra intensificada no hover */
+}
+
+.card-produto img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Força a imagem a ser quadrada */
+    height: auto; 
+    object-fit: cover; /* Corta a imagem para preencher o espaço sem distorcer */
+}
+
+.card-produto h3 {
+    font-family: 'Segoe UI', sans-serif; /* Fonte mais suave (padrão do corpo) */
+    font-size: 1.2rem;
+    text-align: left;
+    padding: 15px 15px 5px 15px;
+    background-color: transparent;
+    color: #000;
+    font-weight: bold;
+}
+
+.descricao-produto {
+    padding: 0 15px 20px 15px;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* --- Media Query para Responsividade --- */
+@media (max-width: 768px) {
+    .icone-menu {
+        display: block; /* Mostra o ícone do hambúrguer no celular */
+    }
+
+    /* Ajuste para o slogan não ocupar muito espaço no celular */
+    .slogan {
+        font-size: 0.9rem;
+    }
+
+    /* No mobile, a navegação principal é retirada do fluxo e escondida */
+    .navegacao-principal {
+        display: none;
+        position: absolute;
+        top: 100%; /* Posiciona logo abaixo do cabeçalho */
+        left: 0;
+        width: 100%;
+        background-color: #FFC700;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .navegacao-principal ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+        gap: 0; /* Reseta o espaçamento do desktop */
+    }
+
+    /* Quando o checkbox estiver marcado, mostra o container da navegação */
+    #menu-toggle:checked ~ .navegacao-principal {
+        display: block;
+    }
+
+    .navegacao-principal li {
+        margin-bottom: 15px;
+    }
+
+    /* Ajustes do Banner para Celular */
+    .secao-hero {
+        flex-direction: column; /* Empilha texto e imagem */
+        text-align: center;
+        padding: 40px 20px;
+        min-height: auto;
+    }
+
+    /* Oculta o botão de ação principal no celular */
+    .hero-conteudo .btn-acao {
+        display: none;
+    }
+
+    .hero-conteudo h1 {
+        font-size: 2.8rem; /* Diminui um pouco o título no celular */
+    }
+
+    .hero-imagem img {
+        max-width: 80%; /* Reduz a imagem para não ocupar a tela toda */
+        margin-top: 30px;
+    }
+
+    /* Ajustes dos Produtos para Celular */
+    .grade-produtos {
+        grid-template-columns: 1fr; /* Muda para 1 coluna no celular */
+    }
+
+    .titulo-secao {
+        font-size: 2.5rem;
+    }
+
+    .wrapper-valores {
+        flex-direction: column;
+        align-items: center; /* Centraliza os itens na vertical (agora horizontal) */
+    }
+
+    .grupo-input {
+        flex-direction: column;
+    }
+
+    .grid-pontos {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas no celular */
+    }
+
+    .item-preco {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+    .item-preco .detalhe {
+        text-align: center;
+        min-width: auto;
+    }
+
+    .tabela-precos {
+        width: 100%; /* Garante que a tabela ocupe a largura total no celular */
+    }
+
+    .grid-infos {
+        grid-template-columns: 1fr; /* 1 coluna no celular */
+    }
+
+    .equipe-saga {
+        flex-direction: column;
+        align-items: center; /* Centraliza os cards dos funcionários no celular */
+    }
+}
+
+/* --- Seção Valores --- */
+.secao-valores {
+    padding: 60px 8%;
+    background-color: #f9f9f9;
+}
+
+.wrapper-valores {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start; /* Alinha os itens no topo */
+}
+
+/* --- Tabela de Preços --- */
+.tabela-precos {
+    flex: 1; /* Ocupa metade do espaço */
+    border: 3px solid #000;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.item-preco {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    background-color: #fff;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.item-preco:last-child {
+    border-bottom: none;
+}
+
+.item-preco .quantidade {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.item-preco .preco {
+    font-family: 'Bangers', cursive;
+    font-size: 1.9rem;
+    color: #000;
+}
+
+.item-preco .detalhe {
+    color: #555;
+    min-width: 90px; /* Alinha os detalhes */
+    text-align: right;
+}
+
+/* --- Grid de Informações (4 Quadrados) --- */
+.grid-infos {
+    flex: 1; /* Ocupa a outra metade */
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 colunas */
+    gap: 20px;
+}
+
+.card-info {
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 4px 4px 0px #000; /* Sombra dura estilo HQ */
+    transition: transform 0.2s;
+}
+
+.card-info:hover {
+    transform: translateY(-3px);
+}
+
+.icone-info {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.card-info h4 {
+    font-family: 'Bangers', cursive;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+/* --- Seção Nossa Saga (Quem Somos) --- */
+.secao-saga {
+    padding: 80px 8%;
+    background-color: #8A00C4; /* Terceira cor da paleta */
+    text-align: center;
+}
+
+.secao-saga .titulo-secao {
+    color: #fff;
+}
+
+.saga-conteudo {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.saga-conteudo p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #fff;
+}
+
+.texto-destaque {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.stats-saga {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.stat-item {
+    text-align: center;
+    color: #fff;
+    max-width: 150px;
+}
+
+.icone-stat {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.equipe-saga {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.card-membro {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo translúcido */
+    padding: 20px;
+    border-radius: 15px;
+    color: #fff;
+    max-width: 300px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.foto-placeholder {
+    width: 180px; /* Aumentado conforme solicitado */
+    height: 180px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 3px solid #FFC700;
+}
+
+.cargo {
+    font-weight: bold;
+    color: #FFC700;
+    margin-bottom: 10px;
+}
+
+/* --- Seção Contato --- */
+.secao-contato {
+    padding: 60px 8%;
+    background-color: #fff; /* Fallback */
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/superhero.png');
+    background-repeat: repeat;
+}
+
+.form-pedido {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.97);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.destaque-form {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    margin-bottom: 20px; /* Espaço antes do primeiro input */
+}
+
+.destaque-form span {
+    font-size: 2rem;
+}
+
+.destaque-form p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.grupo-input {
+    display: flex;
+    gap: 20px;
+}
+
+.grupo-input input, .form-pedido textarea, .input-full, .area-condicional input, .form-pedido select {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+/* --- Lógica de Entrega/Retirada (CSS Puro) --- */
+.controle-entrega {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.titulo-entrega {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.label-radio {
+    margin-right: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.area-condicional {
+    display: none; /* Escondido por padrão */
+    margin-top: 15px;
+    animation: fadeIn 0.5s;
+}
+
+/* Se o input 'opt-entrega' estiver marcado, mostre a div irmã 'area-endereco' */
+#opt-entrega:checked ~ .area-endereco {
+    display: block;
+}
+
+/* Se o input 'opt-retirada' estiver marcado, mostre a div irmã 'area-retirada-texto' */
+#opt-retirada:checked ~ .area-retirada-texto {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.aviso-form {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.form-pedido textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* --- Seção Pontos de Venda --- */
+.secao-pontos {
+    padding: 60px 8%;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.grid-pontos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 30px;
+}
+
+.ponto-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.nome-ponto {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #000;
+}
+
+.detalhe-ponto {
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: normal;
+    text-align: center;
+    margin-top: -2px;
+}
+
+.logo-ponto {
+    width: 80px;
+    height: 80px;
+    background-color: #ddd; /* Cor cinza placeholder */
+    border-radius: 50%; /* Deixa redondo */
+    border: 2px solid #000;
+}
+
+/* --- Rodapé --- */
+.rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-color: #8A00C4; /* Fundo roxo */
+    color: #fff;
+    text-align: center;
+    padding: 20px 40px;
+    margin-top: 60px; /* Espaço acima do rodapé */
+}
+
+.imagem-rodape {
+    max-height: 80px;
+    margin-bottom: 10px;
+}
+
+.creditos {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    opacity: 0.8;
+}

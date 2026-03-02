@@ -1,0 +1,55 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    border: none; /* Mantive seu reset inicial */
+    box-sizing: border-box; /* Boa prática para controlar melhor o tamanho dos elementos */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Uma fonte moderna e legível */
+    background-color: #fff;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between; /* Joga o logo para a esquerda e a navegação para a direita */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 15px 40px; /* Espaçamento interno (vertical | horizontal) */
+    background-color: #fff;
+    border-bottom: 1px solid #f0f0f0; /* Uma linha sutil para separar do resto do conteúdo */
+    position: sticky; /* Faz o cabeçalho ficar fixo no topo ao rolar a página */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    max-height: 50px; /* Controla a altura máxima do seu logo */
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none; /* Remove as bolinhas da lista */
+    gap: 25px; /* Espaçamento entre os itens do menu */
+}
+
+.main-nav a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #000; /* Cor do texto (preto) */
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease; /* Efeito suave na troca de cor */
+}
+
+.main-nav a:hover {
+    color: #FFC700; /* Cor amarela da sua marca para o efeito hover */
+}
+
+/* --- Media Query para Responsividade --- */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column; /* Empilha o logo e a navegação em telas menores */
+        gap: 20px; /* Espaço entre o logo e a navegação */
+    }
+}

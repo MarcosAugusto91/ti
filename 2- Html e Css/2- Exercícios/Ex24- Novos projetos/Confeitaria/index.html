@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Ei! Brownie</title>
+    <!-- Importando a fonte 'Bangers' do Google Fonts para o tema Geek -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Importando Font Awesome para ícones de redes sociais -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- 
+        Próximos Passos:
+        1- Adicionar Galeria de Fotos das Festas;
+        2- Implementar Javascript com Carrossel
+        3- Implementar Formulário de Contato Real (com validação e envio)
+        4- Adicionar Mapa Interativo para os Pontos de Venda
+        5- Otimizar para SEO (Meta Tags, Alt Text, etc)
+        6- Implementar Banco e Back-end com PHP para trazer os pontos de vendas dinamicamente
+        7- Criar Painel Administrativo para Gestão do Negócio
+    -->
+
+    <!-- Botões de Redes Sociais Fixos -->
+    <div class="botoes-sociais-fixos">
+      <a
+        href="https://www.instagram.com/ei.brownie"
+        target="_blank"
+        class="social-btn"
+        title="Siga-nos no Instagram"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <a
+        href="https://wa.me/5513996038918"
+        target="_blank"
+        class="social-btn"
+        title="Fale Conosco no WhatsApp"
+        ><i class="fab fa-whatsapp"></i
+      ></a>
+    </div>
+
+    <header class="cabecalho-principal">
+      <div class="container-logo">
+        <img src="source/logo2.png" alt="Logo Ei! Brownie" class="logo" />
+        <span class="slogan">Delicioso e Criativo</span>
+      </div>
+
+      <!-- Checkbox invisível para controlar o menu -->
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <!-- Ícone do Menu Hambúrguer -->
+      <label for="menu-toggle" class="icone-menu">
+        <span class="hamburguer"></span>
+      </label>
+
+      <nav class="navegacao-principal">
+        <ul>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#valores">Valores</a></li>
+          <li><a href="#saga">Nossa Saga</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="#pontos">Pontos de Venda</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Faixa 1: Banner Principal -->
+    <section class="secao-hero">
+      <div class="hero-conteudo">
+        <h1>
+          Explosão de Sabor <br />
+          no Multiverso!
+        </h1>
+        <p class="subtitulo-hero">
+          Os brownies mais épicos da galáxia, feitos artesanalmente para o seu
+          momento geek.
+        </p>
+        <p class="ano-fundacao">🗓️ Desde 2020</p>
+        <div class="contador-brownies">
+          <p>+125 mil brownies produzidos</p>
+          <p>+300 festas (Aniversários, Casamentos, Eventos Corporativos)</p>
+          <p>+100 feiras (Bazares, Artesanais e Geeks)</p>
+          <p>
+            +35 sabores (Doce de leite, Brigadeiro, Ninho, Ovomaltine, C. de
+            Avelã...)
+          </p>
+        </div>
+        <a href="#produtos" class="btn-acao">Ver Missões (Cardápio)</a>
+      </div>
+      <div class="hero-imagem">
+        <img src="source/banner.avif" alt="Brownie delicioso com tema geek" />
+      </div>
+    </section>
+
+    <!-- Faixa 2: Produtos -->
+    <section id="produtos" class="secao-produtos">
+      <h2 class="titulo-secao">Produtos</h2>
+
+      <div class="grade-produtos">
+        <div class="card-produto">
+          <img
+            src="https://images.unsplash.com/photo-1515037893149-de7f840978e2?auto=format&fit=crop&w=500&q=60"
+            alt="Brownies"
+          />
+          <h3><i class="fas fa-star" style="color: #ffc700"></i> Brownies</h3>
+          <p class="descricao-produto">
+            O artefato original! Denso, úmido e com aquela casquinha craquelada
+            lendária.
+          </p>
+        </div>
+        <div class="card-produto">
+          <img
+            src="https://images.unsplash.com/photo-1515037893149-de7f840978e2?auto=format&fit=crop&w=500&q=60"
+            alt="Brownieflix"
+          />
+          <h3>Brownieflix (Pote)</h3>
+          <p class="descricao-produto">
+            O companheiro perfeito para maratonar suas séries e animes
+            favoritos.
+          </p>
+        </div>
+        <div class="card-produto">
+          <img
+            src="https://images.unsplash.com/photo-1515037893149-de7f840978e2?auto=format&fit=crop&w=500&q=60"
+            alt="Bites de Brownie"
+          />
+          <h3>Bites de Brownie</h3>
+          <p class="descricao-produto">
+            Pequenos fragmentos de XP (sabor) para compartilhar com sua guilda.
+          </p>
+        </div>
+        <div class="card-produto">
+          <img
+            src="https://images.unsplash.com/photo-1515037893149-de7f840978e2?auto=format&fit=crop&w=500&q=60"
+            alt="Doces para Festa"
+          />
+          <h3>Doces para Festa</h3>
+          <p class="descricao-produto">
+            O "loot" lendário que vai fazer o nível da sua festa subir.
+          </p>
+        </div>
+        <div class="card-produto">
+          <img
+            src="https://images.unsplash.com/photo-1515037893149-de7f840978e2?auto=format&fit=crop&w=500&q=60"
+            alt="Cookies"
+          />
+          <h3>Cookies</h3>
+          <p class="descricao-produto">
+            Crocantes por fora, macios por dentro. O equilíbrio perfeito da
+            Força.
+          </p>
+        </div>
+        <div class="card-produto">
+          <img
+            src="https://images.unsplash.com/photo-1515037893149-de7f840978e2?auto=format&fit=crop&w=500&q=60"
+            alt="Copo da Felicidade"
+          />
+          <h3>Copo da Felicidade</h3>
+          <p class="descricao-produto">
+            Uma poção de mana completa com camadas de recheio e brownie.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Faixa 3: Valores -->
+    <section id="valores" class="secao-valores">
+      <h2 class="titulo-secao">Tabela de XP (Preços)</h2>
+
+      <div class="wrapper-valores">
+        <!-- Lado Esquerdo: Tabela -->
+        <div class="tabela-precos">
+          <div class="item-preco">
+            <span class="quantidade">Unidade</span>
+            <span class="preco">R$ 7,00</span>
+          </div>
+          <div class="item-preco">
+            <span class="quantidade">10 Unidades</span>
+            <span class="preco">R$ 6,00 <small>/un</small></span>
+            <span class="detalhe">(2 Sabores)</span>
+          </div>
+          <div class="item-preco">
+            <span class="quantidade">25 Unidades</span>
+            <span class="preco">R$ 5,50 <small>/un</small></span>
+            <span class="detalhe">(3 Sabores)</span>
+          </div>
+          <div class="item-preco">
+            <span class="quantidade">50 Unidades</span>
+            <span class="preco">R$ 5,00 <small>/un</small></span>
+            <span class="detalhe">(4 Sabores)</span>
+          </div>
+          <div class="item-preco">
+            <span class="quantidade">100 Unidades</span>
+            <span class="preco">R$ 4,50 <small>/un</small></span>
+            <span class="detalhe">(4 Sabores)</span>
+          </div>
+          <div class="item-preco">
+            <span class="quantidade">+150 Unidades</span>
+            <span class="preco">R$ 4,25 <small>/un</small></span>
+            <span class="detalhe">(4 Sabores)</span>
+          </div>
+        </div>
+
+        <!-- Lado Direito: Informações em 4 Quadrados -->
+        <div class="grid-infos">
+          <div class="card-info">
+            <div class="icone-info">🎨</div>
+            <h4>Personalização Grátis</h4>
+            <p>
+              Embalagens temáticas do seu jeito! Arte entregue na semana do
+              evento.
+            </p>
+          </div>
+          <div class="card-info">
+            <div class="icone-info">🍫</div>
+            <h4>Sabores Épicos</h4>
+            <p>
+              Doce de Leite, Brigadeiro, Ninho, Ovomaltine, Oreo, Paçoca,
+              Beijinho e Bicho de Pé.
+            </p>
+          </div>
+          <div class="card-info">
+            <div class="icone-info">💰</div>
+            <h4>Pagamento & Sinal</h4>
+            <p>
+              Encomendas confirmadas mediante sinal. Aceitamos Dinheiro, Pix,
+              Débito e Crédito 1x sem juros ou até 3x com juros da maquinha.
+            </p>
+          </div>
+          <div class="card-info">
+            <div class="icone-info">🛵</div>
+            <h4>Delivery</h4>
+            <p>Consulte o valor da entrega.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Faixa 4: Quem Somos -->
+    <section id="saga" class="secao-saga">
+      <div class="saga-conteudo">
+        <h2 class="titulo-secao">Nossa Saga</h2>
+
+        <p class="texto-destaque">
+          Produzimos brownies recheados <strong>desde 2020</strong>. Criamos a
+          <strong>Ei! Brownie</strong> porque somos apaixonados pelo universo
+          Geek e queríamos inovar, trazendo essa temática divertida para a
+          confeitaria tradicional.
+        </p>
+
+        <div class="stats-saga">
+          <div class="stat-item">
+            <span class="icone-stat">🍫</span>
+            <p>+35 Sabores Produzidos</p>
+          </div>
+          <div class="stat-item">
+            <span class="icone-stat">🚀</span>
+            <p>+125 Mil Brownies Entregues</p>
+          </div>
+          <div class="stat-item">
+            <span class="icone-stat">🎉</span>
+            <p>+300 Festas Realizadas</p>
+          </div>
+          <div class="stat-item">
+            <span class="icone-stat">⭐</span>
+            <p>Chocolate Nobre & Ingredientes de Qualidade</p>
+          </div>
+        </div>
+
+        <div class="equipe-saga">
+          <div class="card-membro">
+            <div class="foto-placeholder">
+              <img src="source/joyci2.JPG" alt="Joyci Produtora" />
+            </div>
+            <h3>Joyci</h3>
+            <p class="cargo">Chefe de Produção</p>
+            <p class="descricao-membro">
+              Produção, Design, Estratégia e Atendimento ao Cliente.
+            </p>
+          </div>
+          <div class="card-membro">
+            <div class="foto-placeholder">
+              <img src="source/marcos.png" alt="" />
+            </div>
+            <h3>Marcos</h3>
+            <p class="cargo">Administrativo & Criativo</p>
+            <p class="descricao-membro">
+              Administrativo, Design, Marketing, Vendas, Atendimento
+              Corporativo.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Faixa 5: Contato -->
+    <section id="contato" class="secao-contato">
+      <h2 class="titulo-secao">Envie um Sinal (Contato)</h2>
+      <form class="form-pedido">
+        <div class="destaque-form">
+          <span>🎉</span>
+          <p>
+            <strong>+300 eventos realizados!</strong> De festas e aniversários a
+            casamentos e eventos corporativos.
+          </p>
+        </div>
+        <div class="grupo-input">
+          <input type="text" placeholder="Seu Nome (Codinome)" required />
+          <input
+            type="tel"
+            placeholder="Seu WhatsApp (DDD + Número)"
+            required
+          />
+        </div>
+
+        <div class="grupo-input">
+          <input
+            type="number"
+            placeholder="Quantidade de Brownies"
+            min="1"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Temática da Embalagem (Grátis!)"
+            title="Ex: Star Wars, Harry Potter, Marvel..."
+          />
+        </div>
+
+        <!-- Campo de Sabores -->
+        <input
+          type="text"
+          placeholder="Quais sabores você deseja?"
+          required
+          class="input-full"
+        />
+
+        <!-- Seção de Entrega ou Retirada (Lógica via CSS) -->
+        <div class="controle-entrega">
+          <p class="titulo-entrega">Como deseja receber?</p>
+
+          <input type="radio" name="tipo_entrega" id="opt-entrega" checked />
+          <label for="opt-entrega" class="label-radio"
+            >Entrega (Delivery)</label
+          >
+
+          <input type="radio" name="tipo_entrega" id="opt-retirada" />
+          <label for="opt-retirada" class="label-radio">Retirada</label>
+
+          <!-- Conteúdo que aparece se for Entrega -->
+          <div class="area-condicional area-endereco">
+            <input
+              type="text"
+              placeholder="Endereço completo para entrega"
+              class="input-full"
+            />
+          </div>
+
+          <!-- Conteúdo que aparece se for Retirada -->
+          <div class="area-condicional area-retirada-texto">
+            <p>
+              📍 <strong>Retirada na Base:</strong> Av. Antônio Correia 75. Vila
+              Ligya. Guarujá-SP
+            </p>
+          </div>
+        </div>
+
+        <!-- Forma de Pagamento -->
+        <select class="input-full" required>
+          <option value="" disabled selected>Forma de Pagamento</option>
+          <option value="dinheiro">Dinheiro</option>
+          <option value="pix">Pix</option>
+          <option value="debito">Débito</option>
+          <option value="credito1">Crédito (1x)</option>
+          <option value="credito2">Crédito (2x)</option>
+          <option value="credito3">Crédito (3x)</option>
+        </select>
+
+        <textarea placeholder="Observações ou dúvidas..."></textarea>
+
+        <a
+          href="https://wa.me/5513996038918?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20um%20or%C3%A7amento."
+          target="_blank"
+          class="btn-acao"
+          style="text-align: center"
+          >Enviar Pedido por WhatsApp</a
+        >
+        <p class="aviso-form">
+          Clique no botão para abrir o WhatsApp. O formulário acima serve como
+          um guia para você montar seu pedido!
+        </p>
+      </form>
+    </section>
+
+    <!-- Faixa 6: Pontos de Venda -->
+    <section id="pontos" class="secao-pontos">
+      <h2 class="titulo-secao">Onde Encontrar (Base Aliadas)</h2>
+      <div class="grid-pontos">
+        <!-- Lista de Pontos de Venda -->
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">7 de Setembro</span
+          ><span class="detalhe-ponto">Bar - Vila Ligya</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">D maria</span
+          ><span class="detalhe-ponto">Restaurante - Vila Ligya</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Salgado mania</span
+          ><span class="detalhe-ponto">Salgados - Vila Ligya</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Posto Ipiranga</span
+          ><span class="detalhe-ponto">Posto - Vila Ligya</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Esquenta</span
+          ><span class="detalhe-ponto">Adega - Santa Rosa</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Santa Rosa</span
+          ><span class="detalhe-ponto">Adega - Santa Rosa</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Doce Sabor</span
+          ><span class="detalhe-ponto">Bomboniere - Santa Rosa</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Completona</span
+          ><span class="detalhe-ponto">Pastelaria - Santa Rosa</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Nova</span
+          ><span class="detalhe-ponto">Adega - Santa Rosa</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Sabore</span
+          ><span class="detalhe-ponto">Restaurante - Santa Rosa</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Bela Gullia</span
+          ><span class="detalhe-ponto">Delivery - Santa Rosa</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Tinho</span
+          ><span class="detalhe-ponto">Adega - Santa Rosa</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Tinho 2</span
+          ><span class="detalhe-ponto">Adega - Santa Rosa</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Wizard</span
+          ><span class="detalhe-ponto">Cantina - Centro Guarujá</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Jamel</span
+          ><span class="detalhe-ponto">Hamburgueria - Santa Rosa</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Horti Fruti</span
+          ><span class="detalhe-ponto">Sorveteria - Santa Rosa</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Hamburgão</span
+          ><span class="detalhe-ponto">Hamburgueria - Santa Rosa</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Dm Burguer</span
+          ><span class="detalhe-ponto">Hamburgueria - Santa Rosa</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Guaruplast</span
+          ><span class="detalhe-ponto">Embalagens - Santo Antônio</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Nino's 1</span
+          ><span class="detalhe-ponto">Restaurante - Centro Guarujá</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Bacana Burguer</span
+          ><span class="detalhe-ponto">Hamburgueria - Centro Guarujá</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Dom Comilão</span
+          ><span class="detalhe-ponto">Restaurante - Centro Guarujá</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Formigão</span
+          ><span class="detalhe-ponto">Restaurante - Centro Guarujá</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Nino's 2</span
+          ><span class="detalhe-ponto">Restaurante - Centro Guarujá</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Bella Guarujá</span
+          ><span class="detalhe-ponto">Padaria - Centro Guarujá</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Projac</span
+          ><span class="detalhe-ponto">Restaurante - Centro Guarujá</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Central burguer</span
+          ><span class="detalhe-ponto">Hamburgueria - Centro Guarujá</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">La Plage</span
+          ><span class="detalhe-ponto">Banca - Centro Guarujá</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">D' Lima</span
+          ><span class="detalhe-ponto">Adega - Asturias</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">013</span
+          ><span class="detalhe-ponto">Adega - Asturias</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">013 2</span
+          ><span class="detalhe-ponto">Adega - Asturias</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Conexão</span
+          ><span class="detalhe-ponto">Adega - Asturias</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">No Ponto certo</span
+          ><span class="detalhe-ponto">Hamburgueria - Enseada</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Fabricio</span
+          ><span class="detalhe-ponto">Salgados - Enseada</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Van</span
+          ><span class="detalhe-ponto">Chup Chup - Enseada</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Paty</span
+          ><span class="detalhe-ponto">Sorveteria - Enseada</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Dati</span
+          ><span class="detalhe-ponto">Restaurante - Enseada</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Curvão</span
+          ><span class="detalhe-ponto">Restaurante - Enseada</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Praiô</span
+          ><span class="detalhe-ponto">Bar - Enseada</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Bella Vista Mar</span
+          ><span class="detalhe-ponto">Restaurante - Enseada</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Tortugas</span
+          ><span class="detalhe-ponto">Sorveteria - Enseada</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Max Flavor</span
+          ><span class="detalhe-ponto">Hamburgueria - Enseada</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Unaerp</span
+          ><span class="detalhe-ponto">Cantina - Enseada</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Nali</span
+          ><span class="detalhe-ponto">Cuscuz Bar - Enseada</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Universitas</span
+          ><span class="detalhe-ponto">Cantina - Santos</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Vida Rasa</span
+          ><span class="detalhe-ponto">Adega - Santos</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Joy Internacional</span
+          ><span class="detalhe-ponto">Cantina - Santos</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Planeta Café</span
+          ><span class="detalhe-ponto">Cafeteria - Santos</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">El Divino</span
+          ><span class="detalhe-ponto">Cantina - Unisanta</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Duport</span
+          ><span class="detalhe-ponto">Cafeteria</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Trio</span
+          ><span class="detalhe-ponto">Cafeteria - Helbor</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Trio</span
+          ><span class="detalhe-ponto">Cafeteria - Casa Saúde</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Trio</span
+          ><span class="detalhe-ponto">Cafeteria - Multimagem</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Bomboniere</span
+          ><span class="detalhe-ponto">Santos</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Senac</span
+          ><span class="detalhe-ponto">Cantina - Santos</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Mix Salgados</span
+          ><span class="detalhe-ponto">Salgados - Santos</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Unisantos</span
+          ><span class="detalhe-ponto">Cantina - Santos</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Nova Seara</span
+          ><span class="detalhe-ponto">Padaria - Santos</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Arena Geek</span
+          ><span class="detalhe-ponto">CardGame - Santos</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Ana Costa</span
+          ><span class="detalhe-ponto">Cantina Hospital - Gonzaga</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Ninos</span
+          ><span class="detalhe-ponto">Restaurante - Gonzaga</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Bia</span
+          ><span class="detalhe-ponto">Restaurante - Gonzaga</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Liceu Santista</span
+          ><span class="detalhe-ponto">Cantina</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Ninos</span
+          ><span class="detalhe-ponto">Restaurante - Centro Santos</span>
+        </div>
+        <div class="ponto-item">
+          <div class="logo-ponto"></div>
+          <span class="nome-ponto">Colina</span
+          ><span class="detalhe-ponto">Restaurante - Centro Santos</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="rodape">
+      <img
+        src="source/rodape2.png"
+        alt="Detalhe do rodapé"
+        class="imagem-rodape"
+      />
+      <p>&copy; 2026 Ei! Brownie. Todos os direitos reservados. | Desde 2020</p>
+      <p class="creditos">Desenvolvido por: Marcos Augusto de Azevedo</p>
+    </footer>
+  </body>
+</html>
