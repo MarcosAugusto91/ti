@@ -95,3 +95,5 @@ Exercício 1:
 2- Crie uma regra de estilo em app.css que altere a cor do seu elemento;
 3- Vá até o arquivo index.html e altere o título da aplicação na meta tag;
 
+OBS IMPORTANTE: Quando fomos rodar um projeto em outra máquina PELA PRIMEIRA VEZ antes de sair rodando com NPM RUN DEV execute npm install
+
