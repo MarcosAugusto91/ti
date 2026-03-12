@@ -7,9 +7,9 @@ const handleMyEvent = (e) => {
 
 const renderSomething = (x) => {
     if(x){
-        return <h1>Renderizando isso!</h1>;
+        return <h2>Renderizando isso!</h2>;
     } else {
-        return <h1>Também pode renderizar isso!</h1>;
+        return <h2>Também pode renderizar isso!</h2>;
     }   
 };
 
@@ -34,6 +34,7 @@ return(
         </div>
             {renderSomething(true)}
             {renderSomething(false)}
+            <hr />
     </div>
 );
 

@@ -4,8 +4,9 @@ const FirstComponents = () => {
     return (
         <div>
             {/*Comentário em JSX */}
-            <h1>Primeiro Componente</h1>
+            <h1>FIRSTCOMPONENT</h1>
             <p>Este é o meu primeiro componente React!</p>
+            <hr />
         </div>
     );
 }

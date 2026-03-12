@@ -1,7 +1,8 @@
 const MyComponent = () => {
     return (
         <>
-            <p>Estou sendo reaproveitado em vários lugares!</p>
+            <p>MYCOMPONENT: Estou sendo reaproveitado em vários lugares!</p>
+            <hr />
         </>
     );
 }
