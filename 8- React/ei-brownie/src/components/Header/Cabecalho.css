@@ -1,0 +1,15 @@
+.divcab{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(255, 217, 0);
+}
+
+.textocab{
+    color: black;
+    font-size: 2em;
+    font-weight: 600;
+    margin-left: 20px;
+}
