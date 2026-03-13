@@ -29,7 +29,7 @@ const [users, setUsers] = useState([
 
 return (
     <div>
-        <h2>Renderizando Listas e Objetos</h2>
+        <h2>Renderizando Listas e Objetos: ListRender</h2>
         <ul>
             {/* Renderizando Listas */}
             { list.map((item, i) => (
@@ -37,11 +37,11 @@ return (
             ))}
         </ul>
 
-        <ul>
+        <ul style={{listStyleType: "none"}}>
             {/* Renderizando Objetos */}
             {users.map((user) => (
                 <li key={user.id}> 
-                    {user.name} - {user.age} anos
+                   <strong>{user.id}</strong> {user.name} - {user.age} anos
                 </li>
             ))}
         </ul>
