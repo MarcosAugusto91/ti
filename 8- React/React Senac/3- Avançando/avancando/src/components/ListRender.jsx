@@ -14,7 +14,8 @@ const [users, setUsers] = useState([
         const randomNumber = Math.floor(Math.random() * 5)+1;
         
         setUsers((prevUsers) => {
-            return prevUsers.filter((user) => randomNumber !== user.id)      
+            return prevUsers.filter((user) => randomNumber !== user.id)    
+            //Usamos o filter para criar um novo array, excluindo apenas o ID que for igual ao número sorteado (randomNumber), mantendo os diferentes;
     });
 };
 

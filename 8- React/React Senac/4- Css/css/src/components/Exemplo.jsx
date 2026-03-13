@@ -1,5 +1,6 @@
 import './Exemplo.css'
-// import styles from './Exemplo.module.css'
+
+// import styles from './Exemplo.module.css' <------ Dessa forma utilizando o Module os estilos não vazariam para os outros componentes.
 
 const Exemplo = () => {
   return (
