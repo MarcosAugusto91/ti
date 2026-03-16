@@ -48,6 +48,9 @@ alter table chamados
  
  alter table chamados
  add descricaotecnico longtext;
+
+ alter table chamados
+ add valor double;
  
  ALTER TABLE chamados CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
     

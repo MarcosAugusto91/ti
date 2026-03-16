@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Exemplo from './components/Exemplo.jsx'
 import ExemploSemCss from './components/ExemploSemCss'
@@ -10,8 +8,8 @@ function App() {
   
   //CSS Global: index.css (Vermelho)
   //CSS Local: App.css (Mais forte que o global) (Azul)
-  //CSS Local: Exemplo.Css se não criarmos ele acaba pegando o local do App.css ou o Global.css (Verde)
-  //CSS Module: Exemplo.module.css (Tem que ser importado como um objeto e usar className={estilos.nomeDaClasse})
+  //CSS Local: Exemplo.Css se não criarmos ele acaba pegando o local do App.css ou o Global.css (Verde) Cuidado pois este pode acabar vazando para outros;
+  //CSS Module: Exemplo.module.css (Tem que ser importado no seu componente como um objeto e usar className={estilos.nomeDaClasse}) evita vazar para outros componentes.
 
   let autor = 'Marcos'
 

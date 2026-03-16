@@ -1,9 +1,7 @@
 import { Fragment, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Squirtle from './assets/squirtle2.png'
-import ManageData from './components/ManageData'
+//import ManageData from './components/ManageData'
 import ManageData2UseState from './components/ManageData2UseState'
 import ListRender from './components/ListRender'
 import CondicionalRender from './components/CondicionalRender'
@@ -31,8 +29,8 @@ import ChangeMessageState from './components/ChangeMessageState'
 //13 - State Lift: Um componente exibe outro altera, o Pai gerencia; - Arquivo App.jsx (Componente Message.jsx e ChangeMessageState.jsx)
 
 function App() {
-  const [count, setCount] = useState(0)
-  const name = "Marcos Augusto"
+
+  {/* Variável utilizada em ShowUserName */}
   const [userName] = useState("Marcos Augusto de Azevedo")
 
   {/* Array de objetos utilizado em CarDetails */}
@@ -58,69 +56,96 @@ function App() {
   return (
     <>
       <div>
-        <p>Começando Sessão 3</p>
         {/* Imagem em Public */}
+        <h2>Imagem em Public: </h2>
         <div>
           <img src="/bulbassauro.png" alt="Pokemon Bulbassauro" />
         </div>
         <div>
-          <img src="/chamander.png" alt="Pokemon Chamander" />          
+          <img src="/chamander.png" alt="Pokemon Chamander" />  
+          <hr />        
         </div>
-
+        {/* ----------------------------------------------------------------------------------- */}
+        
+        <h2>Imagem em Assets: </h2>
         {/* Imagem em Assets */}
         <div>
           <img src={Squirtle} alt="Pokemon Squirtle" />  
+          <hr />
         </div>
+
+        {/* ----------------------------------------------------------------------------------- */}
 
         {/* <ManageData: Alterando usando useState/> */}
         <ManageData2UseState />
         <hr />
+        {/* ----------------------------------------------------------------------------------- */}
 
         {/* Renderização de listas e objetos */}
         <ListRender/>
         <hr />
 
+        {/* ----------------------------------------------------------------------------------- */}
+
         {/* Renderização condicional */}
         <CondicionalRender/>
         <hr />
 
+        {/* ----------------------------------------------------------------------------------- */}
+
         {/* Utilizando Props */}
         <ShowUserName name={userName}/>
         <hr />
+
+        {/* ----------------------------------------------------------------------------------- */}
     
         {/* Destructuring Props */}
-        <CarDetails brand="Ferrari" km={100000} color="Preto"  novo={false}/>
-        <hr />
-    
+        <h2>Usando Props Desconstruídas: CarDetails</h2>
+        <CarDetails brand="Ferrari" km={100000} color="Preto" novo={false}/>
+
         {/* Reaproveitando Componente */}
+        <h3>Reaproveitando Componente</h3>
         <CarDetails brand="Ford" color="Vermelho" km={0} novo={true}/>
-        <CarDetails brand="Fiat" color="Cinza" km={15000} novo={false}/>
+        <hr />
+
+        {/* ----------------------------------------------------------------------------------- */}
 
         {/* Loop em array de objetos */}
-        {<hr></hr>}
+        <h2>Loop em array de objetos: CarDetails</h2>
         {cars.map((car) => (
           <CarDetails 
             key={car.id} 
+            id={car.id}
             brand={car.brand} 
             color={car.color} 
             km={car.km} 
             novo={car.novo}/>
         ))}
 
+        {/* ----------------------------------------------------------------------------------- */}
+
         {/* Fragment */}
         <Fragment2 propFragment='teste'/>
+
+        {/* ----------------------------------------------------------------------------------- */}
 
         {/* Children: Conseguimos renderizar conteúdo Html pelo componente filho */}
         <Container propValor="Marcos Augusto"> 
           <p>Conteúdo filho do Container</p>
         </Container>
 
+        {/* ----------------------------------------------------------------------------------- */}
+
         {/* Executar função por Props(Pelo componente Filho) */}
         <ExecuteFunction myFunction={showMessage}/>
+
+        {/* ----------------------------------------------------------------------------------- */}
 
         {/* State Lift: Um componente exibe outro altera, o Pai gerencia; */}
         <Message msg={message} /> {/* Componente que exibe o valor do estado message */}
         <ChangeMessageState changeMessage={handleMessage}/> {/* Componente que altera o valor do estado */}
+
+        {/* ----------------------------------------------------------------------------------- */}
 
       </div>      
     </>

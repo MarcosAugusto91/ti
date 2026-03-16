@@ -1,0 +1,26 @@
+.cabecalho-nav {
+    display: flex;
+    gap: 1.5rem; /* Espaçamento entre os itens */
+    list-style: none;
+    padding: 0;
+    padding-right: 20px;
+    margin: 0;
+}
+
+.cabecalho-nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.cabecalho-nav li{
+    padding: 10px;
+}
+
+.cabecalho-nav li:hover {
+    background-color: rgba(0, 0, 0, 0.08); /* Escurece levemente o fundo amarelo do cabeçalho */
+}

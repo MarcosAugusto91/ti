@@ -1,5 +1,5 @@
 import './MyForm.css'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 
 const MyForm = ({user}) => {
     //6- Controlled inputs
@@ -9,6 +9,9 @@ const MyForm = ({user}) => {
     const [name, setName] = useState(user ? user.name : '')
     const [email, setEmail] = useState(user ? user.email : '')
     const [bio, setBio] = useState('')
+
+    //10- Importamos o useRef e criamos a referencia abaixo que foi colocado no input para conseguimos utilizar o focus
+    const nameInputRef = useRef(null)
  
     const [role, setRole] = useState('')
     
@@ -17,6 +20,7 @@ const MyForm = ({user}) => {
     }
 
     // 5- Envio de formulário
+    // preventDefault ele evita o envio do formulário para outra página;
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log('Enviando o formulário')
@@ -27,6 +31,7 @@ const MyForm = ({user}) => {
         setEmail('')
         setBio('')
         setRole('')
+        nameInputRef.current.focus()
     }
 
     return (
@@ -38,6 +43,7 @@ const MyForm = ({user}) => {
                 <input 
                 type="text" 
                 name="name" 
+                ref={nameInputRef}
                 placeholder='Digite seu Nome' 
                 onChange={handleName} 
                 value={name}
@@ -47,7 +53,7 @@ const MyForm = ({user}) => {
 
             {/* 2- Label envolvendo Input */}
             <label>
-                {/* 4- Simplificação da manipulação do state */}
+                {/* 4- Simplificação da manipulação do state: Na linha onChange */}
                <span>Email: </span>
                <input 
                type="email" 
@@ -81,8 +87,6 @@ const MyForm = ({user}) => {
             <input type="submit" value="Enviar" />
         </form>
     </div>
-
-
 
   )
 }
