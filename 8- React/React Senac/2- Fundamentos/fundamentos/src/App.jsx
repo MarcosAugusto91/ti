@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import FirstComponents from './componentes/FirstComponents'
 import TemplateExpressions from './componentes/TemplateExpressions'
@@ -9,7 +7,6 @@ import Events from './componentes/Events'
 import Challenge from './componentes/challenge' 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>        
