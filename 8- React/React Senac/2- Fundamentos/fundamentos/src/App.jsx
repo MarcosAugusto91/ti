@@ -8,6 +8,13 @@ import MyComponent from './componentes/MyComponent'
 import Events from './componentes/Events'
 import Challenge from './componentes/challenge' 
 
+//Ordem de aprendizagem:
+//1- First Component
+//2- Template Expressions
+//3- MyComponent
+//4- Events
+//5- Challenge
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -28,7 +35,7 @@ function App() {
         </button>
 
         {/* Importando os componentes */}
-        <MyComponent/>
+        <MyComponent/> {/* Sendo chamado aqui e no TemplateExpressions */}
         <FirstComponents />   
         <TemplateExpressions />  
         <Events />
