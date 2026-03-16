@@ -14,6 +14,8 @@ Esqueci minha senha; Com validação após 3 tentativas;
 Criar limite de quantidade de registros por tela;
 Aceitar pagamentos;
 
+------------------------------------------------------------------------------------------
+
 BANCO:
 drop database helpdesk;
 drop table chamados;
@@ -42,6 +44,7 @@ create database helpdesk;
     select * from chamados;
     
     SELECT count(statuschamado) as 'Total' FROM chamados WHERE statuschamado ='Aberto';
+
     
 alter table chamados
  add statuschamado varchar(50);
@@ -53,6 +56,9 @@ alter table chamados
  add valor double;
  
  ALTER TABLE chamados CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+insert into usuarios (nome, email, senha, perfil) values 
+		('Marcos','marcos@senacsp.edu.br'	,'202cb962ac59075b964b07152d234b70'	,'adm');
     
     update usuarios
 	set perfil = 'Adm'
