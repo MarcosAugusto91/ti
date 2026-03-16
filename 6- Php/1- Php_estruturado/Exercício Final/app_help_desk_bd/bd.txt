@@ -1,4 +1,4 @@
-Futuro:
+Implementações Futuras:
 Mudar fonte HELP-DESK;
 
 Inserir contato do Usuário
@@ -15,13 +15,15 @@ Criar limite de quantidade de registros por tela;
 Aceitar pagamentos;
 
 ------------------------------------------------------------------------------------------
-
-BANCO:
+BANCO: (Somente caso queira  começar do zero, não tem como excluir um banco que ainda não existe!)
 drop database helpdesk;
 drop table chamados;
 drop table usuarios;
-
+-------------------------------------------------------------------------------------------
+Criando o banco:
 create database helpdesk;
+-------------------------------------------------------------------------------------------
+Criando as tabelas:
 	create table usuarios (
     
     id_usuario int primary key auto_increment,
@@ -39,13 +41,8 @@ create database helpdesk;
     id_usuario int,
     Constraint fkChamadoUsuario foreign key (id_usuario) references usuarios (id_usuario)
     );
-    
-    select * from usuarios;
-    select * from chamados;
-    
-    SELECT count(statuschamado) as 'Total' FROM chamados WHERE statuschamado ='Aberto';
-
-    
+-------------------------------------------------------------------------------------------
+Alterando e colocando os campos faltantes na tabela chamados:    
 alter table chamados
  add statuschamado varchar(50);
  
@@ -56,14 +53,25 @@ alter table chamados
  add valor double;
  
  ALTER TABLE chamados CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-
+ -------------------------------------------------------------------------------------------
+Inserindo usuário padrão adm para começar o processo de login:
 insert into usuarios (nome, email, senha, perfil) values 
 		('Marcos','marcos@senacsp.edu.br'	,'202cb962ac59075b964b07152d234b70'	,'adm');
-    
+-------------------------------------------------------------------------------------------
+Caso precise atualizar o perfil desse usuário:
     update usuarios
 	set perfil = 'Adm'
     where id_usuario = 1;
-    
+-------------------------------------------------------------------------------------------
+Mudando status do chamado:
     update chamados
 	set statuschamado = 'Finalizado'
     where id_chamado in (8,9,11);
+
+-------------------------------------------------------------------------------------------
+Consultando no banco:
+    select * from usuarios;
+    select * from chamados;
+    
+    SELECT count(statuschamado) as 'Total' FROM chamados WHERE statuschamado ='Aberto';
+-------------------------------------------------------------------------------------------
