@@ -20,7 +20,7 @@ function App() {
         {/* Importando os componentes */}
         <MyComponent/> {/* Sendo chamado aqui e no TemplateExpressions */}
         <FirstComponents />   
-        <TemplateExpressions />  
+        <TemplateExpressions />
         <Events />
         <Challenge />
       </div>

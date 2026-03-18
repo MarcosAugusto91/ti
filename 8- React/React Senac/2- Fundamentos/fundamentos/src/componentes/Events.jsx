@@ -7,16 +7,16 @@ const handleMyEvent = (e) => {
 
 const renderSomething = (x) => {
     if(x){
-        return <h2>Renderizando isso!</h2>;
+        return <h2>Renderizando True!</h2>;
     } else {
-        return <h2>Também pode renderizar isso!</h2>;
+        return <h2>Renderizando False!</h2>;
     }   
 };
 
 return(
     <div>
         <div>
-            <button onClick={(handleMyEvent)}>Função Maior com Nome!</button>
+            <button onClick={handleMyEvent}>Função Maior com Nome!</button>
         </div>
 
         <div>

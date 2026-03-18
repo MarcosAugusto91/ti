@@ -9,12 +9,14 @@ if ($_SESSION['perfil'] != 'Adm') {
     $sql = "SELECT * FROM chamados";
 }
 
-  $res = $conexao->query($sql);
-  $qtd = $res->num_rows;
+  $res = $conexao->query($sql); // Executa a query de chamados no banco de dados e armazena o resultado em $res (Trazendo os chamados)
+  
+  $qtd = $res->num_rows; // Armazena a quantidade de linhas (chamados) retornadas pela consulta
 
   $sql = "SELECT * FROM usuarios";
-  $resusuarios = $conexao->query($sql);
-  $qtdusuarios = $resusuarios->num_rows;
+  $resusuarios = $conexao->query($sql); // Executa a query que seleciona todos os usuários e armazena em $resusuarios
+  
+  $qtdusuarios = $resusuarios->num_rows; // Armazena a quantidade de linhas (usuários) retornadas pela consulta
 ?>
 
 <html>
@@ -69,6 +71,7 @@ if ($_SESSION['perfil'] != 'Adm') {
                     $idchamado = $row -> id_chamado;
                     $idusuario = $row -> id_usuario;
                     $resusuarios->data_seek(0); // Reinicia o ponteiro do resultado da consulta de usuários
+                    
                     while ($user = $resusuarios->fetch_object()){
                         if ($user -> id_usuario == $idusuario){ 
                           echo '<p style="color: green; margin-bottom: 2px;"> Usuário: ' . $user -> nome . '</p>';
