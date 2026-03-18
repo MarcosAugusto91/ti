@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import FirstComponents from './componentes/FirstComponents'
 import TemplateExpressions from './componentes/TemplateExpressions'
@@ -24,7 +23,6 @@ function App() {
         <TemplateExpressions />  
         <Events />
         <Challenge />
-
       </div>
     </>
   )

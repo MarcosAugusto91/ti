@@ -56,7 +56,7 @@ alter table chamados
  -------------------------------------------------------------------------------------------
 Inserindo usuário padrão adm para começar o processo de login:
 insert into usuarios (nome, email, senha, perfil) values 
-		('Marcos','marcos@senacsp.edu.br'	,'202cb962ac59075b964b07152d234b70'	,'adm');
+		('Marcos','marcos@senacsp.edu.br'	,'202cb962ac59075b964b07152d234b70'	,'Adm');
 -------------------------------------------------------------------------------------------
 Caso precise atualizar o perfil desse usuário:
     update usuarios
