@@ -16,7 +16,7 @@ const renderSomething = (x) => {
 return(
     <div>
         <div>
-            <button onClick={handleMyEvent}>Função Maior com Nome!</button>
+            <button onClick={(handleMyEvent)}>Função Maior com Nome!</button>
         </div>
 
         <div>
