@@ -1,14 +1,15 @@
 import './Nav.css'
+import { Link } from 'react-router-dom'
 
 const Nav = () => {
   return (
-    <div>
-        <ul className="cabecalho-nav">
-            <li><a href="">Home</a></li>
-            <li><a href="">Sobre</a></li>
-            <li><a href="">Contato</a></li>
-        </ul>
-    </div>
+    <>
+      <nav className='cabecalho-nav'>
+        <Link to="/"><button>Home</button></Link>
+        <Link to="/about"><button>Sobre</button></Link>
+        <Link to="/Contato"><button>Contato</button></Link>
+      </nav>
+    </>
   )
 }
 

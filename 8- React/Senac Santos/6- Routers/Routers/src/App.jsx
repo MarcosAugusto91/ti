@@ -38,7 +38,7 @@ function App() {
           <Link to="/about"><button>About</button></Link>
         </nav>
 
-        {/* 
+        {/*   
         2- Criando as rotas de acordo com a Url da Página 
         3- Após colocar os caminhos e posicionar as pages crie uma pasta pages e crie os componentes lá dentro com seus css;
         */}
