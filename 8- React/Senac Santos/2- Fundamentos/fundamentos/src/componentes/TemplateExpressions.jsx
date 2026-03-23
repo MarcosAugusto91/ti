@@ -1,6 +1,5 @@
 import MyComponent from './MyComponent'
 
-
 const TemplateExpressions = () => {
     const name = "Marcos";
     const data = {

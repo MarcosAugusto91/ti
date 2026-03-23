@@ -15,6 +15,9 @@ function App() {
 
   return (
     <>
+
+      <h1>TESTE</h1>
+
       {/* Exemplo sem Css pegando o CSS Exemplo.css erroneamente porque quando colocamos uma configuração global em algum css componente ele aplica em todos, temos que usar o CSS Module e className.
       Ex: Exemplo.module.css + Exemplo.jsx (parte comentada) */}
       <ExemploSemCss />
