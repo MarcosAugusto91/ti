@@ -42,7 +42,7 @@ return (
             {/* Renderizando Objetos */}
             {users.map((user) => (
                 <li key={user.id}> 
-                   <strong>{user.id}</strong> {user.name} - {user.age} anos
+                   <strong>ID:</strong> {user.id} / {user.name} - {user.age} anos
                 </li>
             ))}
         </ul>
