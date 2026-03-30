@@ -15,7 +15,7 @@ const [users, setUsers] = useState([
         
         setUsers((prevUsers) => {
             return prevUsers.filter((user) => randomNumber !== user.id)    
-            //Usamos o filter para criar um novo array, excluindo apenas o ID que for igual ao número sorteado (randomNumber), mantendo os diferentes;
+            //Usamos o filter para criar um novo objeto, excluindo apenas o ID que for igual ao número sorteado (randomNumber), mantendo os diferentes;
     });
 };
 
