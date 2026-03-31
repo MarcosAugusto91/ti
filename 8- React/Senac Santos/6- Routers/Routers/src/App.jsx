@@ -33,7 +33,7 @@ function App() {
         <Cabecalho/>
         
         {/* 5- Criando botões que redirecionam por meio do Link */}
-        <nav style={{display: 'flex', gap: '10px', padding: '10px'}}>
+        <nav style={{display: 'flex', justifyContent: 'center', gap: '10px', padding: '10px', backgroundColor: '#f0f0f0'}}>
           <Link to="/"><button>Home</button></Link>
           <Link to="/about"><button>About</button></Link>
         </nav>
