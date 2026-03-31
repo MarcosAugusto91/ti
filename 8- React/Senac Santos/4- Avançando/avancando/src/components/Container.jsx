@@ -1,9 +1,8 @@
-const Container = ({ children, propValor }) => {
+const Container = ({ children }) => {
   return (
     <div>
         <hr />
         <h2>Utilizando Children: Container.jsx</h2>
-        <p>Meu nome é: {propValor}</p>
         {children}
     </div>
   )

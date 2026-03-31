@@ -30,23 +30,23 @@ import ChangeMessageState from './components/ChangeMessageState'
 
 function App() {
 
-  {/* Variável utilizada em ShowUserName */}
+  {/* Variável utilizada em ShowUserName */ }
   const [userName] = useState("Marcos Augusto de Azevedo")
 
-  {/* Array de objetos utilizado em CarDetails */}
+  {/* Array de objetos utilizado em CarDetails */ }
   const cars = [
-    {id: 1, brand: "Ferrari", color: "Vermelho", km: 0, novo: true},
-    {id: 2, brand: "Ford", color: "Preto", km: 10000, novo: false},
-    {id: 3, brand: "Fiat", color: "Cinza", km: 45000, novo: false},
-    {id: 4, brand: "Chevrolet", color: "Azul", km: 0, novo: true}
+    { id: 1, brand: "Ferrari", color: "Vermelho", km: 0, novo: true },
+    { id: 2, brand: "Ford", color: "Preto", km: 10000, novo: false },
+    { id: 3, brand: "Fiat", color: "Cinza", km: 45000, novo: false },
+    { id: 4, brand: "Chevrolet", color: "Azul", km: 0, novo: true }
   ]
 
-  {/* Função para ser executada no componente filho: ExecuteFunction */}
+  {/* Função para ser executada no componente filho: ExecuteFunction */ }
   function showMessage() {
     console.log("Evento do componente pai")
   }
 
-  {/* State Lift: Criando estado no componente pai e alterando ele a partir do componente filho */}
+  {/* State Lift: Criando estado no componente pai e alterando ele a partir do componente filho */ }
   const [message, setMessage] = useState("")
 
   const handleMessage = (msg) => {
@@ -62,15 +62,15 @@ function App() {
           <img src="/bulbassauro.png" alt="Pokemon Bulbassauro" />
         </div>
         <div>
-          <img src="/chamander.png" alt="Pokemon Chamander" />  
-          <hr />        
+          <img src="/chamander.png" alt="Pokemon Chamander" />
+          <hr />
         </div>
         {/* ---------------------------------------------------------------------------------------------- */}
-        
+
         <h2>Imagem em Assets: </h2>
         {/* Imagem em Assets */}
         <div>
-          <img src={Squirtle} alt="Pokemon Squirtle" />  
+          <img src={Squirtle} alt="Pokemon Squirtle" />
           <hr />
         </div>
 
@@ -82,30 +82,30 @@ function App() {
         {/* ---------------------------------------------------------------------------------------------- */}
 
         {/* Renderização de listas e objetos */}
-        <ListRender/>
+        <ListRender />
         <hr />
 
         {/* ---------------------------------------------------------------------------------------------- */}
 
         {/* Renderização condicional */}
-        <CondicionalRender/>
+        <CondicionalRender />
         <hr />
 
         {/* ---------------------------------------------------------------------------------------------- */}
 
         {/* Utilizando Props */}
-        <ShowUserName name={userName}/>
+        <ShowUserName name={userName} />
         <hr />
 
         {/* ---------------------------------------------------------------------------------------------- */}
-    
+
         {/* Destructuring Props */}
         <h2>Usando Props Desconstruídas: CarDetails</h2>
-        <CarDetails brand="Ferrari" km={100000} color="Preto" novo={false}/>
+        <CarDetails brand="Ferrari" km={100000} color="Preto" novo={false} />
 
         {/* Reaproveitando Componente */}
         <h3>Reaproveitando Componente</h3>
-        <CarDetails brand="Ford" color="Vermelho" km={0} novo={true}/>
+        <CarDetails brand="Ford" color="Vermelho" km={0} novo={true} />
         <hr />
 
         {/* ---------------------------------------------------------------------------------------------- */}
@@ -113,41 +113,44 @@ function App() {
         {/* Loop em array de objetos */}
         <h2>Loop em array de objetos: CarDetails</h2>
         {cars.map((car) => (
-          <CarDetails 
-            key={car.id} 
+          <CarDetails
+            key={car.id}
             id={car.id}
-            brand={car.brand} 
-            color={car.color} 
-            km={car.km} 
-            novo={car.novo}/>
+            brand={car.brand}
+            color={car.color}
+            km={car.km}
+            novo={car.novo} />
         ))}
 
         {/* ---------------------------------------------------------------------------------------------- */}
 
         {/* Fragment */}
-        <Fragment2 propFragment='teste'/>
+        <Fragment2 propFragment='teste' />
 
         {/* ---------------------------------------------------------------------------------------------- */}
 
         {/* Children: Conseguimos renderizar conteúdo Html pelo componente filho */}
-        <Container propValor="Marcos Augusto"> 
-          <p>Conteúdo filho do Container</p>
+        <Container>
+          <>
+            <h3>Children</h3>
+            <p>Conteúdo filho do Container</p>
+          </>
         </Container>
 
         {/* ---------------------------------------------------------------------------------------------- */}
 
         {/* Executar função por Props(Pelo componente Filho) */}
-        <ExecuteFunction myFunction={showMessage}/>
+        <ExecuteFunction myFunction={showMessage} />
 
         {/* ---------------------------------------------------------------------------------------------- */}
 
         {/* State Lift: Um componente exibe outro altera, o Pai gerencia; */}
         <Message msg={message} /> {/* Componente que exibe o valor do estado message */}
-        <ChangeMessageState changeMessage={handleMessage}/> {/* Componente que altera o valor do estado */}
+        <ChangeMessageState changeMessage={handleMessage} /> {/* Componente que altera o valor do estado */}
 
         {/* ---------------------------------------------------------------------------------------------- */}
 
-      </div>      
+      </div>
     </>
   )
 }

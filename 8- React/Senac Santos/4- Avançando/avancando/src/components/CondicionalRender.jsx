@@ -20,7 +20,7 @@ const [name, setName] = useState("Marcos");
         {x ? <p>Se x for true, Sim!</p> : <p>Se x for false, Sim!</p>}
 
         {name === "Marcos" ? (<p>Olá, Marcos!</p>) : (<p>Olá, João!</p>)}
-        <button onClick={() => setName("João")}>Mudar nome</button>
+        <button onClick={() => setName("x")}>Mudar nome</button>
     </div>
 )
 }

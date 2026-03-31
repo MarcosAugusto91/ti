@@ -9,12 +9,11 @@ const MyForm = ({user}) => {
     const [name, setName] = useState(user ? user.name : '')
     const [email, setEmail] = useState(user ? user.email : '')
     const [bio, setBio] = useState('')
+    const [role, setRole] = useState('')
 
     //10- Importamos o useRef e criamos a referencia abaixo que foi colocado no input para conseguimos utilizar o focus
     const nameInputRef = useRef(null)
  
-    const [role, setRole] = useState('')
-    
     const handleName = (e) => {
         setName(e.target.value);
     }
@@ -25,7 +24,6 @@ const MyForm = ({user}) => {
         e.preventDefault()
         console.log('Enviando o formulário')
         console.log(name, email, bio, role)
-
     //7- Limpar os inputs após o envio
         setName('')
         setEmail('')
@@ -84,10 +82,9 @@ const MyForm = ({user}) => {
                 </select>
             </label>
 
-            <input type="submit" value="Enviar" />
+            <input type="submit" value="Enviar"/>
         </form>
     </div>
-
   )
 }
 
