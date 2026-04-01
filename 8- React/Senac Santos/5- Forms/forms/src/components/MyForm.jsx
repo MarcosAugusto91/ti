@@ -75,7 +75,8 @@ const MyForm = ({user}) => {
             {/* 9- Select */}
             <label>
                 <span>Função do Sistema:</span>
-                <select name="role" onChange={(e)=>setRole(e.target.value)}>
+                <select name="role" required value={role} onChange={(e)=>setRole(e.target.value)}>
+                    <option value="" disabled hidden>Selecione uma opção</option>
                     <option value="user">Usuário</option>
                     <option value="editor">Editor</option>
                     <option value="admin">Administrador</option>
