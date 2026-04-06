@@ -4,10 +4,7 @@
     class PersonagemQuadrinho{
 
         //ATRIBUTOS
-        public $forcaBruta;
-        public $agilidade;
-        public $inteligencia;
-        public $nome;
+        public $forcaBruta, $agilidade, $inteligencia, $nome;
 
         //MÉTODOS
         public function exibirAtributos(){
@@ -18,7 +15,7 @@
                     Inteligência: $this->inteligencia <hr>";
         } 
 
-        public function alteraAtributos($nome, $forca,$agilidade,$inteligencia){
+        public function alteraAtributos($nome, $forca, $agilidade, $inteligencia){
             $this->nome = $nome;
             $this->forcaBruta = $forca;
             $this->agilidade = $agilidade;
