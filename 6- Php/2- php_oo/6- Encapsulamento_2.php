@@ -1,49 +1,32 @@
 <?php
 
-class Pai {
-    private $nome = 'Jorge'; //disponível para o proprio obj(class), nem os próprios filhos podem acessar, nem a aplicação;
+class Pessoa{
+    private $nome = 'Jorge'; //disponível para o propria classe, nem os próprios filhos podem acessar, nem a aplicação;
     protected $sobrenome = 'Silva'; //disponível para o proprio obj(class) ou filhos, mas não para aplicação;
     public $humor = 'Feliz'; //Disponível para aplicação quanto para outros objetos;
 
 
-    // public function getNome(){
-    //     //somente com métodos que acesso os atributos private e protected
-    //     return $this->nome;
-    // }
-    // public function getSobrenome()
-    // {
-    //     //somente com métodos que acesso os atributos private e protected
-    //     return $this->sobrenome;
-    // }
-
-    // public function setNome($value)
-    // {
-    //     $this->nome = $value;
-    // }
-
-    // public function setSobrenome($value)
-    // {
-    //     if (strlen($value) >= 3) {
-    //         $this->sobrenome = $value;
-    //     }
-    // }
-
-    public function __get($atr) {
+    public function __get($atr)
+    {
         return $this->$atr;
     }
-    public function __set($atr, $value) {
-       $this->$atr = $value;
+    public function __set($atr, $value)
+    {
+        $this->$atr = $value;
     }
 
-    private function executarMania() {
+    private function executarMania()
+    {
         echo 'Assobiar';
     }
 
-    protected function responder() {
+    protected function responder()
+    {
         echo 'Oi';
     }
 
-    public function executarAcao() {
+    public function executarAcao()
+    {
         $x = rand(1, 10);
 
         if ($x >= 1 && $x <= 8) {
@@ -53,28 +36,34 @@ class Pai {
         }
     }
 }
-    class Filho extends Pai {
 
-        public function __construct() {
-            echo '<pre>';
-            print_r(get_class_methods($this));
-            echo '</pre>';
-        }
+class Filho extends Pessoa
+{
 
-        private function executarMania() {
-            echo 'Cantar';
-        }
+    public function __construct()
+    {
+        echo '<pre>';
+        print_r(get_class_methods($this));
+        echo '</pre>';
+    }
 
-        public function x() {
-            $this->executarMania();
-        }
+    private function executarMania()
+    {
+        echo 'Cantar';
+    }
 
-        protected function responder() {
-            echo 'Olá';
-        }
-    
+    public function x()
+    {
+        $this->executarMania();
+    }
 
-      /*   public function getAtributo ($attr) {
+    protected function responder()
+    {
+        echo 'Olá';
+    }
+
+
+    /*   public function getAtributo ($attr) {
             return $this->$attr;
         }
 
@@ -82,24 +71,27 @@ class Pai {
             $this->$attr = $value;
         } */
 
-       /*  public function __get($atr) {
+    /*  public function __get($atr) {
             return $this->$atr;
         }
         public function __set($atr, $value) {
            $this->$atr = $value;
         } */
-    
-    }
+}
 
 $filho = new Filho();
-//$pai = new Pai();
 
+echo '<pre>';
+//exibir os atributos do objeto
+print_r($filho);
+echo '</pre>';
 
-    echo '<pre>';
-    print_r($filho);
-    echo '</pre>';
+echo '</pre>';
+//exibir os métodos do objeto
+print_r(get_class_methods($filho));
+echo '</pre>';
 
-    /* echo $filho->getAtributo('nome');
+/* echo $filho->getAtributo('nome');
     echo '<br />';
     $filho->setAtributo('nome', 'Pereira');
     echo '<pre>';
@@ -108,12 +100,7 @@ $filho = new Filho();
     echo '<br />';
     echo $filho->getAtributo('nome'); */
 
-    //exibir os métodos do objeto
-    // echo '<pre>';
-    // print_r(get_class_methods($filho));
-    // echo '</pre>';
-
-   /*  echo $filho->__get('nome');
+/*  echo $filho->__get('nome');
 
     $filho->__set('nome', 'Jamilton');
     echo '<br />';
@@ -123,8 +110,10 @@ $filho = new Filho();
     print_r($filho);
     echo '</pre>'; */
 
-    $fiho->executarMania();
-    echo '<br/>';
-    $filho->x();
+//echo '<br/>';
+//$filho->executarMania();
+echo '<br/>';
+echo '<br/>';
+$filho->x();
 
-    ?>
+?>
