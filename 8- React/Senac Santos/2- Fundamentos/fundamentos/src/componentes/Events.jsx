@@ -13,14 +13,16 @@ const renderSomething = (x) => {
     }   
 };
 
+
+
 return(
     <div>
         <div>
-            <button onClick={handleMyEvent}>Função Maior com Nome!</button>
+            <button onClick={handleMyEvent}>Função Comum Maior +1 ação</button>
         </div>
 
         <div>
-            <button onClick={() => console.log("Evento 2 ativado!")}>Função Menor sem Nome!</button>
+            <button onClick={() => console.log("Evento 2 ativado!")}>Função Anônima 1 Ação</button>
         </div>
 
         <div>
@@ -30,7 +32,7 @@ return(
                 }
                 //Usar lógica somente nas funções maiores, que contém nome!
                 //Evitar usar lógica em arrow functions inline!
-            }}>Não fazer dessa forma! Sobrecarrega o HTML</button>
+            }}>Não fazer dessa forma! Sobrecarrega o HTML/JSX</button>
         </div>
             {renderSomething(true)}
             {renderSomething(false)}
