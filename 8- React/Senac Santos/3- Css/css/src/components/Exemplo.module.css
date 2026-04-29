@@ -1,3 +1,13 @@
 .titulo { 
     color: pink; 
 }
+
+/*
+h1.container_titulo {
+    color: purple;
+}
+*/
+
+h1{
+    color: purple;
+}

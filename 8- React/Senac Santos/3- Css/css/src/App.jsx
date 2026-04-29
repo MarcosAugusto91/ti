@@ -9,15 +9,14 @@ function App() {
   //CSS Global: index.css (Vermelho)
   //CSS Local: App.css (Mais forte que o global) (Azul)
   //CSS Local: Exemplo.Css se não criarmos ele acaba pegando o local do App.css ou o Global.css (Verde) Cuidado pois este pode acabar vazando para outros;
-  //CSS Module: Exemplo.module.css (Tem que ser importado no seu componente como um objeto e usar className={estilos.nomeDaClasse}) evita vazar para outros componentes.
+  //CSS Module: Exemplo.module.css (Tem que ser importado no seu componente como um objeto e usar className={estilos.nomeDaClasse}) evita vazar para outros componentes, SOMENTE em Classes ou Id's, para Seletores genéricos como um parágrafo ainda vai continuar vazando.
 
   let autor = 'Marcos'
 
   return (
     <>
-
       <h1>TESTE</h1>
-
+      
       {/* Exemplo sem Css pegando o CSS Exemplo.css erroneamente porque quando colocamos uma configuração global em algum css componente ele aplica em todos, temos que usar o CSS Module e className.
       Ex: Exemplo.module.css + Exemplo.jsx (parte comentada) */}
       <ExemploSemCss />
@@ -48,6 +47,7 @@ function App() {
 
       {/* Classes Dinâmicas */}
         <h1 className={autor === 'Marcos' ? 'marcos' : 'titulo'}>Formatação com Classe Dinâmica</h1>
+
 
     </>
   )
