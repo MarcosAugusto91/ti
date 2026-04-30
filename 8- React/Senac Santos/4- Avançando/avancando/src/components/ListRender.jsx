@@ -1,7 +1,8 @@
 import {useState} from 'react'
 
 const ListRender = () => {
-const [list] = useState(["Matheus", "João", "Maria", "Ana"])
+
+const list = ["Matheus", "João", "Maria", "Ana"]
 
 const [users, setUsers] = useState([
     {id: 1, name: "Matheus", age: 30},
