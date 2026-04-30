@@ -100,7 +100,7 @@ function App() {
         {/* ---------------------------------------------------------------------------------------------- */}
 
         {/* Destructuring Props */}
-        <h2>Usando Props Desconstruídas: CarDetails</h2>
+        <h2>Usando Props Desconstruídas FRAGMENT: CarDetails</h2>
         <CarDetails brand="Ferrari" km={100000} color="Preto" novo={false} />
 
         {/* Reaproveitando Componente */}

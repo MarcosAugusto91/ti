@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 const CondicionalRender = () => {
+
 const [x] = useState(false);
 const [name, setName] = useState("Marcos");
 
@@ -17,7 +18,7 @@ const [name, setName] = useState("Marcos");
 
         {/* Operadores Ternários */}
         <h3>Operador Ternário:</h3>
-        {x ? <p>Se x for true, Sim!</p> : <p>Se x for false, Sim!</p>}
+          {x ? <p>Se x for true, Sim!</p> : <p>Se x for false, Sim!</p>}
 
         {name === "Marcos" ? (<p>Olá, Marcos!</p>) : (<p>Olá, João!</p>)}
         <button onClick={() => setName("x")}>Mudar nome</button>
