@@ -23,7 +23,6 @@ function App() {
         <Events />
         <Challenge />
       </div>
-
     </>
   );
 }

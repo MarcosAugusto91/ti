@@ -49,6 +49,8 @@ function App() {
         <h1 className={autor === 'Marcos' ? 'marcos' : 'titulo'}>Formatação com Classe Dinâmica</h1>
 
 
+      {/* Utilizando Classe de mesmo nome com Module */}
+        <h1 className='titulo'>Classe de mesmo nome com Module "Trouxe do App"</h1>
     </>
   )
 }

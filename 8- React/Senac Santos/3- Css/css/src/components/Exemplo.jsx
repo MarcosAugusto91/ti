@@ -6,7 +6,7 @@ const Exemplo = () => {
   return (
     <div>
         <h1 className={styles.container_titulo}>Exemplo de Componente (Sem Estilo Específico)</h1>
-        <h1 className={styles.titulo}>Exemplo de Componente (Com estilo pink)</h1>
+        <h1 className={styles.titulo}>Exemplo de Componente (Com estilo pink) "Trouxe do Module"</h1>
     </div>
   )
 }
