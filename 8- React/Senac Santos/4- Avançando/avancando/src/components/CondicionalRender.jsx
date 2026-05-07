@@ -14,6 +14,7 @@ const [name, setName] = useState("Marcos");
         {/* Condicional simples */}
         <h3>Condicional Simples:</h3>
         {x && <p>Se x for true, Sim!</p>}
+
         {!x && <p>Se x for false, Sim!</p>}
 
         {/* Operadores Ternários */}
