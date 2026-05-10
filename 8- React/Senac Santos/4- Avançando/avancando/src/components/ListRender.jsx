@@ -1,8 +1,13 @@
 import {useState} from 'react'
 
 const ListRender = () => {
+<<<<<<< Updated upstream
 
 const list = ["Matheus", "João", "Maria", "Ana"]
+=======
+    
+const [list] = useState(["Matheus", "João", "Maria", "Ana"])
+>>>>>>> Stashed changes
 
 const [users, setUsers] = useState([
     {id: 1, name: "Matheus", age: 30},
