@@ -15,6 +15,7 @@ const MyForm = ({user}) => {
     const nameInputRef = useRef(null)
  
     const handleName = (e) => {
+        console.log(e);
         setName(e.target.value);
     }
 
@@ -49,7 +50,7 @@ const MyForm = ({user}) => {
                 />
             </div>
 
-            {/* 2- Label envolvendo Input */}
+            {/* 2- Label envolvendo Input - BOA PRÁTICA */}
             <label>
                 {/* 4- Simplificação da manipulação do state: Na linha onChange */}
                <span>Email: </span>
@@ -57,7 +58,7 @@ const MyForm = ({user}) => {
                type="email" 
                name="email" 
                placeholder='Digite seu Email' 
-               onChange={(e) => setEmail(e.target.value)}
+               onChange={(e) => setEmail(e.target.value) /* Boa Prática */}
                value={email}/>
             </label>
 
