@@ -12,6 +12,7 @@ import Container from './components/Container'
 import ExecuteFunction from './components/ExecuteFunction'
 import Message from './components/Message'
 import ChangeMessageState from './components/ChangeMessageState'
+import ChildrenFunction from './components/ChildrenFunction'
 
 //Ordem de aprendizagem:
 //1 - Imagem em Public - Arquivo App.jsx
@@ -44,6 +45,11 @@ function App() {
   {/* Função para ser executada no componente filho: ExecuteFunction */ }
   function showMessage() {
     console.log("Evento do componente pai")
+  }
+
+  {/* Função que recebe um parâmetro e o exibe no console */}
+  function showMessage2(texto) {
+    console.log("O parâmetro disparado pelo filho foi: " + texto)
   }
 
   {/* State Lift: Criando estado no componente pai e alterando ele a partir do componente filho */ }
@@ -119,7 +125,7 @@ function App() {
             brand={car.brand}
             color={car.color}
             km={car.km}
-            novo={car.novo} />
+            novo={car.novo}/>
         ))}
 
         {/* ---------------------------------------------------------------------------------------------- */}
@@ -144,11 +150,19 @@ function App() {
 
         {/* ---------------------------------------------------------------------------------------------- */}
 
+        {/* Passamos a função showMessage2 encapsulada em uma arrow function para enviar o parâmetro */}
+        <ChildrenFunction myFunction={() => showMessage2("Olá, eu sou o parâmetro!")} >
+          <p>Children: Texto exibido no componente filho</p>
+        </ChildrenFunction>
+
+        {/* ---------------------------------------------------------------------------------------------- */}
+
         {/* State Lift: Um componente exibe outro altera, o Pai gerencia; */}
         <Message msg={message} /> {/* Componente que exibe o valor do estado message */}
         <ChangeMessageState changeMessage={handleMessage} /> {/* Componente que altera o valor do estado */}
 
         {/* ---------------------------------------------------------------------------------------------- */}
+
 
       </div>
     </>
