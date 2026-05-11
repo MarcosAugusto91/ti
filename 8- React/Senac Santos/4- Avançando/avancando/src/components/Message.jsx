@@ -1,9 +1,9 @@
-const Message = ({msg}) => {
+const Message = (props) => {
   return (
     <div>
         <hr/>
         <h2>Utilizando State Lift: Message e ChangeMessageState</h2>
-        A mensagem é: {msg}
+        A mensagem é: {props.msg}
     </div>
   )
 }

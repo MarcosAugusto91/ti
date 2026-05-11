@@ -31,10 +31,10 @@ import ChildrenFunction from './components/ChildrenFunction'
 
 function App() {
 
-  {/* Variável utilizada em ShowUserName */ }
+  /* Variável utilizada em ShowUserName */ 
   const [userName] = useState("Marcos Augusto de Azevedo")
 
-  {/* Array de objetos utilizado em CarDetails */ }
+  /* Array de objetos utilizado em CarDetails */
   const cars = [
     { id: 1, brand: "Ferrari", color: "Vermelho", km: 0, novo: true },
     { id: 2, brand: "Ford", color: "Preto", km: 10000, novo: false },
@@ -42,17 +42,17 @@ function App() {
     { id: 4, brand: "Chevrolet", color: "Azul", km: 0, novo: true }
   ]
 
-  {/* Função para ser executada no componente filho: ExecuteFunction */ }
+  /* Função para ser executada no componente filho: ExecuteFunction */
   function showMessage() {
     console.log("Evento do componente pai")
   }
 
-  {/* Função que recebe um parâmetro e o exibe no console */}
+  /* Função que recebe um parâmetro e o exibe no console */
   function showMessage2(texto) {
     console.log("O parâmetro disparado pelo filho foi: " + texto)
   }
 
-  {/* State Lift: Criando estado no componente pai e alterando ele a partir do componente filho */ }
+  /* State Lift: Criando estado no componente pai e alterando ele a partir do componente filho */
   const [message, setMessage] = useState("")
 
   const handleMessage = (msg) => {
