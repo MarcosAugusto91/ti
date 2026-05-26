@@ -61,6 +61,8 @@ class Mensagem {
             //Para obter esta senha, vá em sua conta google >> Gerenciar sua conta Google >> Segurança e Login >> 
             //Verificação em duas etapas >> Senhas de App >> coloque o nome do app e criar >> Copie e cole acima a chave disponibilizada.
 
+            //Nova forma de acesso: https://myaccount.google.com/security e pesquise por senhas de app
+
 			$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
 			$mail->Port       = 587;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
