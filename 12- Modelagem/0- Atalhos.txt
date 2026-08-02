@@ -95,3 +95,22 @@ Após inserir o arco as propriedades podem ser alteradas;
 
 Duplicar várias Suzanes usando o Spin (Propriedade Dupli)
 Pode usar o Spin Duplicate que já vem com ela marcada;
+------------------------------------------------------------------------
+Construir a Caneca
+Crie um Cilindro;
+
+Alça:
+Primeiro usaremos a ferramenta Loopcut para criar as arestas de onde construiremos as alça;
+Usaremos o Bevel para replicar mais duas arestas em volta da caneca para que possamos selecionar a área que será base para a alça;
+Após isso devemos selecionar duas faces do eixo y na parte de cima e de baixo e extrudar com a ferramenta ou atalho e
+Devemos usar o comando s + y + 0 para zerar o ângulo da extrusão para que depois a alça fique correta;
+Shift S + Cursor to select faz o cursor se posionar bem entre o meio dos elementos selecionados (Para fazer a alça)
+Selecionamos apenas as faces de cima que foram extrudadas e usamos a ferramenta Spin para gerar a alça marcamos o eixo X para ficar na orientação correta;
+Agora puxe até ficar próximo de finalizar a alça;
+Agora selecione as 4 faces >> Ferramentas de arestas (Edge) >> Bridge edge Loops
+
+Interior:
+Selecione a face superior da caneca
+Use o inset para criar uma circunferência que será nossa borda
+Extrude até o fundo para abrir o espaço de armazenamento líquido da caneca;
+
