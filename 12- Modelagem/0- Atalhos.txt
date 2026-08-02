@@ -1,0 +1,97 @@
+G Utilizamos para Mover o Objeto
+S Utilizamos para Dimensionar o Objeto
+R Utilizamos para Rotacionar Objeto
+
+Y Utilizamos para mover o Objeto para frente o para trás
+X Utilizamos para mover o Objeto para os lados
+Z Utilizamos para mover o Objeto para Cima e para baixo
+
+Shift + C: Posiciona o cursor no ponto Inicial;
+Shift + D: Duplica um objeto;
+Shift + A: Abre as opções de criação de objetos;
+N Abre as opções de tranformação;
+
+Collection;
+Modificadores;
+
+Vista Ortográfica (5 do NumPad)
+Ctrl + Tab alterna entre vários modos (Object Mode / Edit Mode)
+Tab alterna no modo que estivermos e o Edit Mode
+
+Vértices / Arestas / Faces
+1 / 2 / 3
+
+No modo Edit:
+A Seleciona tudo;
+AA rapidamente tira a seleção ou Alt A
+B e C são outras formas de seleção
+Toogle X-Ray permite selecionar áreas do objeto da parte de trás
+Ctrl + expande a seleção
+
+Comandos Especiais
+Segura o Alt e Clica nos Vértices, Arestas ou Faces; Posso combinar com Shift;
+Ctrl e Alt Pressionados podemos selecionar Arestas paralelas
+Clica em alguma parte do objeto, segura o Ctrl e clica em outro mais longe, vai selecionar todo aquele espaço entre as duas regiões clicadas;
+
+--------------------------------------------------------------------
+Inserindo Arestas, Vértices e Faces:
+
+Ferramenta Loop Cut (Ctrl R)
+Após a inserção podemos editar os parâmetros no painel de propriedades na parte de baixo;
+Número de cortes;
+Suavização (Smoothness);
+Factor para reposicionar os loops;
+*Criação de um Barril e de Saturno;
+
+Offset Edge Loop Cut (Ctrl Shift R)
+Selecionamos uma aresta com Clique e Alt ao colocarmos na ferramenta podemos arrascar para baixo ou para cima que ele cria novas arestas paralelas a que selecionamos.
+
+Knife (k)
+Colocar Arestas aleatóriamente no objeto;
+*Fazer uma coroa de abacaxi;
+
+Bisect (Shift 8)
+Serve para colocar uma aresta de "corte" tem que estar com o objeto ou região selecionada antes;
+
+Temos menus específicos com ferramentas para Vertex, Edge, Face
+Em Edge temos o subdivice que pega as arestas selecionadas e subdivide ela em mais arestas;
+------------------------------------------------------------------------
+Apagando partes da Geometria:
+Delete / Dissolve (Ctrl Delete / Ctrl X)
+
+------------------------------------------------------------------------
+Juntando Elementos
+Object >> Join (Ctrl J)
+
+Separando Elementos
+Mesh >> Separate >> Selection
+------------------------------------------------------------------------
+Extrude (E)
+Temos algumas opções de extrude, elas servem para você afundar ou levantar alguma face do objeto;
+
+Inset (I)
+Para inserir novos polígonos
+------------------------------------------------------------------------
+Modelando um Armário
+------------------------------------------------------------------------
+Bevel, bridge e Fill
+
+Após aplicar o Bevel ("Arredondamento das arestas")
+Propriedades: Width, Segments e Profile para modificar;
+
+Bridge Edge Loops Dentro do Menu Edge (Ctrl E)
+Com faces selecionadas de objetos diferentes ao usarmos essa ferramenta ela faz a união como se fosse uma ponte;
+Propriedades: Number of Cuts / Profile Factor / Smoothness
+
+*Se tivermos um buraco e estivermos na seleção de aresta(2) e clicarmos com o Alt pressionado na aresta do buraco ela consegue selecionar todo o espaço do buraco;
+New Edge/Face from Vertices(F) vai preencher todo buraco;
+
+Grid Fill dentro do Menu Face (Ctrl F) (Só funciona se tiver um número par de arestas selecionadas)
+Propriedades: Span e Offset
+------------------------------------------------------------------------
+Spin Tool (Extruda em forma de arco)
+Nas propriedades na barra lateral direita selecionamos qual eixo será a base do arco;
+Após inserir o arco as propriedades podem ser alteradas;
+
+Duplicar várias Suzanes usando o Spin (Propriedade Dupli)
+Pode usar o Spin Duplicate que já vem com ela marcada;
