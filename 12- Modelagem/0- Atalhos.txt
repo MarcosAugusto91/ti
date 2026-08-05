@@ -113,4 +113,24 @@ Interior:
 Selecione a face superior da caneca
 Use o inset para criar uma circunferência que será nossa borda
 Extrude até o fundo para abrir o espaço de armazenamento líquido da caneca;
-
+--------------------------------------
+Fazer o Shade Smooth e o Shade Auto Smooth
+--------------------------------------
+Demonstração das outras 6 ferramentas
+--------------------------------------
+Ferramenta Polybuild
+--------------------------------------
+Separando e soldando os vértices de um objeto
+--------------------------------------
+Visibilidade, ocultando partes do objeto no modo edit;
+--------------------------------------
+Aplicando os valores que forem escalados
+--------------------------------------
+Proportional editing: Podemos fazer uma modelagem de forma mais suave e que
+pode influenciar outros objetos em volta;
+--------------------------------------
+Removendo vértices sobrepostos (Merge no Menu Vértices)
+--------------------------------------
+Removendo arestas soltas: Select >> Loose Geometry >> Delete Edges
+--------------------------------------
+Removendo Faces internas: Select >> Select All by trait >> Interior Faces
