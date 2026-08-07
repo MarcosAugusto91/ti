@@ -12,13 +12,13 @@ main{
     width: 500px;
     margin: auto;
     margin-top: 10px;
-    background-color: aquamarine;
+    background-color: transparent;
 }
 
 div{
     color: white;
     padding-top: 10px;
-    margin: 0px;
+    margin: 5px;
     width: 20%;
     height: 100px;
     margin-right: -4px;
