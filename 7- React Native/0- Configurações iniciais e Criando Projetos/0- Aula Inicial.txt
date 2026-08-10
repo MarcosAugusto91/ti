@@ -1,0 +1,48 @@
+1. O que é o React Native?
+Um framework, duas plataformas: Permite construir aplicativos para iOS e Android usando JavaScript e React.
+
+Não é Webview (Hybrid) e não é Flutter: Ele não roda dentro de um navegador embutido nem desenha pixels em uma tela própria. 
+Ele renderiza componentes nativos reais do sistema operacional.
+
+2. Como ele funciona por baixo dos panos?
+Arquitetura de Duas Threads principais:JavaScript Thread: Onde o seu código React/JS roda (lógica de negócios, estado, chamadas de API).
+
+Native Thread (Main/UI Thread): Onde as telas nativas (iOS e Android) são desenhadas e os eventos de toque ocorrem.
+
+A "Ponte" (Bridge / Nova Arquitetura): O JavaScript não conversa diretamente com o sistema operacional. Ele envia mensagens em JSON explicando o que quer exibir, e a camada nativa interpreta e desenha os elementos na tela.
+
+
+4. O Contexto Crítico antes do Setup: 
+
+Expo vs. React Native CLI.
+
+Expo (Caminho recomendado para aprendizado/início):
+	Funciona como uma camada em cima do React Native.
+	Não exige Xcode ou Android Studio configurados imediatamente.
+	Permite testar direto no celular físico via QR Code (app Expo Go).
+
+React Native CLI (Bare Workflow):
+	Acesso direto aos projetos nativos (/ios e /android).
+	Requer instalação completa do Android Studio (Android SDK/Emulador) e/ou Xcode (somente no macOS).
+	Necessário quando há integração com bibliotecas nativas muito específicas ou legadas.
+
+--------------------------------------------------------------------------------------------------------------------------------
+Passo a passo de transformação do nosso código JSX em tela:
+Escrita (JSX):
+Você cria a interface declarativa em JSX (ex: <View><Text>Olá</Text></View>).
+
+Empacotamento (Metro Bundler):
+O Metro junta todo o seu código JS/JSX e assets em um único arquivo (bundle JavaScript), exatamente como o Webpack/Vite faz na web.
+
+Execução da Lógica (JS Thread):
+O motor de JavaScript (Hermes) executa seu código e gera uma árvore de renderização (React Tree).
+
+Tradução e Envio (Bridge / JSI):
+O React Native calcula o layout (usando o sistema Yoga para Flexbox) e envia ordens assíncronas serializadas para o lado nativo: "Crie um container de tela e coloque um texto dentro com a string 'Olá'".
+
+Renderização Nativa (Main UI Thread):
+O iOS e o Android recebem a ordem e criam as visões reais do sistema:
+
+No iOS: O JSX vira um UIView contendo um UILabel.
+
+No Android: O JSX vira um android.view.View contendo um TextView.
