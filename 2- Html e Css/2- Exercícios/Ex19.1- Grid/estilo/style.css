@@ -15,6 +15,7 @@
 
 .container{ /* DIV PAI */
     background-image: url(../imagens/fundo2.jpg);
+    background-size: cover;
     height: 100vh;
 
     display: grid;                         /* Define que o Container será configurado em GRID */
@@ -43,7 +44,8 @@
 /* FILHOS */
 
 .header{
-    grid-column: 3 / -1;    /*Define a posição inicial e final do elemento filho da grid na horizontal*/
+    grid-column: 1 / -1;    /*Define a posição inicial e final do elemento filho da grid na horizontal*/
+    grid-row: 1 / 1;         /*Define a posição inicial e final do elemento filho da grid na vertical*/
 
     /*grid-area: header;*/  
     justify-self: stretch; /*Define o alinhamento na horizontal do elemento filho da grid*/
@@ -52,8 +54,8 @@
 }
 
 .main{
-    grid-column: 1 / 3;   /*Posição inicial e final do elemento filho da grid na horizontal*/
-    grid-row: 1 / 1;      /*Posição inicial e final do elemento filho da grid na vertical*/
+    grid-column: 2 / -1;   /*Posição inicial e final do elemento filho da grid na horizontal*/
+    grid-row: 2 / 4;      /*Posição inicial e final do elemento filho da grid na vertical*/
 
     align-self: stretch;
     /*grid-area: main;*/
@@ -79,7 +81,6 @@
     justify-self: stretch;
 
     /* grid-area: footer; */
-    display: grid;
     background-color: black;
 }
 
