@@ -1,25 +1,28 @@
-PERMISSÕES E INSTALAÇÕES INICIAIS
+PERMISSÕES E INSTALAÇÕES INICIAIS (NODE E NPM)
 1- Abra o powershell como ADM (NÃO TEMOS PERMISSÃO)
 2- Get-ExecutionPolicy
 3- Set-ExecutionPolicy AllSigned
 
+4,5 e 6 Pode pular caso baixe a versão Node LTS mais recente pelo SITE;
+
 4- INSTALANDO O CHOCO: 		Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-
 5- Reinicia o PowerShell: choco -v
-
 6- INSTALANDO O NODE E JDK:	choco install -y nodejs-lts microsoft-openjdk17 yarn
+***BAIXAR SEMPRE A VERSÃO LTS MAIS RECENTE (PODE SER PELO SITE)
 
 7- VERIFICANDO VERSÕES: No cmd: node -v / npm -v (É o gerenciador de pacote do node) / java –version
+Caso o npm -v dê erro:
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ---------------------------------------------------------------------------------------------------------
-ANDROID STUDIO
+ANDROID STUDIO (EMULADOR)
 1- Baixe e Instale o Android Studio
 2- Na instalaçao o Virtual Device tem que estar marcado, depois Next até aparecer instalação customizada(custom)
 3- Se a máquina for intel pode instalar o HAXM / Marcar também: Performance (Android Emulator...) e Android Virtual Device
-4- Após instalar na tela inicial: More Actions (ou 3 pontinhos) -> SDK Manager -> Intalar Android 13 e 11
+4- Após instalar na tela inicial: More Actions (ou 3 pontinhos) -> SDK Manager -> Intalar Android 16, 13 e 11
 5- Em SDK Tools -> SDK Build Tools, Android Emulator, SDK-Plataform Tools, Google Play Services, HAXM
 6- Copie o caminho que está marcado em Android SDK Location: C:\SDK
 7- Na tela inicial do Android Studio: More Actions (ou 3 pontinhos) -> Virtual Device Manager -> Exclua o Padrão
-8- Criar um novo -> Pixel 2 (COM SÍMBOLO DA PLAYSTORE)-> Selecionar preferencialmente Android 11(R) -> Finish
+8- Criar um novo -> Pixel 10 PRO XL (COM SÍMBOLO DA PLAYSTORE)-> Selecionar preferencialmente Android 16 -> Finish (Já pode executar o Emulador, após carregar, já podemos finalizar as outras telas do Android-Studio);
 ---------------------------------------------------------------------------------------------------------
 VARIÁVEIS DE AMBIENTE
 1- O JDK será instalado em uma das pastas a seguir: C:\Program Files\Microsoft\ ou C:\Program Files\OpenJDK
