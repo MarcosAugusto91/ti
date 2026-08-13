@@ -17,7 +17,7 @@ function verificar(){
 
     switch(genero){
         case 'M':
-            if(idade > 124 || idade < 1){
+            if(idade > 125 || idade < 1){
                 texto.innerText = 'ERRO - Digite uma data válida (De 1900 à 2024)'
                 window.alert('[ERRO] - Digite uma data válida (De 1900 à 2023)')
                 img.style.display = 'none'
@@ -33,7 +33,7 @@ function verificar(){
                 img.style.margin = 'auto'
                 img.style.paddingBottom = '10px'
                 img.src = 'criancamenino.webp' 
-            } else if(idade <18){
+            } else if(idade < 18){
                 texto.innerText = `Você é um adolescente de ${idade} anos!`
                 img.style.display = 'block'
                 img.style.margin = 'auto'

@@ -51,7 +51,7 @@ article{
 
 
 div:hover{
-    transform: scale(1.05) translateY(10px) rotate(2deg);
+    transform: scale(1.05) translateY(10px) rotate(5deg);
     transition: 1s;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     background-color: rgb(100, 149, 237);

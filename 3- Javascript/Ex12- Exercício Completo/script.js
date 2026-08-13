@@ -24,7 +24,7 @@ function adicionar() {
 }
 
 function validacao0100(n) {
-    if (Number(n) > 0 && Number(n) < 101) {
+    if (Number(n) >= 0 && Number(n) < 101) {
         return true
     } else {
         return false
