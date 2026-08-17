@@ -3,14 +3,7 @@ PERMISSÕES E INSTALAÇÕES INICIAIS (NODE E NPM)
 2- Get-ExecutionPolicy
 3- Set-ExecutionPolicy AllSigned
 
-4,5 e 6 Pode pular caso baixe a versão Node LTS mais recente pelo SITE;
-
-4- INSTALANDO O CHOCO: 		Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-5- Reinicia o PowerShell: choco -v
-6- INSTALANDO O NODE E JDK:	choco install -y nodejs-lts microsoft-openjdk17 yarn
-***BAIXAR SEMPRE A VERSÃO LTS MAIS RECENTE (PODE SER PELO SITE)
-
-7- VERIFICANDO VERSÕES: No cmd: node -v / npm -v (É o gerenciador de pacote do node) / java –version
+4- VERIFICANDO VERSÕES: No cmd: node -v / npm -v (É o gerenciador de pacote do node) / java –version
 Caso o npm -v dê erro:
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ---------------------------------------------------------------------------------------------------------
