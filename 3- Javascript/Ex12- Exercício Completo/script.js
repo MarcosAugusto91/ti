@@ -24,7 +24,7 @@ function adicionar() {
 }
 
 function validacao0100(n) {
-    if (Number(n) > 0 && Number(n) < 101) {
+    if (Number(n) >= 0 && Number(n) < 101) {
         return true
     } else {
         return false
@@ -51,14 +51,15 @@ function finalizar() {
         for (let pos in valores) {
             soma += Number(valores[pos])
         }
-        media = soma / valores.length
+
+        media = soma / total
         Math.round(media, 2)
 
         valores.sort((a, b) => a - b) // Ordena os valores em ordem crescente
 
         resultado.innerHTML = `<p>Ao todo, temos <strong>${total}</strong> números cadastrados!</p> 
                                <p>O menor valor da lista é <strong>${Number(valores[0])}</strong></p>
-                               <p>O maior valor da lista é <strong>${Number(valores[total - 1])}</strong></p>
+                               <p>O maior valor da lista é <strong>${Number(valores[valores.length - 1])}</strong></p>
                                <p>Soma dos valores do Vetor: <strong>${soma}</strong></p>
                                <p>A média dos valores da lista é: <strong>${media}</strong>`
         num.focus()
