@@ -19,7 +19,7 @@
     height: 100vh;
 
     display: grid;                         /* Define que o Container será configurado em GRID */
-    grid-template-columns: repeat(5, 1fr); /* Define quantas colunas teremos na nossa GRID*/
+    grid-template-columns: repeat(5, 1fr) 2fr; /* Define quantas colunas teremos na nossa GRID*/
     grid-template-rows: 150px 300px 300px 80px 80px; /* Define quantas linhas teremos na nossa GRID*/
     
     /*grid-auto-rows: 200px;*/    /*Define qual o tamanho das linhas que possam ser geradas*/
@@ -29,27 +29,28 @@
     /*grid-column-gap:10px;*/     /*Espaçamento entre as colunas da grade */
     /*grid-row-gap:10px;*/        /* Espaçamento entre as linhas da grade */
 
-    justify-items: start;  /*center, end; */ 
+    justify-items: stretch;  /*center, end; */ 
     /*Define o alinhamento na horizontal dos elementos filhos da grid*/
 
-    align-items: start; /*center, end; stretch */ 
-    /*Define o alinhamento na vertical dos elementos filhos da grid*/
+    align-items: stretch; /*center, end; stretch */ 
+    /*Define o alinhamento na vertical dos elementos filhos da grid*/           
 
-    /*grid-template-areas: "header header header header header header header header header header header header" 
-                         "aside  aside   null   null   main   main   main   main  main   main   main  main"
-                         "aside  aside   null   null   main   main   main   main   main  main   main  main"
-                         "footer footer footer footer footer footer footer footer footer footer footer footer";*/
+    /*grid-template-areas: 
+        "header header header header header header header header header header header header" 
+        "aside  aside   null   null   main   main   main   main  main   main   main  main"
+        "aside  aside   null   null   main   main   main   main   main  main   main  main"
+        "footer footer footer footer footer footer footer footer footer footer footer footer";*/
 }
 
 /* FILHOS */
 
 .header{
     grid-column: 1 / -1;    /*Define a posição inicial e final do elemento filho da grid na horizontal*/
-    grid-row: 1 / 1;         /*Define a posição inicial e final do elemento filho da grid na vertical*/
+    grid-row: 1 / 2;         /*Define a posição inicial e final do elemento filho da grid na vertical*/
 
     /*grid-area: header;*/  
-    justify-self: stretch; /*Define o alinhamento na horizontal do elemento filho da grid*/
-    align-self: stretch;   /*Define o alinhamento na vertical do elemento filho da grid*/
+    /*justify-self: stretch; /*Define o alinhamento na horizontal do elemento filho da grid*/
+    /*align-self: stretch;   /*Define o alinhamento na vertical do elemento filho da grid*/
     background-color: green;
 }
 
