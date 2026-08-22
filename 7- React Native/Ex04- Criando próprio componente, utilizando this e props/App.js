@@ -1,42 +1,20 @@
 import React, {Component} from 'react';
 import { View, Text, Image } from 'react-native';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import Jobs from './components/Jobs';
 
 class App extends Component{
-  render(){
 
+  render(){
     let nome = 'Steve Jobs';
-
-
-    return(
-      <View>
-        <Text style={{marginTop:35}}>
-        </Text>
-
-        <Jobs largura={420} altura={200} nome='Steve Jobs'/>
-
-      </View>
-    );
-  }
-}
-
-{/* Nome de classes sempre com letra maiúscula no início! */}
-class Jobs extends Component{ 
-  render(){
-    let imagem = 'https://sujeitoprogramador.com/steve.png';
+    let imagem = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_kAv6dkeyo8SGLY6qMo5nPOUqfX9MqX7ZBE8npIvQ1OZ4e-BoEfPPrKuKS2gvu46VruTx9HJDbz11v_qJZ-hg5MDycbhfZoplqhJb9eg&s=10';
 
     return(
-     <View>
-        <Text style={{color: 'red', fontSize: 20, textAlign:'center', marginBottom: 10}}>
-            {this.props.nome}
+      <View style={{flex:1, alignItems:"center", marginTop:20}}>
+        <Text style={{marginTop:35}}>Olá
         </Text>
-        <Image 
-        source={{uri: imagem}}
-        style={{width: this.props.largura, height:this.props.altura}}
-        />
 
+        <Jobs largura={250} altura={100} nome={nome} imagem={imagem}/>
       </View>
-
     );
   }
 }
