@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- ALTERE: troque o titulo que aparece na aba do navegador. -->
+	<title>Minha Loja | Casa Aberta Senac</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+	<header class="cabecalho">
+		<a class="marca" href="#" aria-label="Pagina inicial">
+			<!-- ALTERE: troque logo.svg e o texto do alt pelo logo da sua empresa. -->
+			<img class="logo" src="logo.svg" alt="Logo da Minha Loja">
+			<!-- ALTERE: troque o nome da empresa. -->
+			<span class="nome-empresa">Minha Loja</span>
+		</a>
+
+		<div class="acoes-header">
+			<!-- ALTERE: troque o texto do botao, se desejar. -->
+			<button class="botao-login" type="button">Entrar</button>
+			<!-- ALTERE: troque o simbolo do botao de tema, se desejar. -->
+			<button id="botao-tema" class="botao-tema" type="button" title="Ativar modo noturno" aria-label="Ativar modo noturno" onclick="alternarTema()">&#9790;</button>
+		</div>
+	</header>
+
+	<main class="conteudo">
+		<section class="area-login" aria-label="Area de login">
+			<article class="card-login">
+				<header class="cabecalho-card">
+					<!-- ALTERE: personalize o titulo e o texto do cabecalho. -->
+					<h2>Acesse sua conta</h2>
+				</header>
+
+				<div class="corpo-card">
+					<form id="formulario-login" onsubmit="return validarLogin()">
+					<!-- ALTERE: troque os textos dos campos, se desejar. -->
+					<label for="email">E-mail</label>
+					<input id="email" name="email" type="email" placeholder="seuemail@exemplo.com">
+
+					<label for="senha">Senha</label>
+					<input id="senha" name="senha" type="password" placeholder="Digite sua senha">
+
+					<!-- ALTERE: troque o texto do botao. -->
+					<button class="botao-acessar" type="submit">Acessar conta</button>
+					</form>
+				</div>
+			</article>
+		</section>
+	</main>
+
+	<footer class="rodape">
+		<!-- ALTERE: troque o texto do rodape e os dados de contato. -->
+		<p>Minha Loja - Feito com criatividade no Senac</p>
+		<p>contato@minhaloja.com</p>
+	</footer>
+
+	<script src="script.js"></script>
+</body>
+</html>

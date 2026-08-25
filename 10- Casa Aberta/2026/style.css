@@ -1,0 +1,266 @@
+/*
+   ATIVIDADE SENAC: experimente alterar as variaveis abaixo.
+   Elas controlam as principais cores da pagina.
+*/
+:root {
+    /* ALTERE: cor de fundo do header. */
+    --cor-header: #102a43;
+    /* ALTERE: cores dos botoes normal e ao passar o mouse. */
+    --cor-botao: #e07a5f;
+    --cor-botao-hover: #c95f45;
+    /* ALTERE: cor de fundo da pagina, usada como reserva da imagem. */
+    --cor-fundo: #f4f1ea;
+    /* ALTERE: cor de fundo do corpo do card. */
+    --cor-card: #ffffff;
+    /* ALTERE: cor de fundo do cabecalho do card de login. */
+    --cor-cabecalho-card: #3d5a80;
+    /* ALTERE: cor principal dos textos. */
+    --cor-texto: #243b53;
+    /* ALTERE: cor dos textos secundarios. */
+    --cor-texto-suave: #627d98;
+}
+
+body.tema-noturno {
+    --cor-header: #0b1117;
+    --cor-fundo: #101820;
+    --cor-card: #1f2933;
+    --cor-cabecalho-card: #16324f;
+    --cor-texto: #f4f1ea;
+    --cor-texto-suave: #c3d0db;
+    background-image: linear-gradient(rgba(16, 24, 32, 0.88), rgba(16, 24, 32, 0.88)), url("fundo-main.svg");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* ALTERE: troque fundo-main.svg pelo arquivo da imagem de fundo desejada. */
+    background-color: var(--cor-fundo);
+    background-image: url("fundo-main.svg");
+    background-position: center;
+    background-size: cover;
+    color: var(--cor-texto);
+    display: flex;
+    flex-direction: column;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+.cabecalho {
+    /* ALTERE: mantenha a altura em 80px ou teste outro valor. */
+    min-height: 80px;
+    align-items: center;
+    background-color: var(--cor-header);
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 6%;
+}
+
+.marca {
+    align-items: center;
+    color: #ffffff;
+    display: flex;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo {
+    border-radius: 8px;
+    display: block;
+    height: 48px;
+    object-fit: cover;
+    width: 48px;
+}
+
+.nome-empresa {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.botao-login {
+    background-color: var(--cor-botao);
+    border: 0;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+    padding: 10px 22px;
+    transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.botao-login:hover {
+    background-color: var(--cor-botao-hover);
+    transform: translateY(-2px);
+}
+
+.acoes-header {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+.botao-tema {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font: inherit;
+    font-size: 1.25rem;
+    line-height: 1;
+    min-width: 42px;
+    padding: 9px 10px;
+}
+
+.botao-tema:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.conteudo {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1180px;
+    padding: 64px 6% 80px;
+}
+
+.area-login {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.card-login {
+    background-color: var(--cor-card);
+    border: 1px solid rgba(36, 59, 83, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 14px 30px rgba(36, 59, 83, 0.1);
+    overflow: hidden;
+    width: min(900px, 100%);
+}
+
+.cabecalho-card {
+    background-color: var(--cor-cabecalho-card);
+    color: #ffffff;
+    padding: 32px 42px;
+}
+
+.cabecalho-card h2 {
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.corpo-card {
+    padding: 42px;
+}
+
+.corpo-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.card-login label {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.card-login input {
+    border: 1px solid #bcccdc;
+    border-radius: 5px;
+    color: var(--cor-texto);
+    font: inherit;
+    margin-bottom: 10px;
+    padding: 12px 14px;
+}
+
+.card-login input:focus {
+    border-color: var(--cor-botao);
+    outline: 3px solid rgba(224, 122, 95, 0.2);
+}
+
+.botao-acessar {
+    background-color: var(--cor-botao);
+    border: 0;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+    margin-top: 8px;
+    padding: 12px;
+    transition: background-color 180ms ease;
+}
+
+.botao-acessar:hover {
+    background-color: var(--cor-botao-hover);
+}
+
+.rodape {
+    align-items: center;
+    background-color: var(--cor-header);
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 28px;
+    justify-content: space-between;
+    padding: 26px 6%;
+}
+
+.rodape p {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 620px) {
+    .cabecalho {
+        padding: 0 5%;
+    }
+
+    .nome-empresa {
+        font-size: 1rem;
+    }
+
+    .botao-login {
+        padding: 9px 16px;
+    }
+
+    .acoes-header {
+        gap: 6px;
+    }
+
+    .botao-tema {
+        font-size: 1.1rem;
+        min-width: 38px;
+        padding: 8px 9px;
+    }
+
+    .conteudo {
+        padding: 46px 5% 58px;
+    }
+
+    .cabecalho-card,
+    .corpo-card {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+
+    .rodape {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 24px 5%;
+    }
+}
