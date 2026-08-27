@@ -1,15 +1,28 @@
-// ALTERE: defina aqui o usuario e a senha ficticios da atividade.
+// ALTERE: defina aqui o usuário e a senha fictícios da atividade.
 const usuarioCorreto = "aluno@senac.com";
 const senhaCorreta = "1234";
 
 function validarLogin() {
-    const email = document.getElementById("email").value;
-    const senha = document.getElementById("senha").value;
+    // estes nomes "email" e "senha" devem bater com os IDs do HTML.
+    const email = document.getElementById("email");
+    const senha = document.getElementById("senha");
 
-    if (email === usuarioCorreto && senha === senhaCorreta) {
-        alert("Logado com sucesso");
+    // troque a mensagem que aparece quando o login falhar.
+    const mensagemErro = document.getElementById("mensagem-erro");
+
+    // Aqui a gente compara o que o usuário digitou com os valores corretos.
+    if (email.value === usuarioCorreto && senha.value === senhaCorreta) {
+        // Se estiver certo, vai para a página de sucesso.
+        window.location.href = "logado.html";
     } else {
-        alert("Usuario e senha invalidos");
+        // Se estiver errado, mostra a mensagem na tela.
+        mensagemErro.innerText = "Usuário e senha inválidos!";
+        mensagemErro.style.display = "block";
+
+        // Limpa os campos e coloca o foco no primeiro input para tentar novamente.
+        email.value = "";
+        senha.value = "";
+        email.focus();
     }
 
     return false;

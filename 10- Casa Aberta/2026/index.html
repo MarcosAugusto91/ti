@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 	<!-- ALTERE: troque o titulo que aparece na aba do navegador. -->
 	<title>Minha Loja | Casa Aberta Senac</title>
 	<link rel="stylesheet" href="style.css">
@@ -33,6 +34,7 @@
 				</header>
 
 				<div class="corpo-card">
+					<h1 id="mensagem-erro" style="display: none; color: #c95f45; margin-bottom: 12px; font-size: 1.1rem;">Usuário e senha inválidos!</h1>
 					<form id="formulario-login" onsubmit="return validarLogin()">
 					<!-- ALTERE: troque os textos dos campos, se desejar. -->
 					<label for="email">E-mail</label>
