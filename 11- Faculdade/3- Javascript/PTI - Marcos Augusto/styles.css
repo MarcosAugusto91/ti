@@ -1,0 +1,129 @@
+/* Resets básicos e tipografia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #222222;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header estilizado em escuro */
+header {
+    background-color: #222222;
+    color: #ffffff;
+    padding: 25px 40px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 13px;
+    color: #cccccc;
+}
+
+/* Main organizando as seções com FLEX-WRAP */
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Permite a quebra automática para baixo em telas menores */
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 40px;
+    padding: 40px;
+    flex: 1;
+}
+
+/* Formulário de contato com tamanho mínimo fixado */
+main section:nth-child(1) {
+    width: 260px;
+    min-width: 240px; /* Impede que o formulário encolha demais */
+}
+
+main section:nth-child(1) h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #222222;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+/* Seção do Logo */
+main section:nth-child(2) {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+
+main section:nth-child(2) img {
+    max-width: 160px;
+    height: auto;
+}
+
+/* Seção do Canvas (Bandeira do Japão) */
+main section:nth-child(3) {
+    display: flex;
+    align-items: flex-start;
+}
+
+canvas {
+    display: block;
+    max-width: 100%; /* Permite adaptar o canvas em telas muito pequenas */
+    height: auto;
+}
+
+/* Footer centralizado */
+footer {
+    background-color: #222222;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+}
