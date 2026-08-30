@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logado com sucesso | Casa Aberta Senac</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <header class="cabecalho">
+        <a class="marca" href="#" aria-label="Pagina inicial">
+            <img class="logo" src="logo.svg" alt="Logo da Minha Loja">
+            <span class="nome-empresa">Minha Loja</span>
+        </a>
+
+        <div class="acoes-header">
+            <button class="botao-login" type="button">Entrar</button>
+            <button id="botao-tema" class="botao-tema" type="button" title="Ativar modo noturno" aria-label="Ativar modo noturno" onclick="alternarTema()">&#9790;</button>
+        </div>
+    </header>
+
+    <main class="conteudo">
+        <section class="area-login" aria-label="Area de login">
+            <article class="card-login">
+                <header class="cabecalho-card">
+                    <h2>Bem-vindo(a)</h2>
+                </header>
+
+                <div class="corpo-card">
+                    <p style="font-size:1.1rem; font-weight:bold; margin-bottom: 15px; color: var(--cor-texto);">Logado com sucesso!</p>
+                    <p style="margin-bottom: 20px; color: var(--cor-texto-suave);">Sua conta foi acessada com sucesso. Continue navegando pela loja.</p>
+                    <button class="botao-acessar" type="button" onclick="window.location.href='index.html'">Voltar para o login</button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>Minha Loja - Feito com criatividade no Senac</p>
+        <p>contato@minhaloja.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

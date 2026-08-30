@@ -63,6 +63,7 @@ function finalizar() {
                                <p>Soma dos valores do Vetor: <strong>${soma}</strong></p>
                                <p>A média dos valores da lista é: <strong>${media}</strong>`
         num.focus()
+        
     }
     num.focus()
 }
