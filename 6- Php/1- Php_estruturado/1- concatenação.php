@@ -4,11 +4,10 @@
     $profissao = 'professor';
 
     //Comentário
-
     /* Concatenando Opção 1: */
     $fichaCompleta = '<strong>Nome:</strong> ' . $nome . ' - <strong>Idade:</strong> ' . $idade . ' - <strong>Profissão:</strong> ' . $profissao . '.';
     echo 'Opção 1: ' .  $fichaCompleta;
-    echo '<hr>';
+    echo '<hr>'; 
 
     /* Opção 2 */
     $fichaCompleta = "<strong>Nome:</strong> $nome - ";

@@ -6,4 +6,3 @@ if (vel > 60) {
 else{ 
     console.log(`A velocidade do seu carro era de ${vel}km/h, você está dentro da velocidade da via! Parabéns!!!` )
 }
-
