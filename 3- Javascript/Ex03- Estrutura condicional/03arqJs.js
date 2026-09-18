@@ -1,5 +1,7 @@
 function calcular() {
-    let vel = window.document.getElementById('vel') //POR ID
+    let vel = window.document.getElementById('vel') 
+    let resp = window.document.getElementById('resp')
+    //POR ID
     /* 
     let vel = window.document.getElementsByTagName('input')[0] //POR TAG
     let vel = window.document.getElementsByName('vel') //POR NAME
@@ -7,7 +9,7 @@ function calcular() {
     let vel = window.document.querySelector('input.vel') //POR SELECTOR   
     */
 
-    let resp = window.document.getElementById('resp')
+
     let velocidade = Number(vel.value)
 
     if (velocidade <= 40) {
