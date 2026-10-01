@@ -42,10 +42,11 @@
                 echo '</br>';
                 }
             echo '<hr>';
-            $idx = 0;
+            
 
         //Listando Array com Foreach
             echo '<h4>Listando um Array com Foreach</h4>';
+            $idx = 0;
             foreach($listadefilmes as $idx)
             {
             echo $idx . '</br>';
@@ -57,7 +58,7 @@
             $Comida = ['Doces'];
             $Comida = ['Salgados'];
             $Comida['Doces'] = ['Brownies', 'Brigadeiros', 'Cookies'];
-            $Comida['Salgados'] = ['Assados', 'Fritos'];
+            $Comida['Salgados'] = ['Assados', 'Fritos',];
             $idx = 0;
             $idx2 = 0;
 
@@ -66,13 +67,13 @@
                 {
                     if ($idx < count($Comida['Doces']))
                         {
-                        echo '[' . $idx .'] ';
+                        echo '(' . $idx .') ';
                         echo $Comida['Doces'][$idx];
                         echo '</br>';
                         $idx++;    
                         }
                     else {
-                        echo '[' . $idx2 .'] ';
+                        echo '(' . $idx2 .') ';
                         echo $Comida['Salgados'][$idx2];
                         echo '</br>';
                         $idx2++; 
