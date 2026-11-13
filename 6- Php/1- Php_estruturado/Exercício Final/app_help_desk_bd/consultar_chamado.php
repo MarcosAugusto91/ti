@@ -57,7 +57,7 @@ if ($_SESSION['perfil'] == 'Usuario') {
             <div class="card-body">
               
             <!-- Rodamos um foreach passando por todos os chamados -->
-              <?php while($chamado = $res->fetch_object()){ ?>
+              <?php while($chamado = $res->fetch_object()){ ?> <!-- Enquanto houver chamados, o while vai rodar -->
 
               <div class="card mb-3 bg-light">
                 <div class="card-body">
@@ -71,7 +71,8 @@ if ($_SESSION['perfil'] == 'Usuario') {
                     $idusuario = $chamado -> id_usuario;
                     $resusuarios->data_seek(0); // Reinicia o ponteiro do resultado da consulta de usuários
                     
-                    while ($usuario = $resusuarios->fetch_object()){
+                    //Percorre todos os usuários para encontrar o correspondente ao chamado
+                    while ($usuario = $resusuarios->fetch_object()){  //Enquanto houver usuários, o while vai rodar 
                         if ($usuario -> id_usuario == $idusuario){ 
                           echo '<p style="color: green; margin-bottom: 2px;"> Usuário: ' . $usuario -> nome . '</p>';
                             break; // Sair do loop após encontrar o usuário
