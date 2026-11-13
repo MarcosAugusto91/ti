@@ -3,7 +3,7 @@
   require "config.php";
 
 // Ajusta a consulta SQL com base no perfil do usuário
-if ($_SESSION['perfil'] != 'Adm') {
+if ($_SESSION['perfil'] == 'Usuario') {
     $sql = "SELECT * FROM chamados WHERE id_usuario = {$_SESSION['id']}";
 } else {
     $sql = "SELECT * FROM chamados";
@@ -57,30 +57,29 @@ if ($_SESSION['perfil'] != 'Adm') {
             <div class="card-body">
               
             <!-- Rodamos um foreach passando por todos os chamados -->
-              <?php while($row = $res->fetch_object()){ ?>
+              <?php while($chamado = $res->fetch_object()){ ?>
 
               <div class="card mb-3 bg-light">
                 <div class="card-body">
 
                   <!-- Nos 3 itens abaixo aplicamos os valores respectivos em cada um deles -->
-                  <h5 class="card-title"><?php echo $row -> titulo ?></h5>
-                  <h6 class="card-subtitle mb-2 text-muted">Categoria: <?php echo $row -> categoria ?></h6>
-                  <p class="card-text">Descrição: <?php echo $row -> descricao ?></p>
+                  <h5 class="card-title"><?php echo $chamado -> titulo ?></h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Categoria: <?php echo $chamado -> categoria ?></h6>
+                  <p class="card-text">Descrição: <?php echo $chamado -> descricao ?></p>
                   <h6 class="card-subtitle mb-2 text-muted" style="text-align: right;">
                     <?php 
-                    $idchamado = $row -> id_chamado;
-                    $idusuario = $row -> id_usuario;
+                    $idusuario = $chamado -> id_usuario;
                     $resusuarios->data_seek(0); // Reinicia o ponteiro do resultado da consulta de usuários
                     
-                    while ($user = $resusuarios->fetch_object()){
-                        if ($user -> id_usuario == $idusuario){ 
-                          echo '<p style="color: green; margin-bottom: 2px;"> Usuário: ' . $user -> nome . '</p>';
+                    while ($usuario = $resusuarios->fetch_object()){
+                        if ($usuario -> id_usuario == $idusuario){ 
+                          echo '<p style="color: green; margin-bottom: 2px;"> Usuário: ' . $usuario -> nome . '</p>';
                             break; // Sair do loop após encontrar o usuário
                         }
                       }
                     ?>
                   </h6>
-                  <h6 class="card-title" style="text-align: right;">Ordem de Serviço: <?php echo $row -> id_chamado ?></h6>
+                  <h6 class="card-title" style="text-align: right;">Ordem de Serviço: <?php echo $chamado -> id_chamado ?></h6>
                 </div>
               </div>
               <?php } ?>
